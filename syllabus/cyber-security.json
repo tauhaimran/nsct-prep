@@ -1,0 +1,812 @@
+{
+  "questions": [
+    {
+      "id": "cyb_001",
+      "subtopic": "1. Introduction to Cyber Security",
+      "question": "Which principle of the CIA triad is primarily violated during a successful DDoS attack?",
+      "options": ["Confidentiality", "Integrity", "Availability", "Non-repudiation"],
+      "answer": 2,
+      "explanation": "DDoS attacks aim to overwhelm a system's resources, making it unreachable for legitimate users, which directly targets Availability."
+    },
+    {
+      "id": "cyb_002",
+      "subtopic": "2. Security Fundamentals & Principles",
+      "question": "Which component of the AAA framework is responsible for determining which files a user can modify after they have logged in?",
+      "options": ["Authentication", "Authorization", "Accounting", "Auditing"],
+      "answer": 1,
+      "explanation": "Authorization defines access rights and permissions (what the user is allowed to do)."
+    },
+    {
+      "id": "cyb_003",
+      "subtopic": "3. Cryptography Basics",
+      "question": "In a Public Key Infrastructure (PKI), Alice wants to send Bob a digitally signed message. Which key should she use to create the signature?",
+      "options": ["Alice's Public Key", "Alice's Private Key", "Bob's Public Key", "Bob's Private Key"],
+      "answer": 1,
+      "explanation": "A digital signature is created using the sender's private key so that anyone with the sender's public key can verify its authenticity."
+    },
+    {
+      "id": "cyb_004",
+      "subtopic": "4. Network Security",
+      "question": "Which type of firewall monitors the state of active connections to determine whether to allow or block a packet?",
+      "options": ["Packet Filtering Firewall", "Stateless Firewall", "Stateful Inspection Firewall", "Proxy Firewall"],
+      "answer": 2,
+      "explanation": "Stateful firewalls track the context of traffic (e.g., TCP handshakes) to ensure incoming packets are part of an established, valid session."
+    },
+    {
+      "id": "cyb_005",
+      "subtopic": "5. Operating System Security",
+      "question": "Which access control model is based on security labels and clearance levels, often used in military environments?",
+      "options": ["DAC (Discretionary)", "MAC (Mandatory)", "RBAC (Role-Based)", "ABAC (Attribute-Based)"],
+      "answer": 1,
+      "explanation": "MAC (Mandatory Access Control) constrains the ability of subjects to access objects based on sensitivity labels assigned by a central authority."
+    },
+    {
+      "id": "cyb_006",
+      "subtopic": "6. Web Application Security",
+      "question": "An attacker injects a script into a web page that executes every time a user views a specific comment section. What type of attack is this?",
+      "options": ["Reflected XSS", "Stored XSS", "DOM-based XSS", "SQL Injection"],
+      "answer": 1,
+      "explanation": "Stored (or Persistent) XSS occurs when the malicious script is permanently saved on the target server (e.g., in a database)."
+    },
+    {
+      "id": "cyb_007",
+      "subtopic": "7. Malware & Attack Techniques",
+      "question": "Which type of malware is designed to hide its presence and certain processes from the operating system's standard detection tools?",
+      "options": ["Worm", "Trojan", "Rootkit", "Spyware"],
+      "answer": 2,
+      "explanation": "Rootkits modify the OS kernel or system files to hide their existence and maintain persistent administrative access."
+    },
+    {
+      "id": "cyb_008",
+      "subtopic": "8. Authentication & Access Control",
+      "question": "What is the primary vulnerability of a 'Knowledge-based' authentication factor (Something you know)?",
+      "options": ["Biometric spoofing", "Theft of a physical token", "Social engineering or brute-forcing", "Hardware failure"],
+      "answer": 2,
+      "explanation": "Passwords and PINs are vulnerable to being guessed, cracked via brute force, or stolen through phishing."
+    },
+    {
+      "id": "cyb_009",
+      "subtopic": "9. Secure Software Development",
+      "question": "Which of the following is a primary goal of 'Input Sanitization'?",
+      "options": ["To speed up the database", "To prevent injection attacks like SQLi and XSS", "To encrypt user passwords", "To reduce network latency"],
+      "answer": 1,
+      "explanation": "Sanitization cleanses user input of malicious characters that could be executed as code by the application or database."
+    },
+    {
+      "id": "cyb_010",
+      "subtopic": "10. Wireless & Mobile Security",
+      "question": "What security improvement does WPA3 offer over WPA2 to mitigate offline dictionary attacks?",
+      "options": ["Wider frequency bands", "Simultaneous Authentication of Equals (SAE)", "Removing the need for passwords", "Hiding the SSID automatically"],
+      "answer": 1,
+      "explanation": "SAE (also known as Dragonfly) replaces the PSK 4-way handshake, making it resistant to offline password guessing."
+    },
+    {
+      "id": "cyb_011",
+      "subtopic": "11. Cloud & Virtualization Security",
+      "question": "In the 'Shared Responsibility Model' of Cloud Security, who is typically responsible for the physical security of the data center?",
+      "options": ["The Customer", "The Cloud Service Provider (CSP)", "The Internet Service Provider", "Both Customer and CSP"],
+      "answer": 1,
+      "explanation": "The CSP (e.g., AWS, Azure) is always responsible for the security 'of' the cloud (infrastructure, hardware, and physical site)."
+    },
+    {
+      "id": "cyb_012",
+      "subtopic": "12. Digital Forensics",
+      "question": "According to the 'Order of Volatility', which evidence should a forensic investigator collect first?",
+      "options": ["Hard disk drive", "USB flash drive", "CPU Cache and RAM", "Network backup tapes"],
+      "answer": 2,
+      "explanation": "CPU cache and RAM are highly volatile and are lost the moment power is removed; they must be imaged first."
+    },
+    {
+      "id": "cyb_013",
+      "subtopic": "13. Incident Response & Management",
+      "question": "What is the primary objective of the 'Containment' phase in incident response?",
+      "options": ["To identify the attacker's identity", "To stop the spread of the threat and limit damage", "To restore systems from backup", "To file a legal report"],
+      "answer": 1,
+      "explanation": "Containment ensures that the breach does not expand to other systems while the team prepares for eradication."
+    },
+    {
+      "id": "cyb_014",
+      "subtopic": "14. Security Monitoring & Auditing",
+      "question": "Which system aggregates and correlates log data from multiple security devices to detect complex patterns of attack?",
+      "options": ["Antivirus", "IPS", "SIEM", "Proxy"],
+      "answer": 2,
+      "explanation": "SIEM (Security Information and Event Management) provides real-time analysis of security alerts generated by applications and network hardware."
+    },
+    {
+      "id": "cyb_015",
+      "subtopic": "15. Cyber Laws & Ethics",
+      "question": "Which of the following describes 'White Hat' hacking?",
+      "options": ["Hacking for personal gain", "Hacking with malicious intent but without damage", "Ethical hacking performed with permission to improve security", "Hacking performed by government agencies only"],
+      "answer": 2,
+      "explanation": "White Hat hackers use their skills for defensive purposes and operate within legal and ethical boundaries."
+    },
+    {
+      "id": "cyb_016",
+      "subtopic": "16. Emerging Trends in Cyber Security",
+      "question": "What does the 'Quantum Threat' refer to in the context of cryptography?",
+      "options": ["Quantum computers breaking existing AES-256 keys in seconds", "Quantum computers breaking RSA and Elliptic Curve cryptography via Shor's Algorithm", "Quantum computers making firewalls obsolete", "Quantum computers causing global internet outages"],
+      "answer": 1,
+      "explanation": "Shor's algorithm running on a sufficiently powerful quantum computer can efficiently solve the mathematical problems that underpin RSA and ECC."
+    },
+    {
+      "id": "cyb_017",
+      "subtopic": "2. Security Fundamentals & Principles",
+      "question": "The concept of 'Defense in Depth' is best illustrated by:",
+      "options": ["Using one extremely strong password", "Implementing multiple layers of security (Firewall, IDS, Encryption, MFA)", "Hiring a single security expert", "Encrypting the database but leaving the network open"],
+      "answer": 1,
+      "explanation": "Defense in depth ensures that if one security control fails, others are in place to stop the attacker."
+    },
+    {
+      "id": "cyb_018",
+      "subtopic": "3. Cryptography Basics",
+      "question": "Which of the following is a characteristic of a secure Hash function?",
+      "options": ["It is easily reversible", "It produces the same output for any input", "A small change in input produces a significantly different output (Avalanche effect)", "It requires a public key to operate"],
+      "answer": 2,
+      "explanation": "The avalanche effect ensures that even a one-bit change in input creates a completely different hash, preventing patterns."
+    },
+    {
+      "id": "cyb_019",
+      "subtopic": "4. Network Security",
+      "question": "What is the function of a 'Honeypot' in a network?",
+      "options": ["To speed up legitimate traffic", "To act as a decoy system to trap and observe attackers", "To store backup data", "To provide wireless access to guests"],
+      "answer": 1,
+      "explanation": "Honeypots are used to gather intelligence on attacker techniques by appearing as vulnerable targets."
+    },
+    {
+      "id": "cyb_020",
+      "subtopic": "6. Web Application Security",
+      "question": "How does a Cross-Site Request Forgery (CSRF) attack differ from XSS?",
+      "options": ["CSRF steals data; XSS deletes data", "XSS exploits the user's trust in a site; CSRF exploits the site's trust in a user's browser/session", "CSRF only works on mobile", "XSS is server-side; CSRF is client-side"],
+      "answer": 1,
+      "explanation": "In CSRF, the attacker tricks the victim's browser into performing an action on a site where the user is already authenticated."
+    },
+    {
+      "id": "cyb_021",
+      "subtopic": "7. Malware & Attack Techniques",
+      "question": "A 'Logic Bomb' is malware that:",
+      "options": ["Spreads through emails automatically", "Triggers a malicious action when a specific condition or time is met", "Only affects the BIOS", "Requires a physical USB drive to activate"],
+      "answer": 1,
+      "explanation": "Logic bombs lie dormant until a specific date, time, or system event (like a user being deleted from a payroll database)."
+    },
+    {
+      "id": "cyb_022",
+      "subtopic": "9. Secure Software Development",
+      "question": "In the context of software testing, what is 'Fuzzing'?",
+      "options": ["Writing documentation for code", "Providing random or invalid data as input to a program to find vulnerabilities", "Checking if the UI colors are correct", "Manually reading the source code for bugs"],
+      "answer": 1,
+      "explanation": "Fuzz testing helps identify buffer overflows, crashes, and memory leaks by stressing the input handlers."
+    },
+    {
+      "id": "cyb_023",
+      "subtopic": "12. Digital Forensics",
+      "question": "What is the purpose of a 'Write Blocker' during forensic imaging?",
+      "options": ["To speed up the copying process", "To prevent any modification of the original evidence drive", "To encrypt the destination drive", "To bypass the BIOS password"],
+      "answer": 1,
+      "explanation": "Write blockers ensure the integrity of the evidence by intercepting commands that would write data to the source drive."
+    },
+    {
+      "id": "cyb_024",
+      "subtopic": "14. Security Monitoring & Auditing",
+      "question": "What is the difference between an IDS and an IPS?",
+      "options": ["IDS is hardware; IPS is software", "IDS only detects and alerts; IPS detects and automatically takes action to block the threat", "IDS is for internal use; IPS is for external", "There is no difference"],
+      "answer": 1,
+      "explanation": "An Intrusion Prevention System (IPS) is active and can drop malicious packets, while an IDS (Detection) is passive."
+    },
+    {
+      "id": "cyb_025",
+      "subtopic": "3. Cryptography Basics",
+      "question": "Which of the following is a stream cipher?",
+      "options": ["AES", "DES", "RC4", "Blowfish"],
+      "answer": 2,
+      "explanation": "RC4 is a stream cipher that encrypts data bit-by-bit or byte-by-byte, unlike block ciphers like AES."
+    },
+    {
+      "id": "cyb_026",
+      "subtopic": "4. Network Security",
+      "question": "A 'Smurf Attack' is a type of:",
+      "options": ["XSS attack", "Amplification DDoS attack", "Brute force attack", "Phishing attack"],
+      "answer": 1,
+      "explanation": "Smurf attacks use spoofed ICMP packets to a broadcast address to overwhelm a victim with traffic."
+    },
+    {
+      "id": "cyb_027",
+      "subtopic": "6. Web Application Security",
+      "question": "What is the primary function of the 'HttpOnly' flag on a cookie?",
+      "options": ["To ensure the cookie is only sent over HTTPS", "To prevent client-side scripts (JavaScript) from accessing the cookie", "To make the cookie expire faster", "To hide the cookie from the server"],
+      "answer": 1,
+      "explanation": "HttpOnly is a critical defense against XSS-based session hijacking, as it prevents 'document.cookie' access."
+    },
+    {
+      "id": "cyb_028",
+      "subtopic": "7. Malware & Attack Techniques",
+      "question": "A 'Botnet' is primarily used for which of the following activities?",
+      "options": ["Running small spreadsheets", "Coordinating large-scale DDoS attacks or spam campaigns", "Cleaning up system registries", "Updating Windows automatically"],
+      "answer": 1,
+      "explanation": "A Botnet is a network of compromised 'zombie' computers controlled by a single Command & Control (C2) server."
+    },
+    {
+      "id": "cyb_029",
+      "subtopic": "11. Cloud & Virtualization Security",
+      "question": "What is 'Side-Channel Analysis' in a multi-tenant cloud environment?",
+      "options": ["Measuring physical attributes like power or timing to leak data between two VMs on the same hardware", "Hacking the cloud provider's office", "Intercepting calls on a mobile phone", "Deleting the hypervisor"],
+      "answer": 0,
+      "explanation": "Attacks like Spectre or Meltdown use side-channel analysis to read memory across isolation boundaries."
+    },
+    {
+      "id": "cyb_030",
+      "subtopic": "13. Incident Response & Management",
+      "question": "Which document outlines the specific steps an organization takes during a security breach?",
+      "options": ["SLA", "NDA", "IRP (Incident Response Plan)", "AUP"],
+      "answer": 2,
+      "explanation": "The IRP provides the roadmap for identifying, containing, and recovering from an incident."
+    },
+    {
+      "id": "cyb_031",
+      "subtopic": "2. Security Fundamentals & Principles",
+      "question": "The principle of 'Least Privilege' dictates that:",
+      "options": ["Users should have no access at all", "Users should be granted only the minimum access necessary to perform their job", "Everyone should be an administrator", "Access should be granted based on seniority"],
+      "answer": 1,
+      "explanation": "Least privilege reduces the 'attack surface' by ensuring compromised accounts have limited reach."
+    },
+    {
+      "id": "cyb_032",
+      "subtopic": "3. Cryptography Basics",
+      "question": "What is 'Salt' in the context of password hashing?",
+      "options": ["A way to make the password longer", "Random data added to a password before hashing to prevent rainbow table attacks", "A type of encryption key", "A tool for recovering lost passwords"],
+      "answer": 1,
+      "explanation": "Salting ensures that two identical passwords produce different hashes, rendering pre-computed hash tables (rainbow tables) useless."
+    },
+    {
+      "id": "cyb_033",
+      "subtopic": "4. Network Security",
+      "question": "Which protocol is commonly used to create a secure VPN tunnel at the Network Layer?",
+      "options": ["SSL", "TLS", "IPsec", "SSH"],
+      "answer": 2,
+      "explanation": "IPsec provides security at the IP layer, allowing for site-to-site or client-to-site VPNs."
+    },
+    {
+      "id": "cyb_034",
+      "subtopic": "6. Web Application Security",
+      "question": "In a 'Man-in-the-Middle' (MITM) attack, the attacker:",
+      "options": ["Steals a physical server", "Intercepts and potentially alters communication between two parties who believe they are talking directly", "Brute forces a password", "Sends thousands of emails"],
+      "answer": 1,
+      "explanation": "MITM attacks often involve ARP spoofing or DNS poisoning to route traffic through the attacker's machine."
+    },
+    {
+      "id": "cyb_035",
+      "subtopic": "7. Malware & Attack Techniques",
+      "question": "What is 'Spear Phishing'?",
+      "options": ["Phishing targeting a wide audience", "A targeted phishing attack aimed at a specific individual or organization", "Hacking into a seafood company", "Using a phone call to steal data"],
+      "answer": 1,
+      "explanation": "Spear phishing uses personal details to make the bait more convincing to a specific target."
+    },
+    {
+      "id": "cyb_036",
+      "subtopic": "12. Digital Forensics",
+      "question": "A 'Hash' of a forensic image is used primarily to:",
+      "options": ["Compress the image", "Prove that the image has not been altered (Data Integrity)", "Encrypt the image for storage", "Search for keywords in the image"],
+      "answer": 1,
+      "explanation": "By comparing the hash of the image to the original, investigators can prove in court that the evidence is authentic."
+    },
+    {
+      "id": "cyb_037",
+      "subtopic": "14. Security Monitoring & Auditing",
+      "question": "In log management, what is 'Normalization'?",
+      "options": ["Deleting logs older than a month", "Converting logs from different formats into a common, standard format for analysis", "Enciphering logs to keep them secret", "Backing up logs to the cloud"],
+      "answer": 1,
+      "explanation": "Normalization allows a SIEM to compare events from a Windows server and a Cisco router side-by-side."
+    },
+    {
+      "id": "cyb_038",
+      "subtopic": "5. Operating System Security",
+      "question": "What is the primary risk of running a 'Monolithic Kernel' compared to a 'Microkernel'?",
+      "options": ["It is slower", "A bug in any kernel service (like a driver) can crash the entire system", "It does not support multitasking", "It is incompatible with modern hardware"],
+      "answer": 1,
+      "explanation": "In monolithic kernels, all services run in the same address space, meaning a single failure can lead to a system-wide crash."
+    },
+    {
+      "id": "cyb_039",
+      "subtopic": "3. Cryptography Basics",
+      "question": "Diffie-Hellman algorithm is used primarily for:",
+      "options": ["Data Encryption", "Digital Signatures", "Secure Key Exchange", "Hashing"],
+      "answer": 2,
+      "explanation": "Diffie-Hellman allows two parties to establish a shared secret key over an insecure channel."
+    },
+    {
+      "id": "cyb_040",
+      "subtopic": "4. Network Security",
+      "question": "What does a 'Proxy Server' provide to client machines?",
+      "options": ["Increased hardware speed", "Anonymity and filtering by acting as an intermediary for requests", "Direct connection to the database", "Physical cabling for the network"],
+      "answer": 1,
+      "explanation": "Proxies hide the internal IP of the client and can block access to specific websites."
+    },
+    {
+      "id": "cyb_041",
+      "subtopic": "7. Malware & Attack Techniques",
+      "question": "What is 'Vishing'?",
+      "options": ["Phishing via email", "Phishing via voice calls (VoIP)", "Phishing via SMS", "Phishing targeting CEOs"],
+      "answer": 1,
+      "explanation": "Vishing (Voice Phishing) uses phone calls or social engineering via audio to steal credentials."
+    },
+    {
+      "id": "cyb_042",
+      "subtopic": "10. Wireless & Mobile Security",
+      "question": "On an Android or iOS device, what is the security risk of 'Sideloading'?",
+      "options": ["It drains the battery", "It bypasses official app store security reviews, increasing malware risk", "It slows down the internet", "It deletes user contacts"],
+      "answer": 1,
+      "explanation": "Sideloading apps from third-party sources is a common way malware enters mobile devices."
+    },
+    {
+      "id": "cyb_043",
+      "subtopic": "11. Cloud & Virtualization Security",
+      "question": "What is a 'Hypervisor'?",
+      "options": ["A very fast server", "Software that creates and runs virtual machines", "A cloud-based database", "A security guard at a data center"],
+      "answer": 1,
+      "explanation": "The hypervisor manages the hardware resources and isolates the guest operating systems."
+    },
+    {
+      "id": "cyb_044",
+      "subtopic": "1. Introduction to Cyber Security",
+      "question": "An attacker changes the price of an item in an e-commerce database. Which CIA triad principle is violated?",
+      "options": ["Confidentiality", "Integrity", "Availability", "Accountability"],
+      "answer": 1,
+      "explanation": "Integrity refers to the accuracy and trustworthiness of data; unauthorized modification violates it."
+    },
+    {
+      "id": "cyb_045",
+      "subtopic": "15. Cyber Laws & Ethics",
+      "question": "A 'Gray Hat' hacker is defined as someone who:",
+      "options": ["Always hacks with permission", "Always hacks for money", "Hacks without permission but often without malicious intent (sometimes to point out flaws)", "Only hacks for the government"],
+      "answer": 2,
+      "explanation": "Gray hats sit between white and black; they might break laws but don't usually aim to destroy data for profit."
+    },
+    {
+      "id": "cyb_046",
+      "subtopic": "16. Emerging Trends in Cyber Security",
+      "question": "How can AI/Machine Learning be used defensively in Cyber Security?",
+      "options": ["By replacing all human employees", "By detecting anomalies in network traffic that humans might miss", "By making passwords obsolete", "By increasing the physical speed of servers"],
+      "answer": 1,
+      "explanation": "ML models can learn 'normal' behavior and flag deviations that indicate a zero-day attack or insider threat."
+    },
+    {
+      "id": "cyb_047",
+      "subtopic": "3. Cryptography Basics",
+      "question": "Which of the following hash algorithms is currently considered collision-vulnerable and should be avoided?",
+      "options": ["SHA-256", "SHA-3", "MD5", "Bcrypt"],
+      "answer": 2,
+      "explanation": "MD5 is computationally broken; it is easy to find two different inputs that produce the same MD5 hash (a collision)."
+    },
+    {
+      "id": "cyb_048",
+      "subtopic": "4. Network Security",
+      "question": "A 'VLAN' (Virtual Local Area Network) improves security by:",
+      "options": ["Encrypting all traffic", "Logically segmenting the network to limit the broadcast domain and restrict lateral movement", "Replacing the router", "Connecting different cities"],
+      "answer": 1,
+      "explanation": "Segmenting a network ensures that if one department is compromised, the attacker cannot easily access other segments."
+    },
+    {
+      "id": "cyb_049",
+      "subtopic": "6. Web Application Security",
+      "question": "What is the risk of an 'Insecure Direct Object Reference' (IDOR) vulnerability?",
+      "options": ["The server crashes", "An attacker can access resources (like other users' profiles) by simply changing an ID in the URL", "The website becomes slow", "Users are logged out automatically"],
+      "answer": 1,
+      "explanation": "IDOR occurs when an application provides direct access to objects based on user-supplied input without proper authorization checks."
+    },
+    {
+      "id": "cyb_050",
+      "subtopic": "7. Malware & Attack Techniques",
+      "question": "What is the primary goal of a 'Ransomware' attack?",
+      "options": ["To steal user contacts", "To encrypt the victim's files and demand payment for the decryption key", "To use the victim's CPU for mining crypto", "To redirect the victim to a fake website"],
+      "answer": 1,
+      "explanation": "Ransomware targets availability and confidentiality by locking data until a ransom is paid."
+    },
+    {
+      "id": "cyb_051",
+      "subtopic": "12. Digital Forensics",
+      "question": "What is a 'Bit-stream Image' in forensics?",
+      "options": ["A screenshot of the desktop", "A file-by-file copy of the documents folder", "An exact sector-by-sector copy of a physical storage device, including slack space and deleted files", "A list of all installed programs"],
+      "answer": 2,
+      "explanation": "Forensic imaging must capture the entire physical state of the drive to include hidden or deleted data."
+    },
+    {
+      "id": "cyb_052",
+      "subtopic": "14. Security Monitoring & Auditing",
+      "question": "In SIEM terminology, what is 'Correlation'?",
+      "options": ["Backing up data to two locations", "Linking related events from different sources to identify a single security incident", "Connecting a mouse to a keyboard", "Calculating the average network speed"],
+      "answer": 1,
+      "explanation": "Correlation rules allow the system to see that a failed login on the VPN followed by a weird file transfer on a server is actually one coordinated attack."
+    },
+    {
+      "id": "cyb_053",
+      "subtopic": "5. Operating System Security",
+      "question": "What is 'ASLR' (Address Space Layout Randomization)?",
+      "options": ["A way to organize files", "A security technique that randomly arranges the address space positions of key data areas to prevent buffer overflow exploits", "A method for faster boot times", "A tool for mapping the network"],
+      "answer": 1,
+      "explanation": "ASLR makes it difficult for attackers to predict the memory address of a malicious payload."
+    },
+    {
+      "id": "cyb_054",
+      "subtopic": "3. Cryptography Basics",
+      "question": "Elliptic Curve Cryptography (ECC) is gaining popularity because:",
+      "options": ["It is the oldest algorithm", "It provides the same level of security as RSA but with much smaller key sizes", "It is easier to understand", "It does not require math"],
+      "answer": 1,
+      "explanation": "Smaller keys mean faster processing and less power consumption, making ECC ideal for mobile and IoT devices."
+    },
+    {
+      "id": "cyb_055",
+      "subtopic": "4. Network Security",
+      "question": "Which attack involves sending a larger-than-normal amount of data to a specific network port to cause a crash?",
+      "options": ["SQL Injection", "Buffer Overflow", "Ping of Death", "Cross-site scripting"],
+      "answer": 2,
+      "explanation": "The 'Ping of Death' uses oversized ICMP packets to crash systems that cannot handle the reassembly."
+    },
+    {
+      "id": "cyb_056",
+      "subtopic": "7. Malware & Attack Techniques",
+      "question": "What is the difference between a 'Virus' and a 'Trojan'?",
+      "options": ["Viruses are good; Trojans are bad", "Viruses self-replicate; Trojans rely on social engineering to trick a user into executing them", "Trojans are faster", "Viruses only affect hardware"],
+      "answer": 1,
+      "explanation": "Trojans appear as useful software but contain hidden malicious code; they do not self-replicate like viruses do."
+    },
+    {
+      "id": "cyb_057",
+      "subtopic": "13. Incident Response & Management",
+      "question": "What is a 'Business Continuity Plan' (BCP)?",
+      "options": ["A plan to hire more staff", "A strategy to ensure that critical business functions continue during and after a disaster or security incident", "A plan to delete old data", "A marketing strategy"],
+      "answer": 1,
+      "explanation": "BCP focuses on keeping the business running, while DRP (Disaster Recovery) focuses on restoring the IT infrastructure."
+    },
+    {
+      "id": "cyb_058",
+      "subtopic": "15. Cyber Laws & Ethics",
+      "question": "Which regulation in the USA governs the protection of health-related information?",
+      "options": ["FERPA", "HIPAA", "GLBA", "SOX"],
+      "answer": 1,
+      "explanation": "HIPAA (Health Insurance Portability and Accountability Act) sets the standard for protecting sensitive patient data."
+    },
+    {
+      "id": "cyb_059",
+      "subtopic": "8. Authentication & Access Control",
+      "question": "In 'Multi-Factor Authentication' (MFA), which combination represents two different factors?",
+      "options": ["Password and Security Question", "Password and OTP sent to a phone", "Fingerprint and Retina scan", "Smart card and Hardware token"],
+      "answer": 1,
+      "explanation": "MFA requires factors from different categories: Something you know (Password) and Something you have (Phone/OTP)."
+    },
+    {
+      "id": "cyb_060",
+      "subtopic": "11. Cloud & Virtualization Security",
+      "question": "What is 'Cloud Jacking'?",
+      "options": ["Stealing a physical server from a data center", "The process of unauthorized account takeover of a cloud service", "A way to download files faster", "A cloud-based video game"],
+      "answer": 1,
+      "explanation": "Cloud jacking often occurs through stolen credentials or session tokens."
+    },
+    {
+      "id": "cyb_061",
+      "subtopic": "4. Network Security",
+      "question": "Which of the following acts as a secure gateway for users to access internal network resources from an untrusted public network?",
+      "options": ["VPN", "Hub", "Repeater", "Bridge"],
+      "answer": 0,
+      "explanation": "A Virtual Private Network (VPN) creates an encrypted tunnel for secure remote access."
+    },
+    {
+      "id": "cyb_062",
+      "subtopic": "12. Digital Forensics",
+      "question": "What is 'Slack Space' on a hard drive?",
+      "options": ["Empty space at the end of the drive", "The space between the end of a file and the end of the physical disk cluster", "Space used for the OS", "Space reserved for the recycle bin"],
+      "answer": 1,
+      "explanation": "Slack space is important in forensics because it can contain data remnants from previously deleted files."
+    },
+    {
+      "id": "cyb_063",
+      "subtopic": "6. Web Application Security",
+      "question": "What is the purpose of 'Salting' in password storage?",
+      "options": ["To make the password salty", "To ensure unique hashes even for identical passwords", "To speed up hashing", "To compress the database"],
+      "answer": 1,
+      "explanation": "Salting prevents an attacker from using a single rainbow table to crack everyone's password at once."
+    },
+    {
+      "id": "cyb_064",
+      "subtopic": "7. Malware & Attack Techniques",
+      "question": "A 'Drive-by Download' refers to:",
+      "options": ["Downloading files while driving a car", "Malware that is installed without the user's knowledge when they simply visit a compromised website", "A very fast download speed", "Using a peer-to-peer network"],
+      "answer": 1,
+      "explanation": "Drive-by downloads exploit browser or plugin vulnerabilities to install malware automatically."
+    },
+    {
+      "id": "cyb_065",
+      "subtopic": "9. Secure Software Development",
+      "question": "What is the 'Fail-Safe Defaults' principle in secure design?",
+      "options": ["When a system fails, it should default to the most secure state (e.g., denying access)", "The system should never fail", "When a system fails, it should let everyone in", "The system should restart automatically"],
+      "answer": 0,
+      "explanation": "For example, a firewall that crashes should block all traffic rather than letting it all through."
+    },
+    {
+      "id": "cyb_066",
+      "subtopic": "16. Emerging Trends in Cyber Security",
+      "question": "What is 'DevSecOps'?",
+      "options": ["A new programming language", "The integration of security practices into the DevOps software development lifecycle", "A team of security guards", "A way to encrypt hardware"],
+      "answer": 1,
+      "explanation": "DevSecOps moves security 'to the left' by automating security checks during development and deployment."
+    },
+    {
+      "id": "cyb_067",
+      "subtopic": "3. Cryptography Basics",
+      "question": "Which of the following is a non-repudiation mechanism?",
+      "options": ["Strong passwords", "Encryption", "Digital Signatures", "Firewalls"],
+      "answer": 2,
+      "explanation": "Digital signatures prove who sent the message, preventing the sender from later denying it."
+    },
+    {
+      "id": "cyb_068",
+      "subtopic": "4. Network Security",
+      "question": "What is 'Eavesdropping'?",
+      "options": ["A passive attack where the attacker listens to network traffic without altering it", "An active attack where the attacker deletes packets", "A type of firewall", "A secure way to communicate"],
+      "answer": 0,
+      "explanation": "Sniffing/Eavesdropping is a violation of confidentiality."
+    },
+    {
+      "id": "cyb_069",
+      "subtopic": "10. Wireless & Mobile Security",
+      "question": "What is 'Bluejacking'?",
+      "options": ["Stealing a Bluetooth headset", "Sending unsolicited messages to Bluetooth-enabled devices", "Hiding the Bluetooth icon", "Increasing Bluetooth range"],
+      "answer": 1,
+      "explanation": "Bluejacking is relatively harmless compared to Bluesnarfing (stealing data via Bluetooth)."
+    },
+    {
+      "id": "cyb_070",
+      "subtopic": "14. Security Monitoring & Auditing",
+      "question": "What is the main drawback of 'Signature-based' detection in Antivirus/IDS?",
+      "options": ["It is too fast", "It cannot detect new, unknown (zero-day) threats", "It uses too much memory", "It only works on Windows"],
+      "answer": 1,
+      "explanation": "Signature-based systems require a pre-defined database of known threats to work."
+    },
+    {
+      "id": "cyb_071",
+      "subtopic": "1. Introduction to Cyber Security",
+      "question": "The 'confidentiality' of the CIA triad is most commonly ensured through:",
+      "options": ["Backups", "Encryption", "Hashing", "Digital Signatures"],
+      "answer": 1,
+      "explanation": "Encryption makes data unreadable to unauthorized users, ensuring confidentiality."
+    },
+    {
+      "id": "cyb_072",
+      "subtopic": "2. Security Fundamentals & Principles",
+      "question": "What does the 'A' in the AAA security framework stand for, besides Authentication and Authorization?",
+      "options": ["Availability", "Accounting", "Accessibility", "Aggregation"],
+      "answer": 1,
+      "explanation": "Accounting (the third A) tracks what a user does on the system for auditing and billing."
+    },
+    {
+      "id": "cyb_073",
+      "subtopic": "3. Cryptography Basics",
+      "question": "Which of the following block cipher modes of operation is the most insecure due to identical blocks of plaintext producing identical blocks of ciphertext?",
+      "options": ["CBC (Cipher Block Chaining)", "ECB (Electronic Codebook)", "CTR (Counter)", "GCM (Galois/Counter Mode)"],
+      "answer": 1,
+      "explanation": "ECB mode does not hide patterns in the data, making it unsuitable for complex images or documents."
+    },
+    {
+      "id": "cyb_074",
+      "subtopic": "4. Network Security",
+      "question": "A 'Man-in-the-Browser' attack is a variation of MITM that:",
+      "options": ["Hacks the hardware router", "Uses a proxy to steal data", "Infects the browser to modify web pages or transactions in real-time as the user sees them", "Steals the physical laptop"],
+      "answer": 2,
+      "explanation": "This attack often uses a malicious extension or trojan to intercept data after the user has decrypted it in the browser UI."
+    },
+    {
+      "id": "cyb_075",
+      "subtopic": "5. Operating System Security",
+      "question": "What is the primary function of a 'Sandbox' in an OS?",
+      "options": ["To store game files", "To provide an isolated environment where untrusted applications can run without affecting the rest of the system", "To speed up the CPU", "To encrypt the hard drive"],
+      "answer": 1,
+      "explanation": "Sandboxing restricts what an application can access, preventing malware from spreading to the core OS."
+    },
+    {
+      "id": "cyb_076",
+      "subtopic": "6. Web Application Security",
+      "question": "The 'OWASP Top 10' is:",
+      "options": ["A list of the top 10 hackers in the world", "A standard awareness document for developers representing the most critical web application security risks", "A type of firewall", "A new web programming language"],
+      "answer": 1,
+      "explanation": "OWASP Top 10 is the industry standard for identifying web vulnerabilities."
+    },
+    {
+      "id": "cyb_077",
+      "subtopic": "7. Malware & Attack Techniques",
+      "question": "What defines a 'Fileless Malware' attack?",
+      "options": ["The attacker uses no software at all", "The malware operates entirely in RAM and uses legitimate system tools (like PowerShell) to avoid leaving a footprint on the disk", "The malware is stored on a CD", "The malware only targets text files"],
+      "answer": 1,
+      "explanation": "Fileless attacks are difficult to detect because there is no malicious .exe file for antivirus to scan."
+    },
+    {
+      "id": "cyb_078",
+      "subtopic": "8. Authentication & Access Control",
+      "question": "What is 'SAML' (Security Assertion Markup Language) primarily used for?",
+      "options": ["Encrypting hard drives", "Single Sign-On (SSO) and exchanging authentication/authorization data between parties", "Styling websites", "Scanning for viruses"],
+      "answer": 1,
+      "explanation": "SAML allows a user to log in once and access multiple different web applications."
+    },
+    {
+      "id": "cyb_079",
+      "subtopic": "9. Secure Software Development",
+      "question": "Which practice involves reviewing code for security flaws before it is compiled or executed?",
+      "options": ["DAST (Dynamic Analysis)", "SAST (Static Analysis)", "Penetration Testing", "Regression Testing"],
+      "answer": 1,
+      "explanation": "Static Application Security Testing (SAST) analyzes the source code or binaries without executing them."
+    },
+    {
+      "id": "cyb_080",
+      "subtopic": "10. Wireless & Mobile Security",
+      "question": "A 'Rogue Access Point' is:",
+      "options": ["A broken Wi-Fi router", "An unauthorized Wi-Fi access point setup on a corporate network without the admin's knowledge", "A very fast public Wi-Fi", "A Wi-Fi router that uses 5G"],
+      "answer": 1,
+      "explanation": "Rogue APs are dangerous because they can bypass corporate security controls and act as backdoors."
+    },
+    {
+      "id": "cyb_081",
+      "subtopic": "11. Cloud & Virtualization Security",
+      "question": "What is 'Container breakout'?",
+      "options": ["When a Docker container finishes its task", "An attack where a malicious process inside a container gains access to the host OS or other containers", "Deleting a virtual machine", "Increasing the RAM of a container"],
+      "answer": 1,
+      "explanation": "Container breakout is similar to VM escape but happens in OS-level virtualization environments like Docker."
+    },
+    {
+      "id": "cyb_082",
+      "subtopic": "12. Digital Forensics",
+      "question": "What is the 'Chain of Custody'?",
+      "options": ["A type of encryption", "A chronological documentation or paper trail showing the seizure, custody, control, and analysis of physical or electronic evidence", "A list of police officers", "A password manager"],
+      "answer": 1,
+      "explanation": "Without a clear chain of custody, forensic evidence can be dismissed in court as potentially tampered with."
+    },
+    {
+      "id": "cyb_083",
+      "subtopic": "13. Incident Response & Management",
+      "question": "What is the difference between an 'Incident' and an 'Event'?",
+      "options": ["They are the same", "An event is any observable occurrence in a system; an incident is an event that has a negative impact on security", "An incident is hardware; an event is software", "Events are always malicious"],
+      "answer": 1,
+      "explanation": "A user logging in is an 'Event'. A user logging in from a foreign country at 3 AM and deleting files is an 'Incident'."
+    },
+    {
+      "id": "cyb_084",
+      "subtopic": "14. Security Monitoring & Auditing",
+      "question": "What is 'Heuristic Analysis' in threat detection?",
+      "options": ["Looking for exact file matches", "Using rules and algorithms to detect malicious behavior or patterns rather than specific signatures", "Counting the number of files", "Checking the file size"],
+      "answer": 1,
+      "explanation": "Heuristics help detect zero-day malware by identifying suspicious actions like modifying core system files."
+    },
+    {
+      "id": "cyb_085",
+      "subtopic": "15. Cyber Laws & Ethics",
+      "question": "The 'Computer Fraud and Abuse Act' (CFAA) is a major piece of cyber legislation in which country?",
+      "options": ["United Kingdom", "Canada", "United States", "India"],
+      "answer": 2,
+      "explanation": "The CFAA is the primary federal statute used in the US to prosecute computer-related crimes."
+    },
+    {
+      "id": "cyb_086",
+      "subtopic": "16. Emerging Trends in Cyber Security",
+      "question": "What is 'Zero-Knowledge Proof' in cryptography?",
+      "options": ["Knowing nothing about security", "A method by which one party can prove to another that they know a value, without conveying any information apart from the fact that they know it", "A way to guess a password", "A database with zero data"],
+      "answer": 1,
+      "explanation": "ZKP is used in privacy-focused systems to verify identities without sharing the actual credential data."
+    },
+    {
+      "id": "cyb_087",
+      "subtopic": "4. Network Security",
+      "question": "Which of the following is a symptom of 'DNS Cache Poisoning'?",
+      "options": ["The internet becomes very slow", "Users are redirected to a malicious IP address even when they type the correct URL", "The computer restarts", "Emails are not sent"],
+      "answer": 1,
+      "explanation": "Attacker injects fake DNS records into a resolver's cache, causing traffic to be misrouted."
+    },
+    {
+      "id": "cyb_088",
+      "subtopic": "7. Malware & Attack Techniques",
+      "question": "What is 'Whaling' in phishing?",
+      "options": ["Phishing targeting fish markets", "Phishing targeting high-profile targets like CEOs and senior executives", "A very large phishing email", "Phishing that happens on a ship"],
+      "answer": 1,
+      "explanation": "Whaling is a specialized form of spear phishing aimed at the 'big fish' of a company."
+    },
+    {
+      "id": "cyb_089",
+      "subtopic": "3. Cryptography Basics",
+      "question": "Alice and Bob use a symmetric key 'K' to communicate. What happens if an attacker steals 'K'?",
+      "options": ["Nothing, it's asymmetric", "The attacker can decrypt all past and future messages encrypted with 'K'", "The attacker can only see the public key", "The attacker can only sign messages"],
+      "answer": 1,
+      "explanation": "In symmetric crypto, the security depends entirely on the secrecy of the single shared key."
+    },
+    {
+      "id": "cyb_090",
+      "subtopic": "5. Operating System Security",
+      "question": "In a 'Role-Based Access Control' (RBAC) system, permissions are assigned to:",
+      "options": ["Individual users", "The owner of the file", "Specific jobs or functions (Roles) within the organization", "The hardware ID"],
+      "answer": 2,
+      "explanation": "RBAC simplifies management by assigning permissions to roles (e.g., 'Manager', 'Accountant') and then adding users to those roles."
+    },
+    {
+      "id": "cyb_091",
+      "subtopic": "6. Web Application Security",
+      "question": "A 'Clickjacking' attack involves:",
+      "options": ["Stealing a mouse", "Using transparent or opaque layers (iframes) to trick a user into clicking on a button they didn't intend to click", "Clicking too many times on an ad", "Cracking a website's CSS"],
+      "answer": 1,
+      "explanation": "Also known as UI Redressing, this trick leads users to perform actions like deleting their account or making a purchase unknowingly."
+    },
+    {
+      "id": "cyb_092",
+      "subtopic": "9. Secure Software Development",
+      "question": "What does 'Threat Modeling' allow developers to do?",
+      "options": ["Write code faster", "Identify, quantify, and address the security risks associated with an application before it's built", "Choose the best programming language", "Calculate the project budget"],
+      "answer": 1,
+      "explanation": "Threat modeling looks at the architecture to find potential entry points for attackers."
+    },
+    {
+      "id": "cyb_093",
+      "subtopic": "12. Digital Forensics",
+      "question": "A 'Write Blocker' is used when:",
+      "options": ["Writing a report", "Acquiring data from a storage device to ensure the original data is not modified", "Encryption is enabled", "A virus is detected"],
+      "answer": 1,
+      "explanation": "Maintaining the integrity of the original evidence is the core rule of digital forensics."
+    },
+    {
+      "id": "cyb_094",
+      "subtopic": "4. Network Security",
+      "question": "What is 'ARP Spoofing'?",
+      "options": ["Hacking into a router", "Sending fake ARP messages to link an attacker's MAC address with a legitimate IP address on a LAN", "Stealing a Wi-Fi password", "A type of DDoS"],
+      "answer": 1,
+      "explanation": "ARP spoofing allows an attacker to intercept, modify, or stop data intended for a specific IP."
+    },
+    {
+      "id": "cyb_095",
+      "subtopic": "10. Wireless & Mobile Security",
+      "question": "Which of the following is a risk of 'Jailbreaking' or 'Rooting' a mobile device?",
+      "options": ["The screen becomes bigger", "The device loses its warranty and removes critical security sandboxes, making it easier for malware to gain system access", "The battery life doubles", "International calling becomes free"],
+      "answer": 1,
+      "explanation": "Jailbreaking compromises the manufacturer's security model, leaving the device vulnerable."
+    },
+    {
+      "id": "cyb_096",
+      "subtopic": "2. Security Fundamentals & Principles",
+      "question": "What is the principle of 'Separation of Duties'?",
+      "options": ["One person does everything", "Dividing a high-risk task among multiple people to prevent fraud or error", "Working in different buildings", "Using different programming languages"],
+      "answer": 1,
+      "explanation": "For example, the person who creates a payment should not be the same person who authorizes it."
+    },
+    {
+      "id": "cyb_097",
+      "subtopic": "3. Cryptography Basics",
+      "question": "What is 'Perfect Forward Secrecy' (PFS)?",
+      "options": ["Encryption that never breaks", "A feature that ensures a compromise of a long-term private key does not compromise past session keys", "A way to predict future keys", "Using 512-bit keys"],
+      "answer": 1,
+      "explanation": "PFS generates unique session keys for every connection so that a future theft of the server's private key cannot be used to decrypt recorded traffic."
+    },
+    {
+      "id": "cyb_098",
+      "subtopic": "7. Malware & Attack Techniques",
+      "question": "What defines a 'Zero-Day' vulnerability?",
+      "options": ["A vulnerability that only lasts one day", "A vulnerability that is known to the vendor and has a patch", "A vulnerability that is unknown to the vendor and has no patch available", "A vulnerability in old software"],
+      "answer": 2,
+      "explanation": "Zero-day refers to the fact that the developer has had 'zero days' to fix the flaw since it was discovered."
+    },
+    {
+      "id": "cyb_099",
+      "subtopic": "11. Cloud & Virtualization Security",
+      "question": "What is 'Serverless' security primarily concerned with?",
+      "options": ["Managing hardware firewalls", "Securing function-level code, API triggers, and data in transit as the infrastructure is managed by the provider", "Buying servers", "Physical locks on data centers"],
+      "answer": 1,
+      "explanation": "In serverless (FaaS), you don't secure the OS; you secure the code logic and the identity of those calling the functions."
+    },
+    {
+      "id": "cyb_100",
+      "subtopic": "14. Security Monitoring & Auditing",
+      "question": "What is an 'Audit Trail'?",
+      "options": ["A path in the woods", "A chronological record of system activities that allows an investigator to reconstruct events", "A backup of the registry", "A list of employee salaries"],
+      "answer": 1,
+      "explanation": "Audit trails are vital for accountability and determining how a breach occurred."
+    },
+    {
+      "id": "cyb_101",
+      "subtopic": "4. Network Security",
+      "question": "What is 'SQL Injection' primarily used for?",
+      "options": ["Crashing the web server", "Bypassing authentication and stealing or modifying data in a database", "Changing the website's CSS", "Sending spam emails"],
+      "answer": 1,
+      "explanation": "SQLi occurs when malicious SQL statements are inserted into entry fields for execution."
+    }
+  ]
+}
