@@ -1,0 +1,724 @@
+{
+  "questions": [
+    {
+      "id": "wd_001",
+      "subtopic": "1. Introduction to Web Development",
+      "question": "In a standard 3-tier architecture, what is the primary responsibility of the Logic Tier (Application Tier)?",
+      "options": ["To manage physical hardware.", "To handle business rules and data validation.", "To render HTML/CSS.", "To store raw data records."],
+      "answer": 1,
+      "explanation": "The Logic Tier processes data and enforces business rules between the UI and the Database."
+    },
+    {
+      "id": "wd_002",
+      "subtopic": "1. Introduction to Web Development",
+      "question": "Which architecture pattern involves the server sending a fully rendered page to the client for every request?",
+      "options": ["Single Page Application (SPA)", "Multi-Page Application (MPA)", "Micro-frontend", "Serverless"],
+      "answer": 1,
+      "explanation": "MPAs (like traditional PHP or ASP.NET sites) render complete pages on the server for each route change."
+    },
+    {
+      "id": "wd_003",
+      "subtopic": "1. Introduction to Web Development",
+      "question": "What is the primary role of a Web Server versus an Application Server?",
+      "options": ["Web servers handle HTTP; App servers handle business logic and multi-threading.", "They are identical.", "Web servers store databases; App servers store HTML.", "Web servers are only for static CSS."],
+      "answer": 0,
+      "explanation": "Web servers (Nginx/Apache) focus on HTTP requests and static files, while App servers handle dynamic logic and integration."
+    },
+    {
+      "id": "wd_004",
+      "subtopic": "1. Introduction to Web Development",
+      "question": "What does 'Tiers' refer to in architecture, as opposed to 'Layers'?",
+      "options": ["Tiers are physical deployment separations; Layers are logical code separations.", "Layers are physical; Tiers are logical.", "They mean the same thing.", "Tiers are only for databases."],
+      "answer": 0,
+      "explanation": "Layers refer to how you organize code (e.g., Folder structure), while Tiers refer to where the code runs (e.g., different servers)."
+    },
+    {
+      "id": "wd_005",
+      "subtopic": "1. Introduction to Web Development",
+      "question": "Which of the following is a characteristic of a 'Thin Client'?",
+      "options": ["Heavy processing on the client-side.", "Minimal processing on the client; most logic occurs on the server.", "The client has its own database.", "It does not require an internet connection."],
+      "answer": 1,
+      "explanation": "Thin clients rely on the server for processing, focusing mainly on displaying the UI."
+    },
+    {
+      "id": "wd_006",
+      "subtopic": "2. Web Architecture & Protocols",
+      "question": "How does HTTP/2 improve performance compared to HTTP/1.1?",
+      "options": ["By using binary encoding and Multiplexing.", "By using text encoding.", "By opening multiple TCP connections.", "By removing SSL requirements."],
+      "answer": 0,
+      "explanation": "Multiplexing allows multiple resources to be sent over a single connection simultaneously."
+    },
+    {
+      "id": "wd_007",
+      "subtopic": "2. Web Architecture & Protocols",
+      "question": "What is the primary advantage of HTTP/3 (QUIC) over HTTP/2?",
+      "options": ["It uses TCP.", "It uses UDP to eliminate Head-of-Line blocking at the transport layer.", "It is slower but more secure.", "It doesn't use headers."],
+      "answer": 1,
+      "explanation": "QUIC uses UDP to prevent a single lost packet from stopping all other streams in the connection."
+    },
+    {
+      "id": "wd_008",
+      "subtopic": "2. Web Architecture & Protocols",
+      "question": "In the DNS resolution process, what is the role of the 'Authoritative Nameserver'?",
+      "options": ["It caches previous results.", "It holds the actual IP address record for the specific domain.", "It is the first server a browser contacts.", "It manages the local router settings."],
+      "answer": 1,
+      "explanation": "The Authoritative Nameserver is the final stop in the DNS query that knows the IP for the requested domain."
+    },
+    {
+      "id": "wd_009",
+      "subtopic": "2. Web Architecture & Protocols",
+      "question": "What does the 'Keep-Alive' header do in HTTP/1.1?",
+      "options": ["It refreshes the page automatically.", "It allows the same TCP connection to be used for multiple requests.", "It keeps the user logged in.", "It prevents the server from crashing."],
+      "answer": 1,
+      "explanation": "Persistent connections reduce the overhead of setting up new TCP handshakes for every image or script."
+    },
+    {
+      "id": "wd_010",
+      "subtopic": "2. Web Architecture & Protocols",
+      "question": "What is the purpose of the 'OPTIONS' HTTP method?",
+      "options": ["To delete a resource.", "To describe the communication options for the target resource (used in CORS).", "To update a user profile.", "To login to a site."],
+      "answer": 1,
+      "explanation": "The browser sends an OPTIONS 'preflight' request to check if the server allows a cross-origin request."
+    },
+    {
+      "id": "wd_011",
+      "subtopic": "3. HTML Fundamentals",
+      "question": "Which of the following is a 'Semantic' HTML5 element?",
+      "options": [" <div> ", " <span> ", " <article> ", " <font>"],
+      "answer": 2,
+      "explanation": "Semantic elements like <article> describe their meaning to both the browser and the developer."
+    },
+    {
+      "id": "wd_012",
+      "subtopic": "3. HTML Fundamentals",
+      "question": "What does the 'async' attribute do in a <script> tag?",
+      "options": ["Blocks parsing until the script is done.", "Downloads the script in parallel and executes it as soon as it's ready, potentially before parsing finishes.", "Defers execution until HTML is fully parsed.", "Runs the script in a background worker."],
+      "answer": 1,
+      "explanation": "Async scripts don't wait for parsing; they execute as soon as they are downloaded."
+    },
+    {
+      "id": "wd_013",
+      "subtopic": "3. HTML Fundamentals",
+      "question": "What is the function of the <meta name='viewport' content='...'> tag?",
+      "options": ["To set the page background color.", "To control how the page is scaled and displayed on different devices.", "To link a CSS file.", "To provide a description for Google."],
+      "answer": 1,
+      "explanation": "The viewport meta tag is essential for responsive design, telling browsers to match the screen width."
+    },
+    {
+      "id": "wd_014",
+      "subtopic": "3. HTML Fundamentals",
+      "question": "What is the difference between 'SVG' and 'Canvas' in HTML5?",
+      "options": ["SVG is vector-based (retains quality); Canvas is pixel-based (raster).", "Canvas is better for text.", "SVG is faster for 100,000 objects.", "They are the same."],
+      "answer": 0,
+      "explanation": "SVG uses XML/DOM and is scalable; Canvas uses JavaScript and is better for high-performance games/pixels."
+    },
+    {
+      "id": "wd_015",
+      "subtopic": "3. HTML Fundamentals",
+      "question": "Which HTML5 API allows for storing data locally in the browser with no expiration date?",
+      "options": ["Cookies", "SessionStorage", "LocalStorage", "IndexedDB"],
+      "answer": 2,
+      "explanation": "LocalStorage persists even after the browser is closed and reopened."
+    },
+    {
+      "id": "wd_016",
+      "subtopic": "4. CSS Fundamentals",
+      "question": "If an element has 'box-sizing: border-box', what does the 'width' property include?",
+      "options": ["Content only.", "Content + Padding + Border.", "Content + Margin.", "Padding only."],
+      "answer": 1,
+      "explanation": "Border-box makes sizing much easier by including padding and border inside the specified width."
+    },
+    {
+      "id": "wd_017",
+      "subtopic": "4. CSS Fundamentals",
+      "question": "Calculate the specificity: 'ul#nav li.active a'?",
+      "options": ["0, 1, 1, 3", "0, 1, 1, 2", "1, 0, 1, 2", "0, 1, 0, 3"],
+      "answer": 0,
+      "explanation": "1 ID (#nav), 1 Class (.active), 3 Elements (ul, li, a). Score: 0,1,1,3."
+    },
+    {
+      "id": "wd_018",
+      "subtopic": "4. CSS Fundamentals",
+      "question": "What is the difference between 'display: none' and 'visibility: hidden'?",
+      "options": ["None.", "'display: none' removes the element from the layout; 'visibility: hidden' hides it but keeps its space.", "'visibility: hidden' is faster.", "They both remove the element from the DOM."],
+      "answer": 1,
+      "explanation": "Display:none collapses the space; visibility:hidden leaves an empty gap."
+    },
+    {
+      "id": "wd_019",
+      "subtopic": "4. CSS Fundamentals",
+      "question": "Which CSS unit is relative to the font-size of the root element (<html>)?",
+      "options": ["em", "rem", "px", "vh"],
+      "answer": 1,
+      "explanation": "rem (Root EM) always looks at the root font size, making it consistent across the site."
+    },
+    {
+      "id": "wd_020",
+      "subtopic": "4. CSS Fundamentals",
+      "question": "What does the 'z-index' property require to function correctly?",
+      "options": ["A background color.", "A width.", "A 'position' property other than 'static'.", "A display: block."],
+      "answer": 2,
+      "explanation": "z-index only works on positioned elements (relative, absolute, fixed, or sticky)."
+    },
+    {
+      "id": "wd_021",
+      "subtopic": "5. Advanced CSS & Responsive Design",
+      "question": "In CSS Grid, what does '1fr' represent?",
+      "options": ["1 Fixed Resolution.", "A fraction of the available space in the grid container.", "1 Font Row.", "100 pixels."],
+      "answer": 1,
+      "explanation": "The 'fr' unit allows for flexible layouts by distributing remaining space."
+    },
+    {
+      "id": "wd_022",
+      "subtopic": "5. Advanced CSS & Responsive Design",
+      "question": "Which Flexbox property controls how a single item aligns along the cross-axis, overriding the container's settings?",
+      "options": ["justify-content", "align-items", "align-self", "flex-direction"],
+      "answer": 2,
+      "explanation": "Align-self allows individual control of an item's vertical alignment (in a row)."
+    },
+    {
+      "id": "wd_023",
+      "subtopic": "5. Advanced CSS & Responsive Design",
+      "question": "What is a 'Breakpoint' in the context of Responsive Web Design?",
+      "options": ["A point where the website crashes.", "A specific screen width defined in a media query where the layout changes.", "A way to pause JavaScript execution.", "The end of a CSS file."],
+      "answer": 1,
+      "explanation": "Breakpoints allow developers to apply different styles for mobile, tablet, and desktop."
+    },
+    {
+      "id": "wd_024",
+      "subtopic": "5. Advanced CSS & Responsive Design",
+      "question": "What is the primary purpose of 'CSS Variables' (Custom Properties)?",
+      "options": ["To make CSS run faster.", "To store reusable values (like colors) that can be updated dynamically.", "To replace JavaScript.", "To detect the browser version."],
+      "answer": 1,
+      "explanation": "Variables like --main-color allow for easy theme switching and maintenance."
+    },
+    {
+      "id": "wd_025",
+      "subtopic": "5. Advanced CSS & Responsive Design",
+      "question": "Which property is used to create a responsive grid that automatically wraps items without using media queries?",
+      "options": ["grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))", "display: flex", "float: left", "width: 100%"],
+      "answer": 0,
+      "explanation": "Auto-fit/minmax is the modern way to create fluid grids that adjust based on available space."
+    },
+    {
+      "id": "wd_026",
+      "subtopic": "6. JavaScript Fundamentals",
+      "question": "What is the difference between 'let' and 'var'?",
+      "options": ["'var' is block-scoped; 'let' is function-scoped.", "'let' is block-scoped; 'var' is function-scoped.", "They are identical.", "Only 'var' can be used in loops."],
+      "answer": 1,
+      "explanation": "Let and Const respect { } blocks, while Var is hoisted and scoped to the entire function."
+    },
+    {
+      "id": "wd_027",
+      "subtopic": "6. JavaScript Fundamentals",
+      "question": "What is 'Hoisting'?",
+      "options": ["Compressing images.", "The behavior where declarations are moved to the top of their scope during compile time.", "Increasing server RAM.", "A method to link JS files."],
+      "answer": 1,
+      "explanation": "Hoisting allows you to call functions before they are defined in the code."
+    },
+    {
+      "id": "wd_028",
+      "subtopic": "6. JavaScript Fundamentals",
+      "question": "What is the output of 'typeof NaN'?",
+      "options": ["'string'", "'number'", "'undefined'", "'object'"],
+      "answer": 1,
+      "explanation": "JavaScript considers 'Not-a-Number' to be of the 'number' type."
+    },
+    {
+      "id": "wd_029",
+      "subtopic": "6. JavaScript Fundamentals",
+      "question": "What does the 'use strict' directive do?",
+      "options": ["Makes the code run faster.", "Enforces stricter parsing and error handling (e.g., prevents global variables).", "Encrypts the script.", "Disables all loops."],
+      "answer": 1,
+      "explanation": "Strict mode helps catch common coding bugs and prevents unsafe actions."
+    },
+    {
+      "id": "wd_030",
+      "subtopic": "6. JavaScript Fundamentals",
+      "question": "What is a 'Callback' function?",
+      "options": ["A function passed as an argument to another function to be executed later.", "A function that calls itself.", "A way to return to the previous page.", "A security feature."],
+      "answer": 0,
+      "explanation": "Callbacks are the foundation of asynchronous programming in JavaScript."
+    },
+    {
+      "id": "wd_031",
+      "subtopic": "7. Advanced JavaScript",
+      "question": "What is a 'Closure'?",
+      "options": ["A way to close the browser.", "A function that remembers its lexical scope even when executed outside that scope.", "A private database.", "A minified script."],
+      "answer": 1,
+      "explanation": "Closures allow for data privacy and are used heavily in functional programming."
+    },
+    {
+      "id": "wd_032",
+      "subtopic": "7. Advanced JavaScript",
+      "question": "How does Prototypal Inheritance work in JavaScript?",
+      "options": ["Objects inherit properties directly from classes like in Java.", "Objects have a hidden [[Prototype]] link to another object from which they inherit properties.", "It doesn't exist; JS uses only classes now.", "Properties are copied into every new object."],
+      "answer": 1,
+      "explanation": "JS uses a prototype chain. If a property isn't found on an object, it looks up the chain."
+    },
+    {
+      "id": "wd_033",
+      "subtopic": "7. Advanced JavaScript",
+      "question": "What is the 'this' keyword in an arrow function?",
+      "options": ["It refers to the element that triggered the event.", "It is lexically scoped (inherited from the surrounding non-arrow function).", "It refers to the global window object always.", "It is undefined."],
+      "answer": 1,
+      "explanation": "Arrow functions do not have their own 'this'; they capture it from the parent scope."
+    },
+    {
+      "id": "wd_034",
+      "subtopic": "7. Advanced JavaScript",
+      "question": "What is the purpose of 'Async/Await'?",
+      "options": ["To make code run in parallel threads.", "To write asynchronous code that looks and behaves like synchronous code using Promises.", "To stop the script from running.", "To handle CSS transitions."],
+      "answer": 1,
+      "explanation": "Async/Await is syntactic sugar over Promises, making code cleaner and more readable."
+    },
+    {
+      "id": "wd_035",
+      "subtopic": "7. Advanced JavaScript",
+      "question": "What is the 'Event Loop'?",
+      "options": ["A loop that repeats a task 10 times.", "The mechanism that handles the execution of multiple chunks of code, following the Call Stack and Task Queues.", "A security loop in the browser.", "The way CSS animations repeat."],
+      "answer": 1,
+      "explanation": "The Event Loop allows JS to be non-blocking by offloading tasks and processing them when ready."
+    },
+    {
+      "id": "wd_036",
+      "subtopic": "8. Frontend Frameworks & Libraries",
+      "question": "What is the 'Virtual DOM' in React?",
+      "options": ["A direct copy of the browser's DOM.", "A lightweight representation of the real DOM used to calculate efficient updates (diffing).", "A way to run React on a server.", "A CSS engine."],
+      "answer": 1,
+      "explanation": "Virtual DOM minimizes expensive real-DOM manipulations by only updating what actually changed."
+    },
+    {
+      "id": "wd_037",
+      "subtopic": "8. Frontend Frameworks & Libraries",
+      "question": "What is 'Prop Drilling'?",
+      "options": ["A high-performance way to pass data.", "The process of passing data through multiple levels of components just to reach a deep child.", "A way to delete properties from an object.", "A method to optimize images."],
+      "answer": 1,
+      "explanation": "Prop drilling is often solved by using State Management (Redux/Context API)."
+    },
+    {
+      "id": "wd_038",
+      "subtopic": "8. Frontend Frameworks & Libraries",
+      "question": "In Angular, what is 'Dependency Injection'?",
+      "options": ["Injecting viruses into code.", "A design pattern where a class receives its dependencies from an external source rather than creating them itself.", "Adding CSS to a component.", "Connecting to a database."],
+      "answer": 1,
+      "explanation": "DI makes code more modular, testable, and maintainable."
+    },
+    {
+      "id": "wd_039",
+      "subtopic": "8. Frontend Frameworks & Libraries",
+      "question": "What is the primary purpose of a 'Single Page Application' (SPA)?",
+      "options": ["To have only one page on the whole internet.", "To provide a fluid user experience by dynamically updating the current page rather than loading entire new pages from the server.", "To make the site load slower.", "To disable the back button."],
+      "answer": 1,
+      "explanation": "SPAs load the app once and use JS to swap content, making it feel like a native desktop app."
+    },
+    {
+      "id": "wd_040",
+      "subtopic": "8. Frontend Frameworks & Libraries",
+      "question": "What is 'State' in a frontend component?",
+      "options": ["The physical location of the user.", "An object that holds information that may change over the lifetime of the component.", "The CSS style of the component.", "The server URL."],
+      "answer": 1,
+      "explanation": "When state changes, the component usually re-renders to reflect the new data."
+    },
+    {
+      "id": "wd_041",
+      "subtopic": "9. Backend Development Fundamentals",
+      "question": "What are the four basic functions of persistent storage (CRUD)?",
+      "options": ["Copy, Read, Update, Delete.", "Create, Read, Update, Delete.", "Create, Run, Undo, Destroy.", "Connect, Read, Use, Disconnect."],
+      "answer": 1,
+      "explanation": "CRUD represents the standard operations performed on database records."
+    },
+    {
+      "id": "wd_042",
+      "subtopic": "9. Backend Development Fundamentals",
+      "question": "What is 'Session' management versus 'JWT'?",
+      "options": ["Sessions are stored on the server; JWTs are stored on the client (stateless).", "JWT is only for mobile apps.", "Sessions are faster than JWTs.", "JWT requires a database on every request."],
+      "answer": 0,
+      "explanation": "JWT (JSON Web Tokens) allows for stateless authentication, which is easier to scale across multiple servers."
+    },
+    {
+      "id": "wd_043",
+      "subtopic": "9. Backend Development Fundamentals",
+      "question": "What is the purpose of 'Hashing' a password?",
+      "options": ["To encrypt it so it can be decrypted later.", "To turn the password into a one-way string that cannot be reversed.", "To make the password shorter.", "To store it in plain text."],
+      "answer": 1,
+      "explanation": "Hashing protects user data; even if the database is stolen, the actual passwords are not revealed."
+    },
+    {
+      "id": "wd_044",
+      "subtopic": "9. Backend Development Fundamentals",
+      "question": "What is 'Load Balancing'?",
+      "options": ["Making sure the server doesn't fall over.", "Distributing incoming network traffic across multiple servers to ensure reliability and performance.", "Increasing the power of a single server.", "Charging users based on their data usage."],
+      "answer": 1,
+      "explanation": "Load balancers prevent any single server from becoming a bottleneck."
+    },
+    {
+      "id": "wd_045",
+      "subtopic": "9. Backend Development Fundamentals",
+      "question": "What is a 'Web Socket'?",
+      "options": ["A physical plug for the internet.", "A protocol providing full-duplex communication channels over a single TCP connection (Real-time).", "A way to hide IP addresses.", "A CSS property for circles."],
+      "answer": 1,
+      "explanation": "WebSockets allow the server to push data to the client instantly (e.g., chat apps)."
+    },
+    {
+      "id": "wd_046",
+      "subtopic": "10. Server-Side Programming",
+      "question": "What is the 'Event Loop' in Node.js?",
+      "options": ["A multi-threaded engine.", "A single-threaded loop that manages asynchronous I/O operations.", "A loop that checks for viruses.", "The way Node.js connects to a database."],
+      "answer": 1,
+      "explanation": "The Event Loop allows Node.js to handle thousands of concurrent connections efficiently on one thread."
+    },
+    {
+      "id": "wd_047",
+      "subtopic": "10. Server-Side Programming",
+      "question": "What is a 'Stream' in Node.js?",
+      "options": ["A way to download a whole file into RAM.", "An interface for handling data piece-by-piece without loading it all into memory (efficiency).", "A live video on YouTube.", "A type of loop."],
+      "answer": 1,
+      "explanation": "Streams are essential for processing large files or data transfers without crashing the server."
+    },
+    {
+      "id": "wd_048",
+      "subtopic": "10. Server-Side Programming",
+      "question": "In Node.js, what is the role of 'package.json'?",
+      "options": ["To store the server's code.", "To list dependencies, scripts, and metadata for the project.", "To encrypt the project.", "To manage the server's RAM."],
+      "answer": 1,
+      "explanation": "Package.json acts as the manifest for the entire Node.js application."
+    },
+    {
+      "id": "wd_049",
+      "subtopic": "10. Server-Side Programming",
+      "question": "What is 'Process Management' (e.g., using PM2)?",
+      "options": ["Managing the hiring of developers.", "Ensuring background scripts stay alive and restart automatically if they crash.", "Writing code that runs on Windows.", "Managing the CPU temperature."],
+      "answer": 1,
+      "explanation": "PM2 or similar tools keep production servers running 24/7."
+    },
+    {
+      "id": "wd_050",
+      "subtopic": "10. Server-Side Programming",
+      "question": "What is 'Server-Side Rendering' (SSR) advantage?",
+      "options": ["Better for SEO and faster initial page load (First Contentful Paint).", "Uses less server CPU.", "Easier to write than CSR.", "It only works with HTML."],
+      "answer": 0,
+      "explanation": "SSR sends a fully-formed page to the browser, which search engines can easily index."
+    },
+    {
+      "id": "wd_051",
+      "subtopic": "11. Databases for Web Applications",
+      "question": "What is the difference between SQL and NoSQL?",
+      "options": ["SQL is fast; NoSQL is slow.", "SQL is relational with fixed schemas; NoSQL is non-relational with flexible schemas.", "SQL is for web; NoSQL is for mobile.", "NoSQL doesn't use a server."],
+      "answer": 1,
+      "explanation": "SQL is great for complex relationships; NoSQL is great for scale and unstructured data."
+    },
+    {
+      "id": "wd_052",
+      "subtopic": "11. Databases for Web Applications",
+      "question": "What is 'Normalization' in databases?",
+      "options": ["Making all data the same size.", "The process of organizing data to reduce redundancy and improve data integrity.", "Converting NoSQL to SQL.", "Encrypting the database."],
+      "answer": 1,
+      "explanation": "Normalization involves splitting tables to ensure data is only stored in one place."
+    },
+    {
+      "id": "wd_053",
+      "subtopic": "11. Databases for Web Applications",
+      "question": "What is an 'Index' in a database used for?",
+      "options": ["To list all tables.", "To speed up data retrieval operations (searches) at the cost of slower writes.", "To store user passwords.", "To count the number of rows."],
+      "answer": 1,
+      "explanation": "Indexing creates a lookup table so the database doesn't have to scan every row."
+    },
+    {
+      "id": "wd_054",
+      "subtopic": "11. Databases for Web Applications",
+      "question": "What is ACID compliance?",
+      "options": ["A way to clean data.", "Atomicity, Consistency, Isolation, Durability - ensures reliable transactions.", "A protocol for web security.", "A database for chemistry."],
+      "answer": 1,
+      "explanation": "ACID properties are crucial for financial systems where data accuracy is non-negotiable."
+    },
+    {
+      "id": "wd_055",
+      "subtopic": "11. Databases for Web Applications",
+      "question": "What is an 'ORM' (Object-Relational Mapper)?",
+      "options": ["A type of database.", "A library that lets you query and manipulate data from a database using an object-oriented paradigm.", "A way to draw database diagrams.", "A security tool."],
+      "answer": 1,
+      "explanation": "ORMs (like Hibernate, Sequelize) allow developers to write DB queries in their native programming language."
+    },
+    {
+      "id": "wd_056",
+      "subtopic": "12. Web Security",
+      "question": "What is 'SQL Injection'?",
+      "options": ["Adding a database to a website.", "A vulnerability where an attacker can execute malicious SQL statements that control a web app's database.", "A way to speed up SQL queries.", "Using SQL in a JavaScript file."],
+      "answer": 1,
+      "explanation": "Prevented by using 'Parameterized Queries' or ORMs."
+    },
+    {
+      "id": "wd_057",
+      "subtopic": "12. Web Security",
+      "question": "What is Cross-Site Scripting (XSS)?",
+      "options": ["Connecting two websites.", "Injecting malicious scripts into web pages viewed by other users.", "A way to share CSS between sites.", "A script that runs on the server."],
+      "answer": 1,
+      "explanation": "XSS can be used to steal session cookies or deface websites."
+    },
+    {
+      "id": "wd_058",
+      "subtopic": "12. Web Security",
+      "question": "What is Cross-Site Request Forgery (CSRF)?",
+      "options": ["Copying a website.", "Tricking a victim into submitting a malicious request to a web app where they are currently authenticated.", "Stealing a user's password.", "A virus that spreads through HTML."],
+      "answer": 1,
+      "explanation": "CSRF exploits the trust a site has in the user's browser (usually mitigated with CSRF tokens)."
+    },
+    {
+      "id": "wd_059",
+      "subtopic": "12. Web Security",
+      "question": "What does HTTPS provide that HTTP does not?",
+      "options": ["Faster speeds.", "Encryption, Data Integrity, and Authentication (via SSL/TLS).", "Better images.", "It's only for banks."],
+      "answer": 1,
+      "explanation": "HTTPS ensures the data between the client and server cannot be intercepted or tampered with."
+    },
+    {
+      "id": "wd_060",
+      "subtopic": "12. Web Security",
+      "question": "What is 'Content Security Policy' (CSP)?",
+      "options": ["A list of rules for writing code.", "An HTTP header that allows site operators to restrict the resources (JS, CSS, Images) that a browser can load for a page.", "A way to hide content from kids.", "A privacy law."],
+      "answer": 1,
+      "explanation": "CSP is a powerful tool to prevent XSS and data injection attacks."
+    },
+    {
+      "id": "wd_061",
+      "subtopic": "13. Web Performance & Optimization",
+      "question": "What is 'Minification'?",
+      "options": ["Making images smaller.", "The process of removing unnecessary characters (like spaces and comments) from source code without changing its functionality.", "Using a smaller font size.", "Reducing the number of pages on a site."],
+      "answer": 1,
+      "explanation": "Minification reduces the file size, making the website load faster."
+    },
+    {
+      "id": "wd_062",
+      "subtopic": "13. Web Performance & Optimization",
+      "question": "What is a 'Content Delivery Network' (CDN)?",
+      "options": ["A way to watch movies.", "A system of distributed servers that deliver web content based on the geographic locations of the user.", "A faster internet cable.", "A local database."],
+      "answer": 1,
+      "explanation": "CDNs reduce latency by serving files from a server physically closer to the user."
+    },
+    {
+      "id": "wd_063",
+      "subtopic": "13. Web Performance & Optimization",
+      "question": "What is 'Lazy Loading'?",
+      "options": ["A developer who doesn't work.", "Delaying the loading of non-critical resources (like images) until they are actually needed (e.g., when scrolled into view).", "A slow server.", "Loading the whole site in the background."],
+      "answer": 1,
+      "explanation": "Lazy loading saves bandwidth and improves initial load time."
+    },
+    {
+      "id": "wd_064",
+      "subtopic": "13. Web Performance & Optimization",
+      "question": "What is 'Caching'?",
+      "options": ["A way to win money.", "Storing copies of files in a temporary storage location so they can be accessed more quickly.", "Deleting old files.", "Hidden code in a browser."],
+      "answer": 1,
+      "explanation": "Browser caching prevents redownloading the same CSS/JS on every page visit."
+    },
+    {
+      "id": "wd_065",
+      "subtopic": "13. Web Performance & Optimization",
+      "question": "What is 'Critical Rendering Path'?",
+      "options": ["The steps the browser takes to convert HTML, CSS, and JS into pixels on the screen.", "The way a developer writes code.", "A high-performance server.", "The main link on a homepage."],
+      "answer": 0,
+      "explanation": "Optimizing the CRP involves reducing the number of render-blocking resources."
+    },
+    {
+      "id": "wd_066",
+      "subtopic": "14. Web Testing & Debugging",
+      "question": "What is 'Unit Testing'?",
+      "options": ["Testing the whole company.", "Testing individual units or components of a software in isolation.", "Testing the site on one mobile phone.", "Testing the connection speed."],
+      "answer": 1,
+      "explanation": "Unit tests ensure that small pieces of code (functions/classes) work as expected."
+    },
+    {
+      "id": "wd_067",
+      "subtopic": "14. Web Testing & Debugging",
+      "question": "What is 'Integration Testing'?",
+      "options": ["Testing code in a different country.", "Testing how different modules or services work together as a group.", "Merging code into GitHub.", "Testing CSS on multiple browsers."],
+      "answer": 1,
+      "explanation": "Integration tests catch bugs in the communication between modules (e.g., API to Database)."
+    },
+    {
+      "id": "wd_068",
+      "subtopic": "14. Web Testing & Debugging",
+      "question": "What is 'Regression Testing'?",
+      "options": ["Testing a site for older users.", "Re-running tests to ensure that new changes haven't broken existing functionality.", "Testing a site for bugs.", "Returning to an older version of code."],
+      "answer": 1,
+      "explanation": "Regression testing is vital when adding new features to an existing system."
+    },
+    {
+      "id": "wd_069",
+      "subtopic": "14. Web Testing & Debugging",
+      "question": "What is 'Lighthouse' in Chrome DevTools?",
+      "options": ["A tool for finding lost files.", "An open-source, automated tool for improving the quality of web pages (Performance, SEO, Accessibility).", "A security firewall.", "A way to change the theme of the browser."],
+      "answer": 1,
+      "explanation": "Lighthouse provides a score and suggestions for improving web vitals."
+    },
+    {
+      "id": "wd_070",
+      "subtopic": "14. Web Testing & Debugging",
+      "question": "What does 'Console.dir()' do differently than 'Console.log()'?",
+      "options": ["It prints in red.", "It displays an interactive list of the properties of a specified JavaScript object.", "It saves the log to a file.", "There is no difference."],
+      "answer": 1,
+      "explanation": "Dir is better for inspecting complex JSON/DOM objects."
+    },
+    {
+      "id": "wd_071",
+      "subtopic": "15. Deployment & Hosting",
+      "question": "What is 'PaaS' (Platform as a Service)?",
+      "options": ["Renting a physical server.", "A cloud computing model that provides a platform allowing customers to develop, run, and manage applications without the complexity of infrastructure.", "Building your own data center.", "Free hosting for students."],
+      "answer": 1,
+      "explanation": "Heroku, AWS Elastic Beanstalk, and Vercel are examples of PaaS."
+    },
+    {
+      "id": "wd_072",
+      "subtopic": "15. Deployment & Hosting",
+      "question": "What is 'Docker'?",
+      "options": ["A place to store ships.", "A platform that uses OS-level virtualization to deliver software in packages called containers.", "A type of web server.", "A JavaScript library for UI."],
+      "answer": 1,
+      "explanation": "Containers ensure that an app runs exactly the same way on every machine."
+    },
+    {
+      "id": "wd_073",
+      "subtopic": "15. Deployment & Hosting",
+      "question": "What is 'Continuous Integration' (CI)?",
+      "options": ["Keeping the server turned on.", "The practice of automating the integration of code changes from multiple contributors into a single software project.", "Writing code without stopping.", "Updating the database every second."],
+      "answer": 1,
+      "explanation": "CI pipelines run automated tests every time you push code."
+    },
+    {
+      "id": "wd_074",
+      "subtopic": "15. Deployment & Hosting",
+      "question": "What is 'Serverless' computing?",
+      "options": ["A website that doesn't use a server.", "A cloud-execution model where the cloud provider dynamically manages the allocation and provisioning of servers (e.g., AWS Lambda).", "A peer-to-peer network.", "Using your own PC as a server."],
+      "answer": 1,
+      "explanation": "You write code (functions), and the provider handles scaling and servers."
+    },
+    {
+      "id": "wd_075",
+      "subtopic": "15. Deployment & Hosting",
+      "question": "What is 'Blue-Green' deployment?",
+      "options": ["Changing the color of the site.", "A technique that reduces downtime and risk by running two identical production environments.", "Using CSS to change themes.", "Deploying on two different countries."],
+      "answer": 1,
+      "explanation": "One environment is live (Blue), while the new version is tested in (Green) before switching over."
+    },
+    {
+      "id": "wd_076",
+      "subtopic": "16. Web APIs & Integration",
+      "question": "What is 'REST'?",
+      "options": ["When the server is not working.", "Representational State Transfer - an architectural style for designing networked applications (stateless, resource-based).", "A way to encrypt APIs.", "A programming language for APIs."],
+      "answer": 1,
+      "explanation": "RESTful APIs use standard HTTP methods like GET, POST, PUT, DELETE."
+    },
+    {
+      "id": "wd_077",
+      "subtopic": "16. Web APIs & Integration",
+      "question": "What is 'GraphQL'?",
+      "options": ["A way to draw graphs on a website.", "A query language for APIs that allows clients to request exactly the data they need and nothing more.", "A replacement for SQL.", "A social media API."],
+      "answer": 1,
+      "explanation": "GraphQL solves the problem of 'Over-fetching' and 'Under-fetching' data."
+    },
+    {
+      "id": "wd_078",
+      "subtopic": "16. Web APIs & Integration",
+      "question": "What is an 'API Gateway'?",
+      "options": ["A physical gate at a data center.", "A server that acts as an API front-end, receiving requests, enforcing policies, and routing them to appropriate backend services.", "A password for an API.", "A list of all APIs on the internet."],
+      "answer": 1,
+      "explanation": "Essential in Microservices for security, rate limiting, and routing."
+    },
+    {
+      "id": "wd_079",
+      "subtopic": "16. Web APIs & Integration",
+      "question": "What is 'OAuth 2.0'?",
+      "options": ["A new version of HTML.", "An industry-standard protocol for authorization (allowing a site to access data from another site, like 'Login with Google').", "A secure way to write JavaScript.", "An API for mathematicians."],
+      "answer": 1,
+      "explanation": "OAuth is for authorization, while OpenID Connect is for authentication."
+    },
+    {
+      "id": "wd_080",
+      "subtopic": "16. Web APIs & Integration",
+      "question": "What is 'Rate Limiting'?",
+      "options": ["Limiting the speed of the internet.", "The process of limiting the number of requests a user can make to an API in a given time period.", "Charging users for faster access.", "A way to prevent users from seeing certain pages."],
+      "answer": 1,
+      "explanation": "Rate limiting protects APIs from abuse and DDoS attacks."
+    },
+    {
+      "id": "wd_081",
+      "subtopic": "17. Modern Web Development Practices",
+      "question": "What is a 'Micro-frontend'?",
+      "options": ["A very small screen.", "An architectural style where a frontend app is decomposed into smaller, semi-independent apps that work together.", "A website for mobile only.", "A site with no JavaScript."],
+      "answer": 1,
+      "explanation": "Allows large teams to work on different parts of the UI independently."
+    },
+    {
+      "id": "wd_082",
+      "subtopic": "17. Modern Web Development Practices",
+      "question": "What is 'Jamstack'?",
+      "options": ["A sandwich shop.", "JavaScript, APIs, and Markup - a modern architecture for building fast, secure websites.", "A way to stack multiple databases.", "A music website."],
+      "answer": 1,
+      "explanation": "Jamstack focuses on pre-rendered static content and serverless APIs."
+    },
+    {
+      "id": "wd_083",
+      "subtopic": "17. Modern Web Development Practices",
+      "question": "What is 'Headless CMS'?",
+      "options": ["A CMS with no logo.", "A back-end only content management system that provides content via an API, rather than coupling it to a specific frontend.", "A CMS that doesn't have a login.", "A broken website."],
+      "answer": 1,
+      "explanation": "Allows content to be shared across web, mobile, and IoT devices simultaneously."
+    },
+    {
+      "id": "wd_084",
+      "subtopic": "17. Modern Web Development Practices",
+      "question": "What is 'TDD' (Test Driven Development)?",
+      "options": ["Testing after the project is finished.", "A process where you write the test for a feature before you write the actual code.", "Testing with many users.", "Testing only the UI."],
+      "answer": 1,
+      "explanation": "TDD follows a 'Red-Green-Refactor' cycle to ensure code quality."
+    },
+    {
+      "id": "wd_085",
+      "subtopic": "17. Modern Web Development Practices",
+      "question": "What is 'Infrastructure as Code' (IaC)?",
+      "options": ["Writing code that fixes computers.", "Managing and provisioning server infrastructure through machine-readable definition files (like Terraform).", "Building a server in JavaScript.", "The hardware of a computer."],
+      "answer": 1,
+      "explanation": "Allows infrastructure to be versioned and deployed just like software."
+    },
+    {
+      "id": "wd_086",
+      "subtopic": "12. Web Security",
+      "question": "What is 'Clickjacking'?",
+      "options": ["Stealing a computer mouse.", "A malicious technique where a user is tricked into clicking on something different from what they perceive (usually via hidden iframes).", "A way to get more likes on social media.", "A virus that opens many tabs."],
+      "answer": 1,
+      "explanation": "Prevented using the 'X-Frame-Options' HTTP header."
+    },
+    {
+      "id": "wd_087",
+      "subtopic": "13. Web Performance & Optimization",
+      "question": "What is 'Brotli'?",
+      "options": ["A type of vegetable.", "A modern data compression algorithm that is more efficient than Gzip.", "A JavaScript framework.", "A security protocol."],
+      "answer": 1,
+      "explanation": "Most modern browsers support Brotli to make file transfers even smaller."
+    },
+    {
+      "id": "wd_088",
+      "subtopic": "16. Web APIs & Integration",
+      "question": "What is 'Webhook'?",
+      "options": ["A fishing website.", "A way for an app to provide other applications with real-time information by sending an automated message/request when something happens.", "A security key for APIs.", "A tool for scraping websites."],
+      "answer": 1,
+      "explanation": "Webhooks are 'Reverse APIs' where the server pushes data to your URL."
+    },
+    {
+      "id": "wd_089",
+      "subtopic": "17. Modern Web Development Practices",
+      "question": "What is a 'PWA' (Progressive Web App)?",
+      "options": ["A native app.", "A web app that uses modern web capabilities to provide an app-like experience (Offline, Push Notifications, Installable).", "An app for web developers only.", "A site with many pages."],
+      "answer": 1,
+      "explanation": "PWAs combine the best of web and native apps."
+    },
+    {
+      "id": "wd_090",
+      "subtopic": "2. Web Architecture & Protocols",
+      "question": "What is 'gRPC'?",
+      "options": ["A new type of CSS.", "A high-performance, open-source universal RPC framework developed by Google (using Protocol Buffers).", "A way to compress images.", "A database for Node.js."],
+      "answer": 1,
+      "explanation": "gRPC is often used for fast communication between microservices."
+    }
+  ]
+}
