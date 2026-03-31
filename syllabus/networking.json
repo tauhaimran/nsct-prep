@@ -1,0 +1,844 @@
+{
+  "questions": [
+    {
+      "id": "net_001",
+      "subtopic": "1 - Data Communication",
+      "question": "Which factor primarily affects the accuracy of data communication by introducing errors into the signal?",
+      "options": ["Bandwidth", "Noise", "Latency", "Throughput"],
+      "answer": 1,
+      "explanation": "Noise is an unwanted disturbance in an electrical signal that can alter the data being transmitted, leading to decreased accuracy."
+    },
+    {
+      "id": "net_002",
+      "subtopic": "1 - Data Communication",
+      "question": "In which transmission mode can communication occur in both directions, but not at the same time?",
+      "options": ["Simplex", "Full Duplex", "Half Duplex", "Parallel"],
+      "answer": 2,
+      "explanation": "Half Duplex allows two-way communication, but only one party can transmit at a time (e.g., a Walkie-Talkie)."
+    },
+    {
+      "id": "net_003",
+      "subtopic": "1 - Data Communication",
+      "question": "Jitter is a critical issue in data communication. What does it represent?",
+      "options": ["The total loss of signal strength.", "The variation in the delay of received packets.", "The maximum capacity of the medium.", "The number of bits sent per second."],
+      "answer": 1,
+      "explanation": "Jitter refers to the variation in packet arrival time. It is particularly damaging to real-time applications like VoIP and Video Streaming."
+    },
+    {
+      "id": "net_004",
+      "subtopic": "2 - Computer Networks",
+      "question": "In which topology does a single cable failure (the backbone) result in the entire network going down?",
+      "options": ["Mesh", "Star", "Bus", "Ring"],
+      "answer": 2,
+      "explanation": "In a Bus topology, all nodes share a single communication line. If the main cable (bus) fails, all communication stops."
+    },
+    {
+      "id": "net_005",
+      "subtopic": "2 - Computer Networks",
+      "question": "Which network type is specifically designed for a city or a large campus, spanning roughly 5km to 50km?",
+      "options": ["LAN", "PAN", "MAN", "WAN"],
+      "answer": 2,
+      "explanation": "A Metropolitan Area Network (MAN) covers a larger area than a LAN (office/building) but smaller than a WAN (country/world)."
+    },
+    {
+      "id": "net_006",
+      "subtopic": "2 - Computer Networks",
+      "question": "What is the primary difference between the OSI model and the TCP/IP model?",
+      "options": ["TCP/IP has 7 layers, OSI has 4.", "OSI is a theoretical framework, while TCP/IP is the actual implementation used for the Internet.", "OSI was developed by Google, TCP/IP by ISO.", "There is no difference between them."],
+      "answer": 1,
+      "explanation": "The OSI model is a conceptual model used for education and standardization, whereas TCP/IP is the protocol suite that powers the modern internet."
+    },
+    {
+      "id": "net_007",
+      "subtopic": "3 - Data Link Layer",
+      "question": "Which sublayer of the Data Link Layer is responsible for communicating with the Network Layer and identifying the network protocol being used?",
+      "options": ["MAC (Media Access Control)", "LLC (Logical Link Control)", "Physical Layer", "Transport Layer"],
+      "answer": 1,
+      "explanation": "The LLC sublayer acts as an interface between the media access method and the Network layer protocols like IP."
+    },
+    {
+      "id": "net_008",
+      "subtopic": "3 - Data Link Layer",
+      "question": "What is the primary purpose of 'Framing' at the Data Link Layer?",
+      "options": ["To encrypt data.", "To break a stream of bits into manageable bit sequences with start and end markers.", "To assign IP addresses to devices.", "To determine the best path to a destination."],
+      "answer": 1,
+      "explanation": "Framing provides a way for a receiver to identify where a block of data starts and ends within a continuous stream of bits."
+    },
+    {
+      "id": "net_009",
+      "subtopic": "3 - Data Link Layer",
+      "question": "Which error detection technique is based on polynomial division and is highly reliable for detecting burst errors?",
+      "options": ["Simple Parity Check", "Two-dimensional Parity", "Checksum", "CRC (Cyclic Redundancy Check)"],
+      "answer": 3,
+      "explanation": "CRC is a mathematically robust method used in Ethernet and Wi-Fi to ensure data frames have not been corrupted during transit."
+    },
+    {
+      "id": "net_010",
+      "subtopic": "4 - Network Layer",
+      "question": "What happens to the TTL (Time to Live) field in an IP header as the packet passes through a router?",
+      "options": ["It is increased by 1.", "It is decreased by 1.", "It remains the same.", "It is reset to 255."],
+      "answer": 1,
+      "explanation": "Every router decrements the TTL by 1. If it reaches 0, the packet is discarded to prevent infinite loops in the network."
+    },
+    {
+      "id": "net_011",
+      "subtopic": "4 - Network Layer",
+      "question": "Which protocol is used by a host to discover the MAC address of a device when only its IP address is known?",
+      "options": ["ICMP", "IGMP", "ARP (Address Resolution Protocol)", "DHCP"],
+      "answer": 2,
+      "explanation": "ARP maps a known IP address to a physical MAC address on a local area network."
+    },
+    {
+      "id": "net_012",
+      "subtopic": "4 - Network Layer",
+      "question": "Which routing algorithm requires each router to know the full topology of the entire network to calculate the shortest path?",
+      "options": ["Distance Vector Routing", "Link State Routing", "Static Routing", "Flooding"],
+      "answer": 1,
+      "explanation": "Link State protocols (like OSPF) require all routers to have a synchronized 'map' (Link State Database) of the entire network."
+    },
+    {
+      "id": "net_013",
+      "subtopic": "5 - Transport Layer",
+      "question": "What are the three steps of the TCP connection establishment process?",
+      "options": ["SYN, SYN-ACK, ACK", "SYN, ACK, FIN", "GET, POST, PUT", "DATA, ACK, CLOSE"],
+      "answer": 0,
+      "explanation": "The 'Three-way Handshake' involves the client sending a SYN, the server responding with SYN-ACK, and the client confirming with an ACK."
+    },
+    {
+      "id": "net_014",
+      "subtopic": "5 - Transport Layer",
+      "question": "Which Transport Layer protocol would be most appropriate for a DNS query or a real-time multiplayer game?",
+      "options": ["TCP", "UDP", "HTTP", "FTP"],
+      "answer": 1,
+      "explanation": "UDP (User Datagram Protocol) is 'best-effort' and low-overhead, making it faster than TCP for applications that can tolerate minor data loss."
+    },
+    {
+      "id": "net_015",
+      "subtopic": "5 - Transport Layer",
+      "question": "What is the function of the 'Window Size' in a TCP header?",
+      "options": ["To identify the application port.", "To indicate the number of bytes the sender is willing to receive (Flow Control).", "To set the encryption level.", "To determine the priority of the packet."],
+      "answer": 1,
+      "explanation": "The Window Size is used for Flow Control, preventing a fast sender from overwhelming a slow receiver."
+    },
+    {
+      "id": "net_016",
+      "subtopic": "6 - Application Layer",
+      "question": "Which Application Layer protocol is used to resolve a human-readable domain name (e.g., google.com) into an IP address?",
+      "options": ["HTTP", "SNMP", "DNS (Domain Name System)", "SMTP"],
+      "answer": 2,
+      "explanation": "DNS acts as the 'phonebook' of the internet, translating domain names into the IP addresses needed for routing."
+    },
+    {
+      "id": "net_017",
+      "subtopic": "6 - Application Layer",
+      "question": "What is the primary difference between POP3 and IMAP for email retrieval?",
+      "options": ["POP3 is more secure than IMAP.", "POP3 downloads and usually deletes the email from the server; IMAP synchronizes the email across multiple devices.", "IMAP only works on mobile phones.", "POP3 is used for sending, IMAP for receiving."],
+      "answer": 1,
+      "explanation": "IMAP is designed for users who access email from multiple devices, as it keeps the emails stored on the server."
+    },
+    {
+      "id": "net_018",
+      "subtopic": "6 - Application Layer",
+      "question": "Which HTTP status code range indicates that there was a 'Client-side error' (e.g., a bad URL)?",
+      "options": ["2xx", "3xx", "4xx", "5xx"],
+      "answer": 2,
+      "explanation": "4xx codes (like 404 Not Found) indicate that the error originated from the client's request."
+    },
+    {
+      "id": "net_019",
+      "subtopic": "7 - Wireless Networks",
+      "question": "Why does Wi-Fi use CSMA/CA (Collision Avoidance) instead of the Ethernet's CSMA/CD (Collision Detection)?",
+      "options": ["Because Wi-Fi is faster.", "Because wireless stations cannot reliably detect collisions while they are transmitting (the Hidden Terminal problem).", "Because collision avoidance is only for radio waves.", "Because Wi-Fi does not use frames."],
+      "answer": 1,
+      "explanation": "In wireless, a station's own signal overwhelms any other incoming signal, making it impossible to 'hear' a collision while talking."
+    },
+    {
+      "id": "net_020",
+      "subtopic": "7 - Wireless Networks",
+      "question": "Which generation of cellular technology first introduced massive MIMO and ultra-low latency (<1ms)?",
+      "options": ["3G", "4G LTE", "5G", "6G"],
+      "answer": 2,
+      "explanation": "5G technology is designed to support the Internet of Things (IoT) with extremely high speeds and near-instant response times."
+    },
+    {
+      "id": "net_021",
+      "subtopic": "8 - Cloud Computing",
+      "question": "If a developer uses a service like AWS Lambda where they only upload code and do not manage the underlying server, what is this called?",
+      "options": ["IaaS", "PaaS", "SaaS", "Serverless/FaaS"],
+      "answer": 3,
+      "explanation": "Serverless (Function as a Service) abstracts the server management entirely away from the developer."
+    },
+    {
+      "id": "net_022",
+      "subtopic": "8 - Cloud Computing",
+      "question": "Which cloud deployment model involves a combination of on-premise infrastructure and public cloud services?",
+      "options": ["Private Cloud", "Public Cloud", "Hybrid Cloud", "Community Cloud"],
+      "answer": 2,
+      "explanation": "Hybrid clouds allow organizations to keep sensitive data on-premise while using the public cloud for scalable workloads."
+    },
+    {
+      "id": "net_023",
+      "subtopic": "9 - Network Security",
+      "question": "Which security principle ensures that data has not been modified by an unauthorized person during transit?",
+      "options": ["Confidentiality", "Integrity", "Availability", "Non-repudiation"],
+      "answer": 1,
+      "explanation": "Integrity ensures that the message received is exactly what was sent."
+    },
+    {
+      "id": "net_024",
+      "subtopic": "9 - Network Security",
+      "question": "What is the primary function of an IPS (Intrusion Prevention System) compared to an IDS (Intrusion Detection System)?",
+      "options": ["IPS only records the attack; IDS blocks it.", "IPS sits 'in-line' with traffic and can actively block/drop malicious packets; IDS only alerts admins.", "IDS is hardware; IPS is always software.", "There is no difference."],
+      "answer": 1,
+      "explanation": "IPS is proactive and takes action to stop an attack, while IDS is reactive and focused on visibility."
+    },
+    {
+      "id": "net_025",
+      "subtopic": "10 - Next Generation Networks",
+      "question": "In SDN (Software Defined Networking), which 'plane' is removed from the individual hardware switches and centralized in a software controller?",
+      "options": ["Data Plane", "Control Plane", "Physical Plane", "Application Plane"],
+      "answer": 1,
+      "explanation": "Centralizing the Control Plane allows for programmatic and dynamic management of the entire network."
+    },
+    {
+      "id": "net_026",
+      "subtopic": "10 - Next Generation Networks",
+      "question": "What is NFV (Network Function Virtualization) primarily used for?",
+      "options": ["To speed up the internet.", "To replace dedicated hardware (like firewalls and load balancers) with software running on standard servers.", "To encrypt all network traffic.", "To connect smart homes to the cloud."],
+      "answer": 1,
+      "explanation": "NFV reduces capital expenditure by using virtual machines to perform network tasks traditionally handled by expensive proprietary hardware."
+    },
+    {
+      "id": "net_027",
+      "subtopic": "4 - Network Layer",
+      "question": "Which of the following is a 'Class C' IP address?",
+      "options": ["10.0.0.1", "172.16.0.1", "192.168.1.1", "224.0.0.1"],
+      "answer": 2,
+      "explanation": "Class C addresses start in the range 192.0.0.0 to 223.255.255.255."
+    },
+    {
+      "id": "net_028",
+      "subtopic": "3 - Data Link Layer",
+      "question": "Which device is used to connect two segments of a network and makes forwarding decisions based on MAC addresses?",
+      "options": ["Hub", "Repeater", "Switch", "Router"],
+      "answer": 2,
+      "explanation": "Switches operate at Layer 2 (Data Link) and use MAC addresses to reduce collisions by creating dedicated collision domains."
+    },
+    {
+      "id": "net_029",
+      "subtopic": "5 - Transport Layer",
+      "question": "What does a 'Port Number' identify in the networking process?",
+      "options": ["A specific computer on the network.", "A specific physical cable port.", "A specific process or service running on a host.", "The type of network cable being used."],
+      "answer": 2,
+      "explanation": "Port numbers (like 80 for HTTP, 443 for HTTPS) allow the Transport layer to deliver data to the correct application on a device."
+    },
+    {
+      "id": "net_030",
+      "subtopic": "6 - Application Layer",
+      "question": "Which protocol is used for securely transferring files over a network by encrypting the command and data channel?",
+      "options": ["FTP", "HTTP", "SFTP", "SMTP"],
+      "answer": 2,
+      "explanation": "SFTP (SSH File Transfer Protocol) provides secure, encrypted file access and transfer."
+    },
+    {
+        "id": "net_031",
+        "subtopic": "4 - Network Layer",
+        "question": "What is the purpose of CIDR (Classless Inter-Domain Routing)?",
+        "options": ["To eliminate the need for IP addresses.", "To provide more efficient allocation of IP addresses and reduce the size of routing tables.", "To encrypt routing updates.", "To allow MAC addresses to be used for routing."],
+        "answer": 1,
+        "explanation": "CIDR replaced the rigid classful system (A, B, C), allowing for flexible subnet masking (e.g., /24, /21)."
+    },
+    {
+        "id": "net_032",
+        "subtopic": "5 - Transport Layer",
+        "question": "In TCP Congestion Control, what is the 'Slow Start' phase?",
+        "options": ["The server takes a long time to boot up.", "The process of doubling the congestion window for every successful ACK until a threshold is reached.", "Sending only 1 bit per second to avoid errors.", "Waiting for 10 seconds before sending any data."],
+        "answer": 1,
+        "explanation": "Slow Start allows TCP to rapidly find the available bandwidth without immediately crashing the network."
+    },
+    {
+        "id": "net_033",
+        "subtopic": "8 - Cloud Computing",
+        "question": "What is 'Elasticity' in cloud computing?",
+        "options": ["The ability of the hardware to bend.", "The ability to automatically scale resources up or down based on real-time demand.", "The cost-saving of using a public cloud.", "The speed of the cloud internet connection."],
+        "answer": 1,
+        "explanation": "Elasticity allows a cloud system to handle spikes in traffic (scaling up) and save money when traffic is low (scaling down)."
+    },
+    {
+        "id": "net_034",
+        "subtopic": "9 - Network Security",
+        "question": "How does a 'Denial of Service' (DoS) attack primarily differ from a 'Distributed Denial of Service' (DDoS) attack?",
+        "options": ["DDoS uses a single computer; DoS uses a network.", "DoS is for software; DDoS is for hardware.", "DoS comes from one source; DDoS uses a botnet of multiple compromised sources to flood the target.", "There is no difference."],
+        "answer": 2,
+        "explanation": "DDoS is much harder to block because the malicious traffic originates from thousands of different IP addresses."
+    },
+    {
+        "id": "net_035",
+        "subtopic": "10 - Next Generation Networks",
+        "question": "What is 'Edge Computing'?",
+        "options": ["Computing done on the edge of a desk.", "Processing data near the source of the data (e.g., IoT sensors) rather than in a centralized cloud data center.", "A type of gaming computer.", "Building data centers in cold climates."],
+        "answer": 1,
+        "explanation": "Edge computing reduces latency and bandwidth usage by handling data locally before sending summaries to the cloud."
+    },
+    {
+        "id": "net_036",
+        "subtopic": "3 - Data Link Layer",
+        "question": "Which of the following describes 'Sliding Window' flow control?",
+        "options": ["The sender sends one frame and waits for an ACK before sending the next.", "The sender can send multiple frames before requiring an acknowledgment, up to a specific limit.", "The browser window slides when loading a page.", "A method to delete old frames automatically."],
+        "answer": 1,
+        "explanation": "Sliding window improves efficiency by utilizing the link bandwidth more effectively than 'Stop-and-Wait'."
+    },
+    {
+        "id": "net_037",
+        "subtopic": "4 - Network Layer",
+        "question": "Which ICMP message type is used by the 'ping' command?",
+        "options": ["Destination Unreachable", "Time Exceeded", "Echo Request and Echo Reply", "Source Quench"],
+        "answer": 2,
+        "explanation": "Ping sends an 'Echo Request' and expects an 'Echo Reply' to test connectivity."
+    },
+    {
+        "id": "net_038",
+        "subtopic": "6 - Application Layer",
+        "question": "Which protocol is primarily used for managing and monitoring network devices like routers and switches?",
+        "options": ["SMTP", "SNMP (Simple Network Management Protocol)", "SSH", "Telnet"],
+        "answer": 1,
+        "explanation": "SNMP allows administrators to collect information and configure network devices remotely."
+    },
+    {
+        "id": "net_039",
+        "subtopic": "7 - Wireless Networks",
+        "question": "In a cellular network, what is a 'Handoff' (or Handover)?",
+        "options": ["Giving a phone to another person.", "The process of transferring a call or data session from one cell site (base station) to another as the user moves.", "The transition from 4G to 5G.", "Turning off the mobile data."],
+        "answer": 1,
+        "explanation": "Handoff ensures that mobile users stay connected while traveling between different signal towers."
+    },
+    {
+        "id": "net_040",
+        "subtopic": "1 - Data Communication",
+        "question": "Which transmission media has the lowest attenuation and is immune to electromagnetic interference (EMI)?",
+        "options": ["Twisted Pair", "Coaxial Cable", "Fiber Optic Cable", "Radio Waves"],
+        "answer": 2,
+        "explanation": "Fiber optics use light pulses instead of electricity, making them superior for long-distance, high-speed, and secure data transfer."
+    },
+    {
+        "id": "net_041",
+        "subtopic": "4 - Network Layer",
+        "question": "What is the size of an IPv6 address?",
+        "options": ["32 bits", "64 bits", "128 bits", "256 bits"],
+        "answer": 2,
+        "explanation": "IPv6 addresses are 128 bits long, providing a virtually inexhaustible number of unique IP addresses."
+    },
+    {
+        "id": "net_042",
+        "subtopic": "2 - Computer Networks",
+        "question": "Which layer of the OSI model is responsible for data compression and encryption/decryption?",
+        "options": ["Application Layer", "Presentation Layer", "Session Layer", "Transport Layer"],
+        "answer": 1,
+        "explanation": "The Presentation Layer (Layer 6) handles the syntax and semantics of the data, including translation, compression, and encryption."
+    },
+    {
+        "id": "net_043",
+        "subtopic": "3 - Data Link Layer",
+        "question": "In Ethernet, what is the 'Preamble' used for?",
+        "options": ["To identify the sender.", "To synchronize the receiver's clock with the incoming bit stream.", "To check for errors.", "To specify the destination."],
+        "answer": 1,
+        "explanation": "The preamble is a pattern of alternating 1s and 0s that allows receivers to establish bit synchronization."
+    },
+    {
+        "id": "net_044",
+        "subtopic": "5 - Transport Layer",
+        "question": "Which TCP flag is used to abruptly close a connection due to an error or security issue?",
+        "options": ["FIN", "ACK", "RST (Reset)", "PSH"],
+        "answer": 2,
+        "explanation": "RST tells the other side to drop the connection immediately without the normal closing handshake."
+    },
+    {
+        "id": "net_045",
+        "subtopic": "8 - Cloud Computing",
+        "question": "Which cloud service characteristic allows users to provision computing capabilities (like server time) automatically without human interaction with the provider?",
+        "options": ["Resource Pooling", "Broad Network Access", "On-demand Self-service", "Measured Service"],
+        "answer": 2,
+        "explanation": "Self-service is a core tenet of the cloud, allowing developers to spin up resources instantly."
+    },
+    {
+        "id": "net_046",
+        "subtopic": "10 - Next Generation Networks",
+        "question": "What is 'Slicing' in a 5G network?",
+        "options": ["Cutting the hardware into pieces.", "Creating multiple virtual networks on a single physical 5G infrastructure, each optimized for a specific use case (e.g., IoT vs Video).", "Reducing the speed of the user.", "Dividing the cell tower into smaller antennas."],
+        "answer": 1,
+        "explanation": "Network Slicing allows a single physical network to support diverse requirements, from low-latency gaming to low-power IoT sensors."
+    },
+    {
+        "id": "net_047",
+        "subtopic": "1 - Data Communication",
+        "question": "Which type of modulation varies the height of the carrier wave to represent data?",
+        "options": ["Frequency Modulation (FM)", "Phase Modulation (PM)", "Amplitude Modulation (AM)", "Pulse Modulation"],
+        "answer": 2,
+        "explanation": "AM changes the amplitude (strength) of the signal to encode information."
+    },
+    {
+        "id": "net_048",
+        "subtopic": "9 - Network Security",
+        "question": "Which type of VPN operates at the Application Layer and only requires a web browser for the client?",
+        "options": ["IPsec VPN", "L2TP VPN", "SSL/TLS VPN", "PPTP VPN"],
+        "answer": 2,
+        "explanation": "SSL VPNs are popular for remote access because they don't require specialized client software installed on the user's machine."
+    },
+    {
+        "id": "net_049",
+        "subtopic": "4 - Network Layer",
+        "question": "What is 'Anycast' addressing?",
+        "options": ["Sending data to every host on the network.", "Sending data to a specific host.", "Sending data to the nearest host in a group of potential receivers.", "Sending data only to mobile devices."],
+        "answer": 2,
+        "explanation": "Anycast is commonly used in DNS and CDNs to route a user to the closest server for better performance."
+    },
+    {
+        "id": "net_050",
+        "subtopic": "6 - Application Layer",
+        "question": "Which protocol is used to automatically assign IP addresses, subnet masks, and default gateways to hosts on a network?",
+        "options": ["ARP", "DNS", "DHCP (Dynamic Host Configuration Protocol)", "SSH"],
+        "answer": 2,
+        "explanation": "DHCP eliminates the need for manual IP configuration on every device."
+    },
+    {
+        "id": "net_051",
+        "subtopic": "5 - Transport Layer",
+        "question": "In a TCP connection, what is the 'Maximum Segment Size' (MSS)?",
+        "options": ["The total size of the IP packet.", "The maximum amount of data (in bytes) that TCP can send in a single segment.", "The speed of the network.", "The length of the cable."],
+        "answer": 1,
+        "explanation": "MSS excludes the TCP and IP headers; it refers only to the payload data."
+    },
+    {
+        "id": "net_052",
+        "subtopic": "3 - Data Link Layer",
+        "question": "Which field in an Ethernet frame is used to detect if a collision occurred in a half-duplex environment?",
+        "options": ["CRC", "FCS", "Slot Time/Inter-frame gap", "The signal strength"],
+        "answer": 2,
+        "explanation": "Ethernet relies on timing (Slot Time) to ensure that if a collision happens, it is detected before the transmission finishes."
+    },
+    {
+        "id": "net_053",
+        "subtopic": "2 - Computer Networks",
+        "question": "What is the difference between a 'Hub' and a 'Switch'?",
+        "options": ["Hubs are faster.", "A Hub broadcasts data to all ports; a Switch learns MAC addresses and forwards data only to the relevant port.", "Switches are used for WANs.", "There is no difference."],
+        "answer": 1,
+        "explanation": "Switches are 'intelligent' devices that reduce unnecessary network traffic and improve security."
+    },
+    {
+        "id": "net_054",
+        "subtopic": "9 - Network Security",
+        "question": "Which of the following is a 'Passive' attack?",
+        "options": ["SQL Injection", "Traffic Analysis / Eavesdropping", "DDoS", "ARP Spoofing"],
+        "answer": 1,
+        "explanation": "Passive attacks involve observing and collecting data without altering the system's state or resources."
+    },
+    {
+        "id": "net_055",
+        "subtopic": "10 - Next Generation Networks",
+        "question": "What is 'Orchestration' in the context of Cloud and NGN?",
+        "options": ["A musical performance.", "The automated arrangement, coordination, and management of complex computer systems, middleware, and services.", "Designing a new router.", "Managing the data center electricity."],
+        "answer": 1,
+        "explanation": "Orchestration tools (like Kubernetes or Terraform) allow for 'Infrastructure as Code' and automated scaling."
+    },
+    {
+        "id": "net_056",
+        "subtopic": "4 - Network Layer",
+        "question": "Which routing protocol is the 'protocol of the internet,' responsible for routing traffic between different Autonomous Systems (AS)?",
+        "options": ["RIP", "OSPF", "BGP (Border Gateway Protocol)", "EIGRP"],
+        "answer": 2,
+        "explanation": "BGP is a Path Vector protocol that manages how packets cross the global internet from one ISP to another."
+    },
+    {
+        "id": "net_057",
+        "subtopic": "6 - Application Layer",
+        "question": "What is the purpose of 'Cookies' in HTTP?",
+        "options": ["To provide snacks to the user.", "To maintain state in a stateless protocol, allowing for session management and user tracking.", "To encrypt the URL.", "To download images faster."],
+        "answer": 1,
+        "explanation": "Since HTTP is stateless, cookies allow a server to 'remember' a user across multiple requests."
+    },
+    {
+        "id": "net_058",
+        "subtopic": "7 - Wireless Networks",
+        "question": "What is 'Beamforming' in modern Wi-Fi (802.11ac/ax)?",
+        "options": ["A way to build antennas.", "Directing a wireless signal toward a specific receiving device rather than broadcasting it in all directions.", "Blocking signals from neighbors.", "Increasing the number of channels."],
+        "answer": 1,
+        "explanation": "Beamforming improves signal strength and throughput by focusing the energy where it is needed most."
+    },
+    {
+        "id": "net_059",
+        "subtopic": "8 - Cloud Computing",
+        "question": "What is 'Multi-tenancy'?",
+        "options": ["Renting an apartment.", "A software architecture where a single instance of software serves multiple customers (tenants) while keeping their data isolated.", "Building multiple data centers.", "Using multiple cloud providers at once."],
+        "answer": 1,
+        "explanation": "Multi-tenancy is fundamental to SaaS providers like Salesforce or Gmail."
+    },
+    {
+        "id": "net_060",
+        "subtopic": "1 - Data Communication",
+        "question": "What is 'Multiplexing'?",
+        "options": ["Increasing the speed of a single user.", "Combining multiple signals from different sources into a single signal over a shared medium.", "Encrypting data 10 times.", "The process of repeating a signal."],
+        "answer": 1,
+        "explanation": "Multiplexing (TDM, FDM) allows expensive communication links to be shared by many users simultaneously."
+    },
+    {
+        "id": "net_061",
+        "subtopic": "3 - Data Link Layer",
+        "question": "Which of the following is a loop prevention mechanism used in Layer 2 switched networks?",
+        "options": ["BGP", "STP (Spanning Tree Protocol)", "OSPF", "RIP"],
+        "answer": 1,
+        "explanation": "STP prevents broadcast storms by logically disabling redundant paths in a network until they are needed."
+    },
+    {
+        "id": "net_062",
+        "subtopic": "5 - Transport Layer",
+        "question": "What happens if a TCP segment is lost during transmission?",
+        "options": ["The entire connection is dropped.", "The receiver ignores it.", "The sender retransmits the segment after a timeout or receiving triple duplicate ACKs.", "The application crashes."],
+        "answer": 2,
+        "explanation": "TCP is a reliable protocol that uses acknowledgments and retransmissions to ensure 100% data delivery."
+    },
+    {
+        "id": "net_063",
+        "subtopic": "9 - Network Security",
+        "question": "What does a 'Stateful' firewall track that a 'Stateless' firewall does not?",
+        "options": ["The IP addresses.", "The port numbers.", "The sequence of packets and the TCP handshake state.", "The physical cable type."],
+        "answer": 2,
+        "explanation": "Stateful firewalls understand the context of the conversation, making them much more secure against spoofing attacks."
+    },
+    {
+        "id": "net_064",
+        "subtopic": "4 - Network Layer",
+        "question": "Which protocol is used for multicasting (sending data to a group of interested receivers)?",
+        "options": ["ICMP", "IGMP (Internet Group Management Protocol)", "ARP", "DHCP"],
+        "answer": 1,
+        "explanation": "IGMP allows hosts to tell their local router that they want to join or leave a specific multicast group."
+    },
+    {
+        "id": "net_065",
+        "subtopic": "2 - Computer Networks",
+        "question": "In the OSI model, which layer is responsible for 'routing' packets across multiple networks?",
+        "options": ["Layer 2", "Layer 3", "Layer 4", "Layer 7"],
+        "answer": 1,
+        "explanation": "Layer 3 (The Network Layer) handles logical addressing and the selection of the best path to a destination."
+    },
+    {
+        "id": "net_066",
+        "subtopic": "6 - Application Layer",
+        "question": "What is the primary difference between HTTP/1.1 and HTTPS?",
+        "options": ["HTTPS is faster.", "HTTPS uses SSL/TLS to encrypt the communication between the browser and the server.", "HTTP/1.1 is for web, HTTPS is for mobile.", "None."],
+        "answer": 1,
+        "explanation": "HTTPS provides encryption, data integrity, and authentication."
+    },
+    {
+        "id": "net_067",
+        "subtopic": "7 - Wireless Networks",
+        "question": "What is the 'SSID' in a Wi-Fi network?",
+        "options": ["A security key.", "The human-readable name of the wireless network.", "The frequency of the radio waves.", "The speed of the router."],
+        "answer": 1,
+        "explanation": "Service Set Identifier (SSID) is what you see when you search for available Wi-Fi networks."
+    },
+    {
+        "id": "net_068",
+        "subtopic": "8 - Cloud Computing",
+        "question": "What is 'Cloud Sprawl'?",
+        "options": ["Cloud servers in a field.", "The uncontrolled proliferation of cloud instances, services, or providers within an organization, leading to high costs and security risks.", "A very large cloud data center.", "Rain coming from the cloud."],
+        "answer": 1,
+        "explanation": "Sprawl occurs when departments spin up cloud resources without central oversight, leading to wasted budget."
+    },
+    {
+        "id": "net_069",
+        "subtopic": "10 - Next Generation Networks",
+        "question": "What is 'SD-WAN'?",
+        "options": ["A very slow WAN.", "A Software-Defined Wide Area Network that uses software to manage and optimize traffic across different types of connections (like MPLS and Broadband).", "A WAN for smart devices only.", "A WAN built in a single building."],
+        "answer": 1,
+        "explanation": "SD-WAN provides better performance and lower costs compared to traditional hardware-based WAN routing."
+    },
+    {
+        "id": "net_070",
+        "subtopic": "1 - Data Communication",
+        "question": "Which transmission impairment refers to the loss of energy as a signal travels through a medium?",
+        "options": ["Noise", "Distortion", "Attenuation", "Jitter"],
+        "answer": 2,
+        "explanation": "Attenuation is why signals need to be 'amplified' or 'repeated' over long distances."
+    },
+    {
+        "id": "net_071",
+        "subtopic": "3 - Data Link Layer",
+        "question": "What is a 'MAC Address'?",
+        "options": ["The name of the computer user.", "A logical address that changes when you move to a new network.", "A unique physical identifier burned into a Network Interface Card (NIC).", "The password for the router."],
+        "answer": 2,
+        "explanation": "MAC addresses are permanent hardware IDs (e.g., 00:0a:95:9d:68:16)."
+    },
+    {
+        "id": "net_072",
+        "subtopic": "5 - Transport Layer",
+        "question": "Which TCP mechanism is used to ensure that the sender does not overflow the receiver's buffer?",
+        "options": ["Congestion Control", "Flow Control", "Error Detection", "Multiplexing"],
+        "answer": 1,
+        "explanation": "Flow Control is receiver-centric; Congestion Control is network-centric."
+    },
+    {
+        "id": "net_073",
+        "subtopic": "4 - Network Layer",
+        "question": "What is 'NAT' (Network Address Translation) primarily used for?",
+        "options": ["To speed up the internet.", "To allow multiple devices on a private network to share a single public IP address.", "To encrypt all web traffic.", "To assign MAC addresses."],
+        "answer": 1,
+        "explanation": "NAT helped delay the exhaustion of IPv4 addresses by allowing many private IPs to be represented by one public IP."
+    },
+    {
+        "id": "net_074",
+        "subtopic": "9 - Network Security",
+        "question": "What is a 'Zero-Day' vulnerability in network security?",
+        "options": ["A vulnerability that lasts 24 hours.", "A security flaw that is unknown to the vendor and has no patch available.", "A very old vulnerability.", "A vulnerability in a clock application."],
+        "answer": 1,
+        "explanation": "Zero-day attacks are dangerous because there is no known defense at the time they are first used."
+    },
+    {
+        "id": "net_075",
+        "subtopic": "2 - Computer Networks",
+        "question": "Which of the following is an example of a PAN (Personal Area Network)?",
+        "options": ["The Internet.", "A university Wi-Fi network.", "Connecting a Bluetooth headset to a smartphone.", "Connecting a New York office to a London office."],
+        "answer": 2,
+        "explanation": "PANs are for personal devices within a very short range (meters)."
+    },
+    {
+        "id": "net_076",
+        "subtopic": "6 - Application Layer",
+        "question": "Which protocol is used for sending (not receiving) emails between servers?",
+        "options": ["POP3", "IMAP", "SMTP (Simple Mail Transfer Protocol)", "HTTP"],
+        "answer": 2,
+        "explanation": "SMTP is the standard for pushing mail from a client to a server and between mail servers."
+    },
+    {
+        "id": "net_077",
+        "subtopic": "10 - Next Generation Networks",
+        "question": "What is the 'Northbound Interface' in SDN architecture?",
+        "options": ["A cable pointing North.", "The API that allows the SDN controller to communicate with applications and business logic.", "The connection to the internet.", "The link to the cell tower."],
+        "answer": 1,
+        "explanation": "Northbound interfaces allow applications to tell the network what they need."
+    },
+    {
+        "id": "net_078",
+        "subtopic": "7 - Wireless Networks",
+        "question": "What does 'WPA2' stand for in Wi-Fi security?",
+        "options": ["Wireless Protected Access 2", "Wide Protocol Area 2", "Wired Privacy Access 2", "None of the above"],
+        "answer": 0,
+        "explanation": "WPA2 was the standard for over a decade before WPA3 was released."
+    },
+    {
+        "id": "net_079",
+        "subtopic": "8 - Cloud Computing",
+        "question": "What is 'Cloud Native' development?",
+        "options": ["Building apps in a data center.", "Designing applications specifically to leverage cloud scale, resilience, and services (often using microservices and containers).", "Moving an old app to the cloud without changing it.", "Using only Apple cloud services."],
+        "answer": 1,
+        "explanation": "Cloud-native apps are built to thrive in the dynamic environments of modern clouds."
+    },
+    {
+        "id": "net_080",
+        "subtopic": "1 - Data Communication",
+        "question": "What is the 'Bandwidth' of a channel?",
+        "options": ["The physical length of the cable.", "The highest frequency it can carry.", "The range of frequencies it can carry (Difference between high and low).", "The speed of the computer processor."],
+        "answer": 2,
+        "explanation": "In analog terms, bandwidth is measured in Hertz (Hz). In digital, it's bits per second."
+    },
+    {
+        "id": "net_081",
+        "subtopic": "3 - Data Link Layer",
+        "question": "Which MAC address is the 'Broadcast' address?",
+        "options": ["00:00:00:00:00:00", "FF:FF:FF:FF:FF:FF", "192.168.1.255", "127.0.0.1"],
+        "answer": 1,
+        "explanation": "A frame sent to FF:FF:FF:FF:FF:FF will be processed by every device on the local network segment."
+    },
+    {
+        "id": "net_082",
+        "subtopic": "4 - Network Layer",
+        "question": "Which of the following is a 'Private' IP address range according to RFC 1918?",
+        "options": ["8.8.8.8", "192.168.0.0 - 192.168.255.255", "200.1.1.1", "1.1.1.1"],
+        "answer": 1,
+        "explanation": "Private IPs are not routable on the public internet and are used inside homes and offices."
+    },
+    {
+        "id": "net_083",
+        "subtopic": "5 - Transport Layer",
+        "question": "What is 'Piggybacking' in the context of acknowledgments?",
+        "options": ["Hacking a connection.", "Including an acknowledgment of a received frame inside the header of an outgoing data frame.", "Sending two packets at once.", "Stealing bandwidth from a neighbor."],
+        "answer": 1,
+        "explanation": "Piggybacking saves overhead by not needing a separate packet just for the ACK."
+    },
+    {
+        "id": "net_084",
+        "subtopic": "9 - Network Security",
+        "question": "What is 'Encryption'?",
+        "options": ["Deleting data.", "The process of converting data into an unreadable format using a key, to prevent unauthorized access.", "Compressing data.", "Naming a network."],
+        "answer": 1,
+        "explanation": "Encryption is the primary tool for maintaining confidentiality."
+    },
+    {
+        "id": "net_085",
+        "subtopic": "2 - Computer Networks",
+        "question": "Which layer of the OSI model is responsible for establishing, managing, and terminating 'Dialogues' between applications?",
+        "options": ["Transport Layer", "Session Layer", "Network Layer", "Data Link Layer"],
+        "answer": 1,
+        "explanation": "The Session Layer (Layer 5) manages the checkpoints and recovery of data streams."
+    },
+    {
+        "id": "net_086",
+        "subtopic": "6 - Application Layer",
+        "question": "What does a '403 Forbidden' status code mean?",
+        "options": ["The page does not exist.", "The server is down.", "The user is authenticated but does not have permission to access the resource.", "The connection timed out."],
+        "answer": 2,
+        "explanation": "403 is different from 401 (Unauthorized), which means the server doesn't know who you are."
+    },
+    {
+        "id": "net_087",
+        "subtopic": "10 - Next Generation Networks",
+        "question": "What is 'OpenFlow'?",
+        "options": ["A type of water cooling.", "A standard communication protocol between the SDN controller and the switches in an SDN network.", "A free internet service.", "An open-source browser."],
+        "answer": 1,
+        "explanation": "OpenFlow was the first standard protocol for SDN, allowing the controller to define how switches handle flows."
+    },
+    {
+        "id": "net_088",
+        "subtopic": "7 - Wireless Networks",
+        "question": "In Wi-Fi, what is 'WPA3's SAE' designed to protect against?",
+        "options": ["Water damage.", "Physical theft of the router.", "Offline dictionary attacks (password guessing).", "Signal interference from microwaves."],
+        "answer": 2,
+        "explanation": "SAE ensures that even if an attacker records a handshake, they cannot crack it later using a dictionary."
+    },
+    {
+        "id": "net_089",
+        "subtopic": "8 - Cloud Computing",
+        "question": "What is 'SaaS'?",
+        "options": ["Software as a Service (e.g., Google Docs, Slack).", "Servers as a Service.", "Storage as a Service.", "None of the above."],
+        "answer": 0,
+        "explanation": "SaaS provides a complete application over the internet; the user manages nothing."
+    },
+    {
+        "id": "net_090",
+        "subtopic": "4 - Network Layer",
+        "question": "Which protocol is used by routers to share information about the status of the network (e.g., unreachable destinations)?",
+        "options": ["TCP", "UDP", "ICMP (Internet Control Message Protocol)", "DNS"],
+        "answer": 2,
+        "explanation": "ICMP is used for error reporting and diagnostics (e.g., Destination Unreachable)."
+    },
+    {
+        "id": "net_091",
+        "subtopic": "3 - Data Link Layer",
+        "question": "What is 'Bit Stuffing'?",
+        "options": ["Adding 0s to a bit stream to prevent a data sequence from being confused with a 'Flag' sequence.", "Compressing bits.", "Encrypting bits.", "A way to increase signal speed."],
+        "answer": 0,
+        "explanation": "Bit stuffing ensures the receiver doesn't think the data is over just because the data happened to contain the same pattern as the end-of-frame flag."
+    },
+    {
+        "id": "net_092",
+        "subtopic": "5 - Transport Layer",
+        "question": "Which of the following describes the 'Cumulative Acknowledgment' in TCP?",
+        "options": ["Every packet must be ACKed separately.", "An ACK number indicates the next byte expected, implying all previous bytes were received correctly.", "The ACK is sent only once at the end.", "The ACK is encrypted."],
+        "answer": 1,
+        "explanation": "If a receiver sends ACK 1001, it means 'I have received everything up to 1000, now send me 1001'."
+    },
+    {
+        "id": "net_093",
+        "subtopic": "1 - Data Communication",
+        "question": "What is 'Baud Rate'?",
+        "options": ["The number of bits sent per second.", "The number of times the signal state changes per second.", "The thickness of the wire.", "The cost of the data plan."],
+        "answer": 1,
+        "explanation": "Baud rate is signal changes; Bit rate is actual data. One signal change can carry multiple bits."
+    },
+    {
+        "id": "net_094",
+        "subtopic": "9 - Network Security",
+        "question": "What is a 'Social Engineering' attack?",
+        "options": ["Using a virus to delete files.", "Manipulating people into revealing confidential information (e.g., Phishing).", "Hacking a social media site.", "Building a faster network."],
+        "answer": 1,
+        "explanation": "Social engineering targets the 'human element' of security rather than technical flaws."
+    },
+    {
+        "id": "net_095",
+        "subtopic": "10 - Next Generation Networks",
+        "question": "What is 'White Box' switching?",
+        "options": ["A switch painted white.", "Using generic, off-the-shelf switching hardware with an open-source Network Operating System.", "A switch with no security.", "A switch used for home offices only."],
+        "answer": 1,
+        "explanation": "White box switches are the hardware foundation for many SDN implementations."
+    },
+    {
+        "id": "net_096",
+        "subtopic": "2 - Computer Networks",
+        "question": "What is the 'Loopback' address for IPv4?",
+        "options": ["192.168.1.1", "127.0.0.1", "0.0.0.0", "255.255.255.255"],
+        "answer": 1,
+        "explanation": "The loopback address points back to the 'local host' (the computer itself)."
+    },
+    {
+        "id": "net_097",
+        "subtopic": "6 - Application Layer",
+        "question": "Which Application Layer protocol is used to access files on a remote server with commands like GET and MGET?",
+        "options": ["HTTP", "SMTP", "FTP (File Transfer Protocol)", "DNS"],
+        "answer": 2,
+        "explanation": "FTP is the classic protocol for uploading and downloading files."
+    },
+    {
+        "id": "net_098",
+        "subtopic": "4 - Network Layer",
+        "question": "What does 'Fragmenting' a packet mean?",
+        "options": ["Deleting the packet.", "Breaking a packet into smaller pieces because it is larger than the MTU (Maximum Transmission Unit) of a network link.", "Combining two packets.", "Changing the IP address."],
+        "answer": 1,
+        "explanation": "Routers fragment packets when the outgoing link cannot handle the current packet size."
+    },
+    {
+        "id": "net_099",
+        "subtopic": "8 - Cloud Computing",
+        "question": "What is 'Cloud Interoperability'?",
+        "options": ["Connecting two clouds.", "The ability to move workloads and data between different cloud providers without needing major re-engineering.", "Using only one cloud provider.", "A very fast cloud connection."],
+        "answer": 1,
+        "explanation": "Interoperability prevents 'Vendor Lock-in'."
+    },
+    {
+        "id": "net_100",
+        "subtopic": "5 - Transport Layer",
+        "question": "What is the range of 'Well-known' ports?",
+        "options": ["0 to 1023", "1024 to 49151", "49152 to 65535", "None of the above"],
+        "answer": 0,
+        "explanation": "Ports 0-1023 are reserved for standard system services like HTTP, FTP, and SSH."
+    },
+    {
+        "id": "net_101",
+        "subtopic": "10 - Next Generation Networks",
+        "question": "What is the primary goal of SDN 'Centralization'?",
+        "options": ["To make the hardware more expensive.", "To provide a single, global view of the network for better traffic engineering and security policy enforcement.", "To store all data in one place.", "To remove the need for cables."],
+        "answer": 1,
+        "explanation": "Centralization allows the controller to optimize the network path based on real-time global conditions."
+    },
+    {
+        "id": "net_102",
+        "subtopic": "7 - Wireless Networks",
+        "question": "In 5G, what is 'Massive MIMO'?",
+        "options": ["A large mouse.", "Using a huge number of antennas at the base station to serve many users simultaneously with high throughput.", "Using only one antenna.", "A way to encrypt Wi-Fi."],
+        "answer": 1,
+        "explanation": "Massive Multiple-Input Multiple-Output (MIMO) is key to 5G's capacity and speed."
+    },
+    {
+        "id": "net_103",
+        "subtopic": "9 - Network Security",
+        "question": "What is a 'Man-in-the-Middle' (MITM) attack?",
+        "options": ["A person standing in a doorway.", "An attacker intercepting and potentially altering communication between two parties who believe they are talking directly.", "Deleting a server.", "Sending a fake email."],
+        "answer": 1,
+        "explanation": "MITM attacks can happen via ARP spoofing or DNS poisoning."
+    },
+    {
+        "id": "net_104",
+        "subtopic": "3 - Data Link Layer",
+        "question": "What is the difference between 'Error Detection' and 'Error Correction'?",
+        "options": ["Detection finds the error; Correction fixes it (using redundant bits like Hamming code).", "Correction is for hardware.", "Detection is slower.", "There is no difference."],
+        "answer": 0,
+        "explanation": "Correction requires more overhead (more bits) than simple detection."
+    },
+    {
+        "id": "net_105",
+        "subtopic": "1 - Data Communication",
+        "question": "What is 'Latency' in a network?",
+        "options": ["The width of the cable.", "The time it takes for a message to travel from source to destination.", "The total amount of data sent.", "The security level of the link."],
+        "answer": 1,
+        "explanation": "Latency is 'delay.' Low latency is essential for gaming and real-time control systems."
+    }
+  ]
+}
