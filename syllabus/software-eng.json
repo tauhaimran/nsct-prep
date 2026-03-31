@@ -1,0 +1,924 @@
+{
+  "questions": [
+    {
+      "id": "se_001",
+      "subtopic": "1. Introduction to Software Engineering",
+      "question": "According to the IEEE, software engineering is defined as:",
+      "options": ["The process of writing code in high-level languages.", "The application of a systematic, disciplined, quantifiable approach to development, operation, and maintenance of software.", "The management of hardware and software integration.", "The design of computer architecture."],
+      "answer": 1,
+      "explanation": "IEEE Standard 610.12 emphasizes that SE is not just coding, but a disciplined engineering approach to the entire lifecycle."
+    },
+    {
+      "id": "se_002",
+      "subtopic": "1. Introduction to Software Engineering",
+      "question": "What is the 'Software Crisis' primarily characterized by?",
+      "options": ["A shortage of silicon for hardware.", "The inability to develop software on time, within budget, and meeting user requirements.", "The lack of programming languages.", "The high cost of server maintenance."],
+      "answer": 1,
+      "explanation": "The software crisis led to the birth of Software Engineering as a field to address project failures, cost overruns, and poor quality."
+    },
+    {
+      "id": "se_003",
+      "subtopic": "2. Software Process Models",
+      "question": "Which process model is best suited for large-scale, high-risk projects where risk analysis is required at every stage?",
+      "options": ["Waterfall Model", "Spiral Model", "RAD Model", "Incremental Model"],
+      "answer": 1,
+      "explanation": "The Spiral Model, proposed by Boehm, is an evolutionary model that focuses heavily on Risk Analysis in every iteration."
+    },
+    {
+      "id": "se_004",
+      "subtopic": "2. Software Process Models",
+      "question": "In the Waterfall model, what is the primary drawback of its linear nature?",
+      "options": ["It is too fast.", "It requires too much documentation.", "Requirements must be fully frozen at the start; it is difficult to go back to previous phases.", "It does not include a testing phase."],
+      "answer": 2,
+      "explanation": "Waterfall is rigid. Changes in requirements late in the cycle often lead to project failure or massive costs."
+    },
+    {
+      "id": "se_005",
+      "subtopic": "3. Agile Software Development",
+      "question": "In the Scrum framework, what is the 'Product Backlog'?",
+      "options": ["A list of bugs found during testing.", "An ordered list of everything that might be needed in the product; the single source of requirements.", "A report sent to the stakeholders after a sprint.", "The documentation for the system architecture."],
+      "answer": 1,
+      "explanation": "The Product Owner manages the backlog, which contains all features, functions, and fixes for the product."
+    },
+    {
+      "id": "se_006",
+      "subtopic": "3. Agile Software Development",
+      "question": "The Agile Manifesto values 'Responding to change' over:",
+      "options": ["Working software", "Customer collaboration", "Following a plan", "Individual interactions"],
+      "answer": 2,
+      "explanation": "Agile prioritizes flexibility and adaptation to user feedback over rigid adherence to a pre-defined plan."
+    },
+    {
+      "id": "se_007",
+      "subtopic": "4. Software Requirements Engineering",
+      "question": "What is the difference between Functional and Non-Functional requirements?",
+      "options": ["Functional is for users; Non-functional is for testers.", "Functional describes what the system does; Non-functional describes how the system performs (constraints like speed, security).", "Functional is written in code; Non-functional is written in English.", "There is no difference."],
+      "answer": 1,
+      "explanation": "Functional requirements define features; Non-functional requirements define quality attributes (e.g., 'The system must load in under 2 seconds')."
+    },
+    {
+      "id": "se_008",
+      "subtopic": "4. Software Requirements Engineering",
+      "question": "What does the IEEE 830 standard provide guidelines for?",
+      "options": ["Coding standards", "Software Requirement Specifications (SRS)", "Unit Testing", "Project Management"],
+      "answer": 1,
+      "explanation": "IEEE 830 is the industry standard for writing high-quality SRS documents."
+    },
+    {
+      "id": "se_009",
+      "subtopic": "5. Software Project Management",
+      "question": "In project scheduling, what does a 'Gantt Chart' primarily show?",
+      "options": ["The logic between code modules.", "The project budget vs actual spend.", "A timeline of project tasks, their duration, and overlap.", "The hierarchy of the development team."],
+      "answer": 2,
+      "explanation": "Gantt charts are visual tools for tracking the project schedule and progress over time."
+    },
+    {
+      "id": "se_010",
+      "subtopic": "5. Software Project Management",
+      "question": "Given the PERT formula, how is the 'Expected Time' (Te) calculated?",
+      "options": ["(Optimistic + Pessimistic) / 2", "(Optimistic + 4*MostLikely + Pessimistic) / 6", "(Optimistic + MostLikely + Pessimistic) / 3", "(Optimistic + 2*MostLikely + Pessimistic) / 4"],
+      "answer": 1,
+      "explanation": "PERT uses a weighted average to give more importance to the 'Most Likely' time estimate."
+    },
+    {
+      "id": "se_011",
+      "subtopic": "6. Software Design",
+      "question": "Which type of 'Cohesion' is considered the most desirable (best) in software design?",
+      "options": ["Coincidental Cohesion", "Logical Cohesion", "Functional Cohesion", "Temporal Cohesion"],
+      "answer": 2,
+      "explanation": "Functional Cohesion occurs when every part of a module is directed toward a single, well-defined task."
+    },
+    {
+      "id": "se_012",
+      "subtopic": "6. Software Design",
+      "question": "In terms of 'Coupling', a good software design should aim for:",
+      "options": ["High Coupling, High Cohesion", "Low Coupling, Low Cohesion", "Low Coupling, High Cohesion", "High Coupling, Low Cohesion"],
+      "answer": 2,
+      "explanation": "Low coupling means modules are independent; High cohesion means modules are focused. This makes the system easier to maintain."
+    },
+    {
+      "id": "se_013",
+      "subtopic": "7. Software Architecture",
+      "question": "Which architectural style is characterized by a 'Single Source of Truth' and is commonly used in database-heavy applications?",
+      "options": ["Pipe and Filter", "Layered Architecture", "Repository Architecture", "Client-Server"],
+      "answer": 2,
+      "explanation": "In Repository architecture, all components access and modify a central data store."
+    },
+    {
+      "id": "se_014",
+      "subtopic": "7. Software Architecture",
+      "question": "What is the primary goal of a 3-tier architecture?",
+      "options": ["To make the code run faster.", "To separate the user interface, business logic, and data storage into independent layers.", "To allow 3 developers to work at once.", "To use 3 different programming languages."],
+      "answer": 1,
+      "explanation": "Separation of concerns allows each tier (Presentation, Logic, Data) to be updated or scaled independently."
+    },
+    {
+      "id": "se_015",
+      "subtopic": "8. User Interface Design",
+      "question": "What is Mandel’s first 'Golden Rule' of UI design?",
+      "options": ["Make the interface beautiful.", "Place the user in control.", "Reduce the number of colors.", "Use as many icons as possible."],
+      "answer": 1,
+      "explanation": "The user should feel they are navigating the system, not being forced into rigid, confusing paths."
+    },
+    {
+      "id": "se_016",
+      "subtopic": "9. Software Implementation & Coding",
+      "question": "What is the main benefit of a 'Code Inspection' (Fagan Inspection) over simple debugging?",
+      "options": ["It is faster.", "It is a formal process that finds defects early by having a team systematically review the code.", "It requires no documentation.", "It uses automated scripts to find bugs."],
+      "answer": 1,
+      "explanation": "Inspections are a static verification technique that is much more effective at finding logic errors than simple testing."
+    },
+    {
+      "id": "se_017",
+      "subtopic": "10. Software Testing",
+      "question": "Which testing type ensures that new changes or bug fixes have not broken existing functionality?",
+      "options": ["Unit Testing", "Alpha Testing", "Regression Testing", "Stress Testing"],
+      "answer": 2,
+      "explanation": "Regression testing is vital after any code change to maintain system stability."
+    },
+    {
+      "id": "se_018",
+      "subtopic": "10. Software Testing",
+      "question": "What is the difference between 'Verification' and 'Validation'?",
+      "options": ["Verification is for hardware; Validation is for software.", "Verification asks 'Are we building the product right?'; Validation asks 'Are we building the right product?'", "Validation is done by developers; Verification by users.", "There is no difference."],
+      "answer": 1,
+      "explanation": "Verification checks against specs (Internal); Validation checks against user needs (External)."
+    },
+    {
+      "id": "se_019",
+      "subtopic": "11. Software Maintenance & Evolution",
+      "question": "Which type of maintenance involves modifying software to improve performance or maintainability without changing its functionality?",
+      "options": ["Corrective Maintenance", "Adaptive Maintenance", "Perfective Maintenance", "Preventive Maintenance"],
+      "answer": 2,
+      "explanation": "Perfective maintenance focuses on making the software 'better' (e.g., faster) rather than just fixing bugs."
+    },
+    {
+      "id": "se_020",
+      "subtopic": "11. Software Maintenance & Evolution",
+      "question": "According to Lehman’s Laws, what happens to a software system over time if it is not continually updated?",
+      "options": ["It becomes more stable.", "It becomes progressively less useful as the environment changes.", "It consumes less memory.", "It becomes automatically bug-free."],
+      "answer": 1,
+      "explanation": "Lehman’s Law of Continuing Change states that a system must change or it becomes obsolete."
+    },
+    {
+      "id": "se_021",
+      "subtopic": "12. Software Quality Assurance",
+      "question": "In the SEI Capability Maturity Model (CMM), at which level is the software process 'Managed' and quantitative quality goals are set?",
+      "options": ["Level 2", "Level 3", "Level 4", "Level 5"],
+      "answer": 2,
+      "explanation": "Level 4 (Managed) is where the organization starts using detailed metrics to manage the process and product."
+    },
+    {
+      "id": "se_022",
+      "subtopic": "13. Software Metrics & Measurement",
+      "question": "How is McCabe’s Cyclomatic Complexity V(G) calculated for a flow graph with E edges and N nodes?",
+      "options": ["V(G) = E - N + 2", "V(G) = E + N - 2", "V(G) = N - E + 2", "V(G) = E * N"],
+      "answer": 0,
+      "explanation": "Cyclomatic complexity measures the number of independent paths through the code; a higher number means more complex testing."
+    },
+    {
+      "id": "se_023",
+      "subtopic": "13. Software Metrics & Measurement",
+      "question": "What does a 'Function Point' (FP) metric measure that 'Lines of Code' (LOC) does not?",
+      "options": ["The speed of the programmer.", "The complexity and functionality provided to the user, independent of the programming language.", "The size of the hard drive needed.", "The number of comments in the code."],
+      "answer": 1,
+      "explanation": "FP is a language-independent metric useful for estimating project size early in the design phase."
+    },
+    {
+      "id": "se_024",
+      "subtopic": "14. Software Configuration Management",
+      "question": "What is a 'Baseline' in SCM?",
+      "options": ["The minimum salary for a developer.", "A specification or product that has been formally reviewed and agreed upon, serving as the basis for further development.", "The first line of code written.", "The database schema."],
+      "answer": 1,
+      "explanation": "Once a version is 'Baselined', any changes to it must follow a formal Change Control process."
+    },
+    {
+      "id": "se_025",
+      "subtopic": "15. Software Risk Management",
+      "question": "Risk Exposure (RE) is mathematically defined as:",
+      "options": ["RE = Probability + Impact", "RE = Probability * Loss (Impact)", "RE = Loss / Probability", "RE = Total Budget - Risk Cost"],
+      "answer": 1,
+      "explanation": "Risk exposure helps prioritize which risks to mitigate first based on their likelihood and potential damage."
+    },
+    {
+      "id": "se_026",
+      "subtopic": "16. Software Security Engineering",
+      "question": "What is 'Threat Modeling' in secure software development?",
+      "options": ["Hiring a hacker to break the system.", "A systematic approach to identifying and evaluating potential threats to an application during the design phase.", "Updating the antivirus on the server.", "Writing code in assembly."],
+      "answer": 1,
+      "explanation": "Threat modeling (like STRIDE) identifies vulnerabilities before they are built into the code."
+    },
+    {
+      "id": "se_027",
+      "subtopic": "2. Software Process Models",
+      "question": "Which model is also known as the 'Linear Sequential Model'?",
+      "options": ["Spiral", "Waterfall", "Prototype", "Iterative"],
+      "answer": 1,
+      "explanation": "The Waterfall model follows a strict sequence: Requirements -> Design -> Coding -> Testing -> Maintenance."
+    },
+    {
+      "id": "se_028",
+      "subtopic": "10. Software Testing",
+      "question": "What is 'Black-box' testing?",
+      "options": ["Testing the internal logic of the code.", "Testing the software without knowledge of the internal structure, focusing purely on inputs and outputs.", "Testing done only on a black screen.", "Testing performed only on server hardware."],
+      "answer": 1,
+      "explanation": "Black-box testing treats the system as a 'black box', ensuring the requirements are met regardless of how the code is written."
+    },
+    {
+      "id": "se_029",
+      "subtopic": "5. Software Project Management",
+      "question": "What is a 'Work Breakdown Structure' (WBS)?",
+      "options": ["A tool for breaking the server.", "A hierarchical decomposition of the total scope of work to be carried out by the project team.", "A list of employees who left the project.", "The code folder structure."],
+      "answer": 1,
+      "explanation": "WBS is the foundation of project planning, allowing for accurate time and cost estimation of small work packages."
+    },
+    {
+      "id": "se_030",
+      "subtopic": "13. Software Metrics & Measurement",
+      "question": "In Halstead's Software Science, 'Program Volume' (V) is calculated based on:",
+      "options": ["Lines of code.", "The number of unique operators and operands and their total frequency.", "The size of the compiled binary.", "The number of variables."],
+      "answer": 1,
+      "explanation": "Halstead's metrics focus on the information content of the source code itself."
+    },
+    {
+        "id": "se_031",
+        "subtopic": "4. Software Requirements Engineering",
+        "question": "What does the 'TBD' (To Be Determined) label in an SRS indicate?",
+        "options": ["The project is finished.", "The requirement is currently unknown or pending further analysis.", "The code is being tested.", "The requirement is rejected."],
+        "answer": 1,
+        "explanation": "TBD is a placeholder used when specific details cannot be finalized yet, but the need for a requirement has been identified."
+    },
+    {
+        "id": "se_032",
+        "subtopic": "6. Software Design",
+        "question": "Which UML diagram is used to show the static structure of a system, including attributes and methods?",
+        "options": ["Sequence Diagram", "Use Case Diagram", "Class Diagram", "Statechart Diagram"],
+        "answer": 2,
+        "explanation": "Class diagrams are the backbone of object-oriented modeling, showing classes and their relationships."
+    },
+    {
+        "id": "se_033",
+        "subtopic": "10. Software Testing",
+        "question": "What is 'Alpha Testing'?",
+        "options": ["Testing performed by the end-user at their own site.", "Testing performed by the development team at the developer's site in a controlled environment.", "The very first test ever written.", "Testing the hardware compatibility."],
+        "answer": 1,
+        "explanation": "Alpha testing is internal (developer site), while Beta testing is external (user site)."
+    },
+    {
+        "id": "se_034",
+        "subtopic": "12. Software Quality Assurance",
+        "question": "What is the focus of ISO 9126?",
+        "options": ["Standardizing network cables.", "Defining software quality characteristics (Functionality, Reliability, Usability, Efficiency, Maintainability, Portability).", "Project management certificates.", "Data center cooling standards."],
+        "answer": 1,
+        "explanation": "ISO 9126 provides a framework for evaluating software quality from different perspectives."
+    },
+    {
+        "id": "se_035",
+        "subtopic": "14. Software Configuration Management",
+        "question": "Which body is responsible for reviewing and approving/rejecting proposed changes to a baselined configuration item?",
+        "options": ["CEO", "CCB (Configuration Control Board)", "The Lead Programmer", "The Client only"],
+        "answer": 1,
+        "explanation": "The CCB ensures that changes are only made if they are necessary and their impact is understood."
+    },
+    {
+        "id": "se_036",
+        "subtopic": "11. Software Maintenance & Evolution",
+        "question": "What is 'Corrective Maintenance'?",
+        "options": ["Changing code for a new OS.", "Reacting to errors and bugs found after the software is released to users.", "Adding new features for the client.", "Optimizing the database queries."],
+        "answer": 1,
+        "explanation": "Corrective maintenance is the process of fixing 'faults' or 'bugs' reported by users."
+    },
+    {
+        "id": "se_037",
+        "subtopic": "5. Software Project Management",
+        "question": "In COCOMO, the 'EAF' (Effort Adjustment Factor) is used to:",
+        "options": ["Calculate the total number of developers.", "Adjust the base effort estimate using 15 cost drivers (like reliability and complexity).", "Convert LOC to Function Points.", "Measure the speed of the internet."],
+        "answer": 1,
+        "explanation": "Intermediate COCOMO uses cost drivers to make the effort estimate more accurate for a specific project's environment."
+    },
+    {
+        "id": "se_038",
+        "subtopic": "3. Agile Software Development",
+        "question": "How long is a typical 'Sprint' in most Scrum implementations?",
+        "options": ["1 day", "2 to 4 weeks", "6 months", "1 year"],
+        "answer": 1,
+        "explanation": "Sprints are short, fixed-length iterations to ensure frequent delivery of working software."
+    },
+    {
+        "id": "se_039",
+        "subtopic": "6. Software Design",
+        "question": "In a Sequence Diagram, what does a vertical dashed line represent?",
+        "options": ["A loop.", "The lifeline of an object over time.", "A message being sent.", "A database connection."],
+        "answer": 1,
+        "explanation": "The lifeline shows how long an object exists during the interaction being modeled."
+    },
+    {
+        "id": "se_040",
+        "subtopic": "12. Software Quality Assurance",
+        "question": "What does 'Six Sigma' aim for in terms of defects?",
+        "options": ["Zero defects.", "3.4 defects per million opportunities.", "10 defects per thousand lines of code.", "Reducing cost by 6%."],
+        "answer": 1,
+        "explanation": "Six Sigma is a data-driven approach to eliminate defects and improve process quality."
+    },
+    {
+        "id": "se_041",
+        "subtopic": "4. Software Requirements Engineering",
+        "question": "Which requirement elicitation technique involves a joint team of customers and developers working in an intensive session?",
+        "options": ["Interviews", "Questionnaires", "FAST (Facilitated Application Specification Techniques)", "Observation"],
+        "answer": 2,
+        "explanation": "FAST sessions are designed to bridge the gap between user expectations and developer understanding quickly."
+    },
+    {
+        "id": "se_042",
+        "subtopic": "15. Software Risk Management",
+        "question": "What is 'Risk Mitigation'?",
+        "options": ["Accepting that a risk will happen.", "Developing actions to reduce the probability or impact of a threat.", "Ignoring the risk.", "Reporting the risk to the media."],
+        "answer": 1,
+        "explanation": "Mitigation is a proactive strategy to minimize the potential damage of a risk."
+    },
+    {
+        "id": "se_043",
+        "subtopic": "13. Software Metrics & Measurement",
+        "question": "What is 'Reliability' defined as in Software Engineering?",
+        "options": ["The speed of the software.", "The probability of failure-free operation in a specified environment for a specified time.", "The number of lines of code.", "The difficulty of the programming language."],
+        "answer": 1,
+        "explanation": "Reliability is a key quality attribute often measured using MTBF (Mean Time Between Failures)."
+    },
+    {
+        "id": "se_044",
+        "subtopic": "7. Software Architecture",
+        "question": "In the Model-View-Controller (MVC) pattern, what is the role of the 'Controller'?",
+        "options": ["To store the data.", "To render the user interface.", "To process user input and coordinate interactions between the Model and the View.", "To connect to the internet."],
+        "answer": 2,
+        "explanation": "The controller acts as the logic layer that handles requests and updates the other two components."
+    },
+    {
+        "id": "se_045",
+        "subtopic": "10. Software Testing",
+        "question": "What is 'Smoke Testing'?",
+        "options": ["Testing if the server catches fire.", "A preliminary test to reveal simple failures severe enough to reject a prospective software release.", "Testing performed only in the cloud.", "Testing the UI colors."],
+        "answer": 1,
+        "explanation": "Smoke testing ensures that the most basic functions of the app work before moving on to deep testing."
+    },
+    {
+        "id": "se_046",
+        "subtopic": "11. Software Maintenance & Evolution",
+        "question": "Which of the following is an example of 'Adaptive Maintenance'?",
+        "options": ["Fixing a bug in the login form.", "Modifying the software to work on a new version of Windows or a new database.", "Adding a new 'Reports' module.", "Refactoring code to make it more readable."],
+        "answer": 1,
+        "explanation": "Adaptive maintenance is required when the environment (OS, hardware, or third-party libraries) changes."
+    },
+    {
+        "id": "se_047",
+        "subtopic": "16. Software Security Engineering",
+        "question": "What is the 'Principle of Least Privilege' (PoLP) in software implementation?",
+        "options": ["Giving users no access at all.", "A module or user should have only the minimum access levels required to perform its function.", "Allowing everyone to be an admin to speed up work.", "Only the CEO has access to the code."],
+        "answer": 1,
+        "explanation": "PoLP reduces the 'attack surface' and limits the potential damage from a security breach."
+    },
+    {
+        "id": "se_048",
+        "subtopic": "5. Software Project Management",
+        "question": "What is the 'Critical Path' in a project network diagram?",
+        "options": ["The shortest possible path.", "The longest path through the network, determining the minimum time required to complete the project.", "The path with the most bugs.", "The path that costs the least money."],
+        "answer": 1,
+        "explanation": "Any delay in a task on the critical path directly delays the entire project completion date."
+    },
+    {
+        "id": "se_049",
+        "subtopic": "2. Software Process Models",
+        "question": "In the Spiral model, what does the 'Angular dimension' represent?",
+        "options": ["Cost", "Progress of the project", "Risk", "Time"],
+        "answer": 1,
+        "explanation": "In a spiral chart, the angle represents the progress made, while the radius represents the cost/resources spent."
+    },
+    {
+        "id": "se_050",
+        "subtopic": "14. Software Configuration Management",
+        "question": "What does a 'Version Control System' (like Git) primarily track?",
+        "options": ["Employee working hours.", "Changes to source code files over time, allowing for rollbacks and branching.", "The number of users on the website.", "The server temperature."],
+        "answer": 1,
+        "explanation": "SCM tools are essential for team collaboration and maintaining an audit trail of code changes."
+    },
+    {
+      "id": "se_051",
+      "subtopic": "1. Introduction to Software Engineering",
+      "question": "Which of the following is NOT a type of software?",
+      "options": ["System software", "Application software", "Firmware software", "Peripheral hardware"],
+      "answer": 3,
+      "explanation": "Hardware is physical; software is the collection of data/instructions."
+    },
+    {
+      "id": "se_052",
+      "subtopic": "1. Introduction to Software Engineering",
+      "question": "Generic software is designed for:",
+      "options": ["A specific customer only", "A wide range of market with common requirements", "Military applications only", "Embedded systems only"],
+      "answer": 1,
+      "explanation": "Generic software like Word or Photoshop is built for a broad market."
+    },
+    {
+      "id": "se_053",
+      "subtopic": "2. Software Process Models",
+      "question": "The RAD (Rapid Application Development) model emphasizes:",
+      "options": ["Long development cycles", "Short development cycles and heavy documentation", "Short development cycles and extensive use of prototyping", "No user involvement"],
+      "answer": 2,
+      "explanation": "RAD uses prototyping and iterative delivery to speed up the process."
+    },
+    {
+      "id": "se_054",
+      "subtopic": "2. Software Process Models",
+      "question": "Which model is preferable when requirements are not fully known at the start?",
+      "options": ["Waterfall", "Evolutionary / Prototyping", "Formal Methods", "Incremental"],
+      "answer": 1,
+      "explanation": "Prototyping allows users to see and refine requirements as they go."
+    },
+    {
+      "id": "se_055",
+      "subtopic": "3. Agile Software Development",
+      "question": "What happens during a 'Sprint Review' in Scrum?",
+      "options": ["The team plans the next month.", "The team demonstrates the 'Increment' to stakeholders and gets feedback.", "The team discusses what went wrong internally.", "The team writes documentation."],
+      "answer": 1,
+      "explanation": "Review is for stakeholders; Retrospective is for internal team improvement."
+    },
+    {
+      "id": "se_056",
+      "subtopic": "3. Agile Software Development",
+      "question": "Which role in Scrum is responsible for removing 'impediments' for the development team?",
+      "options": ["Product Owner", "Stakeholder", "Scrum Master", "Project Manager"],
+      "answer": 2,
+      "explanation": "The Scrum Master is a servant-leader who helps the team stay productive."
+    },
+    {
+      "id": "se_057",
+      "subtopic": "4. Software Requirements Engineering",
+      "question": "What is 'Requirement Volatility'?",
+      "options": ["Requirements that are very difficult to code.", "The tendency for requirements to change over time during or after the development process.", "Requirements that cause system crashes.", "Highly secure requirements."],
+      "answer": 1,
+      "explanation": "High volatility is a major risk factor in software project management."
+    },
+    {
+      "id": "se_058",
+      "subtopic": "4. Software Requirements Engineering",
+      "question": "Requirements validation techniques include all except:",
+      "options": ["Reviews", "Prototyping", "Test-case generation", "Compiling the code"],
+      "answer": 3,
+      "explanation": "Validation happens before or during coding, so you can't compile a non-existent system yet."
+    },
+    {
+      "id": "se_059",
+      "subtopic": "5. Software Project Management",
+      "question": "What does 'Float' or 'Slack' mean in project management?",
+      "options": ["The amount of time a task can be delayed without delaying the whole project.", "The number of employees on vacation.", "The time spent on meetings.", "The budget left over."],
+      "answer": 0,
+      "explanation": "Tasks on the critical path have zero float."
+    },
+    {
+      "id": "se_060",
+      "subtopic": "5. Software Project Management",
+      "question": "COCOMO is based on which estimation technique?",
+      "options": ["Expert Judgment", "Algorithmic Cost Modeling", "Analogy", "Parkinson's Law"],
+      "answer": 1,
+      "explanation": "COCOMO uses mathematical formulas based on project size and cost drivers."
+    },
+    {
+      "id": "se_061",
+      "subtopic": "6. Software Design",
+      "question": "What is the main goal of 'Object-Oriented Design'?",
+      "options": ["To write code as fast as possible.", "To model the system as a collection of interacting objects that bundle data and behavior.", "To eliminate the need for databases.", "To use only global variables."],
+      "answer": 1,
+      "explanation": "OOD focuses on encapsulation, inheritance, and polymorphism."
+    },
+    {
+      "id": "se_062",
+      "subtopic": "6. Software Design",
+      "question": "In software architecture, what is 'Separation of Concerns'?",
+      "options": ["Keeping the developers in separate rooms.", "Dividing a program into distinct sections, where each section addresses a separate concern or feature.", "Hiding the code from the client.", "Ensuring no two variables have the same name."],
+      "answer": 1,
+      "explanation": "This leads to modularity and easier maintenance."
+    },
+    {
+      "id": "se_063",
+      "subtopic": "7. Software Architecture",
+      "question": "The 'Pipe and Filter' architecture is best illustrated by:",
+      "options": ["A website with a database.", "A compiler (lexical analysis -> parsing -> code gen).", "A mobile app.", "A peer-to-peer network."],
+      "answer": 1,
+      "explanation": "Data flows through a series of processing elements (filters)."
+    },
+    {
+      "id": "se_064",
+      "subtopic": "7. Software Architecture",
+      "question": "What is the primary benefit of 'Microservices' architecture?",
+      "options": ["It is easier to build than a monolith.", "It allows individual services to be deployed, scaled, and written in different languages independently.", "It uses only one server.", "It is always cheaper."],
+      "answer": 1,
+      "explanation": "Microservices offer high scalability and fault isolation."
+    },
+    {
+      "id": "se_065",
+      "subtopic": "8. User Interface Design",
+      "question": "Which UI term refers to the visual cues that tell a user how an object can be used (e.g., a button looks clickable)?",
+      "options": ["Affordance", "Aesthetics", "Accessibility", "Animation"],
+      "answer": 0,
+      "explanation": "Affordances make a UI intuitive."
+    },
+    {
+      "id": "se_066",
+      "subtopic": "8. User Interface Design",
+      "question": "What does 'Accessibility' (a11y) in UI design focus on?",
+      "options": ["The speed of the login.", "Ensuring the software is usable by people with disabilities (e.g., screen reader support).", "The price of the software.", "The font size only."],
+      "answer": 1,
+      "explanation": "Inclusive design is a standard requirement for modern web/app software."
+    },
+    {
+      "id": "se_067",
+      "subtopic": "9. Software Implementation & Coding",
+      "question": "What is 'Refactoring'?",
+      "options": ["Adding new features to the software.", "Restructuring existing code without changing its external behavior to improve readability or reduce complexity.", "Deleting the whole project.", "Rewriting code in a new language."],
+      "answer": 1,
+      "explanation": "Refactoring is a key part of maintaining code quality over time."
+    },
+    {
+      "id": "se_068",
+      "subtopic": "9. Software Implementation & Coding",
+      "question": "Why are 'Coding Standards' important in a team environment?",
+      "options": ["To make the code look pretty.", "To ensure consistency, maintainability, and ease of review across the entire codebase.", "To prevent hackers.", "To use more memory."],
+      "answer": 1,
+      "explanation": "Standards like naming conventions and indentation help any developer understand any part of the project."
+    },
+    {
+      "id": "se_069",
+      "subtopic": "10. Software Testing",
+      "question": "What is 'White-box' testing?",
+      "options": ["Testing only the user interface.", "Testing based on the internal logic and structure of the code (e.g., path coverage).", "Testing without looking at the code.", "Testing performed on a white background."],
+      "answer": 1,
+      "explanation": "Also known as Structural testing, it requires knowledge of the source code."
+    },
+    {
+      "id": "se_070",
+      "subtopic": "10. Software Testing",
+      "question": "Which test is performed to determine if a system satisfies its acceptance criteria?",
+      "options": ["Unit Test", "Integration Test", "Acceptance Test", "Stress Test"],
+      "answer": 2,
+      "explanation": "Acceptance tests (UAT) are often the final step before the customer signs off on the project."
+    },
+    {
+      "id": "se_071",
+      "subtopic": "11. Software Maintenance & Evolution",
+      "question": "Approximately what percentage of a software project's budget is typically spent on maintenance?",
+      "options": ["10%", "30%", "50%", "70% or more"],
+      "answer": 3,
+      "explanation": "Most of the cost of software occurs after the initial release due to updates and bug fixes."
+    },
+    {
+      "id": "se_072",
+      "subtopic": "11. Software Maintenance & Evolution",
+      "question": "What is 'Preventive Maintenance'?",
+      "options": ["Fixing bugs before they happen.", "Modifying software to improve future maintainability or to correct latent defects before they become errors.", "Updating the OS.", "Adding new features."],
+      "answer": 1,
+      "explanation": "Refactoring and documentation are examples of preventive maintenance."
+    },
+    {
+      "id": "se_073",
+      "subtopic": "12. Software Quality Assurance",
+      "question": "What is the primary difference between SQA and Testing?",
+      "options": ["Testing is part of SQA; SQA is the broader set of activities ensuring the process produces quality software.", "SQA is done at the end; Testing is done throughout.", "Testing is for bugs; SQA is for documentation.", "There is no difference."],
+      "answer": 0,
+      "explanation": "SQA is process-oriented (preventing bugs); Testing is product-oriented (finding bugs)."
+    },
+    {
+      "id": "se_074",
+      "subtopic": "12. Software Quality Assurance",
+      "question": "In CMM, 'Optimizing' is Level:",
+      "options": ["2", "3", "4", "5"],
+      "answer": 3,
+      "explanation": "Level 5 is the highest, where the focus is on continuous process improvement."
+    },
+    {
+      "id": "se_075",
+      "subtopic": "13. Software Metrics & Measurement",
+      "question": "What is 'MTBF'?",
+      "options": ["Mean Time Between Failures", "Maximum Time Before Finish", "Most Trusted Binary Format", "Metric Towards Business Function"],
+      "answer": 0,
+      "explanation": "MTBF is a key metric for measuring software reliability."
+    },
+    {
+      "id": "se_076",
+      "subtopic": "13. Software Metrics & Measurement",
+      "question": "What is 'MTTR'?",
+      "options": ["Mean Time To Repair", "Maximum Time To Run", "Minimum Time To Restart", "Main Task To Review"],
+      "answer": 0,
+      "explanation": "MTTR measures how long it takes to fix a system after a failure."
+    },
+    {
+      "id": "se_077",
+      "subtopic": "14. Software Configuration Management",
+      "question": "What is 'Status Accounting' in SCM?",
+      "options": ["Managing the payroll.", "Reporting the current state and history of configuration items and change requests.", "Counting the number of lines of code.", "Hiring new developers."],
+      "answer": 1,
+      "explanation": "Status accounting provides the visibility into what changed, when, and why."
+    },
+    {
+      "id": "se_078",
+      "subtopic": "14. Software Configuration Management",
+      "question": "What is a 'Configuration Audit'?",
+      "options": ["Checking the tax records.", "A process to ensure that the actual configuration item matches the requirements and documentation.", "Scanning for viruses.", "Counting the hard drives."],
+      "answer": 1,
+      "explanation": "Audits ensure that the software being released is exactly what was intended."
+    },
+    {
+      "id": "se_079",
+      "subtopic": "15. Software Risk Management",
+      "question": "Which of the following is a 'Technical Risk'?",
+      "options": ["The client runs out of money.", "A critical third-party library is no longer supported.", "A key developer quits.", "The legal laws change."],
+      "answer": 1,
+      "explanation": "Technical risks are directly related to the technology stack and implementation."
+    },
+    {
+      "id": "se_080",
+      "subtopic": "15. Software Risk Management",
+      "question": "What is the 'Rayleigh Model' used for in SE?",
+      "options": ["Predicting the number of bugs over time.", "Predicting the project duration.", "Predicting the budget.", "Predicting the server speed."],
+      "answer": 0,
+      "explanation": "The Rayleigh model is used for defect density and reliability modeling."
+    },
+    {
+      "id": "se_081",
+      "subtopic": "16. Software Security Engineering",
+      "question": "What is 'Secure by Design'?",
+      "options": ["Adding a firewall after the app is done.", "Integrating security principles into every phase of the SDLC from the very beginning.", "Using a strong password.", "Encrypting the source code."],
+      "answer": 1,
+      "explanation": "Security should be a foundation, not an after-thought."
+    },
+    {
+      "id": "se_082",
+      "subtopic": "16. Software Security Engineering",
+      "question": "Which security principle ensures that data is only accessible to authorized users?",
+      "options": ["Integrity", "Availability", "Confidentiality", "Non-repudiation"],
+      "answer": 2,
+      "explanation": "This is one of the three pillars of the CIA triad."
+    },
+    {
+      "id": "se_083",
+      "subtopic": "2. Software Process Models",
+      "question": "What is the primary feature of 'Evolutionary Prototyping'?",
+      "options": ["The prototype is thrown away.", "The prototype is gradually refined and becomes the final system.", "The prototype is only for the UI.", "The prototype is used to hire developers."],
+      "answer": 1,
+      "explanation": "Unlike 'Throwaway' prototyping, Evolutionary prototyping is a long-term strategy."
+    },
+    {
+      "id": "se_084",
+      "subtopic": "4. Software Requirements Engineering",
+      "question": "What is the 'Product Perspective' in an SRS?",
+      "options": ["The price of the product.", "How the product fits into a larger system or environment.", "A list of all features.", "The marketing plan."],
+      "answer": 1,
+      "explanation": "This section explains if the product is standalone or part of a bigger suite."
+    },
+    {
+      "id": "se_085",
+      "subtopic": "5. Software Project Management",
+      "question": "In COCOMO, which project mode is characterized by a small team and very rigid requirements (like military software)?",
+      "options": ["Organic", "Semi-detached", "Embedded", "Agile"],
+      "answer": 2,
+      "explanation": "Embedded projects have strict constraints and high complexity."
+    },
+    {
+      "id": "se_086",
+      "subtopic": "10. Software Testing",
+      "question": "What is 'Integration Testing' focus?",
+      "options": ["Individual functions.", "The communication and data flow between different modules or services.", "The user interface beauty.", "The final deployment."],
+      "answer": 1,
+      "explanation": "Integration testing catches bugs in the 'plumbing' of the system."
+    },
+    {
+      "id": "se_087",
+      "subtopic": "12. Software Quality Assurance",
+      "question": "What is 'Total Quality Management' (TQM)?",
+      "options": ["A testing tool.", "An organization-wide effort to continuously improve the quality of products and services.", "A project management certificate.", "A type of code review."],
+      "answer": 1,
+      "explanation": "TQM is a culture-level approach to quality."
+    },
+    {
+      "id": "se_088",
+      "subtopic": "6. Software Design",
+      "question": "Which design principle suggests that a class should have only one reason to change?",
+      "options": ["Open-Closed Principle", "Single Responsibility Principle", "Dependency Inversion", "Liskov Substitution"],
+      "answer": 1,
+      "explanation": "This is the 'S' in SOLID principles."
+    },
+    {
+      "id": "se_089",
+      "subtopic": "3. Agile Software Development",
+      "question": "What is a 'User Story'?",
+      "options": ["A novel written by the user.", "A simple, natural language description of a feature from the perspective of an end-user.", "A bug report.", "A list of database tables."],
+      "answer": 1,
+      "explanation": "User stories follow the format: 'As a [user], I want to [action] so that [benefit]'."
+    },
+    {
+      "id": "se_090",
+      "subtopic": "13. Software Metrics & Measurement",
+      "question": "What does a 'High Cyclomatic Complexity' value suggest?",
+      "options": ["The code is very efficient.", "The code is difficult to understand, test, and maintain.", "The code has many comments.", "The code is written in Python."],
+      "answer": 1,
+      "explanation": "A complexity over 10 is usually considered a risk for maintenance."
+    },
+    {
+      "id": "se_091",
+      "subtopic": "1. Introduction to Software Engineering",
+      "question": "Which of the following is an attribute of 'Good Software'?",
+      "options": ["High efficiency", "Maintainability", "Usability", "All of the above"],
+      "answer": 3,
+      "explanation": "Software must meet multiple quality dimensions to be considered truly successful."
+    },
+    {
+      "id": "se_092",
+      "subtopic": "7. Software Architecture",
+      "question": "In a 'Client-Server' model, which part usually handles the data storage?",
+      "options": ["The Client", "The Server", "The Browser", "The Cable"],
+      "answer": 1,
+      "explanation": "The server provides resources and data to the clients upon request."
+    },
+    {
+      "id": "se_093",
+      "subtopic": "9. Software Implementation & Coding",
+      "question": "What is 'Technical Debt'?",
+      "options": ["Money owed to a hardware vendor.", "The implied cost of additional rework caused by choosing an easy solution now instead of a better approach that would take longer.", "The total project budget.", "The cost of the developer's laptop."],
+      "answer": 1,
+      "explanation": "Technical debt must eventually be 'paid back' through refactoring or fixing bugs."
+    },
+    {
+      "id": "se_094",
+      "subtopic": "10. Software Testing",
+      "question": "What is the 'Pareto Principle' in software testing?",
+      "options": ["80% of the features are used by 20% of users.", "80% of the bugs are typically found in 20% of the code modules.", "Testing should take 80% of the time.", "Developers write 80% of the tests."],
+      "answer": 1,
+      "explanation": "Focusing testing on the most complex/fault-prone modules is a more efficient strategy."
+    },
+    {
+      "id": "se_095",
+      "subtopic": "4. Software Requirements Engineering",
+      "question": "What is 'Requirement Traceability'?",
+      "options": ["Finding where a requirement was written.", "The ability to track a requirement from its origin, through its development, to its final testing and deployment.", "Counting the requirements.", "Translating requirements into code."],
+      "answer": 1,
+      "explanation": "A traceability matrix ensures that every requirement is implemented and tested."
+    },
+    {
+      "id": "se_096",
+      "subtopic": "6. Software Design",
+      "question": "Which design pattern is used to provide a single instance of a class throughout the application?",
+      "options": ["Factory", "Observer", "Singleton", "Strategy"],
+      "answer": 2,
+      "explanation": "Singleton ensures that only one object of that class ever exists (e.g., for a database connection pool)."
+    },
+    {
+      "id": "se_097",
+      "subtopic": "15. Software Risk Management",
+      "question": "What is 'Risk Avoidance'?",
+      "options": ["Ignoring the risk.", "Changing the project plan to eliminate the threat entirely.", "Buying insurance for the risk.", "Hoping for the best."],
+      "answer": 1,
+      "explanation": "For example, if a library is too risky, you choose a different one."
+    },
+    {
+      "id": "se_098",
+      "subtopic": "12. Software Quality Assurance",
+      "question": "What is an 'ISO 9001' certification used for?",
+      "options": ["To prove the software is bug-free.", "To demonstrate that an organization follows a quality management system that meets specific standards.", "To speed up the internet.", "To hide the source code."],
+      "answer": 1,
+      "explanation": "ISO 9001 is a global standard for quality processes."
+    },
+    {
+      "id": "se_099",
+      "subtopic": "5. Software Project Management",
+      "question": "In a network diagram, what is 'Slack Time'?",
+      "options": ["The time when no one is working.", "The difference between the latest start time and the earliest start time of a task.", "The time spent on lunch.", "The time before the project starts."],
+      "answer": 1,
+      "explanation": "If slack is zero, the task is on the critical path."
+    },
+    {
+      "id": "se_100",
+      "subtopic": "11. Software Maintenance & Evolution",
+      "question": "What is 'Legacy Software'?",
+      "options": ["Software left to a developer in a will.", "Older software systems that are still in use because they perform critical business functions, but are often difficult to maintain.", "Software written in assembly.", "Brand new software."],
+      "answer": 1,
+      "explanation": "Legacy systems are a major focus of software evolution and maintenance."
+    },
+    {
+      "id": "se_101",
+      "subtopic": "13. Software Metrics & Measurement",
+      "question": "What is 'Function Point Count'?",
+      "options": ["Counting the number of functions in the code.", "A process of quantifying the functionality of a system based on inputs, outputs, queries, and files.", "The number of users.", "The size of the screen."],
+      "answer": 1,
+      "explanation": "FP count is used to measure the size of the software from the user's perspective."
+    },
+    {
+        "id": "se_102",
+        "subtopic": "6. Software Design",
+        "question": "What is 'Abstraction' in software design?",
+        "options": ["Making the code harder to read.", "Hiding the complex background details and only showing the essential features to the user or other modules.", "Removing all comments.", "Using only global variables."],
+        "answer": 1,
+        "explanation": "Abstraction reduces complexity by allowing developers to focus on high-level logic."
+    },
+    {
+        "id": "se_103",
+        "subtopic": "10. Software Testing",
+        "question": "What is 'Boundary Value Analysis'?",
+        "options": ["Testing the server's physical boundaries.", "A testing technique where you test the extreme ends of input ranges (e.g., testing 0 and 100 for a 1-100 range).", "Testing only the UI colors.", "Testing the internet speed."],
+        "answer": 1,
+        "explanation": "BVA is effective because bugs often hide at the 'edges' of valid data ranges."
+    },
+    {
+        "id": "se_104",
+        "subtopic": "16. Software Security Engineering",
+        "question": "What is a 'Buffer Overflow'?",
+        "options": ["When the server room is too hot.", "A vulnerability where a program writes more data to a block of memory (buffer) than it can hold, often allowing code injection.", "When the user types too fast.", "When the database is full."],
+        "answer": 1,
+        "explanation": "Buffer overflows are classic security flaws that secure software engineering aims to prevent via bounds checking."
+    },
+    {
+        "id": "se_105",
+        "subtopic": "8. User Interface Design",
+        "question": "What is 'Responsive Web Design'?",
+        "options": ["A website that answers user questions.", "An approach where the UI layout adjusts automatically to fit different screen sizes (mobile, tablet, desktop).", "A very fast website.", "A website with many buttons."],
+        "answer": 1,
+        "explanation": "Responsiveness is key to modern usability."
+    },
+    {
+        "id": "se_106",
+        "subtopic": "1. Introduction to Software Engineering",
+        "question": "Which of the following is a 'Management Myth'?",
+        "options": ["Adding more people to a late project will make it later.", "Testing should be planned from the start.", "If we fall behind, we can just add more programmers later and catch up.", "Documentation is necessary for maintenance."],
+        "answer": 2,
+        "explanation": "This is known as Brooks' Law: Adding manpower to a late software project makes it later."
+    },
+    {
+        "id": "se_107",
+        "subtopic": "13. Software Metrics & Measurement",
+        "question": "What is 'Code Coverage'?",
+        "options": ["The total number of code files.", "A metric that measures the percentage of the source code executed during testing.", "A way to hide the code.", "The size of the code on disk."],
+        "answer": 1,
+        "explanation": "High code coverage usually correlates with higher software quality and fewer hidden bugs."
+    },
+    {
+        "id": "se_108",
+        "subtopic": "3. Agile Software Development",
+        "question": "In Agile, what is a 'Timebox'?",
+        "options": ["A clock on the wall.", "A fixed period of time during which a specific task or iteration must be completed.", "The project deadline.", "The time spent on lunch."],
+        "answer": 1,
+        "explanation": "Timeboxing helps prevent scope creep and keeps the team focused on delivery."
+    },
+    {
+        "id": "se_109",
+        "subtopic": "11. Software Maintenance & Evolution",
+        "question": "What is 'Software Aging'?",
+        "options": ["When the software is 10 years old.", "The progressive deterioration of software performance and quality over time as more and more patches are added.", "When the developer gets old.", "When the server hardware rusts."],
+        "answer": 1,
+        "explanation": "Aging is often resolved through complete system re-engineering."
+    },
+    {
+        "id": "se_110",
+        "subtopic": "15. Software Risk Management",
+        "question": "Which of the following is a strategy for 'Risk Transfer'?",
+        "options": ["Ignoring the risk.", "Purchasing insurance or outsourcing the risky part of the project to a third party.", "Developing a workaround.", "Hiring more testers."],
+        "answer": 1,
+        "explanation": "Transferring the risk moves the financial or operational burden to another entity."
+    },
+    {
+        "id": "se_111",
+        "subtopic": "6. Software Design",
+        "question": "What is 'Encapsulation'?",
+        "options": ["Hiding all code from the user.", "Bundling data and the methods that operate on that data into a single unit (class) and restricting direct access.", "Using only global variables.", "Encrypting the database."],
+        "answer": 1,
+        "explanation": "Encapsulation is a core principle of OOD that protects the internal state of an object."
+    },
+    {
+        "id": "se_112",
+        "subtopic": "14. Software Configuration Management",
+        "question": "In Git, what is a 'Merge Conflict'?",
+        "options": ["When two developers get into a fight.", "When two different sets of changes are made to the same part of a file and the system cannot decide which to use.", "When the server is down.", "When a file is deleted."],
+        "answer": 1,
+        "explanation": "Merge conflicts require manual resolution by a developer."
+    },
+    {
+        "id": "se_113",
+        "subtopic": "7. Software Architecture",
+        "question": "What is 'Service-Oriented Architecture' (SOA)?",
+        "options": ["A website for hiring people.", "A design pattern where application components provide services to other components via a communications protocol over a network.", "A type of database.", "A way to organize files on a computer."],
+        "answer": 1,
+        "explanation": "SOA was the precursor to modern microservices."
+    },
+    {
+        "id": "se_114",
+        "subtopic": "12. Software Quality Assurance",
+        "question": "What is the 'SQA Plan'?",
+        "options": ["A plan to write more code.", "A document that outlines the quality goals, the processes to be followed, and the metrics to be used for a project.", "A list of bug reports.", "The project budget."],
+        "answer": 1,
+        "explanation": "The SQA plan is the roadmap for ensuring the project meets quality standards."
+    },
+    {
+        "id": "se_115",
+        "subtopic": "10. Software Testing",
+        "question": "What is 'Stress Testing'?",
+        "options": ["Testing if the developer is stressed.", "Testing the system under extreme conditions (e.g., massive traffic or low memory) to see how it fails.", "Testing the UI colors.", "A simple unit test."],
+        "answer": 1,
+        "explanation": "Stress testing finds the breaking point of the system."
+    }
+  ]
+}
