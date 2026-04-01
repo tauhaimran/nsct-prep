@@ -1,0 +1,844 @@
+{
+  "questions": [
+    {
+      "id": "ai_001",
+      "subtopic": "1. Introduction to AI, ML & Data Analytics",
+      "question": "Which of the following best describes the relationship between AI, Machine Learning, and Deep Learning?",
+      "options": ["They are three entirely different fields with no overlap.", "AI is a subset of ML, which is a subset of DL.", "DL is a subset of ML, which is a subset of AI.", "ML and AI are the same, while DL is separate."],
+      "answer": 2,
+      "explanation": "AI is the broad field of creating intelligent systems; ML is the subset that uses statistical methods to learn from data; DL is a specialized subset of ML using multi-layered neural networks."
+    },
+    {
+      "id": "ai_002",
+      "subtopic": "1. Introduction to AI, ML & Data Analytics",
+      "question": "What is the primary goal of 'Prescriptive Analytics'?",
+      "options": ["To describe what happened in the past.", "To predict what might happen in the future.", "To suggest specific actions to achieve a desired outcome.", "To identify why something happened."],
+      "answer": 2,
+      "explanation": "Descriptive tells you 'what', Predictive tells you 'what might be', and Prescriptive tells you 'how to make it happen'."
+    },
+    {
+      "id": "ai_003",
+      "subtopic": "2. Mathematical Foundations",
+      "question": "In the context of Principal Component Analysis (PCA), what do the Eigenvectors represent?",
+      "options": ["The mean value of the data.", "The direction of the axes where there is the most variance.", "The number of clusters in the data.", "The learning rate of the model."],
+      "answer": 1,
+      "explanation": "Eigenvectors determine the direction of the new feature space, while Eigenvalues determine the magnitude (variance) along those directions."
+    },
+    {
+      "id": "ai_004",
+      "subtopic": "2. Mathematical Foundations",
+      "question": "Which probability theorem is the foundation for a 'Naive Bayes' classifier?",
+      "options": ["Central Limit Theorem", "Bayes' Theorem", "Law of Large Numbers", "Pythagorean Theorem"],
+      "answer": 1,
+      "explanation": "Naive Bayes applies Bayes' Theorem with the 'naive' assumption of conditional independence between every pair of features."
+    },
+    {
+      "id": "ai_005",
+      "subtopic": "3. Python for AI & Data Analytics",
+      "question": "In the NumPy library, what is the main advantage of using 'Vectorization' over standard Python loops?",
+      "options": ["It uses less memory.", "It is easier to write.", "It performs operations in parallel at the C-level, significantly increasing execution speed.", "It allows for 3D plotting."],
+      "answer": 2,
+      "explanation": "Vectorization eliminates the overhead of Python's high-level loops by using highly optimized C and Fortran code internally."
+    },
+    {
+      "id": "ai_006",
+      "subtopic": "3. Python for AI & Data Analytics",
+      "question": "Which Pandas function is used to handle 'One-Hot Encoding' for categorical variables?",
+      "options": ["pd.concat()", "pd.get_dummies()", "pd.pivot_table()", "pd.merge()"],
+      "answer": 1,
+      "explanation": "get_dummies() converts a categorical variable into multiple dummy/indicator variables (0 or 1)."
+    },
+    {
+      "id": "ai_007",
+      "subtopic": "4. Data Collection & Pre-processing",
+      "question": "What is the difference between 'Standardization' and 'Normalization' (Min-Max Scaling)?",
+      "options": ["Normalization centers data at 0 with unit variance; Standardization scales data to a fixed [0,1] range.", "Standardization centers data at 0 with unit variance; Normalization scales data to a fixed [0,1] range.", "They are the same.", "Standardization is only for images."],
+      "answer": 1,
+      "explanation": "Standardization (Z-score) is generally more robust to outliers, while Normalization is useful when you need a specific bounded range."
+    },
+    {
+      "id": "ai_008",
+      "subtopic": "4. Data Collection & Pre-processing",
+      "question": "If a dataset has missing values in a numerical column, which 'Imputation' strategy is most likely to preserve the mean but underestimate the variance?",
+      "options": ["Deleting the rows.", "Mean Imputation.", "K-Nearest Neighbors Imputation.", "Random Sampling."],
+      "answer": 1,
+      "explanation": "Mean imputation fills gaps with the average value; this keeps the mean constant but artificially reduces the spread (variance) of the data."
+    },
+    {
+      "id": "ai_009",
+      "subtopic": "5. Exploratory Data Analysis (EDA)",
+      "question": "Which visualization is most effective for detecting 'Outliers' in a single numerical variable?",
+      "options": ["Pie Chart", "Histogram", "Box Plot", "Heatmap"],
+      "answer": 2,
+      "explanation": "Box plots visually represent the quartiles and use 'whiskers' to identify points that fall significantly outside the expected range (outliers)."
+    },
+    {
+      "id": "ai_010",
+      "subtopic": "5. Exploratory Data Analysis (EDA)",
+      "question": "What does a correlation coefficient of -0.9 between two variables indicate?",
+      "options": ["No relationship.", "A weak negative relationship.", "A strong negative linear relationship.", "A strong positive relationship."],
+      "answer": 2,
+      "explanation": "Values close to -1 indicate that as one variable increases, the other decreases in a nearly linear fashion."
+    },
+    {
+      "id": "ai_011",
+      "subtopic": "6. Supervised Learning",
+      "question": "In Linear Regression, what is the 'Cost Function' usually minimized using Gradient Descent?",
+      "options": ["Mean Absolute Error (MAE)", "Mean Squared Error (MSE)", "Cross-Entropy Loss", "Hinge Loss"],
+      "answer": 1,
+      "explanation": "MSE is preferred because it is differentiable and penalizes larger errors more heavily than smaller ones."
+    },
+    {
+      "id": "ai_012",
+      "subtopic": "6. Supervised Learning",
+      "question": "What is the primary function of the 'Kernel Trick' in Support Vector Machines (SVM)?",
+      "options": ["To speed up the training process.", "To map data into a higher-dimensional space to make it linearly separable without explicitly calculating the coordinates.", "To reduce the number of features.", "To handle missing data."],
+      "answer": 1,
+      "explanation": "The Kernel trick allows SVMs to find non-linear decision boundaries efficiently."
+    },
+    {
+      "id": "ai_013",
+      "subtopic": "7. Ensemble Learning",
+      "question": "How does 'Random Forest' improve upon a single 'Decision Tree'?",
+      "options": ["By making the tree deeper.", "By using 'Bagging' (Bootstrap Aggregating) to train multiple trees on different data subsets and averaging their results to reduce variance.", "By using 'Boosting' to correct the errors of previous trees.", "By using only one feature per tree."],
+      "answer": 1,
+      "explanation": "Random Forest reduces the risk of 'Overfitting' by combining the predictions of many uncorrelated trees."
+    },
+    {
+      "id": "ai_014",
+      "subtopic": "7. Ensemble Learning",
+      "question": "What is the main difference between 'Bagging' and 'Boosting'?",
+      "options": ["Bagging runs trees in sequence; Boosting runs them in parallel.", "Bagging runs trees in parallel; Boosting runs them in sequence, with each tree trying to correct the errors of the previous one.", "Bagging is only for regression; Boosting is for classification.", "There is no difference."],
+      "answer": 1,
+      "explanation": "Examples of Bagging include Random Forest; examples of Boosting include XGBoost and AdaBoost."
+    },
+    {
+      "id": "ai_015",
+      "subtopic": "8. Unsupervised Learning",
+      "question": "In K-Means clustering, how is the 'Elbow Method' used?",
+      "options": ["To find the optimal learning rate.", "To determine the optimal number of clusters (K) by plotting the Within-Cluster Sum of Squares (WCSS).", "To visualize 4D data.", "To stop the algorithm when it converges."],
+      "answer": 1,
+      "explanation": "The 'elbow' point is where adding another cluster doesn't significantly improve the fit, suggesting the ideal K."
+    },
+    {
+      "id": "ai_016",
+      "subtopic": "8. Unsupervised Learning",
+      "question": "Which unsupervised algorithm is best for detecting clusters of arbitrary shapes and identifying noise/outliers?",
+      "options": ["K-Means", "PCA", "DBSCAN", "Hierarchical Clustering"],
+      "answer": 2,
+      "explanation": "DBSCAN (Density-Based Spatial Clustering of Applications with Noise) groups points based on density rather than distance from a center."
+    },
+    {
+      "id": "ai_017",
+      "subtopic": "9. Model Evaluation & Validation",
+      "question": "If you are building a model to detect a very rare disease, which metric is more important than simple 'Accuracy'?",
+      "options": ["Recall (Sensitivity)", "Precision", "F1-Score", "Both A and C"],
+      "answer": 3,
+      "explanation": "Accuracy is misleading in imbalanced datasets. Recall ensures you don't miss sick patients, and F1 balances Recall with Precision."
+    },
+    {
+      "id": "ai_018",
+      "subtopic": "9. Model Evaluation & Validation",
+      "question": "What is 'K-Fold Cross-Validation'?",
+      "options": ["Training a model K times on the same data.", "Dividing the data into K subsets and training the model K times, using a different subset as the test set each time.", "Using K different algorithms on the same data.", "A type of neural network layer."],
+      "answer": 1,
+      "explanation": "Cross-validation provides a more reliable estimate of how the model will perform on unseen data."
+    },
+    {
+      "id": "ai_019",
+      "subtopic": "10. Feature Engineering & Selection",
+      "question": "What is the 'Curse of Dimensionality'?",
+      "options": ["A virus that affects large datasets.", "The phenomenon where the volume of the space increases so fast that the available data becomes sparse, making it hard to find patterns.", "Having too few features to make a prediction.", "When the CPU cannot handle more than 10 features."],
+      "answer": 1,
+      "explanation": "As the number of features increases, the amount of data needed to generalize effectively grows exponentially."
+    },
+    {
+      "id": "ai_020",
+      "subtopic": "10. Feature Engineering & Selection",
+      "question": "Which technique is a form of 'Feature Extraction' (creating new features from old ones)?",
+      "options": ["Recursive Feature Elimination", "Principal Component Analysis (PCA)", "Chi-Square Test", "Lasso Regression"],
+      "answer": 1,
+      "explanation": "PCA creates 'Principal Components' which are linear combinations of the original features."
+    },
+    {
+      "id": "ai_021",
+      "subtopic": "11. Deep Learning Fundamentals",
+      "question": "What is the role of an 'Activation Function' (e.g., ReLU, Sigmoid) in a neural network?",
+      "options": ["To normalize the input data.", "To introduce non-linearity, allowing the network to learn complex patterns.", "To speed up the training.", "To record the error."],
+      "answer": 1,
+      "explanation": "Without non-linear activation functions, a multi-layer neural network would behave like a simple linear regression regardless of depth."
+    },
+    {
+      "id": "ai_022",
+      "subtopic": "11. Deep Learning Fundamentals",
+      "question": "The 'Vanishing Gradient Problem' primarily occurs because:",
+      "options": ["The learning rate is too high.", "Gradients become extremely small during backpropagation in very deep networks, causing early layers to stop learning.", "The computer runs out of memory.", "The data is not scaled."],
+      "answer": 1,
+      "explanation": "Functions like Sigmoid or Tanh have small derivatives; ReLU helps solve this by providing a constant gradient for positive values."
+    },
+    {
+      "id": "ai_023",
+      "subtopic": "12. Advanced Deep Learning",
+      "question": "In a Convolutional Neural Network (CNN), what is the purpose of a 'Pooling Layer' (e.g., Max Pooling)?",
+      "options": ["To add more weights to the model.", "To reduce the spatial dimensions of the feature maps, reducing computation and preventing overfitting.", "To apply a filter to the image.", "To flatten the image into a vector."],
+      "answer": 1,
+      "explanation": "Pooling summarizes features in a region, making the network more robust to small shifts in the input image."
+    },
+    {
+      "id": "ai_024",
+      "subtopic": "12. Advanced Deep Learning",
+      "question": "Which architecture is specifically designed to handle sequential data by maintaining a 'hidden state' or memory?",
+      "options": ["CNN", "RNN (Recurrent Neural Network)", "GAN", "Autoencoder"],
+      "answer": 1,
+      "explanation": "RNNs use loops to pass information from one step of the sequence to the next."
+    },
+    {
+      "id": "ai_025",
+      "subtopic": "13. Natural Language Processing (NLP)",
+      "question": "What is the purpose of 'TF-IDF' in text processing?",
+      "options": ["To translate text to another language.", "To weight terms based on how often they appear in a document relative to how often they appear in the whole corpus.", "To find the grammar of a sentence.", "To convert text into an image."],
+      "answer": 1,
+      "explanation": "Term Frequency-Inverse Document Frequency highlights words that are unique and important to a specific document."
+    },
+    {
+      "id": "ai_026",
+      "subtopic": "13. Natural Language Processing (NLP)",
+      "question": "What major innovation allowed 'Transformers' (like BERT and GPT) to outperform traditional LSTMs in NLP?",
+      "options": ["They use more layers.", "They use the 'Self-Attention' mechanism to process all words in a sentence simultaneously (parallelization).", "They are trained only on English.", "They don't use backpropagation."],
+      "answer": 1,
+      "explanation": "Attention allows the model to 'focus' on relevant words regardless of their distance in the text, solving the long-term dependency issues of RNNs."
+    },
+    {
+      "id": "ai_027",
+      "subtopic": "14. Computer Vision",
+      "question": "What is the difference between 'Object Detection' and 'Image Segmentation'?",
+      "options": ["Object detection uses bounding boxes; Segmentation classifies every individual pixel in the image.", "Object detection is for videos only.", "Segmentation is faster than detection.", "There is no difference."],
+      "answer": 0,
+      "explanation": "Detection tells you 'where' and 'what'; Segmentation provides a precise pixel-level mask of the object."
+    },
+    {
+      "id": "ai_028",
+      "subtopic": "14. Computer Vision",
+      "question": "Which loss function is commonly used for multi-class image classification?",
+      "options": ["Mean Squared Error", "Binary Cross-Entropy", "Categorical Cross-Entropy", "Hinge Loss"],
+      "answer": 2,
+      "explanation": "Categorical Cross-Entropy measures the performance of a classification model whose output is a probability value between 0 and 1."
+    },
+    {
+      "id": "ai_029",
+      "subtopic": "15. Big Data Analytics (Introductory)",
+      "question": "What are the 'Three Vs' of Big Data?",
+      "options": ["Variety, Velocity, Volume", "Validation, Verification, Visibility", "Value, Vector, Version", "Variable, Virtual, Vision"],
+      "answer": 0,
+      "explanation": "Big Data is defined by the massive amount (Volume), high speed of generation (Velocity), and diversity of formats (Variety)."
+    },
+    {
+      "id": "ai_030",
+      "subtopic": "15. Big Data Analytics (Introductory)",
+      "question": "What is the primary role of 'MapReduce' in the Hadoop ecosystem?",
+      "options": ["To store files on a disk.", "To process massive datasets in parallel across a distributed cluster.", "To provide a SQL interface for data.", "To visualize data trends."],
+      "answer": 1,
+      "explanation": "MapReduce breaks tasks into smaller sub-tasks (Map) and then aggregates the results (Reduce)."
+    },
+    {
+      "id": "ai_031",
+      "subtopic": "16. Model Deployment & MLOps Basics",
+      "question": "What is 'Model Drift'?",
+      "options": ["When the model is moved to a different server.", "The degradation of model performance over time as the real-world data distribution changes compared to the training data.", "A type of data visualization error.", "When the model takes too long to respond."],
+      "answer": 1,
+      "explanation": "MLOps monitors for drift to trigger retraining when the model becomes obsolete."
+    },
+    {
+      "id": "ai_032",
+      "subtopic": "16. Model Deployment & MLOps Basics",
+      "question": "In MLOps, what does 'CI/CD/CT' stand for?",
+      "options": ["Continuous Integration, Continuous Deployment, Continuous Training.", "Code Integration, Cloud Deployment, Computer Testing.", "Central Intelligence, Data Control, Tech Support.", "None of the above."],
+      "answer": 0,
+      "explanation": "Unlike standard software, ML systems require 'Continuous Training' to handle new data automatically."
+    },
+    {
+      "id": "ai_033",
+      "subtopic": "17. AI Ethics, Security & Privacy",
+      "question": "What is 'Algorithmic Bias'?",
+      "options": ["A technical bug in the code.", "When a model produces systematically unfair results (e.g., against a certain race or gender) due to biased training data.", "When a model is too accurate.", "When the model is used for hacking."],
+      "answer": 1,
+      "explanation": "Bias is an ethical concern where models reflect the historical prejudices present in the data used to train them."
+    },
+    {
+      "id": "ai_034",
+      "subtopic": "17. AI Ethics, Security & Privacy",
+      "question": "What is an 'Adversarial Attack' in the context of AI?",
+      "options": ["Deleting the model's database.", "Inputting carefully crafted data (e.g., adding invisible noise to an image) to trick a model into making an incorrect prediction.", "Hacking the developer's laptop.", "Sending too many requests to the API."],
+      "answer": 1,
+      "explanation": "Adversarial examples exploit the way neural networks 'see' patterns, causing them to confidently misclassify inputs."
+    },
+    {
+      "id": "ai_035",
+      "subtopic": "6. Supervised Learning",
+      "question": "Which algorithm is 'Lazy' because it does not learn a model during training, but rather stores the entire dataset and performs computation during prediction?",
+      "options": ["Logistic Regression", "K-Nearest Neighbors (KNN)", "Decision Tree", "Neural Network"],
+      "answer": 1,
+      "explanation": "KNN is a 'Lazy Learner'; it simply finds the K closest points in the training set when a query is made."
+    },
+    {
+      "id": "ai_036",
+      "subtopic": "9. Model Evaluation & Validation",
+      "question": "In an ROC curve, what does the 'AUC' represent?",
+      "options": ["The accuracy of the model.", "The probability that a model will rank a randomly chosen positive instance higher than a randomly chosen negative one.", "The average error of the model.", "The time taken to train the model."],
+      "answer": 1,
+      "explanation": "Area Under the Curve (AUC) provides an aggregate measure of performance across all possible classification thresholds."
+    },
+    {
+      "id": "ai_037",
+      "subtopic": "11. Deep Learning Fundamentals",
+      "question": "What is 'Dropout' in neural network training?",
+      "options": ["When a student leaves the AI course.", "A regularization technique where randomly selected neurons are ignored during training to prevent co-dependency and overfitting.", "Closing the program early.", "Reducing the learning rate to zero."],
+      "answer": 1,
+      "explanation": "Dropout forces the network to learn more robust features that are useful in conjunction with many different random subsets of other neurons."
+    },
+    {
+      "id": "ai_038",
+      "subtopic": "2. Mathematical Foundations",
+      "question": "What is the 'Chain Rule' used for in Deep Learning?",
+      "options": ["To link different computers together.", "To calculate the derivative of complex composite functions during Backpropagation.", "To sort data in a list.", "To manage database permissions."],
+      "answer": 1,
+      "explanation": "The chain rule allows gradients to be propagated from the output layer back to the input layer to update weights."
+    },
+    {
+      "id": "ai_039",
+      "subtopic": "13. Natural Language Processing (NLP)",
+      "question": "What is 'Lemmatization'?",
+      "options": ["Removing vowels from words.", "Reducing words to their base or dictionary form (e.g., 'running' to 'run') using morphological analysis.", "Removing all punctuation.", "Translating slang words."],
+      "answer": 1,
+      "explanation": "Unlike Stemming (which just chops off the end of words), Lemmatization ensures the root word is a valid word in the language."
+    },
+    {
+      "id": "ai_040",
+      "subtopic": "4. Data Collection & Pre-processing",
+      "question": "When dealing with 'Imbalanced Classes', which technique involves creating synthetic examples of the minority class?",
+      "options": ["Random Undersampling", "SMOTE (Synthetic Minority Over-sampling Technique)", "PCA", "Feature Scaling"],
+      "answer": 1,
+      "explanation": "SMOTE creates new data points between existing minority examples rather than just duplicating them."
+    },
+    {
+      "id": "ai_041",
+      "subtopic": "12. Advanced Deep Learning",
+      "question": "What is the primary role of a 'Generator' in a Generative Adversarial Network (GAN)?",
+      "options": ["To classify images as real or fake.", "To create new data instances that look as much like the training data as possible.", "To optimize the learning rate.", "To clean the dataset."],
+      "answer": 1,
+      "explanation": "The Generator tries to 'fool' the Discriminator, creating a competition that improves the quality of generated data."
+    },
+    {
+      "id": "ai_042",
+      "subtopic": "10. Feature Engineering & Selection",
+      "question": "What is 'Recursive Feature Elimination' (RFE)?",
+      "options": ["Deleting all features.", "A wrapper-based feature selection method that fits a model and removes the weakest feature(s) until the specified number of features is reached.", "Generating random features.", "A type of sorting."],
+      "answer": 1,
+      "explanation": "RFE evaluates feature importance in the context of a specific model's performance."
+    },
+    {
+      "id": "ai_043",
+      "subtopic": "8. Unsupervised Learning",
+      "question": "In Hierarchical Clustering, what does a 'Dendrogram' represent?",
+      "options": ["The error of the model.", "A tree-like diagram that records the sequences of merges or splits.", "A scatter plot of clusters.", "The speed of convergence."],
+      "answer": 1,
+      "explanation": "Dendrograms help visualize at which distance/similarity level different clusters were joined."
+    },
+    {
+      "id": "ai_044",
+      "subtopic": "3. Python for AI & Data Analytics",
+      "question": "Which library is the industry standard for traditional Machine Learning algorithms in Python?",
+      "options": ["TensorFlow", "Scikit-Learn", "Matplotlib", "Flask"],
+      "answer": 1,
+      "explanation": "Scikit-Learn provides a consistent API for regression, classification, clustering, and pre-processing."
+    },
+    {
+      "id": "ai_045",
+      "subtopic": "17. AI Ethics, Security & Privacy",
+      "question": "What is 'Differential Privacy'?",
+      "options": ["Making the model run faster.", "A system for sharing information about a dataset by describing the patterns of groups within the dataset while withholding information about individuals in the dataset.", "Encrypting the whole server.", "Restricting access to the model."],
+      "answer": 1,
+      "explanation": "It adds mathematical 'noise' to the data so that individual records cannot be identified."
+    },
+    {
+      "id": "ai_046",
+      "subtopic": "7. Ensemble Learning",
+      "question": "In 'XGBoost', what does the 'Extreme' part of the name refer to?",
+      "options": ["Extremely large datasets.", "Optimized implementation of Gradient Boosting that includes regularization and parallel processing for speed.", "Using an extreme number of layers.", "None of the above."],
+      "answer": 1,
+      "explanation": "XGBoost is a highly efficient and scalable implementation of gradient-boosted decision trees."
+    },
+    {
+      "id": "ai_047",
+      "subtopic": "6. Supervised Learning",
+      "question": "What is the 'Bias-Variance Tradeoff'?",
+      "options": ["Choosing between two different models.", "The conflict between a model's ability to minimize error from erroneous assumptions (Bias) and error from sensitivity to small fluctuations in the training set (Variance).", "The cost of hardware vs software.", "A type of database join."],
+      "answer": 1,
+      "explanation": "High bias leads to underfitting; high variance leads to overfitting. A good model balances both."
+    },
+    {
+      "id": "ai_048",
+      "subtopic": "15. Big Data Analytics (Introductory)",
+      "question": "What is 'Apache Spark's' main advantage over 'Hadoop MapReduce'?",
+      "options": ["It is cheaper.", "It processes data in-memory rather than writing to disk between steps, making it up to 100x faster.", "It is only for Python.", "It doesn't require a network."],
+      "answer": 1,
+      "explanation": "Spark's use of Resilient Distributed Datasets (RDDs) in memory makes it much faster for iterative ML algorithms."
+    },
+    {
+      "id": "ai_049",
+      "subtopic": "5. Exploratory Data Analysis (EDA)",
+      "question": "In a dataset, what is 'Skewness'?",
+      "options": ["When the data has too many errors.", "A measure of the asymmetry of the probability distribution of a real-valued random variable.", "The number of missing values.", "The type of data format."],
+      "answer": 1,
+      "explanation": "Right-skewed (positive) means the tail is on the right; left-skewed (negative) means the tail is on the left."
+    },
+    {
+      "id": "ai_050",
+      "subtopic": "11. Deep Learning Fundamentals",
+      "question": "What is 'Backpropagation' used for?",
+      "options": ["To clean the training data.", "To calculate the gradient of the loss function with respect to the weights of the network, layer by layer.", "To move the model to the production server.", "To plot the error over time."],
+      "answer": 1,
+      "explanation": "Backpropagation is the fundamental algorithm used to train neural networks."
+    },
+    {
+      "id": "ai_051",
+      "subtopic": "1. Introduction to AI, ML & Data Analytics",
+      "question": "What is 'Strong AI' (Artificial General Intelligence)?",
+      "options": ["AI that is very fast.", "AI that possesses the ability to understand, learn, and apply knowledge across a wide range of tasks, similar to a human.", "AI used only for self-driving cars.", "AI that uses only deep learning."],
+      "answer": 1,
+      "explanation": "Current AI is 'Narrow' (tasks like chess or translation); 'Strong' AI remains theoretical."
+    },
+    {
+      "id": "ai_052",
+      "subtopic": "2. Mathematical Foundations",
+      "question": "What does 'Gradient Descent' aim to find?",
+      "options": ["The maximum value of a function.", "The local or global minimum of a cost function.", "The average of a dataset.", "The prime factors of a number."],
+      "answer": 1,
+      "explanation": "It iteratively moves in the direction of the steepest descent to find the parameters that result in the lowest error."
+    },
+    {
+      "id": "ai_053",
+      "subtopic": "3. Python for AI & Data Analytics",
+      "question": "In Matplotlib, what is a 'Subplot'?",
+      "options": ["A smaller version of the same plot.", "A way to place multiple plots in a single figure grid.", "A plot stored in a database.", "A plot created in a separate thread."],
+      "answer": 1,
+      "explanation": "Subplots allow for side-by-side comparison of different variables or trends."
+    },
+    {
+      "id": "ai_054",
+      "subtopic": "4. Data Collection & Pre-processing",
+      "question": "What is 'Data Leakage' during model training?",
+      "options": ["When data is stolen by a hacker.", "When information from outside the training dataset (like the target variable) is accidentally used to create the model.", "When the server crashes.", "When data is converted to CSV."],
+      "answer": 1,
+      "explanation": "Data leakage leads to overly optimistic performance estimates that fail in the real world."
+    },
+    {
+      "id": "ai_055",
+      "subtopic": "6. Supervised Learning",
+      "question": "Which regularization technique adds the 'absolute value' of the magnitude of coefficients as a penalty term?",
+      "options": ["L2 Regularization (Ridge)", "L1 Regularization (Lasso)", "Dropout", "Elastic Net"],
+      "answer": 1,
+      "explanation": "Lasso (L1) can lead to sparse models where some coefficients are exactly zero, effectively performing feature selection."
+    },
+    {
+      "id": "ai_056",
+      "subtopic": "9. Model Evaluation & Validation",
+      "question": "What is a 'Confusion Matrix' used for?",
+      "options": ["To confuse the developer.", "To summarize the performance of a classification algorithm by showing true positives, false positives, true negatives, and false negatives.", "To sort the data.", "To visualize a neural network."],
+      "answer": 1,
+      "explanation": "It provides a clear breakdown of where the model is making mistakes."
+    },
+    {
+      "id": "ai_057",
+      "subtopic": "12. Advanced Deep Learning",
+      "question": "What is the 'Softmax' function typically used for in a neural network?",
+      "options": ["Hidden layer activation.", "The final output layer of a multi-class classifier to produce a probability distribution.", "Data normalization.", "Error calculation."],
+      "answer": 1,
+      "explanation": "Softmax ensures that all output values are between 0 and 1 and sum up to 1."
+    },
+    {
+      "id": "ai_058",
+      "subtopic": "13. Natural Language Processing (NLP)",
+      "question": "What is 'Word2Vec'?",
+      "options": ["A way to count words.", "A group of models used to produce word embeddings, where words are represented as dense vectors in a continuous space.", "A text translation tool.", "A method to delete stop words."],
+      "answer": 1,
+      "explanation": "Word2Vec captures semantic relationships (e.g., King - Man + Woman = Queen)."
+    },
+    {
+      "id": "ai_059",
+      "subtopic": "16. Model Deployment & MLOps Basics",
+      "question": "What is 'A/B Testing' in model deployment?",
+      "options": ["Testing the code for bugs.", "Deploying two different models to different segments of users to see which one performs better.", "Training a model twice.", "Using two different programming languages."],
+      "answer": 1,
+      "explanation": "A/B testing provides real-world evidence of model effectiveness before a full rollout."
+    },
+    {
+      "id": "ai_060",
+      "subtopic": "8. Unsupervised Learning",
+      "question": "Which dimensionality reduction technique is non-linear and often used for high-dimensional data visualization?",
+      "options": ["PCA", "t-SNE (t-Distributed Stochastic Neighbor Embedding)", "Linear Regression", "K-Means"],
+      "answer": 1,
+      "explanation": "t-SNE is excellent for visualizing high-dimensional clusters in 2D or 3D space."
+    },
+    {
+      "id": "ai_061",
+      "subtopic": "2. Mathematical Foundations",
+      "question": "In statistics, what is the 'P-Value'?",
+      "options": ["The probability that the results are correct.", "The probability of obtaining the observed results assuming the null hypothesis is true.", "The precision of the model.", "The power of the CPU."],
+      "answer": 1,
+      "explanation": "A low P-value (typically < 0.05) suggests that the observed results are statistically significant and unlikely to have occurred by chance."
+    },
+    {
+      "id": "ai_062",
+      "subtopic": "4. Data Collection & Pre-processing",
+      "question": "What is the purpose of 'Data Augmentation' in training DL models?",
+      "options": ["To make the dataset smaller.", "To artificially increase the size and diversity of the training set by applying transformations like rotations or flips.", "To delete duplicate data.", "To encrypt the training data."],
+      "answer": 1,
+      "explanation": "Augmentation helps models generalize better, especially in image and audio processing."
+    },
+    {
+      "id": "ai_063",
+      "subtopic": "11. Deep Learning Fundamentals",
+      "question": "What is 'Stochastic Gradient Descent' (SGD)?",
+      "options": ["Updating weights using the entire dataset at once.", "Updating weights using only one random sample (or a small batch) per iteration.", "A way to delete layers in a network.", "A type of activation function."],
+      "answer": 1,
+      "explanation": "SGD is much faster and can handle larger datasets than Batch Gradient Descent."
+    },
+    {
+      "id": "ai_064",
+      "subtopic": "14. Computer Vision",
+      "question": "Which metric is the standard for evaluating the accuracy of 'Object Detection' bounding boxes?",
+      "options": ["Accuracy", "F1 Score", "IoU (Intersection over Union)", "MAE"],
+      "answer": 2,
+      "explanation": "IoU measures how much the predicted bounding box overlaps with the ground truth box."
+    },
+    {
+      "id": "ai_065",
+      "subtopic": "17. AI Ethics, Security & Privacy",
+      "question": "What is the 'Right to Explanation' in AI regulations?",
+      "options": ["The right to know the developer's name.", "The right of a user to receive an explanation for a decision made by an automated system (e.g., loan rejection).", "The right to delete the model.", "The right to use AI for free."],
+      "answer": 1,
+      "explanation": "This is a key part of transparency requirements in regulations like the GDPR."
+    },
+    {
+      "id": "ai_066",
+      "subtopic": "7. Ensemble Learning",
+      "question": "What is 'Stacking' in ensemble methods?",
+      "options": ["Placing models on top of each other.", "A technique where multiple models are trained, and their outputs are used as input for a 'Meta-Model' that makes the final prediction.", "Using the same model K times.", "None of the above."],
+      "answer": 1,
+      "explanation": "Stacking often produces better results by leveraging the different strengths of various algorithms."
+    },
+    {
+      "id": "ai_067",
+      "subtopic": "13. Natural Language Processing (NLP)",
+      "question": "What is 'Named Entity Recognition' (NER)?",
+      "options": ["Finding the name of the file.", "The task of identifying and categorizing key information (entities) in text, such as names of people, places, or dates.", "Translating names to other languages.", "Counting how many times a word appears."],
+      "answer": 1,
+      "explanation": "NER is essential for information extraction from unstructured text."
+    },
+    {
+      "id": "ai_068",
+      "subtopic": "3. Python for AI & Data Analytics",
+      "question": "In Pandas, what is a 'Series'?",
+      "options": ["A collection of movies.", "A one-dimensional labeled array capable of holding any data type.", "A 2D table of data.", "A type of Python loop."],
+      "answer": 1,
+      "explanation": "A Series is like a column in a spreadsheet; a DataFrame is a collection of Series."
+    },
+    {
+      "id": "ai_069",
+      "subtopic": "10. Feature Engineering & Selection",
+      "question": "What is 'Lasso Regression' (L1) most famous for?",
+      "options": ["Handling non-linear data.", "Its ability to perform automatic feature selection by shrinking less important coefficients to zero.", "Being the fastest algorithm.", "Using decision trees."],
+      "answer": 1,
+      "explanation": "Lasso adds a penalty to the sum of absolute values of coefficients, promoting sparsity."
+    },
+    {
+      "id": "ai_070",
+      "subtopic": "5. Exploratory Data Analysis (EDA)",
+      "question": "What does 'Kurtosis' measure in a distribution?",
+      "options": ["The mean of the data.", "The 'tailedness' or peakedness of the distribution compared to a normal distribution.", "The asymmetry.", "The number of unique values."],
+      "answer": 1,
+      "explanation": "High kurtosis indicates a distribution with heavy tails and a sharp peak."
+    },
+    {
+      "id": "ai_071",
+      "subtopic": "15. Big Data Analytics (Introductory)",
+      "question": "In the Hadoop ecosystem, what is 'HDFS'?",
+      "options": ["Hadoop Data Fast Speed.", "Hadoop Distributed File System - a distributed, scalable, and portable file system.", "High Definition File Storage.", "A type of SQL database."],
+      "answer": 1,
+      "explanation": "HDFS stores data across many low-cost commodity servers, providing high throughput access."
+    },
+    {
+      "id": "ai_072",
+      "subtopic": "12. Advanced Deep Learning",
+      "question": "What are 'LSTMs' (Long Short-Term Memory) networks designed to solve compared to standard RNNs?",
+      "options": ["They are faster.", "The 'Long-term dependency' and 'Vanishing Gradient' problems in sequences.", "They work better for images.", "They use fewer neurons."],
+      "answer": 1,
+      "explanation": "LSTMs use 'gates' to decide which information to keep, forget, or pass on over long sequences."
+    },
+    {
+      "id": "ai_073",
+      "subtopic": "8. Unsupervised Learning",
+      "question": "What is the primary objective of 'Dimensionality Reduction'?",
+      "options": ["To delete data to save space.", "To reduce the number of random variables under consideration by obtaining a set of principal variables.", "To increase the accuracy of the model.", "To convert text to numbers."],
+      "answer": 1,
+      "explanation": "It helps simplify models, reduce noise, and visualize complex data."
+    },
+    {
+      "id": "ai_074",
+      "subtopic": "14. Computer Vision",
+      "question": "What is 'Transfer Learning' in Computer Vision?",
+      "options": ["Moving a model from one computer to another.", "Using a pre-trained model (e.g., trained on ImageNet) and fine-tuning it for a new, specific task.", "A way to learn math.", "Translating an image to text."],
+      "answer": 1,
+      "explanation": "Transfer learning allows developers to achieve high accuracy with much smaller datasets."
+    },
+    {
+      "id": "ai_075",
+      "subtopic": "11. Deep Learning Fundamentals",
+      "question": "What is an 'Optimizer' (e.g., Adam, RMSprop) in DL?",
+      "options": ["A tool to clean the code.", "An algorithm used to update the weights and learning rate of the neural network to minimize the loss.", "A type of hardware.", "A data visualization tool."],
+      "answer": 1,
+      "explanation": "Adam is currently the most popular optimizer as it combines the benefits of several techniques."
+    },
+    {
+      "id": "ai_076",
+      "subtopic": "4. Data Collection & Pre-processing",
+      "question": "What is 'Binning' in data pre-processing?",
+      "options": ["Throwing data in the trash.", "Grouping continuous values into smaller numbers of 'bins' or discrete intervals.", "Compressing a file.", "Sorting data alphabetically."],
+      "answer": 1,
+      "explanation": "Binning can help reduce the effects of minor observation errors or handle outliers."
+    },
+    {
+      "id": "ai_077",
+      "subtopic": "6. Supervised Learning",
+      "question": "Which supervised algorithm finds the 'Optimal Hyperplane' that maximizes the 'Margin' between classes?",
+      "options": ["Logistic Regression", "Support Vector Machine (SVM)", "Naive Bayes", "KNN"],
+      "answer": 1,
+      "explanation": "The larger the margin, the lower the generalization error of the classifier."
+    },
+    {
+      "id": "ai_078",
+      "subtopic": "9. Model Evaluation & Validation",
+      "question": "What is the 'F1-Score'?",
+      "options": ["The first score the model produces.", "The harmonic mean of Precision and Recall.", "The average error.", "The percentage of correct predictions."],
+      "answer": 1,
+      "explanation": "F1-Score is a better metric than accuracy when you have an imbalanced class distribution."
+    },
+    {
+      "id": "ai_079",
+      "subtopic": "16. Model Deployment & MLOps Basics",
+      "question": "What is a 'Feature Store' in MLOps?",
+      "options": ["A website for buying models.", "A centralized repository that stores and manages documented, curated features for use in training and inference.", "A type of database index.", "A backup of the source code."],
+      "answer": 1,
+      "explanation": "Feature stores ensure consistency between the features used during training and those used in production."
+    },
+    {
+      "id": "ai_080",
+      "subtopic": "17. AI Ethics, Security & Privacy",
+      "question": "What is 'Federated Learning'?",
+      "options": ["Learning in a large group of people.", "A technique for training AI models on data distributed across multiple devices or servers without ever actually exchanging the raw data.", "A type of ensemble method.", "Hacking a centralized server."],
+      "answer": 1,
+      "explanation": "Federated learning is a privacy-preserving technique used by companies like Google and Apple."
+    },
+    {
+      "id": "ai_081",
+      "subtopic": "13. Natural Language Processing (NLP)",
+      "question": "In Word Embeddings, if 'King' is to 'Man', then 'Queen' is to:",
+      "options": ["Princess", "Woman", "Royal", "Palace"],
+      "answer": 1,
+      "explanation": "Vector math in embeddings captures linguistic relationships: Vector(King) - Vector(Man) + Vector(Woman) ≈ Vector(Queen)."
+    },
+    {
+      "id": "ai_082",
+      "subtopic": "2. Mathematical Foundations",
+      "question": "Which statistical distribution is also known as the 'Gaussian Distribution'?",
+      "options": ["Binomial", "Poisson", "Normal", "Uniform"],
+      "answer": 2,
+      "explanation": "The Normal distribution is the bell-shaped curve characterized by mean and standard deviation."
+    },
+    {
+      "id": "ai_083",
+      "subtopic": "10. Feature Engineering & Selection",
+      "question": "What is 'Wrapper Method' in feature selection?",
+      "options": ["Wrapping code in a function.", "Evaluating subsets of variables which allows detecting the possible interactions between variables.", "Calculating the correlation only.", "Using a penalty term in the loss function."],
+      "answer": 1,
+      "explanation": "Recursive Feature Elimination is a type of wrapper method."
+    },
+    {
+      "id": "ai_084",
+      "subtopic": "15. Big Data Analytics (Introductory)",
+      "question": "In the context of Big Data, what is 'Apache Kafka' primarily used for?",
+      "options": ["Data storage.", "Real-time data streaming and message brokering.", "Data visualization.", "Running SQL queries."],
+      "answer": 1,
+      "explanation": "Kafka handles real-time data feeds with high throughput and low latency."
+    },
+    {
+      "id": "ai_085",
+      "subtopic": "5. Exploratory Data Analysis (EDA)",
+      "question": "A 'Heatmap' in EDA is typically used to visualize:",
+      "options": ["CPU temperature.", "The correlation matrix between multiple variables.", "The location of users on a map.", "The number of missing values."],
+      "answer": 1,
+      "explanation": "Heatmaps use color gradients to show the strength of relationships between many variables at once."
+    },
+    {
+      "id": "ai_086",
+      "subtopic": "11. Deep Learning Fundamentals",
+      "question": "What is an 'Epoch' in DL training?",
+      "options": ["A very long period of time.", "One complete pass of the entire training dataset through the neural network.", "One single update of the weights.", "The time it takes to deploy a model."],
+      "answer": 1,
+      "explanation": "Models are usually trained for many epochs until the loss stops decreasing."
+    },
+    {
+      "id": "ai_087",
+      "subtopic": "4. Data Collection & Pre-processing",
+      "question": "What is the 'Mode' of a dataset?",
+      "options": ["The average value.", "The middle value.", "The most frequently occurring value.", "The difference between max and min."],
+      "answer": 2,
+      "explanation": "Mode is a measure of central tendency, particularly useful for categorical data."
+    },
+    {
+      "id": "ai_088",
+      "subtopic": "3. Python for AI & Data Analytics",
+      "question": "Which Python keyword is used to create an anonymous function?",
+      "options": ["def", "func", "lambda", "inline"],
+      "answer": 2,
+      "explanation": "Lambdas are used for small, throw-away functions."
+    },
+    {
+      "id": "ai_089",
+      "subtopic": "14. Computer Vision",
+      "question": "In image processing, what is 'Grayscaling'?",
+      "options": ["Making the image smaller.", "Converting a color image (RGB) to an image where each pixel represents only intensity (0-255).", "Adding a filter to the image.", "Detecting the edges."],
+      "answer": 1,
+      "explanation": "Grayscaling reduces the complexity of the data from 3 channels to 1."
+    },
+    {
+      "id": "ai_090",
+      "subtopic": "12. Advanced Deep Learning",
+      "question": "What is 'Fine-tuning' in DL?",
+      "options": ["Making the model respond faster.", "Taking a pre-trained model and training it further on a smaller, specific dataset.", "Manually adjusting the weights.", "Deleting neurons in a network."],
+      "answer": 1,
+      "explanation": "Fine-tuning is the final step in Transfer Learning."
+    },
+    {
+        "id": "ai_091",
+        "subtopic": "6. Supervised Learning",
+        "question": "Which algorithm uses 'Information Gain' or 'Gini Impurity' to decide how to split data?",
+        "options": ["Linear Regression", "Naive Bayes", "Decision Tree", "SVM"],
+        "answer": 2,
+        "explanation": "Decision trees split nodes based on which feature reduces the uncertainty (entropy) the most."
+    },
+    {
+        "id": "ai_092",
+        "subtopic": "9. Model Evaluation & Validation",
+        "question": "What is 'Precision'?",
+        "options": ["The total number of correct predictions.", "The ratio of correctly predicted positive observations to the total predicted positives.", "The ratio of correctly predicted positive observations to all observations in the actual class.", "The speed of the model."],
+        "answer": 1,
+        "explanation": "Precision answers: 'Of all instances the model labeled as positive, how many were actually positive?'"
+    },
+    {
+        "id": "ai_093",
+        "subtopic": "8. Unsupervised Learning",
+        "question": "Which technique is used to find groups of related products in transaction data (e.g., 'People who bought milk also bought bread')?",
+        "options": ["K-Means", "Association Rule Mining (Apriori)", "PCA", "Linear Regression"],
+        "answer": 1,
+        "explanation": "Association rules find frequent patterns and correlations in large datasets."
+    },
+    {
+        "id": "ai_094",
+        "subtopic": "1. Introduction to AI, ML & Data Analytics",
+        "question": "What is the 'Turing Test'?",
+        "options": ["A test for CPU speed.", "A test of a machine's ability to exhibit intelligent behavior equivalent to, or indistinguishable from, that of a human.", "A test for database integrity.", "A test for network security."],
+        "answer": 1,
+        "explanation": "Developed by Alan Turing in 1950, it remains a benchmark for human-level AI."
+    },
+    {
+        "id": "ai_095",
+        "subtopic": "13. Natural Language Processing (NLP)",
+        "question": "What is 'Sentiment Analysis'?",
+        "options": ["Translating text.", "The use of NLP to systematically identify, extract, and quantify affective states and subjective information (e.g., positive vs negative).", "Finding the names in a text.", "Correcting spelling errors."],
+        "answer": 1,
+        "explanation": "Commonly used in social media monitoring and customer feedback analysis."
+    },
+    {
+        "id": "ai_096",
+        "subtopic": "11. Deep Learning Fundamentals",
+        "question": "What does a 'Perceptron' represent in a neural network?",
+        "options": ["The whole network.", "A single artificial neuron that takes multiple inputs and produces a single binary output.", "The database.", "A type of loop."],
+        "answer": 1,
+        "explanation": "The Perceptron is the building block of artificial neural networks."
+    },
+    {
+        "id": "ai_097",
+        "subtopic": "10. Feature Engineering & Selection",
+        "question": "What is 'Dimensionality Reduction' intended to prevent?",
+        "options": ["Underfitting.", "Overfitting.", "The Curse of Dimensionality.", "Both B and C."],
+        "answer": 3,
+        "explanation": "By reducing features, we reduce the noise and the complexity of the model, helping it generalize better."
+    },
+    {
+        "id": "ai_098",
+        "subtopic": "16. Model Deployment & MLOps Basics",
+        "question": "In MLOps, what is 'Inference'?",
+        "options": ["The process of training the model.", "The process of using a trained model to make predictions on new data.", "A type of error in the code.", "Deleting the model."],
+        "answer": 1,
+        "explanation": "Training is building the model; Inference is using it."
+    },
+    {
+        "id": "ai_099",
+        "subtopic": "2. Mathematical Foundations",
+        "question": "What is the 'Identity Matrix'?",
+        "options": ["A matrix of all zeros.", "A square matrix with ones on the main diagonal and zeros elsewhere.", "A matrix with random numbers.", "A matrix representing user identity."],
+        "answer": 1,
+        "explanation": "Multiplying any matrix by the identity matrix leaves the original matrix unchanged."
+    },
+    {
+        "id": "ai_100",
+        "subtopic": "17. AI Ethics, Security & Privacy",
+        "question": "What is the 'Black Box' problem in AI?",
+        "options": ["The server case.", "The difficulty in explaining or understanding how complex AI models (like DL) arrive at their specific decisions.", "A type of cyber attack.", "When the AI stops working."],
+        "answer": 1,
+        "explanation": "Explainable AI (XAI) is the field dedicated to making these 'black boxes' transparent."
+    },
+    {
+        "id": "ai_101",
+        "subtopic": "11. Deep Learning Fundamentals",
+        "question": "What is 'Gradient Clipping' used for?",
+        "options": ["To make the gradient faster.", "To prevent 'Exploding Gradients' in deep networks (especially RNNs) by capping the gradient value.", "To delete old weights.", "To normalize the input."],
+        "answer": 1,
+        "explanation": "If gradients become too large, they can cause the model to diverge; clipping keeps them stable."
+    },
+    {
+        "id": "ai_102",
+        "subtopic": "4. Data Collection & Pre-processing",
+        "question": "What is 'Feature Scaling' essential for?",
+        "options": ["Algorithms based on distance (like KNN or SVM).", "Decision Trees.", "Naive Bayes.", "None of the above."],
+        "answer": 0,
+        "explanation": "If features have different scales (e.g., age vs income), the one with larger numbers will dominate the distance calculation."
+    },
+    {
+        "id": "ai_103",
+        "subtopic": "6. Supervised Learning",
+        "question": "What is 'Logistic Regression' primarily used for?",
+        "options": ["Predicting continuous house prices.", "Binary classification (e.g., Yes/No, Spam/Ham).", "Clustering users.", "Finding the mean."],
+        "answer": 1,
+        "explanation": "Despite the name 'Regression', it outputs a probability that is then used for classification."
+    },
+    {
+        "id": "ai_104",
+        "subtopic": "15. Big Data Analytics (Introductory)",
+        "question": "In the CAP theorem, what does 'Partition Tolerance' mean?",
+        "options": ["The system works fast.", "The system continues to operate despite an arbitrary number of messages being dropped by the network between nodes.", "The data is correctly sorted.", "The system is secure."],
+        "answer": 1,
+        "explanation": "Partition tolerance is non-negotiable for distributed systems running over a network."
+    },
+    {
+        "id": "ai_105",
+        "subtopic": "1. Introduction to AI, ML & Data Analytics",
+        "question": "What defines 'Reinforcement Learning'?",
+        "options": ["Learning from labeled data.", "Learning through trial and error to maximize a reward signal.", "Finding patterns in unlabeled data.", "Predicting a single number."],
+        "answer": 1,
+        "explanation": "RL involves an 'Agent' interacting with an 'Environment' to learn a policy."
+    }
+  ]
+}

@@ -1,0 +1,844 @@
+{
+  "questions": [
+    {
+      "id": "dsa_001",
+      "subtopic": "1 - Foundations of Data Structure and Algorithms",
+      "question": "What is an Abstract Data Type (ADT)?",
+      "options": ["A data structure implemented in C++.", "A mathematical model for data types defined by its behavior from the point of view of a user.", "A type of memory segment in RAM.", "A built-in data type like 'int' or 'float'."],
+      "answer": 1,
+      "explanation": "An ADT (like Stack or Queue) defines 'what' the data structure does, but not 'how' it is implemented."
+    },
+    {
+      "id": "dsa_002",
+      "subtopic": "1 - Foundations of Data Structure and Algorithms",
+      "question": "Which asymptotic notation provides the 'Tight Bound' for an algorithm's complexity?",
+      "options": ["Big O (O)", "Big Omega (Ω)", "Theta (Θ)", "Little o (o)"],
+      "answer": 2,
+      "explanation": "Theta notation signifies that the algorithm's running time is bounded from above and below by the same function."
+    },
+    {
+      "id": "dsa_003",
+      "subtopic": "2 - Linear Data Structures",
+      "question": "In a Circular Queue implemented using an array of size N, how do you calculate the next position of the 'rear' pointer?",
+      "options": ["rear = rear + 1", "rear = (rear + 1) / N", "rear = (rear + 1) % N", "rear = rear % N"],
+      "answer": 2,
+      "explanation": "The modulo operator (%) allows the pointer to wrap around to index 0 when it reaches the end of the array."
+    },
+    {
+      "id": "dsa_004",
+      "subtopic": "2 - Linear Data Structures",
+      "question": "What is the time complexity of deleting a node from the middle of a Singly Linked List, given a pointer to that node?",
+      "options": ["O(1)", "O(log n)", "O(n)", "O(n^2)"],
+      "answer": 2,
+      "explanation": "Even with a pointer to the node, you must traverse from the head to find the 'previous' node to update its next pointer, making it O(n)."
+    },
+    {
+      "id": "dsa_005",
+      "subtopic": "2 - Linear Data Structures",
+      "question": "Which data structure is most efficient for evaluating Postfix expressions?",
+      "options": ["Queue", "Linked List", "Stack", "Tree"],
+      "answer": 2,
+      "explanation": "Stacks are used to hold operands; when an operator is encountered, the top two operands are popped and the result is pushed back."
+    },
+    {
+      "id": "dsa_006",
+      "subtopic": "3 - Non-Linear Data Structures",
+      "question": "What defines a 'Complete Binary Tree'?",
+      "options": ["Every node has exactly two children.", "All levels are completely filled except possibly the last, which is filled from left to right.", "All leaves are at the same level.", "The tree is perfectly balanced."],
+      "answer": 1,
+      "explanation": "Complete binary trees are important because they can be efficiently represented using arrays (used in Heaps)."
+    },
+    {
+      "id": "dsa_007",
+      "subtopic": "4 - Searching Algorithms",
+      "question": "What is the prerequisite for performing a Binary Search on a dataset?",
+      "options": ["The data must be in a Linked List.", "The data must be sorted.", "The data must be unique.", "The data must be integers."],
+      "answer": 1,
+      "explanation": "Binary search relies on the ability to eliminate half of the search space based on the middle element, which requires sorted data."
+    },
+    {
+      "id": "dsa_008",
+      "subtopic": "4 - Searching Algorithms",
+      "question": "In the worst case, how many comparisons are needed to find an element in a sorted array of 1024 elements using Binary Search?",
+      "options": ["10", "11", "512", "1024"],
+      "answer": 1,
+      "explanation": "log2(1024) = 10. The 11th comparison confirms if the element is present if the 10th didn't find it exactly."
+    },
+    {
+      "id": "dsa_009",
+      "subtopic": "5 - Sorting Algorithms",
+      "question": "Which sorting algorithm has a worst-case time complexity of O(n^2) but an average-case of O(n log n)?",
+      "options": ["Merge Sort", "Heap Sort", "Quick Sort", "Bubble Sort"],
+      "answer": 2,
+      "explanation": "Quick Sort's worst case occurs when the pivot is always the smallest or largest element (e.g., already sorted data)."
+    },
+    {
+      "id": "dsa_010",
+      "subtopic": "5 - Sorting Algorithms",
+      "question": "What does it mean for a sorting algorithm to be 'Stable'?",
+      "options": ["It does not crash.", "It uses O(1) extra space.", "It preserves the relative order of records with equal keys.", "It always runs in O(n log n)."],
+      "answer": 2,
+      "explanation": "Stability is important when sorting objects by multiple criteria (e.g., sorting by name, then by department)."
+    },
+    {
+      "id": "dsa_011",
+      "subtopic": "6 - Hashing",
+      "question": "In hashing, what is 'Open Addressing'?",
+      "options": ["Using a linked list to handle collisions.", "Searching for the next available slot in the hash table array itself.", "Allowing the hash table to grow infinitely.", "Encrypting the keys before hashing."],
+      "answer": 1,
+      "explanation": "Techniques like Linear Probing and Quadratic Probing are forms of Open Addressing."
+    },
+    {
+      "id": "dsa_012",
+      "subtopic": "6 - Hashing",
+      "question": "What is a 'Collision' in a Hash Table?",
+      "options": ["When two keys are identical.", "When two different keys produce the same hash index.", "When the hash table is full.", "When the hash function returns a negative number."],
+      "answer": 1,
+      "explanation": "Since the key space is usually much larger than the table size, multiple keys will inevitably map to the same index."
+    },
+    {
+      "id": "dsa_013",
+      "subtopic": "7 - Tree Algorithms",
+      "question": "In a Binary Search Tree (BST), what is the time complexity of finding the minimum element?",
+      "options": ["O(1)", "O(log n) average", "O(n) worst case", "Both 1 and 2"],
+      "answer": 2,
+      "explanation": "In a balanced BST, it is O(log n). In a skewed BST (worst case), it is O(n)."
+    },
+    {
+      "id": "dsa_014",
+      "subtopic": "7 - Tree Algorithms",
+      "question": "Which tree traversal produces the elements of a BST in sorted ascending order?",
+      "options": ["Pre-order", "In-order", "Post-order", "Level-order"],
+      "answer": 1,
+      "explanation": "In-order traversal visits Left -> Root -> Right, which matches the BST property."
+    },
+    {
+      "id": "dsa_015",
+      "subtopic": "7 - Tree Algorithms",
+      "question": "What is the maximum height of an AVL tree with 'n' nodes?",
+      "options": ["O(n)", "O(log n)", "O(n log n)", "O(sqrt n)"],
+      "answer": 1,
+      "explanation": "AVL trees are self-balancing BSTs that ensure the height remains logarithmic, guaranteeing fast operations."
+    },
+    {
+      "id": "dsa_016",
+      "subtopic": "8 - Graph Algorithms",
+      "question": "Which graph traversal uses a Queue and is best suited for finding the shortest path in an unweighted graph?",
+      "options": ["Depth First Search (DFS)", "Breadth First Search (BFS)", "Dijkstra's Algorithm", "Kruskal's Algorithm"],
+      "answer": 1,
+      "explanation": "BFS visits nodes level by level, ensuring that the first time a target is reached, it is via the shortest path."
+    },
+    {
+      "id": "dsa_017",
+      "subtopic": "8 - Graph Algorithms",
+      "question": "Dijkstra's algorithm may fail to find the shortest path if:",
+      "options": ["The graph has cycles.", "The graph is directed.", "The graph contains negative edge weights.", "The graph is disconnected."],
+      "answer": 2,
+      "explanation": "Dijkstra assumes that once a node is visited, its shortest path is found; negative weights can invalidate this greedy assumption."
+    },
+    {
+      "id": "dsa_018",
+      "subtopic": "8 - Graph Algorithms",
+      "question": "What is the primary difference between Prim's and Kruskal's algorithms for Minimum Spanning Trees (MST)?",
+      "options": ["Prim's is faster.", "Kruskal's is for directed graphs.", "Prim's grows the MST from a starting vertex; Kruskal's grows the MST by picking the smallest edges from the entire graph.", "Prim's uses a Stack; Kruskal's uses a Queue."],
+      "answer": 2,
+      "explanation": "Prim's is a 'vertex-centric' greedy approach, while Kruskal's is an 'edge-centric' approach using a Disjoint Set Union (DSU)."
+    },
+    {
+      "id": "dsa_019",
+      "subtopic": "9 - Algorithm Design Techniques",
+      "question": "Dynamic Programming is based on which two main properties?",
+      "options": ["Recursion and Iteration.", "Overlapping Subproblems and Optimal Substructure.", "Greedy Choice and Backtracking.", "Sorting and Searching."],
+      "answer": 1,
+      "explanation": "DP solves each subproblem once and stores the result (memoization/tabulation) to avoid redundant calculations."
+    },
+    {
+      "id": "dsa_020",
+      "subtopic": "9 - Algorithm Design Techniques",
+      "question": "Which technique is used in the 'N-Queens' problem to explore all possible configurations and abandon a path as soon as it's invalid?",
+      "options": ["Greedy", "Divide and Conquer", "Backtracking", "Brute Force"],
+      "answer": 2,
+      "explanation": "Backtracking is a refined brute force that 'prunes' the search tree by backing up when a constraint is violated."
+    },
+    {
+      "id": "dsa_021",
+      "subtopic": "10 - Advanced Data Structures",
+      "question": "What is a 'Trie' (Prefix Tree) primarily used for?",
+      "options": ["Storing integers efficiently.", "Fast retrieval of keys in a large dataset of strings (like autocomplete).", "Balancing numerical data.", "Managing database transactions."],
+      "answer": 1,
+      "explanation": "Tries allow for O(L) search time, where L is the length of the string, regardless of how many strings are in the set."
+    },
+    {
+      "id": "dsa_022",
+      "subtopic": "10 - Advanced Data Structures",
+      "question": "In a 'Max-Heap', where is the largest element always located?",
+      "options": ["In the last leaf node.", "At the root node.", "In the middle of the array.", "It depends on the insertion order."],
+      "answer": 1,
+      "explanation": "The defining property of a Max-Heap is that every parent node is greater than or equal to its children."
+    },
+    {
+      "id": "dsa_023",
+      "subtopic": "11 - String Algorithms",
+      "question": "The Knuth-Morris-Pratt (KMP) algorithm improves pattern matching by:",
+      "options": ["Checking every possible alignment.", "Using a partial match table (pi table) to avoid re-examining characters that have already been matched.", "Hashing the pattern.", "Sorting the text first."],
+      "answer": 1,
+      "explanation": "KMP achieves O(n + m) time complexity by leveraging the information gained from previous mismatches."
+    },
+    {
+      "id": "dsa_024",
+      "subtopic": "11 - String Algorithms",
+      "question": "Rabin-Karp algorithm uses which technique for string searching?",
+      "options": ["Binary Search", "Rolling Hash", "Dynamic Programming", "Bit Manipulation"],
+      "answer": 1,
+      "explanation": "Rolling hash allows for constant-time updates to the hash of the current window in the text."
+    },
+    {
+      "id": "dsa_025",
+      "subtopic": "12 - Complexity & Optimization",
+      "question": "What is the 'Amortized Analysis' of an algorithm?",
+      "options": ["Calculating the worst-case for a single operation.", "Calculating the average time taken per operation over a sequence of operations.", "Calculating the memory usage in the best case.", "The total time taken to compile the code."],
+      "answer": 1,
+      "explanation": "For example, appending to a dynamic array is O(n) occasionally (when resizing) but O(1) amortized."
+    },
+    {
+      "id": "dsa_026",
+      "subtopic": "12 - Complexity & Optimization",
+      "question": "Which of the following complexity classes is the most efficient for large inputs?",
+      "options": ["O(n^2)", "O(n log n)", "O(2^n)", "O(n!)"],
+      "answer": 1,
+      "explanation": "O(n log n) is significantly faster than polynomial (n^2) or exponential (2^n) growth."
+    },
+    {
+      "id": "dsa_027",
+      "subtopic": "2 - Linear Data Structures",
+      "question": "A 'Deque' (Double-Ended Queue) allows:",
+      "options": ["Insertion at front and deletion at rear only.", "Insertion and deletion at both ends.", "Only one operation at a time.", "Storage of non-linear data."],
+      "answer": 1,
+      "explanation": "Deques combine the features of both Stacks and Queues."
+    },
+    {
+      "id": "dsa_028",
+      "subtopic": "3 - Non-Linear Data Structures",
+      "question": "In a graph, the number of edges incident to a vertex is called its:",
+      "options": ["Path", "Degree", "Weight", "Cycle"],
+      "answer": 1,
+      "explanation": "In directed graphs, this is split into 'in-degree' and 'out-degree'."
+    },
+    {
+      "id": "dsa_029",
+      "subtopic": "5 - Sorting Algorithms",
+      "question": "Which sorting algorithm is 'In-place' (uses O(1) extra space)?",
+      "options": ["Merge Sort", "Quick Sort (Standard)", "Heap Sort", "All of the above"],
+      "answer": 2,
+      "explanation": "Heap sort sorts directly within the array. Merge sort typically requires O(n) auxiliary space."
+    },
+    {
+      "id": "dsa_030",
+      "subtopic": "8 - Graph Algorithms",
+      "question": "What is the time complexity of BFS using an Adjacency Matrix?",
+      "options": ["O(V + E)", "O(V^2)", "O(E log V)", "O(V!)"],
+      "answer": 1,
+      "explanation": "With a matrix, you must check all V columns for every vertex, resulting in V * V complexity."
+    },
+    {
+        "id": "dsa_031",
+        "subtopic": "9 - Algorithm Design Techniques",
+        "question": "The 'Fractional Knapsack' problem is best solved using which technique?",
+        "options": ["Dynamic Programming", "Greedy Algorithm", "Backtracking", "Divide and Conquer"],
+        "answer": 1,
+        "explanation": "Because items can be broken, we can simply pick items based on the highest value-to-weight ratio. The '0/1 Knapsack' requires DP."
+    },
+    {
+        "id": "dsa_032",
+        "subtopic": "10 - Advanced Data Structures",
+        "question": "Which property is true for all Red-Black Trees?",
+        "options": ["The root is always red.", "Every leaf (NULL) is black.", "There are no black nodes in a red-red path.", "The tree is perfectly balanced like an AVL tree."],
+        "answer": 1,
+        "explanation": "Red-Black trees have specific rules (Root is black, leaves are black, red nodes must have black children) to maintain approximate balance."
+    },
+    {
+        "id": "dsa_033",
+        "subtopic": "6 - Hashing",
+        "question": "What is 'Quadratic Probing' intended to reduce compared to 'Linear Probing'?",
+        "options": ["Primary Clustering", "Secondary Clustering", "Memory Usage", "Hash collisions"],
+        "answer": 0,
+        "explanation": "Linear probing creates long runs of occupied slots (Primary Clustering). Quadratic probing spreads keys out more effectively."
+    },
+    {
+        "id": "dsa_034",
+        "subtopic": "4 - Searching Algorithms",
+        "question": "In a Jump Search algorithm, if the block size is 'm', what is the time complexity?",
+        "options": ["O(n/m)", "O(m + n/m)", "O(log n)", "O(n)"],
+        "answer": 1,
+        "explanation": "Jump search jumps 'm' steps and then performs a linear search in the identified block. Optimal 'm' is √n, leading to O(√n)."
+    },
+    {
+        "id": "dsa_035",
+        "subtopic": "2 - Linear Data Structures",
+        "question": "Which of the following Linked List types allows traversal in both directions?",
+        "options": ["Singly Linked List", "Circular Linked List", "Doubly Linked List", "Header Linked List"],
+        "answer": 2,
+        "explanation": "Doubly Linked Lists have both 'next' and 'prev' pointers for every node."
+    },
+    {
+        "id": "dsa_036",
+        "subtopic": "5 - Sorting Algorithms",
+        "question": "Selection Sort works by:",
+        "options": ["Comparing adjacent elements and swapping.", "Repeatedly finding the minimum element from the unsorted part and putting it at the beginning.", "Dividing the array into two halves.", "Building a heap structure."],
+        "answer": 1,
+        "explanation": "Selection sort has O(n^2) complexity regardless of the initial order of data."
+    },
+    {
+        "id": "dsa_037",
+        "subtopic": "7 - Tree Algorithms",
+        "question": "What is the 'Balance Factor' of a node in an AVL tree?",
+        "options": ["Height of Left Subtree + Height of Right Subtree", "Height of Left Subtree - Height of Right Subtree", "Number of nodes in Left / Number of nodes in Right", "Total depth of the tree"],
+        "answer": 1,
+        "explanation": "AVL trees require the balance factor to be -1, 0, or 1 for every node."
+    },
+    {
+        "id": "dsa_038",
+        "subtopic": "8 - Graph Algorithms",
+        "question": "Which algorithm is used to find the 'Shortest Path' from a single source to all other vertices in a graph that may have negative edge weights?",
+        "options": ["Dijkstra's", "Bellman-Ford", "Floyd-Warshall", "Prim's"],
+        "answer": 1,
+        "explanation": "Bellman-Ford can handle negative weights and even detect negative cycles, though it is slower than Dijkstra (O(VE))."
+    },
+    {
+        "id": "dsa_039",
+        "subtopic": "12 - Complexity & Optimization",
+        "question": "What is the space complexity of an algorithm that uses a 2D adjacency matrix of size V x V?",
+        "options": ["O(V)", "O(E)", "O(V^2)", "O(V + E)"],
+        "answer": 2,
+        "explanation": "The matrix requires V^2 storage regardless of the number of edges (E)."
+    },
+    {
+        "id": "dsa_040",
+        "subtopic": "1 - Foundations of Data Structure and Algorithms",
+        "question": "A 'Divide and Conquer' algorithm consists of which three steps?",
+        "options": ["Sort, Search, Result", "Divide, Conquer, Combine", "Input, Process, Output", "Iterate, Recurse, Return"],
+        "answer": 1,
+        "explanation": "Merge Sort and Quick Sort are the most famous examples of this paradigm."
+    },
+    {
+        "id": "dsa_041",
+        "subtopic": "3 - Non-Linear Data Structures",
+        "question": "What is a 'Directed Acyclic Graph' (DAG)?",
+        "options": ["A graph with no edges.", "A directed graph with no cycles.", "A graph where every node is connected to every other node.", "A tree with multiple roots."],
+        "answer": 1,
+        "explanation": "DAGs are essential for representing dependencies and are the basis for Topological Sorting."
+    },
+    {
+        "id": "dsa_042",
+        "subtopic": "6 - Hashing",
+        "question": "Which hashing collision resolution technique uses an extra hash function if the first one fails?",
+        "options": ["Linear Probing", "Chaining", "Double Hashing", "Quadratic Probing"],
+        "answer": 2,
+        "explanation": "Double hashing drastically reduces clustering by making the probe sequence depend on the key."
+    },
+    {
+        "id": "dsa_043",
+        "subtopic": "11 - String Algorithms",
+        "question": "What is the time complexity of the naive string matching algorithm?",
+        "options": ["O(n)", "O(n log n)", "O(n * m)", "O(n + m)"],
+        "answer": 2,
+        "explanation": "In the worst case (e.g., matching 'aaaaab' in 'aaaaaaaaaa'), the naive approach checks all 'm' characters of the pattern for every position in the 'n' length text."
+    },
+    {
+        "id": "dsa_044",
+        "subtopic": "10 - Advanced Data Structures",
+        "question": "What is a 'B-Tree' primarily used for?",
+        "options": ["Evaluating math expressions.", "Disk-based storage and databases.", "Finding the shortest path.", "Sorting small arrays."],
+        "answer": 1,
+        "explanation": "B-Trees are designed to minimize disk I/O by having a large branching factor, making the tree very short."
+    },
+    {
+        "id": "dsa_045",
+        "subtopic": "2 - Linear Data Structures",
+        "question": "In a Stack, if you perform PUSH(1), PUSH(2), POP(), PUSH(3), what is the top element?",
+        "options": ["1", "2", "3", "Empty"],
+        "answer": 2,
+        "explanation": "1 is pushed, then 2 is pushed. POP() removes 2. 3 is pushed. The stack now contains [1, 3], so 3 is on top."
+    },
+    {
+        "id": "dsa_046",
+        "subtopic": "5 - Sorting Algorithms",
+        "question": "Which sort is best when the range of input values (K) is not significantly larger than the number of elements (N)?",
+        "options": ["Quick Sort", "Counting Sort", "Merge Sort", "Insertion Sort"],
+        "answer": 1,
+        "explanation": "Counting sort is a non-comparison sort with O(N + K) complexity."
+    },
+    {
+        "id": "dsa_047",
+        "subtopic": "8 - Graph Algorithms",
+        "question": "What is the 'Topological Sort' of a graph?",
+        "options": ["Sorting nodes by their value.", "A linear ordering of vertices such that for every directed edge uv, vertex u comes before v.", "Finding the largest node.", "A way to detect negative cycles."],
+        "answer": 1,
+        "explanation": "Topological sort is only possible for Directed Acyclic Graphs (DAGs)."
+    },
+    {
+        "id": "dsa_048",
+        "subtopic": "9 - Algorithm Design Techniques",
+        "question": "Huffman Coding uses which paradigm?",
+        "options": ["Greedy", "Dynamic Programming", "Backtracking", "Divide and Conquer"],
+        "answer": 0,
+        "explanation": "It greedily picks the two lowest-frequency nodes to build the prefix tree."
+    },
+    {
+        "id": "dsa_049",
+        "subtopic": "7 - Tree Algorithms",
+        "question": "What is the height of a perfect binary tree with N nodes?",
+        "options": ["N", "log2(N+1) - 1", "N/2", "sqrt(N)"],
+        "answer": 1,
+        "explanation": "In a perfect binary tree, the relationship between nodes and height (h) is N = 2^(h+1) - 1."
+    },
+    {
+        "id": "dsa_050",
+        "subtopic": "12 - Complexity & Optimization",
+        "question": "Which of the following is an example of an 'NP-Complete' problem?",
+        "options": ["Sorting a list", "Finding the shortest path in a graph", "The Traveling Salesperson Problem (Decision version)", "Binary Search"],
+        "answer": 2,
+        "explanation": "NP-complete problems have no known polynomial-time solution and are among the hardest problems in computer science."
+    },
+    {
+      "id": "dsa_051",
+      "subtopic": "1 - Foundations of Data Structure and Algorithms",
+      "question": "What is the difference between Time Complexity and Space Complexity?",
+      "options": ["Time is for CPU; Space is for RAM.", "Time is the execution time; Space is the extra memory used by the algorithm as input grows.", "They are the same.", "Time is O(n); Space is O(1) always."],
+      "answer": 1,
+      "explanation": "Algorithms often involve a trade-off between time and space (e.g., Hashing is fast but uses more space)."
+    },
+    {
+      "id": "dsa_052",
+      "subtopic": "2 - Linear Data Structures",
+      "question": "Which data structure is used by the compiler to manage function calls and local variables?",
+      "options": ["Queue", "Heap", "Stack", "Tree"],
+      "answer": 2,
+      "explanation": "The 'Call Stack' uses LIFO behavior to manage active subroutines."
+    },
+    {
+      "id": "dsa_053",
+      "subtopic": "3 - Non-Linear Data Structures",
+      "question": "A tree with no cycles and where every node is connected is called a:",
+      "options": ["Graph", "Forest", "Tree", "Binary Tree"],
+      "answer": 2,
+      "explanation": "Mathematically, a tree is a connected acyclic graph."
+    },
+    {
+      "id": "dsa_054",
+      "subtopic": "4 - Searching Algorithms",
+      "question": "Which searching algorithm is best when the jump size is √n?",
+      "options": ["Binary Search", "Jump Search", "Linear Search", "Interpolation Search"],
+      "answer": 1,
+      "explanation": "Jump search is a compromise between linear and binary search for sorted arrays."
+    },
+    {
+      "id": "dsa_055",
+      "subtopic": "5 - Sorting Algorithms",
+      "question": "What is the worst-case time complexity of Merge Sort?",
+      "options": ["O(n)", "O(n^2)", "O(n log n)", "O(log n)"],
+      "answer": 2,
+      "explanation": "Unlike Quick Sort, Merge Sort is guaranteed to be O(n log n) even in the worst case."
+    },
+    {
+      "id": "dsa_056",
+      "subtopic": "6 - Hashing",
+      "question": "What is the 'Load Factor' of a hash table?",
+      "options": ["The size of the table.", "The number of elements divided by the table size.", "The number of collisions.", "The time taken to hash a key."],
+      "answer": 1,
+      "explanation": "A high load factor (>0.7) typically triggers a 'rehash' to a larger table to maintain performance."
+    },
+    {
+      "id": "dsa_057",
+      "subtopic": "7 - Tree Algorithms",
+      "question": "In a Min-Heap, the parent node is always:",
+      "options": ["Smaller than or equal to its children.", "Greater than or equal to its children.", "A leaf node.", "The same as the root."],
+      "answer": 0,
+      "explanation": "This property ensures the minimum element is always at the root."
+    },
+    {
+      "id": "dsa_058",
+      "subtopic": "8 - Graph Algorithms",
+      "question": "Which algorithm finds the shortest path between 'all pairs' of vertices in a graph?",
+      "options": ["Dijkstra's", "Bellman-Ford", "Floyd-Warshall", "BFS"],
+      "answer": 2,
+      "explanation": "Floyd-Warshall uses dynamic programming to find shortest paths between every pair of nodes in O(V^3)."
+    },
+    {
+      "id": "dsa_059",
+      "subtopic": "9 - Algorithm Design Techniques",
+      "question": "Which paradigm does the 'Merge Sort' algorithm use?",
+      "options": ["Greedy", "Backtracking", "Divide and Conquer", "Dynamic Programming"],
+      "answer": 2,
+      "explanation": "It divides the array, sorts the halves (conquer), and merges them (combine)."
+    },
+    {
+      "id": "dsa_060",
+      "subtopic": "10 - Advanced Data Structures",
+      "question": "A 'Segment Tree' is most useful for:",
+      "options": ["Sorting a list.", "Range queries and updates (e.g., sum of elements from index L to R).", "Hiding data.", "Evaluating math logic."],
+      "answer": 1,
+      "explanation": "Segment trees allow for both range queries and point updates in O(log n)."
+    },
+    {
+      "id": "dsa_061",
+      "subtopic": "11 - String Algorithms",
+      "question": "What is a 'Suffix Tree'?",
+      "options": ["A tree of all prefixes of a string.", "A compressed trie of all suffixes of a given string.", "A balanced BST of characters.", "A type of heap."],
+      "answer": 1,
+      "explanation": "Suffix trees are used for complex string problems like finding the longest repeated substring."
+    },
+    {
+      "id": "dsa_062",
+      "subtopic": "12 - Complexity & Optimization",
+      "question": "What is 'Tail Recursion'?",
+      "options": ["Recursion that happens at the beginning of a function.", "A recursive call that is the last action in the function, allowing for stack space optimization.", "Infinite recursion.", "Recursion with two base cases."],
+      "answer": 1,
+      "explanation": "Many compilers can optimize tail recursion into a simple loop to save stack space."
+    },
+    {
+      "id": "dsa_063",
+      "subtopic": "2 - Linear Data Structures",
+      "question": "Which data structure is typically used for 'undo' operations in software?",
+      "options": ["Queue", "Stack", "Linked List", "Tree"],
+      "answer": 1,
+      "explanation": "Stacks (LIFO) allow you to pop the most recent action to revert it."
+    },
+    {
+      "id": "dsa_064",
+      "subtopic": "3 - Non-Linear Data Structures",
+      "question": "The 'In-degree' of a vertex in a directed graph is:",
+      "options": ["The number of edges leaving it.", "The number of edges entering it.", "The total number of edges connected to it.", "The weight of its edges."],
+      "answer": 1,
+      "explanation": "In-degree is critical for algorithms like Kahn's algorithm for topological sorting."
+    },
+    {
+      "id": "dsa_065",
+      "subtopic": "5 - Sorting Algorithms",
+      "question": "Which sort is an example of a 'Comparison Sort'?",
+      "options": ["Counting Sort", "Radix Sort", "Quick Sort", "Bucket Sort"],
+      "answer": 2,
+      "explanation": "Quick sort compares elements to a pivot. Non-comparison sorts like Counting sort use properties of the data (like range)."
+    },
+    {
+      "id": "dsa_066",
+      "subtopic": "8 - Graph Algorithms",
+      "question": "What is the purpose of 'Kruskal's Algorithm'?",
+      "options": ["Find the shortest path.", "Find the Minimum Spanning Tree of a connected weighted graph.", "Detect a cycle in a graph.", "Perform a topological sort."],
+      "answer": 1,
+      "explanation": "Kruskal's uses a greedy approach, picking the smallest edges that don't form a cycle."
+    },
+    {
+      "id": "dsa_067",
+      "subtopic": "10 - Advanced Data Structures",
+      "question": "A 'Disjoint Set Union' (DSU) or 'Union-Find' data structure is used to:",
+      "options": ["Sort a list.", "Keep track of elements partitioned into non-overlapping sets.", "Balance a tree.", "Store key-value pairs."],
+      "answer": 1,
+      "explanation": "DSU is famous for its use in Kruskal's algorithm and for detecting cycles in undirected graphs."
+    },
+    {
+      "id": "dsa_068",
+      "subtopic": "4 - Searching Algorithms",
+      "question": "What is the time complexity of searching in a perfectly balanced Binary Search Tree?",
+      "options": ["O(1)", "O(n)", "O(log n)", "O(n log n)"],
+      "answer": 2,
+      "explanation": "Balanced trees reduce the height to log n, ensuring efficient lookups."
+    },
+    {
+      "id": "dsa_069",
+      "subtopic": "7 - Tree Algorithms",
+      "question": "What is a 'B+ Tree'?",
+      "options": ["A BST with more colors.", "An N-ary tree where all data is stored in leaf nodes and leaves are linked.", "A type of heap.", "A tree with no root."],
+      "answer": 1,
+      "explanation": "B+ trees are the standard for database indexing because they are optimized for disk reads and range scans."
+    },
+    {
+      "id": "dsa_070",
+      "subtopic": "9 - Algorithm Design Techniques",
+      "question": "The '0/1 Knapsack' problem is solved using:",
+      "options": ["Greedy Algorithm", "Dynamic Programming", "Binary Search", "Linear Search"],
+      "answer": 1,
+      "explanation": "Because items cannot be divided, a greedy approach fails; DP explores combinations to find the optimum."
+    },
+    {
+        "id": "dsa_071",
+        "subtopic": "2 - Linear Data Structures",
+        "question": "What is a 'Priority Queue'?",
+        "options": ["A queue where the oldest element is served first.", "A data structure where each element has a priority, and the element with the highest priority is served first.", "A queue for VIP users only.", "A type of linked list."],
+        "answer": 1,
+        "explanation": "Priority queues are typically implemented using Heaps for O(log n) performance."
+    },
+    {
+        "id": "dsa_072",
+        "subtopic": "3 - Non-Linear Data Structures",
+        "question": "In a graph, a 'Cycle' is defined as:",
+        "options": ["A path where no vertices are repeated.", "A path that starts and ends at the same vertex with at least one edge.", "A path that visits every node.", "A graph with no edges."],
+        "answer": 1,
+        "explanation": "Detecting cycles is a common task in deadlock detection and network analysis."
+    },
+    {
+        "id": "dsa_073",
+        "subtopic": "5 - Sorting Algorithms",
+        "question": "Which sorting algorithm is often used when memory is a severe constraint (O(1) auxiliary space)?",
+        "options": ["Merge Sort", "Quick Sort", "Heap Sort", "External Sort"],
+        "answer": 2,
+        "explanation": "Heap sort is an in-place O(n log n) algorithm, making it very memory-efficient."
+    },
+    {
+        "id": "dsa_074",
+        "subtopic": "6 - Hashing",
+        "question": "In hashing, 'Separate Chaining' refers to:",
+        "options": ["Moving to the next slot in the array.", "Using a linked list at each index of the hash table to store colliding elements.", "Hashing the key twice.", "Using a different hash function for each user."],
+        "answer": 1,
+        "explanation": "Chaining allows the hash table to handle more elements than its physical size (though performance degrades)."
+    },
+    {
+        "id": "dsa_075",
+        "subtopic": "8 - Graph Algorithms",
+        "question": "The 'Bellman-Ford' algorithm is primarily used for:",
+        "options": ["Finding the MST.", "Single-source shortest path, even with negative edge weights.", "Detecting all-pairs shortest paths.", "Sorting nodes."],
+        "answer": 1,
+        "explanation": "It is slower than Dijkstra but more versatile as it handles negative weights."
+    },
+    {
+        "id": "dsa_076",
+        "subtopic": "1 - Foundations of Data Structure and Algorithms",
+        "question": "Which complexity class represents an algorithm that doubles its work every time the input increases by one?",
+        "options": ["O(n^2)", "O(2^n)", "O(n!)", "O(log n)"],
+        "answer": 1,
+        "explanation": "Exponential complexity O(2^n) is very inefficient for large inputs."
+    },
+    {
+        "id": "dsa_077",
+        "subtopic": "4 - Searching Algorithms",
+        "question": "Interpolation search is an improvement over Binary Search for which type of data?",
+        "options": ["Randomly distributed data.", "Uniformly distributed sorted data.", "Small datasets.", "Unsorted data."],
+        "answer": 1,
+        "explanation": "Interpolation search 'estimates' the position based on values (like looking for 'Z' in a phonebook), achieving O(log log n) average time."
+    },
+    {
+        "id": "dsa_078",
+        "subtopic": "10 - Advanced Data Structures",
+        "question": "What is a 'Fenwick Tree' (Binary Indexed Tree) used for?",
+        "options": ["Efficiently calculating prefix sums and updating elements.", "Finding the shortest path in a graph.", "Sorting strings.", "Managing memory segments."],
+        "answer": 0,
+        "explanation": "Fenwick trees are faster to implement than segment trees for simple prefix sum problems."
+    },
+    {
+        "id": "dsa_079",
+        "subtopic": "12 - Complexity & Optimization",
+        "question": "What is the time complexity of the 'Sieve of Eratosthenes' algorithm for finding primes up to N?",
+        "options": ["O(N)", "O(N log N)", "O(N log log N)", "O(N^2)"],
+        "answer": 2,
+        "explanation": "The Sieve is a highly efficient algorithm for prime number generation."
+    },
+    {
+        "id": "dsa_080",
+        "subtopic": "7 - Tree Algorithms",
+        "question": "In a Binary Tree, the 'Post-order' traversal is:",
+        "options": ["Root, Left, Right", "Left, Root, Right", "Left, Right, Root", "Right, Left, Root"],
+        "answer": 2,
+        "explanation": "Post-order is often used for deleting a tree or evaluating mathematical expression trees."
+    },
+    {
+      "id": "dsa_081",
+      "subtopic": "2 - Linear Data Structures",
+      "question": "What is the time complexity of accessing an element at index 'i' in an Array?",
+      "options": ["O(1)", "O(log n)", "O(i)", "O(n)"],
+      "answer": 0,
+      "explanation": "Arrays provide 'Random Access' because the memory address can be calculated directly using the base address and index."
+    },
+    {
+      "id": "dsa_082",
+      "subtopic": "3 - Non-Linear Data Structures",
+      "question": "What is an 'Adjacency List' in Graph representation?",
+      "options": ["A 2D array representing connections.", "An array of linked lists where each list contains the neighbors of a vertex.", "A list of all edges in the graph.", "A tree structure for graphs."],
+      "answer": 1,
+      "explanation": "Adjacency lists are space-efficient for 'sparse' graphs (graphs with few edges)."
+    },
+    {
+      "id": "dsa_083",
+      "subtopic": "5 - Sorting Algorithms",
+      "question": "Which sorting algorithm is generally the fastest for small datasets (e.g., < 20 elements)?",
+      "options": ["Merge Sort", "Quick Sort", "Insertion Sort", "Heap Sort"],
+      "answer": 2,
+      "explanation": "Insertion sort has very low constant overhead and is often used as a sub-routine in hybrid sorts (like Timsort)."
+    },
+    {
+      "id": "dsa_084",
+      "subtopic": "11 - String Algorithms",
+      "question": "The 'Z-Algorithm' is used for:",
+      "options": ["String sorting.", "Pattern matching (finding all occurrences of a pattern in a text).", "Data compression.", "Hashing passwords."],
+      "answer": 1,
+      "explanation": "Z-algorithm is a linear-time string matching algorithm similar to KMP."
+    },
+    {
+      "id": "dsa_085",
+      "subtopic": "6 - Hashing",
+      "question": "Which hash function is generally preferred for strings?",
+      "options": ["Summing ASCII values.", "Polynomial rolling hash.", "Taking the first character.", "Random number generation."],
+      "answer": 1,
+      "explanation": "Rolling hashes distribute strings more uniformly and avoid many common collisions."
+    },
+    {
+      "id": "dsa_086",
+      "subtopic": "10 - Advanced Data Structures",
+      "question": "In a 'Trie', what is the maximum number of children a node can have if it stores English words?",
+      "options": ["2", "10", "26", "Unlimited"],
+      "answer": 2,
+      "explanation": "One child for each letter of the alphabet (a-z)."
+    },
+    {
+      "id": "dsa_087",
+      "subtopic": "12 - Complexity & Optimization",
+      "question": "An algorithm with complexity O(n!) is considered:",
+      "options": ["Efficient.", "Logarithmic.", "Factorial (and extremely slow).", "Polynomial."],
+      "answer": 2,
+      "explanation": "Factorial complexity (like the naive solution to the Traveling Salesperson Problem) is impractical for inputs larger than ~15-20."
+    },
+    {
+      "id": "dsa_088",
+      "subtopic": "7 - Tree Algorithms",
+      "question": "In a BST, the predecessor of a node is:",
+      "options": ["The largest node in its left subtree.", "The smallest node in its right subtree.", "The parent of the node.", "The left child of the node."],
+      "answer": 0,
+      "explanation": "Predecessor is the node that comes immediately before in an in-order traversal."
+    },
+    {
+      "id": "dsa_089",
+      "subtopic": "4 - Searching Algorithms",
+      "question": "What is the time complexity of 'Linear Search' on an unsorted array of size N?",
+      "options": ["O(1)", "O(log n)", "O(n)", "O(n log n)"],
+      "answer": 2,
+      "explanation": "You may have to check every element in the worst case if the target is at the end or not present."
+    },
+    {
+      "id": "dsa_090",
+      "subtopic": "9 - Algorithm Design Techniques",
+      "question": "What is the 'Master Theorem' used for?",
+      "options": ["Solving project management issues.", "Determining the time complexity of divide-and-conquer recurrence relations.", "Evaluating database queries.", "Sorting strings."],
+      "answer": 1,
+      "explanation": "It provides a quick way to find the Big-O for functions like T(n) = aT(n/b) + f(n)."
+    },
+    {
+        "id": "dsa_091",
+        "subtopic": "2 - Linear Data Structures",
+        "question": "Which data structure is best for implementing a 'Breadth First Search'?",
+        "options": ["Stack", "Queue", "Tree", "Array"],
+        "answer": 1,
+        "explanation": "Queues (FIFO) are used to keep track of discovered nodes that have not yet been visited."
+    },
+    {
+        "id": "dsa_092",
+        "subtopic": "3 - Non-Linear Data Structures",
+        "question": "A graph with weights on edges is called a:",
+        "options": ["Weighted Graph", "Bipartite Graph", "Complete Graph", "Directed Graph"],
+        "answer": 0,
+        "explanation": "Weights can represent distance, cost, or time in pathfinding algorithms."
+    },
+    {
+        "id": "dsa_093",
+        "subtopic": "5 - Sorting Algorithms",
+        "question": "Which sorting algorithm uses the 'Divide and Conquer' strategy by picking a pivot?",
+        "options": ["Selection Sort", "Quick Sort", "Insertion Sort", "Heap Sort"],
+        "answer": 1,
+        "explanation": "Quick sort partitions the array around a pivot and then recursively sorts the sub-arrays."
+    },
+    {
+        "id": "dsa_094",
+        "subtopic": "8 - Graph Algorithms",
+        "question": "Which algorithm finds all nodes reachable from a starting node in a graph?",
+        "options": ["Dijkstra's", "Prim's", "BFS/DFS", "Binary Search"],
+        "answer": 2,
+        "explanation": "Both graph traversal methods find all reachable components from a source vertex."
+    },
+    {
+        "id": "dsa_095",
+        "subtopic": "10 - Advanced Data Structures",
+        "question": "In a 'B+ Tree', leaf nodes are linked together to support:",
+        "options": ["Faster insertions.", "Efficient sequential range queries.", "Better encryption.", "Simplified deletion."],
+        "answer": 1,
+        "explanation": "Linking leaves allows the database to find one record and then scan forward/backward easily."
+    },
+    {
+        "id": "dsa_096",
+        "subtopic": "6 - Hashing",
+        "question": "What is 'Primary Clustering' in hashing?",
+        "options": ["When keys are hashed to the same primary index.", "The tendency for linear probing to create long blocks of occupied slots, increasing search time.", "When the hash table is too small.", "A type of data backup."],
+        "answer": 1,
+        "explanation": "Primary clustering is a disadvantage of linear probing that other techniques like double hashing avoid."
+    },
+    {
+        "id": "dsa_097",
+        "subtopic": "7 - Tree Algorithms",
+        "question": "What is the 'Depth' of a node in a tree?",
+        "options": ["The total number of children it has.", "The number of edges from the root to that node.", "The total height of the tree.", "The value of the node."],
+        "answer": 1,
+        "explanation": "The root has a depth of 0; its children have a depth of 1."
+    },
+    {
+        "id": "dsa_098",
+        "subtopic": "12 - Complexity & Optimization",
+        "question": "What is 'Memoization' in Dynamic Programming?",
+        "options": ["Memorizing the code.", "Storing the results of expensive function calls and returning the cached result when the same inputs occur again.", "Deleting unused variables.", "Writing code in assembly."],
+        "answer": 1,
+        "explanation": "Memoization is the 'top-down' approach to DP."
+    },
+    {
+        "id": "dsa_099",
+        "subtopic": "11 - String Algorithms",
+        "question": "Rabin-Karp is particularly effective for:",
+        "options": ["Sorting a single string.", "Searching for multiple patterns simultaneously in a text.", "Finding the shortest word.", "Reversing a string."],
+        "answer": 1,
+        "explanation": "By comparing hashes, Rabin-Karp can quickly check for several different patterns."
+    },
+    {
+        "id": "dsa_100",
+        "subtopic": "1 - Foundations of Data Structure and Algorithms",
+        "question": "What is the time complexity of an algorithm that has two nested loops, each running from 1 to N?",
+        "options": ["O(N)", "O(log N)", "O(N^2)", "O(N log N)"],
+        "answer": 2,
+        "explanation": "N iterations inside N iterations = N * N."
+    },
+    {
+        "id": "dsa_101",
+        "subtopic": "2 - Linear Data Structures",
+        "question": "Which data structure follows the FIFO (First-In, First-Out) principle?",
+        "options": ["Stack", "Binary Tree", "Queue", "Hash Map"],
+        "answer": 2,
+        "explanation": "Queues work like a real-world line: the first person to arrive is the first to be served."
+    },
+    {
+        "id": "dsa_102",
+        "subtopic": "10 - Advanced Data Structures",
+        "question": "In a 'Heap', what is the complexity of extracting the root element (Extract-Max/Extract-Min)?",
+        "options": ["O(1)", "O(log n)", "O(n)", "O(n log n)"],
+        "answer": 1,
+        "explanation": "Removing the root requires swapping with the last leaf and 'heapifying' down, which takes log n time."
+    },
+    {
+        "id": "dsa_103",
+        "subtopic": "8 - Graph Algorithms",
+        "question": "Which algorithm is used to find the 'Strongly Connected Components' of a directed graph?",
+        "options": ["Dijkstra's", "Tarjan's or Kosaraju's Algorithm", "BFS", "Prim's"],
+        "answer": 1,
+        "explanation": "Tarjan's and Kosaraju's utilize DFS to identify cycles of mutual reachability."
+    },
+    {
+        "id": "dsa_104",
+        "subtopic": "5 - Sorting Algorithms",
+        "question": "Which sorting algorithm is known for being extremely fast on data that is 'nearly sorted'?",
+        "options": ["Quick Sort", "Insertion Sort", "Selection Sort", "Merge Sort"],
+        "answer": 1,
+        "explanation": "Insertion sort runs in O(n) time if the data is already sorted or nearly sorted."
+    },
+    {
+        "id": "dsa_105",
+        "subtopic": "1 - Foundations of Data Structure and Algorithms",
+        "question": "Which of the following is a non-linear data structure?",
+        "options": ["Array", "Stack", "Graph", "Queue"],
+        "answer": 2,
+        "explanation": "Arrays, Stacks, and Queues are linear (sequential); Graphs and Trees are non-linear (hierarchical/networked)."
+    }
+  ]
+}

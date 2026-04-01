@@ -1,0 +1,1204 @@
+{
+  "questions": [
+    {
+      "id": "ps_001",
+      "subtopic": "1. Introduction to Problem Solving",
+      "question": "In the context of the IDEAL problem-solving model, what does the 'D' stand for?",
+      "options": ["Debug the code", "Define the problem and goals", "Delete unnecessary data", "Develop a marketing plan"],
+      "answer": 1,
+      "explanation": "IDEAL stands for Identify, Define, Explore, Anticipate/Act, and Look back. Defining the specific goals is the crucial second step."
+    },
+    {
+      "id": "ps_002",
+      "subtopic": "2. Problem Understanding & Analysis",
+      "question": "Which technique is most effective for identifying the 'Root Cause' of a recurring technical failure by repeatedly asking 'Why'?",
+      "options": ["Pareto Analysis", "Five Whys Technique", "Decision Matrix", "SWOT Analysis"],
+      "answer": 1,
+      "explanation": "The Five Whys is a systematic iterative interrogative technique used to explore the cause-and-effect relationships underlying a particular problem."
+    },
+    {
+      "id": "ps_003",
+      "subtopic": "3. Logical Reasoning Fundamentals",
+      "question": "Consider the statement: 'If it is raining, the grass is wet.' If the grass is NOT wet, what can we logically conclude?",
+      "options": ["It is raining.", "It is not raining.", "The sun is out.", "No conclusion can be made."],
+      "answer": 1,
+      "explanation": "This is 'Modus Tollens' (P -> Q, ~Q, therefore ~P). If the effect is absent, the cause must be absent."
+    },
+    {
+      "id": "ps_004",
+      "subtopic": "3. Logical Reasoning Fundamentals",
+      "question": "Which logical fallacy occurs when someone argues that a claim must be true because it hasn't been proven false?",
+      "options": ["Ad Hominem", "Circular Reasoning", "Argument from Ignorance", "Straw Man"],
+      "answer": 2,
+      "explanation": "Argumentum ad ignorantiam assumes a lack of evidence is proof of the opposite."
+    },
+    {
+      "id": "ps_005",
+      "subtopic": "4. Algorithms & Flow Control",
+      "question": "In a flowchart, what does a diamond-shaped symbol represent?",
+      "options": ["Start/End", "Process/Action", "Decision/Branching", "Input/Output"],
+      "answer": 2,
+      "explanation": "Diamonds indicate a conditional step where the process splits based on a Yes/No or True/False result."
+    },
+    {
+      "id": "ps_006",
+      "subtopic": "5. Data Representation & Abstraction",
+      "question": "What is the primary purpose of 'Abstraction' in problem solving?",
+      "options": ["To make the solution more complex.", "To focus on essential details while hiding irrelevant background information.", "To convert code into binary.", "To increase the execution speed of a program."],
+      "answer": 1,
+      "explanation": "Abstraction allows us to handle complex systems by breaking them into manageable layers."
+    },
+    {
+      "id": "ps_007",
+      "subtopic": "6. Pattern Recognition & Generalization",
+      "question": "A developer notices that every time a specific API is called with a null value, the server crashes. Generalizing this observation helps in:",
+      "options": ["Writing a specific fix for that one API.", "Creating a global input validation middleware for all APIs.", "Deleting the API.", "Increasing server RAM."],
+      "answer": 1,
+      "explanation": "Generalization takes a specific pattern (null causing crash) and applies a broad solution (validation) to prevent similar issues elsewhere."
+    },
+    {
+      "id": "ps_008",
+      "subtopic": "7. Mathematical & Quantitative Reasoning",
+      "question": "A system has a 1% failure rate per hour. What is the probability that it will run without failure for 2 consecutive hours?",
+      "options": ["98%", "99%", "98.01%", "97.5%"],
+      "answer": 2,
+      "explanation": "Probability of success is 0.99. For two hours: 0.99 * 0.99 = 0.9801 or 98.01%."
+    },
+    {
+      "id": "ps_009",
+      "subtopic": "8. Algorithmic Thinking",
+      "question": "Which approach is being used when a problem is solved by breaking it down into smaller, identical sub-problems?",
+      "options": ["Greedy approach", "Dynamic Programming", "Recursion", "Brute Force"],
+      "answer": 2,
+      "explanation": "Recursion involves a function calling itself to solve smaller instances of the same problem."
+    },
+    {
+      "id": "ps_010",
+      "subtopic": "9. Critical Thinking & Decision Making",
+      "question": "When comparing four different software vendors using multiple criteria (cost, security, speed), which tool is best?",
+      "options": ["Flowchart", "Weighted Decision Matrix", "Venn Diagram", "Histogram"],
+      "answer": 1,
+      "explanation": "A weighted decision matrix allows you to score options based on prioritized requirements."
+    },
+    {
+      "id": "ps_011",
+      "subtopic": "10. Debugging & Error Analysis",
+      "question": "What is 'Binary Search Debugging' (or Git Bisect)?",
+      "options": ["Searching for an error in a sorted list.", "Repeatedly dividing the codebase in half to identify the specific commit or section where a bug was introduced.", "Using only 0s and 1s to debug.", "Checking two variables at the same time."],
+      "answer": 1,
+      "explanation": "By checking the midpoint of a range of code/commits, you can find the source of a bug in log(n) time."
+    },
+    {
+      "id": "ps_012",
+      "subtopic": "11. Complexity & Efficiency Awareness",
+      "question": "If an algorithm's execution time doubles every time the input size 'n' increases by 1, what is its complexity?",
+      "options": ["O(n)", "O(n^2)", "O(2^n)", "O(log n)"],
+      "answer": 2,
+      "explanation": "This describes exponential growth, common in brute-force solutions for NP-hard problems."
+    },
+    {
+      "id": "ps_013",
+      "subtopic": "12. Problem Solving Using Programming",
+      "question": "When solving a problem that requires finding the shortest path in an unweighted social network, which algorithm should be implemented?",
+      "options": ["Dijkstra's Algorithm", "Breadth-First Search (BFS)", "Depth-First Search (DFS)", "Binary Search"],
+      "answer": 1,
+      "explanation": "BFS is the most efficient choice for shortest paths in unweighted graphs."
+    },
+    {
+      "id": "ps_014",
+      "subtopic": "13. Data-Driven Problem Solving",
+      "question": "Which chart is most appropriate for showing the relationship (correlation) between two continuous numerical variables?",
+      "options": ["Bar Chart", "Pie Chart", "Scatter Plot", "Box Plot"],
+      "answer": 2,
+      "explanation": "Scatter plots show how much one variable is affected by another (e.g., CPU usage vs Temperature)."
+    },
+    {
+      "id": "ps_015",
+      "subtopic": "14. Creative & Innovative Thinking",
+      "question": "What is 'First Principles Thinking'?",
+      "options": ["Following the first idea you have.", "Breaking a problem down to its fundamental truths and building up from there, rather than reasoning by analogy.", "Using only the first chapter of a textbook.", "Asking a senior manager for the answer."],
+      "answer": 1,
+      "explanation": "First principles thinking helps avoid 'we've always done it this way' bias and leads to innovative solutions."
+    },
+    {
+      "id": "ps_016",
+      "subtopic": "15. Real-World Problem Solving",
+      "question": "In a production environment, a 'Workaround' is:",
+      "options": ["A permanent fix.", "A temporary bypass of a problem that allows the system to continue functioning while a permanent fix is developed.", "Deleting the feature that has the bug.", "Hiding the bug from the user."],
+      "answer": 1,
+      "explanation": "Workarounds prioritize 'Availability' and 'Business Continuity' in real-world crises."
+    },
+    {
+      "id": "ps_017",
+      "subtopic": "16. Communication & Documentation of Solutions",
+      "question": "Why are 'Post-Mortem' documents created after a major system failure is resolved?",
+      "options": ["To blame the developer who made the mistake.", "To document what went wrong, why it happened, and how to prevent it in the future.", "To inform the media.", "To clear the server logs."],
+      "answer": 1,
+      "explanation": "Blame-free post-mortems are a staple of high-performance engineering cultures (SRE)."
+    },
+    {
+      "id": "ps_018",
+      "subtopic": "7. Mathematical & Quantitative Reasoning",
+      "question": "If you have a 4-bit unsigned binary number, what is the maximum decimal value it can represent?",
+      "options": ["4", "8", "15", "16"],
+      "answer": 2,
+      "explanation": "2^4 - 1 = 15 (Binary 1111)."
+    },
+    {
+      "id": "ps_019",
+      "subtopic": "3. Logical Reasoning Fundamentals",
+      "question": "In Boolean logic, which operator returns true ONLY if exactly one of the two inputs is true?",
+      "options": ["AND", "OR", "XOR", "NAND"],
+      "answer": 2,
+      "explanation": "XOR (Exclusive OR) is true only when inputs differ (1,0 or 0,1)."
+    },
+    {
+      "id": "ps_020",
+      "subtopic": "11. Complexity & Efficiency Awareness",
+      "question": "Which of the following sorting algorithms is generally considered the most efficient for very large, random datasets?",
+      "options": ["Bubble Sort", "Insertion Sort", "Merge Sort", "Selection Sort"],
+      "answer": 2,
+      "explanation": "Merge Sort is O(n log n), making it far superior to the O(n^2) alternatives for large inputs."
+    },
+    {
+        "id": "ps_021",
+        "subtopic": "2. Problem Understanding & Analysis",
+        "question": "What is the primary purpose of a 'Fishbone Diagram' (Ishikawa)?",
+        "options": ["To show the project schedule.", "To visualize potential causes of a specific problem categorized by source.", "To map out user interface flow.", "To calculate code complexity."],
+        "answer": 1,
+        "explanation": "It is a cause-and-effect discovery tool that helps teams brainstorm the root causes of a defect."
+    },
+    {
+        "id": "ps_022",
+        "subtopic": "1. Introduction to Problem Solving",
+        "question": "What is a 'Heuristic' in the context of problem solving?",
+        "options": ["A mathematically proven optimal solution.", "A 'rule of thumb' or mental shortcut that provides a sufficient (but not necessarily perfect) solution.", "A type of compiler error.", "A secure encryption key."],
+        "answer": 1,
+        "explanation": "Heuristics trade perfection for speed in situations where finding an optimal solution is too slow or complex."
+    },
+    {
+        "id": "ps_023",
+        "subtopic": "4. Algorithms & Flow Control",
+        "question": "In pseudocode, which structure is used for 'Selection'?",
+        "options": ["WHILE / ENDWHILE", "IF / ELSE", "FOR / NEXT", "REPEAT / UNTIL"],
+        "answer": 1,
+        "explanation": "Selection allows the algorithm to choose between different paths of execution."
+    },
+    {
+        "id": "ps_024",
+        "subtopic": "7. Mathematical & Quantitative Reasoning",
+        "question": "What is the 'Mean' of the following set: {10, 20, 30, 40, 50}?",
+        "options": ["20", "30", "40", "150"],
+        "answer": 1,
+        "explanation": "Mean = Sum / Count. (150 / 5) = 30."
+    },
+    {
+        "id": "ps_025",
+        "subtopic": "9. Critical Thinking & Decision Making",
+        "question": "The 'Confirmation Bias' refers to the tendency to:",
+        "options": ["Double-check all facts.", "Search for, favor, and recall information that confirms one's pre-existing beliefs.", "Always agree with the team leader.", "Ignore all data."],
+        "answer": 1,
+        "explanation": "Overcoming confirmation bias is essential for objective error analysis and debugging."
+    },
+    {
+        "id": "ps_026",
+        "subtopic": "10. Debugging & Error Analysis",
+        "question": "A 'Heisenbug' is a computer programming term for a bug that:",
+        "options": ["Is very easy to fix.", "Disappears or alters its behavior when one attempts to study it (e.g., by adding print statements).", "Only happens in the summer.", "Is caused by the hardware."],
+        "answer": 1,
+        "explanation": "These are often related to race conditions or uninitialized variables that change when debuggers change timing or memory layout."
+    },
+    {
+        "id": "ps_027",
+        "subtopic": "11. Complexity & Efficiency Awareness",
+        "question": "Which Big O complexity class represents 'Linearithmic' growth?",
+        "options": ["O(n)", "O(n^2)", "O(n log n)", "O(log n)"],
+        "answer": 2,
+        "explanation": "O(n log n) is the standard complexity for efficient sorting algorithms like QuickSort and MergeSort."
+    },
+    {
+        "id": "ps_028",
+        "subtopic": "13. Data-Driven Problem Solving",
+        "question": "If you want to compare the frequency of different categories of bugs in a month, which chart is best?",
+        "options": ["Line Chart", "Scatter Plot", "Bar Chart", "Box Plot"],
+        "answer": 2,
+        "explanation": "Bar charts are the gold standard for comparing discrete categories."
+    },
+    {
+        "id": "ps_029",
+        "subtopic": "15. Real-World Problem Solving",
+        "question": "What does the 'Pareto Principle' (80/20 rule) suggest about software bugs?",
+        "options": ["80% of code is buggy.", "80% of software crashes are caused by 20% of the bugs.", "20% of users report 100% of the bugs.", "Bugs take 80 hours to fix."],
+        "answer": 1,
+        "explanation": "Prioritizing the 'vital few' issues leads to the most significant improvements in system stability."
+    },
+    {
+        "id": "ps_030",
+        "subtopic": "8. Algorithmic Thinking",
+        "question": "What is the 'Base Case' in a recursive function?",
+        "options": ["The most complex version of the problem.", "The condition that stops the recursion and prevents an infinite loop.", "The first line of the function.", "The memory address of the function."],
+        "answer": 1,
+        "explanation": "Without a base case, recursion continues until the stack overflows."
+    },
+    {
+        "id": "ps_031",
+        "subtopic": "12. Problem Solving Using Programming",
+        "question": "Which approach finds the 'local optimum' at each step in hopes of finding the 'global optimum'?",
+        "options": ["Brute Force", "Greedy Algorithm", "Dynamic Programming", "Backtracking"],
+        "answer": 1,
+        "explanation": "Greedy algorithms are fast but don't always find the perfect solution (e.g., the Change-making problem with non-standard coins)."
+    },
+    {
+        "id": "ps_032",
+        "subtopic": "5. Data Representation & Abstraction",
+        "question": "In Hexadecimal, what is the value of the letter 'F'?",
+        "options": ["10", "12", "15", "16"],
+        "answer": 2,
+        "explanation": "Hex uses 0-9 and A-F (10-15)."
+    },
+    {
+        "id": "ps_033",
+        "subtopic": "16. Communication & Documentation of Solutions",
+        "question": "What is a 'README' file typically used for?",
+        "options": ["To store user passwords.", "To provide a high-level overview, installation instructions, and usage guide for a project.", "To hold the project's binary code.", "To list all the bugs in the code."],
+        "answer": 1,
+        "explanation": "Documentation is key to the reproducibility and maintainability of a technical solution."
+    },
+    {
+        "id": "ps_034",
+        "subtopic": "6. Pattern Recognition & Generalization",
+        "question": "Which of the following is an example of 'Generalization'?",
+        "options": ["Writing a unique function for every possible input.", "Creating a template or class that can handle multiple types of data.", "Hardcoding a specific user's ID into the code.", "Writing a comment."],
+        "answer": 1,
+        "explanation": "Using templates or generic classes allows code to be reused across different scenarios."
+    },
+    {
+        "id": "ps_035",
+        "subtopic": "14. Creative & Innovative Thinking",
+        "question": "What is 'Lateral Thinking'?",
+        "options": ["Thinking only about code.", "Solving problems through an indirect and creative approach, using reasoning that is not immediately obvious.", "Thinking while lying down.", "Following the steps exactly as written in a manual."],
+        "answer": 1,
+        "explanation": "Lateral thinking encourages 'thinking outside the box' to find non-traditional solutions."
+    },
+    {
+        "id": "ps_036",
+        "subtopic": "1. Introduction to Problem Solving",
+        "question": "Which step comes FIRST in the standard troubleshooting process?",
+        "options": ["Hypothesize a cause.", "Verify the solution.", "Identify the problem (Gather symptoms).", "Implement a fix."],
+        "answer": 2,
+        "explanation": "You cannot solve what you haven't clearly identified and reproduced."
+    },
+    {
+        "id": "ps_037",
+        "subtopic": "4. Algorithms & Flow Control",
+        "question": "In Big O notation, which complexity class is more efficient than O(n)?",
+        "options": ["O(n log n)", "O(n^2)", "O(log n)", "O(2^n)"],
+        "answer": 2,
+        "explanation": "Logarithmic time (O(log n)) grows much slower than linear time (O(n))."
+    },
+    {
+        "id": "ps_038",
+        "subtopic": "7. Mathematical & Quantitative Reasoning",
+        "question": "If a server's uptime is 99.9% ('Three Nines'), roughly how much downtime is allowed per year?",
+        "options": ["8 hours", "1 day", "3 days", "1 week"],
+        "answer": 0,
+        "explanation": "99.9% uptime allows for approximately 8.77 hours of downtime annually."
+    },
+    {
+        "id": "ps_039",
+        "subtopic": "10. Debugging & Error Analysis",
+        "question": "A 'Syntax Error' is caught by the:",
+        "options": ["User", "Debugger", "Compiler/Interpreter", "Operating System"],
+        "answer": 2,
+        "explanation": "Syntax errors are violations of the language's grammar rules and prevent the code from running."
+    },
+    {
+        "id": "ps_040",
+        "subtopic": "12. Problem Solving Using Programming",
+        "question": "What is the primary advantage of 'Space-Time Tradeoff'?",
+        "options": ["Making code smaller and faster.", "Using more memory to reduce execution time (e.g., Caching).", "Deleting old code to save space.", "Using two CPUs at once."],
+        "answer": 1,
+        "explanation": "By storing pre-calculated values (using more space), we can avoid repetitive calculations (saving time)."
+    },
+    {
+      "id": "ps_041",
+      "subtopic": "3. Logical Reasoning Fundamentals",
+      "question": "What is the 'Converse' of the statement 'If P then Q'?",
+      "options": ["If Q then P", "If not P then not Q", "If not Q then not P", "P and not Q"],
+      "answer": 0,
+      "explanation": "The converse simply switches the hypothesis and the conclusion. (Note: The converse is not always logically equivalent to the original statement)."
+    },
+    {
+      "id": "ps_042",
+      "subtopic": "2. Problem Understanding & Analysis",
+      "question": "Which of the following is a 'Constraint' in a problem-solving context?",
+      "options": ["A goal to achieve.", "A limitation or restriction (e.g., budget, time, hardware).", "A potential solution.", "The final result."],
+      "answer": 1,
+      "explanation": "Constraints define the boundaries within which a solution must be found."
+    },
+    {
+      "id": "ps_043",
+      "subtopic": "5. Data Representation & Abstraction",
+      "question": "In computing, why is data often represented in 'Little-endian' format?",
+      "options": ["To make it harder to hack.", "It refers to the order in which bytes are stored in memory (least significant byte first).", "To save disk space.", "It is only used for images."],
+      "answer": 1,
+      "explanation": "Endianness determines the byte order. x86 architectures typically use little-endian."
+    },
+    {
+      "id": "ps_044",
+      "subtopic": "8. Algorithmic Thinking",
+      "question": "What is 'State Space Search'?",
+      "options": ["Searching for data in space.", "Finding a path from an initial state to a goal state by exploring all possible intermediate states.", "A type of database indexing.", "Deleting old states."],
+      "answer": 1,
+      "explanation": "Commonly used in AI and game logic (e.g., Chess) to find the best move."
+    },
+    {
+      "id": "ps_045",
+      "subtopic": "11. Complexity & Efficiency Awareness",
+      "question": "Which complexity class represents an algorithm that takes the same amount of time regardless of input size?",
+      "options": ["O(1)", "O(log n)", "O(n)", "O(n!)"],
+      "answer": 0,
+      "explanation": "Constant time (O(1)) is the most efficient possible complexity."
+    },
+    {
+      "id": "ps_046",
+      "subtopic": "13. Data-Driven Problem Solving",
+      "question": "The 'Standard Deviation' measures:",
+      "options": ["The average value.", "The dispersion or spread of a dataset relative to its mean.", "The difference between the max and min.", "The number of errors in the data."],
+      "answer": 1,
+      "explanation": "A high standard deviation means the data is spread out; a low one means it's clustered around the mean."
+    },
+    {
+      "id": "ps_047",
+      "subtopic": "10. Debugging & Error Analysis",
+      "question": "What is a 'Regression' bug?",
+      "options": ["A bug that makes the code run backwards.", "A bug where a previously working feature stops working after a new change is implemented.", "A bug in the math logic.", "A bug that happens only on older computers."],
+      "answer": 1,
+      "explanation": "Regression testing is used specifically to catch these types of errors."
+    },
+    {
+      "id": "ps_048",
+      "subtopic": "7. Mathematical & Quantitative Reasoning",
+      "question": "A team of 5 developers can complete a project in 20 days. If the team size is increased to 10, assuming linear scaling, how many days will it take?",
+      "options": ["40 days", "10 days", "5 days", "15 days"],
+      "answer": 1,
+      "explanation": "Inversely proportional: (5 * 20) / 10 = 10 days. (Note: In reality, Brooks' Law often applies!)."
+    },
+    {
+      "id": "ps_049",
+      "subtopic": "9. Critical Thinking & Decision Making",
+      "question": "What is the 'Sunk Cost Fallacy'?",
+      "options": ["Investing more in a failing project just because you have already spent a lot on it.", "Choosing the cheapest vendor.", "Starting a project without a budget.", "Hiding the costs from the client."],
+      "answer": 0,
+      "explanation": "Logical decision-making should be based on future potential, not past unrecoverable costs."
+    },
+    {
+      "id": "ps_050",
+      "subtopic": "16. Communication & Documentation of Solutions",
+      "question": "A 'Technical Specification' document is primarily intended for:",
+      "options": ["The end user.", "Marketing teams.", "Developers and engineers who need to understand the implementation details.", "Accountants."],
+      "answer": 2,
+      "explanation": "Tech specs bridge the gap between high-level requirements and actual code."
+    },
+    {
+        "id": "ps_051",
+        "subtopic": "4. Algorithms & Flow Control",
+        "question": "Which sorting algorithm is often used when memory is a severe constraint (uses O(1) extra space)?",
+        "options": ["Merge Sort", "Quick Sort", "Heap Sort", "External Sort"],
+        "answer": 2,
+        "explanation": "Heap sort is an in-place algorithm, unlike Merge Sort which typically requires O(n) auxiliary space."
+    },
+    {
+        "id": "ps_052",
+        "subtopic": "1. Introduction to Problem Solving",
+        "question": "What is 'Rubber Duck Debugging'?",
+        "options": ["Testing code in a bathroom.", "Explaining your code line-by-line to an inanimate object to identify logic errors.", "A type of security test.", "Minifying the code."],
+        "answer": 1,
+        "explanation": "The act of verbalizing logic often reveals flaws that were missed while thinking internally."
+    },
+    {
+        "id": "ps_053",
+        "subtopic": "3. Logical Reasoning Fundamentals",
+        "question": "In a Truth Table, if P is True and Q is False, what is (P AND Q)?",
+        "options": ["True", "False", "Both", "Indeterminate"],
+        "answer": 1,
+        "explanation": "AND requires BOTH inputs to be true to return true."
+    },
+    {
+        "id": "ps_054",
+        "subtopic": "6. Pattern Recognition & Generalization",
+        "question": "Which of the following is a classic example of 'Pattern Recognition' in software development?",
+        "options": ["Writing a comment.", "Identifying that a problem can be solved using the 'Observer' Design Pattern.", "Naming a variable 'x'.", "Printing the result of a loop."],
+        "answer": 1,
+        "explanation": "Design patterns are generalized solutions to commonly occurring software design problems."
+    },
+    {
+        "id": "ps_055",
+        "subtopic": "14. Creative & Innovative Thinking",
+        "question": "What is 'Brainstorming' designed to do?",
+        "options": ["Solve the problem immediately.", "Generate a large number of ideas without immediate criticism or evaluation.", "Find the cheapest solution.", "Organize the database."],
+        "answer": 1,
+        "explanation": "The goal is quantity of ideas to increase the probability of finding a quality one."
+    },
+    {
+        "id": "ps_056",
+        "subtopic": "2. Problem Understanding & Analysis",
+        "question": "A 'User Persona' is used in problem analysis to:",
+        "options": ["Identify a hacker.", "Understand the needs, goals, and behavior of a typical target user.", "Create a database of names.", "Test the login screen."],
+        "answer": 1,
+        "explanation": "Personas help teams ensure the solution actually solves the problem for the intended audience."
+    },
+    {
+        "id": "ps_057",
+        "subtopic": "11. Complexity & Efficiency Awareness",
+        "question": "If you need to find an element in a SORTED list of 1 million items, which algorithm is most efficient?",
+        "options": ["Linear Search", "Binary Search", "DFS", "Selection Sort"],
+        "answer": 1,
+        "explanation": "Binary search takes O(log n) time (~20 comparisons for 1 million items) while Linear search takes O(n) (1 million comparisons)."
+    },
+    {
+        "id": "ps_058",
+        "subtopic": "5. Data Representation & Abstraction",
+        "question": "What is the 8-bit binary representation of the decimal number 10?",
+        "options": ["00001010", "00000101", "10100000", "00001111"],
+        "answer": 0,
+        "explanation": "8 + 2 = 10. (2^3 + 2^1)."
+    },
+    {
+        "id": "ps_059",
+        "subtopic": "13. Data-Driven Problem Solving",
+        "question": "What is 'Data Cleaning' (or Wrangling)?",
+        "options": ["Deleting the database.", "The process of fixing or removing incorrect, corrupted, incorrectly formatted, duplicate, or incomplete data within a dataset.", "Hiding the data from users.", "Visualizing the data."],
+        "answer": 1,
+        "explanation": "Clean data is essential for accurate analytics and problem solving."
+    },
+    {
+        "id": "ps_060",
+        "subtopic": "7. Mathematical & Quantitative Reasoning",
+        "question": "Which of the following is a measure of 'Central Tendency'?",
+        "options": ["Variance", "Standard Deviation", "Median", "Range"],
+        "answer": 2,
+        "explanation": "Mean, Median, and Mode are measures of central tendency."
+    },
+    {
+        "id": "ps_061",
+        "subtopic": "15. Real-World Problem Solving",
+        "question": "The 'MVP' (Minimum Viable Product) concept helps in:",
+        "options": ["Building the most expensive version first.", "Testing the core hypothesis with minimal resources and getting early feedback from users.", "Hiding the software from competitors.", "Making the software bug-free."],
+        "answer": 1,
+        "explanation": "MVP allows for iterative learning and reduces the risk of building something nobody wants."
+    },
+    {
+        "id": "ps_062",
+        "subtopic": "12. Problem Solving Using Programming",
+        "question": "What is 'Memoization'?",
+        "options": ["Memorizing the code syntax.", "Storing the results of expensive function calls and returning the cached result when the same inputs occur again.", "Adding comments to the code.", "Using only global variables."],
+        "answer": 1,
+        "explanation": "Memoization is a key optimization technique in Dynamic Programming."
+    },
+    {
+        "id": "ps_063",
+        "subtopic": "9. Critical Thinking & Decision Making",
+        "question": "A 'SWOT Analysis' evaluates which four factors?",
+        "options": ["Speed, Weight, Output, Time", "Strengths, Weaknesses, Opportunities, Threats", "Software, Website, Operations, Tech", "Stability, Warranty, Ownership, Tenure"],
+        "answer": 1,
+        "explanation": "SWOT is a strategic planning tool used to evaluate the competitive position of a project or business."
+    },
+    {
+        "id": "ps_064",
+        "subtopic": "8. Algorithmic Thinking",
+        "question": "What is the 'Time Complexity' of adding an element to the end of a Dynamic Array (ArrayList) in the average case?",
+        "options": ["O(1)", "O(n)", "O(log n)", "O(n^2)"],
+        "answer": 0,
+        "explanation": "While resizing is O(n), it happens rarely enough that the 'Amortized' complexity is O(1)."
+    },
+    {
+        "id": "ps_065",
+        "subtopic": "10. Debugging & Error Analysis",
+        "question": "What is an 'Off-by-one Error'?",
+        "options": ["A bug that makes the code run twice.", "A common logic error where a loop iterates one time too many or one time too few.", "A syntax error.", "A type of hardware failure."],
+        "answer": 1,
+        "explanation": "This often occurs when using '<' instead of '<=' in loop conditions."
+    },
+    {
+        "id": "ps_066",
+        "subtopic": "3. Logical Reasoning Fundamentals",
+        "question": "In propositional logic, what is a 'Tautology'?",
+        "options": ["A statement that is always false.", "A statement that is always true, regardless of the truth values of its individual parts.", "A statement that is only true on Tuesdays.", "A type of loop."],
+        "answer": 1,
+        "explanation": "An example is 'P or not P'."
+    },
+    {
+        "id": "ps_067",
+        "subtopic": "1. Introduction to Problem Solving",
+        "question": "What is 'Analysis Paralysis'?",
+        "options": ["The CPU stopping because of an error.", "Over-analyzing a situation to the point that a decision or action is never taken.", "A type of sorting algorithm.", "When the database is too large."],
+        "answer": 1,
+        "explanation": "Excessive planning without action can be as detrimental as acting without a plan."
+    },
+    {
+        "id": "ps_068",
+        "subtopic": "5. Data Representation & Abstraction",
+        "question": "Which of the following is the 'Lowest Level' of abstraction in a computer system?",
+        "options": ["The Operating System", "Assembly Language", "The physical transistors and gates", "The Java code"],
+        "answer": 2,
+        "explanation": "Everything in software eventually boils down to physical signals in hardware."
+    },
+    {
+        "id": "ps_069",
+        "subtopic": "4. Algorithms & Flow Control",
+        "question": "What is a 'Circular Dependency' in software architecture?",
+        "options": ["A loop that never ends.", "When two or more modules depend on each other directly or indirectly, creating a cycle.", "A type of recursive function.", "A fast way to load data."],
+        "answer": 1,
+        "explanation": "Circular dependencies make systems difficult to test, maintain, and compile."
+    },
+    {
+        "id": "ps_070",
+        "subtopic": "14. Creative & Innovative Thinking",
+        "question": "What is 'Reframing' a problem?",
+        "options": ["Fixing the CSS borders.", "Viewing a problem from a different perspective to find new solutions.", "Rewriting the code in a new language.", "Asking the client for more money."],
+        "answer": 1,
+        "explanation": "Sometimes the problem is not what you think it is (e.g., 'The elevator is too slow' vs 'People are bored while waiting')."
+    },
+    {
+        "id": "ps_071",
+        "subtopic": "2. Problem Understanding & Analysis",
+        "question": "The 'Stakeholders' of a project are:",
+        "options": ["Only the developers.", "Only the users.", "Anyone who is affected by or can affect the outcome of the project.", "The hardware vendors."],
+        "answer": 2,
+        "explanation": "Identifying all stakeholders is critical for requirements gathering and project success."
+    },
+    {
+        "id": "ps_072",
+        "subtopic": "12. Problem Solving Using Programming",
+        "question": "What is the 'Brute Force' approach?",
+        "options": ["A very fast approach.", "Trying every possible solution until the correct one is found.", "Using a high-end server.", "A type of encrypted logic."],
+        "answer": 1,
+        "explanation": "Brute force is simple to implement but usually inefficient (high time complexity)."
+    },
+    {
+        "id": "ps_073",
+        "subtopic": "13. Data-Driven Problem Solving",
+        "question": "A 'Correlation' between two events A and B does not necessarily mean:",
+        "options": ["A and B happen at the same time.", "A caused B.", "A and B are related.", "A and B are both data points."],
+        "answer": 1,
+        "explanation": "'Correlation does not imply causation'. A third variable might be causing both."
+    },
+    {
+        "id": "ps_074",
+        "subtopic": "11. Complexity & Efficiency Awareness",
+        "question": "If you increase the input 'n' by a factor of 10 in an O(log n) algorithm, the execution time will:",
+        "options": ["Increase by a factor of 10.", "Increase by a very small, constant amount.", "Increase by a factor of 100.", "Stay exactly the same."],
+        "answer": 1,
+        "explanation": "Logarithmic growth is extremely efficient for large scale data."
+    },
+    {
+        "id": "ps_075",
+        "subtopic": "16. Communication & Documentation of Solutions",
+        "question": "What is the purpose of 'Comments' in code?",
+        "options": ["To make the code run faster.", "To explain the 'Why' behind complex logic for future maintainers.", "To hide the code from the user.", "To encrypt the logic."],
+        "answer": 1,
+        "explanation": "Good code is self-documenting for 'what' it does, but comments explain 'why' it was done that way."
+    },
+    {
+        "id": "ps_076",
+        "subtopic": "8. Algorithmic Thinking",
+        "question": "Which sorting algorithm uses a 'Divide and Conquer' strategy?",
+        "options": ["Bubble Sort", "Merge Sort", "Selection Sort", "Insertion Sort"],
+        "answer": 1,
+        "explanation": "Merge sort divides the problem into halves, sorts them, and merges them back."
+    },
+    {
+        "id": "ps_077",
+        "subtopic": "7. Mathematical & Quantitative Reasoning",
+        "question": "If a system has 'Five Nines' (99.999%) availability, how much downtime is allowed per year?",
+        "options": ["5 minutes", "5 hours", "5 days", "1 hour"],
+        "answer": 0,
+        "explanation": "99.999% uptime is the industry standard for highly critical systems, allowing only ~5.26 minutes of downtime per year."
+    },
+    {
+        "id": "ps_078",
+        "subtopic": "10. Debugging & Error Analysis",
+        "question": "A 'Runtime Error' happens:",
+        "options": ["While the code is being written.", "During the compilation process.", "While the program is executing.", "After the program has finished."],
+        "answer": 2,
+        "explanation": "Examples include division by zero or null pointer exceptions."
+    },
+    {
+        "id": "ps_079",
+        "subtopic": "15. Real-World Problem Solving",
+        "question": "The 'Bus Factor' of a project refers to:",
+        "options": ["The speed of the network bus.", "The number of team members that can be hit by a bus before the project stalls because of lack of knowledge.", "The size of the team.", "The type of office transport."],
+        "answer": 1,
+        "explanation": "A bus factor of 1 is a high risk, meaning only one person understands a critical part of the system."
+    },
+    {
+        "id": "ps_080",
+        "subtopic": "9. Critical Thinking & Decision Making",
+        "question": "What is 'Inductive Reasoning'?",
+        "options": ["Moving from general rules to a specific conclusion.", "Moving from specific observations to broader generalizations and theories.", "A type of math logic.", "Making a guess without data."],
+        "answer": 1,
+        "explanation": "Induction is used to form hypotheses based on patterns in data."
+    },
+    {
+        "id": "ps_081",
+        "subtopic": "1. Introduction to Problem Solving",
+        "question": "What is 'Trial and Error' most suitable for?",
+        "options": ["Mission-critical systems.", "Problems with a very small number of possible solutions.", "Complex mathematical proofs.", "Database architecture."],
+        "answer": 1,
+        "explanation": "Trial and error is too slow and risky for large-scale or complex problems."
+    },
+    {
+        "id": "ps_082",
+        "subtopic": "6. Pattern Recognition & Generalization",
+        "question": "Recognizing that 'all even numbers are divisible by 2' is an example of:",
+        "options": ["Abstraction", "Pattern Recognition", "Logic Bomb", "Encapsulation"],
+        "answer": 1,
+        "explanation": "This is identifying a regularity (pattern) that applies to a whole class of data."
+    },
+    {
+        "id": "ps_083",
+        "subtopic": "4. Algorithms & Flow Control",
+        "question": "What is an 'Infinite Loop'?",
+        "options": ["A loop that runs 1000 times.", "A loop that never reaches its exit condition and runs forever.", "A loop that is very efficient.", "A type of recursion."],
+        "answer": 1,
+        "explanation": "Infinite loops can crash applications by consuming all available CPU resources."
+    },
+    {
+        "id": "ps_084",
+        "subtopic": "12. Problem Solving Using Programming",
+        "question": "What is 'Dry Running' a program?",
+        "options": ["Running code without an internet connection.", "Manually tracing the execution of code on paper to find logic errors.", "Testing code on a server.", "Deleting the code after running it."],
+        "answer": 1,
+        "explanation": "Dry running helps developers understand exactly how variables change at each step."
+    },
+    {
+        "id": "ps_085",
+        "subtopic": "14. Creative & Innovative Thinking",
+        "question": "Which technique involves putting yourself in the user's shoes to understand their emotional pain points?",
+        "options": ["Data Mining", "Empathy Mapping", "Unit Testing", "SWOT Analysis"],
+        "answer": 1,
+        "explanation": "Empathy mapping is a key part of Design Thinking."
+    },
+    {
+        "id": "ps_086",
+        "subtopic": "5. Data Representation & Abstraction",
+        "question": "What is 'Metadata'?",
+        "options": ["Raw numbers in a table.", "Data that describes other data (e.g., file size, creation date).", "Encoded data.", "Deleted data."],
+        "answer": 1,
+        "explanation": "Metadata provides context that is essential for organizing and searching large datasets."
+    },
+    {
+        "id": "ps_087",
+        "subtopic": "2. Problem Understanding & Analysis",
+        "question": "A 'Boundary Condition' is:",
+        "options": ["The edge of the monitor.", "A value that is at the limit of the system's input range (e.g., 0 or 100%).", "The project deadline.", "A type of firewall."],
+        "answer": 1,
+        "explanation": "Bugs often occur at boundary conditions, making them critical for testing."
+    },
+    {
+        "id": "ps_088",
+        "subtopic": "7. Mathematical & Quantitative Reasoning",
+        "question": "In a set of numbers {2, 4, 4, 4, 5, 5, 7, 9}, what is the 'Mode'?",
+        "options": ["4", "5", "4.5", "9"],
+        "answer": 0,
+        "explanation": "The Mode is the most frequent number in the set."
+    },
+    {
+        "id": "ps_089",
+        "subtopic": "13. Data-Driven Problem Solving",
+        "question": "What is 'A/B Testing'?",
+        "options": ["Testing code twice.", "Comparing two versions of a product (A and B) with users to see which one performs better.", "A type of alphabetical sorting.", "A security test."],
+        "answer": 1,
+        "explanation": "A/B testing provides objective data to guide product decisions."
+    },
+    {
+        "id": "ps_090",
+        "subtopic": "11. Complexity & Efficiency Awareness",
+        "question": "Which operation is O(1) in a standard Array?",
+        "options": ["Searching for a value.", "Inserting a value at the beginning.", "Accessing a value by its index.", "Sorting the array."],
+        "answer": 2,
+        "explanation": "Arrays provide constant-time random access."
+    },
+    {
+        "id": "ps_091",
+        "subtopic": "1. Introduction to Problem Solving",
+        "question": "The 'Scientific Method' in problem solving starts with:",
+        "options": ["Conclusion", "Experiment", "Observation", "Hypothesis"],
+        "answer": 2,
+        "explanation": "You must observe a phenomenon before you can form a hypothesis to test."
+    },
+    {
+        "id": "ps_092",
+        "subtopic": "3. Logical Reasoning Fundamentals",
+        "question": "What is a 'Syllogism'?",
+        "options": ["A type of computer virus.", "A form of deductive reasoning where a conclusion is drawn from two premises.", "A loop structure.", "A data compression method."],
+        "answer": 1,
+        "explanation": "Example: All men are mortal (P1). Socrates is a man (P2). Therefore, Socrates is mortal (C)."
+    },
+    {
+        "id": "ps_093",
+        "subtopic": "6. Pattern Recognition & Generalization",
+        "question": "If you solve 10 different bugs and realize 8 were caused by 'null values', you have recognized a:",
+        "options": ["System failure.", "Pattern.", "Binary code.", "User error."],
+        "answer": 1,
+        "explanation": "Identifying patterns is the first step toward systemic improvement."
+    },
+    {
+        "id": "ps_094",
+        "subtopic": "8. Algorithmic Thinking",
+        "question": "What is 'Greedy Choice Property'?",
+        "options": ["Always taking the most expensive option.", "The assumption that picking the local optimum at each step will lead to a global optimum.", "A way to hack a database.", "Deleting data to save space."],
+        "answer": 1,
+        "explanation": "This is the core logic behind greedy algorithms like Huffman Coding or Prim's Algorithm."
+    },
+    {
+        "id": "ps_095",
+        "subtopic": "10. Debugging & Error Analysis",
+        "question": "A 'Logic Error' occurs when:",
+        "options": ["The code fails to compile.", "The program runs but produces incorrect results.", "The computer crashes.", "The user enters a wrong password."],
+        "answer": 1,
+        "explanation": "Logic errors are often the hardest to find because there is no 'crash' to point to the source."
+    },
+    {
+        "id": "ps_096",
+        "subtopic": "12. Problem Solving Using Programming",
+        "question": "What is the purpose of 'Modular Programming'?",
+        "options": ["To make the code look longer.", "To divide a program into independent, interchangeable sub-units (modules) to reduce complexity.", "To use only one file for the whole project.", "To prevent users from seeing the code."],
+        "answer": 1,
+        "explanation": "Modularity improves readability, testability, and reuse."
+    },
+    {
+        "id": "ps_097",
+        "subtopic": "15. Real-World Problem Solving",
+        "question": "In a 'Root Cause Analysis', the 'Effect' is:",
+        "options": ["The underlying reason for the problem.", "The visible symptom or result of the problem.", "The solution applied.", "The cost of the fix."],
+        "answer": 1,
+        "explanation": "The 'Effect' is what you see (the crash); the 'Root Cause' is why it happened (memory leak)."
+    },
+    {
+        "id": "ps_098",
+        "subtopic": "4. Algorithms & Flow Control",
+        "question": "What is 'Iteration'?",
+        "options": ["A type of variable.", "The repetition of a process in order to generate a sequence of outcomes.", "A single-step action.", "Closing a program."],
+        "answer": 1,
+        "explanation": "Loops are the implementation of iteration in programming."
+    },
+    {
+        "id": "ps_099",
+        "subtopic": "7. Mathematical & Quantitative Reasoning",
+        "question": "What is the 'Median' of {1, 3, 3, 6, 7, 8, 9}?",
+        "options": ["3", "6", "5", "7"],
+        "answer": 1,
+        "explanation": "The median is the middle value of a sorted list."
+    },
+    {
+        "id": "ps_100",
+        "subtopic": "9. Critical Thinking & Decision Making",
+        "question": "What is the 'Dunning-Kruger Effect'?",
+        "options": ["A bug in the Windows OS.", "A cognitive bias where people with low ability at a task overestimate their ability.", "A type of fast search algorithm.", "When the database is too fast for the UI."],
+        "answer": 1,
+        "explanation": "Awareness of this bias helps in objective team evaluation and peer review."
+    },
+    {
+        "id": "ps_101",
+        "subtopic": "11. Complexity & Efficiency Awareness",
+        "question": "Which of the following is O(log n)?",
+        "options": ["Linear Search", "Nested Loop", "Binary Search", "QuickSort"],
+        "answer": 2,
+        "explanation": "Binary search repeatedly divides the search space in half, resulting in logarithmic growth."
+    },
+    {
+        "id": "ps_102",
+        "subtopic": "5. Data Representation & Abstraction",
+        "question": "What does 'ASCII' stand for?",
+        "options": ["American Standard Code for Information Interchange", "Advanced System for Computer Integrated Information", "Automated Standard Code for Input Integration", "None of the above"],
+        "answer": 0,
+        "explanation": "ASCII is the standard character encoding for electronic communication."
+    },
+    {
+        "id": "ps_103",
+        "subtopic": "13. Data-Driven Problem Solving",
+        "question": "Which metric measures the middle 50% of a dataset?",
+        "options": ["Standard Deviation", "Interquartile Range (IQR)", "Mean", "Variance"],
+        "answer": 1,
+        "explanation": "IQR is resistant to outliers and shows the 'spread' of the central data."
+    },
+    {
+        "id": "ps_104",
+        "subtopic": "14. Creative & Innovative Thinking",
+        "question": "What is 'Reverse Engineering'?",
+        "options": ["Building something from scratch.", "The process of deconstructing a product to understand how it works and how it was made.", "Writing code backwards.", "Deleting a project."],
+        "answer": 1,
+        "explanation": "It's used to solve compatibility issues, recover lost designs, or analyze competitor products."
+    },
+    {
+        "id": "ps_105",
+        "subtopic": "16. Communication & Documentation of Solutions",
+        "question": "A 'Sequence Diagram' in UML is used to document:",
+        "options": ["Database tables.", "How objects interact with each other in a specific order over time.", "The hardware layout.", "The organization's hierarchy."],
+        "answer": 1,
+        "explanation": "It's a visual way to communicate complex logic flow between services."
+    },
+    {
+        "id": "ps_106",
+        "subtopic": "8. Algorithmic Thinking",
+        "question": "What is 'Pseudocode'?",
+        "options": ["Fake code that doesn't work.", "A plain-language description of the steps in an algorithm.", "A type of binary.", "A secure programming language."],
+        "answer": 1,
+        "explanation": "Pseudocode focuses on logic without worrying about specific language syntax."
+    },
+    {
+        "id": "ps_107",
+        "subtopic": "7. Mathematical & Quantitative Reasoning",
+        "question": "In probability, two events are 'Independent' if:",
+        "options": ["They happen at the same time.", "The occurrence of one does not affect the probability of the other.", "One causes the other.", "They are both impossible."],
+        "answer": 1,
+        "explanation": "Example: Flipping a coin twice; the first result doesn't change the 50/50 odds of the second flip."
+    },
+    {
+        "id": "ps_108",
+        "subtopic": "12. Problem Solving Using Programming",
+        "question": "What is 'Refactoring'?",
+        "options": ["Adding new features.", "Restructuring existing code without changing its external behavior to improve internal quality.", "Fixing a crash.", "Hiding the code."],
+        "answer": 1,
+        "explanation": "Refactoring is essential for reducing 'Technical Debt'."
+    },
+    {
+        "id": "ps_109",
+        "subtopic": "4. Algorithms & Flow Control",
+        "question": "What is a 'Recursion Depth' limit?",
+        "options": ["The number of lines in a function.", "The maximum number of times a function can call itself before causing a stack overflow.", "The speed of the CPU.", "The size of the hard drive."],
+        "answer": 1,
+        "explanation": "OS and languages limit recursion to prevent a single program from crashing the entire system's memory."
+    },
+    {
+        "id": "ps_110",
+        "subtopic": "2. Problem Understanding & Analysis",
+        "question": "What is 'Scope Creep'?",
+        "options": ["The code becoming too fast.", "The uncontrolled expansion of project requirements as the project progresses.", "A type of system virus.", "Hiring too many developers."],
+        "answer": 1,
+        "explanation": "Scope creep is a primary reason projects fail to meet deadlines and budgets."
+    },
+    {
+        "id": "ps_111",
+        "subtopic": "1. Introduction to Problem Solving",
+        "question": "A 'Divergent' thinker aims to:",
+        "options": ["Find the single best answer.", "Generate many different possible solutions to a problem.", "Follow a strict set of rules.", "Ignore the problem."],
+        "answer": 1,
+        "explanation": "Divergent thinking is a key part of the 'Ideation' phase."
+    },
+    {
+        "id": "ps_112",
+        "subtopic": "3. Logical Reasoning Fundamentals",
+        "question": "In logic, what is the 'Contrapositive' of 'If P then Q'?",
+        "options": ["If Q then P", "If not Q then not P", "If P then not Q", "If not P then Q"],
+        "answer": 1,
+        "explanation": "The contrapositive is ALWAYS logically equivalent to the original statement."
+    },
+    {
+        "id": "ps_113",
+        "subtopic": "11. Complexity & Efficiency Awareness",
+        "question": "What is the time complexity of searching for a key in a Hash Table (average case)?",
+        "options": ["O(1)", "O(log n)", "O(n)", "O(n log n)"],
+        "answer": 0,
+        "explanation": "Hashing provides nearly constant-time access to data."
+    },
+    {
+        "id": "ps_114",
+        "subtopic": "9. Critical Thinking & Decision Making",
+        "question": "Which of the following is a 'PESTLE' factor in strategic analysis?",
+        "options": ["Programming", "Environment", "Speed", "Testing"],
+        "answer": 1,
+        "explanation": "PESTLE stands for Political, Economic, Social, Technological, Legal, and Environmental."
+    },
+    {
+        "id": "ps_115",
+        "subtopic": "5. Data Representation & Abstraction",
+        "question": "How many bits are in a 'Byte'?",
+        "options": ["4", "8", "16", "32"],
+        "answer": 1,
+        "explanation": "An 8-bit byte is the standard unit of data storage."
+    },
+    {
+        "id": "ps_116",
+        "subtopic": "10. Debugging & Error Analysis",
+        "question": "What does 'Triage' mean in bug management?",
+        "options": ["Fixing all bugs at once.", "Prioritizing bugs based on their severity and impact.", "Deleting bug reports.", "Writing tests for bugs."],
+        "answer": 1,
+        "explanation": "Triage ensures that the most critical issues are addressed first with limited resources."
+    },
+    {
+        "id": "ps_117",
+        "subtopic": "13. Data-Driven Problem Solving",
+        "question": "What is 'Big Data'?",
+        "options": ["A very large hard drive.", "Datasets so large or complex that traditional data processing applications are inadequate.", "A fast internet connection.", "A type of SQL query."],
+        "answer": 1,
+        "explanation": "Big Data requires specialized tools like Hadoop or Spark for analysis."
+    },
+    {
+        "id": "ps_118",
+        "subtopic": "14. Creative & Innovative Thinking",
+        "question": "What is 'SCAMPER'?",
+        "options": ["A fast way to run code.", "A mnemonic for creative thinking: Substitute, Combine, Adapt, Modify, Put to another use, Eliminate, Reverse.", "A security protocol.", "A type of database join."],
+        "answer": 1,
+        "explanation": "SCAMPER is a tool used to spark innovation by challenging existing ideas."
+    },
+    {
+        "id": "ps_119",
+        "subtopic": "7. Mathematical & Quantitative Reasoning",
+        "question": "In a Normal Distribution, approximately what percentage of data falls within one standard deviation of the mean?",
+        "options": ["50%", "68%", "95%", "99.7%"],
+        "answer": 1,
+        "explanation": "This is known as the Empirical Rule or the 68-95-99.7 rule."
+    },
+    {
+        "id": "ps_120",
+        "subtopic": "16. Communication & Documentation of Solutions",
+        "question": "What is the primary goal of a 'User Manual'?",
+        "options": ["To explain the source code.", "To help the end-user operate the software effectively.", "To list the server hardware specs.", "To provide the marketing budget."],
+        "answer": 1,
+        "explanation": "User manuals focus on usability and task completion for non-technical audiences."
+    },
+    {
+        "id": "ps_121",
+        "subtopic": "6. Pattern Recognition & Generalization",
+        "question": "An 'Interface' in OOP is an example of:",
+        "options": ["A pattern.", "An abstraction.", "A bug.", "A physical device."],
+        "answer": 1,
+        "explanation": "Interfaces abstract away the implementation details, focusing only on the 'contract'."
+    },
+    {
+        "id": "ps_122",
+        "subtopic": "15. Real-World Problem Solving",
+        "question": "The 'Law of Diminishing Returns' implies:",
+        "options": ["The more you work, the better the result.", "Adding more resources to a task eventually yields smaller and smaller improvements in the result.", "Deleting code makes it faster.", "Hardware always gets cheaper."],
+        "answer": 1,
+        "explanation": "In problem solving, there is a point where extra effort is no longer cost-effective."
+    },
+    {
+        "id": "ps_123",
+        "subtopic": "2. Problem Understanding & Analysis",
+        "question": "What is 'Gap Analysis'?",
+        "options": ["Closing the gap between servers.", "Comparing the actual performance with the potential or desired performance to identify areas for improvement.", "A type of binary search.", "Measuring the speed of the disk."],
+        "answer": 1,
+        "explanation": "Gap analysis identifies what is missing to reach the target goal."
+    },
+    {
+        "id": "ps_124",
+        "subtopic": "10. Debugging & Error Analysis",
+        "question": "What is a 'Race Condition'?",
+        "options": ["A bug where the code runs too fast.", "A flaw where the output depends on the timing of uncontrollable events (like thread execution order).", "A type of syntax error.", "A hardware crash."],
+        "answer": 1,
+        "explanation": "Race conditions are notoriously difficult to debug because they are non-deterministic."
+    },
+    {
+        "id": "ps_125",
+        "subtopic": "12. Problem Solving Using Programming",
+        "question": "What is the 'DRY' principle?",
+        "options": ["Do Real Yields.", "Don't Repeat Yourself.", "Data Retrieval Yield.", "None of the above."],
+        "answer": 1,
+        "explanation": "DRY reduces logic duplication, making code easier to maintain."
+    },
+    {
+        "id": "ps_126",
+        "subtopic": "8. Algorithmic Thinking",
+        "question": "What is 'Big O' used to describe?",
+        "options": ["The exact execution time of a program in seconds.", "The upper bound of an algorithm's growth rate as input size increases.", "The size of the source code file.", "The number of users on the site."],
+        "answer": 1,
+        "explanation": "Big O provides a high-level way to compare algorithm efficiency independently of hardware."
+    },
+    {
+        "id": "ps_127",
+        "subtopic": "3. Logical Reasoning Fundamentals",
+        "question": "What is a 'Red Herring' in an argument?",
+        "options": ["A type of security encryption.", "A distraction intended to mislead or move away from the actual issue.", "A very important fact.", "A bug in the network."],
+        "answer": 1,
+        "explanation": "It is an irrelevant topic introduced in an argument to divert the attention of listeners or readers from the original issue."
+    },
+    {
+        "id": "ps_128",
+        "subtopic": "9. Critical Thinking & Decision Making",
+        "question": "What is 'Opportunity Cost'?",
+        "options": ["The price of the software.", "The value of the next best alternative that is given up when a decision is made.", "The cost of a project failure.", "The salary of a developer."],
+        "answer": 1,
+        "explanation": "Every choice involves giving up something else; understanding this is vital for strategic decision-making."
+    },
+    {
+        "id": "ps_129",
+        "subtopic": "13. Data-Driven Problem Solving",
+        "question": "A 'Null Hypothesis' in statistics is:",
+        "options": ["A hypothesis that is always true.", "A statement that there is no relationship between two variables.", "A hypothesis that is empty.", "A proven law."],
+        "answer": 1,
+        "explanation": "Statistical tests aim to 'reject the null hypothesis' to prove a relationship exists."
+    },
+    {
+        "id": "ps_130",
+        "subtopic": "5. Data Representation & Abstraction",
+        "question": "What is the 'Floating Point' representation used for?",
+        "options": ["Representing large integers.", "Representing non-integer real numbers (decimals) in binary.", "Sorting data.", "A type of network protocol."],
+        "answer": 1,
+        "explanation": "Floating point allows computers to handle a wide range of values but can introduce precision errors."
+    },
+    {
+        "id": "ps_131",
+        "subtopic": "4. Algorithms & Flow Control",
+        "question": "What is 'Time Complexity' of a linear loop from 1 to N?",
+        "options": ["O(1)", "O(n)", "O(log n)", "O(n^2)"],
+        "answer": 1,
+        "explanation": "If work is proportional to the input size, it is linear (O(n))."
+    },
+    {
+        "id": "ps_132",
+        "subtopic": "14. Creative & Innovative Thinking",
+        "question": "What is 'Design Thinking'?",
+        "options": ["Making things look pretty.", "A human-centered approach to innovation that integrates the needs of people, the possibilities of technology, and the requirements for business success.", "Writing code in a graphical language.", "A type of database design."],
+        "answer": 1,
+        "explanation": "It focuses on Empathize, Define, Ideate, Prototype, and Test."
+    },
+    {
+        "id": "ps_133",
+        "subtopic": "2. Problem Understanding & Analysis",
+        "question": "What is a 'Business Case'?",
+        "options": ["A box for storing computer parts.", "A justification for a proposed project or undertaking on the basis of its expected commercial benefit.", "A list of developers.", "A legal document."],
+        "answer": 1,
+        "explanation": "The business case explains 'why' the project is worth the investment."
+    },
+    {
+        "id": "ps_134",
+        "subtopic": "10. Debugging & Error Analysis",
+        "question": "What is 'Static Analysis'?",
+        "options": ["Running the code and checking for errors.", "Checking the code without executing it (e.g., using a linter).", "Testing the UI manually.", "A type of hardware test."],
+        "answer": 1,
+        "explanation": "Static analysis finds syntax and simple logic errors before the program even runs."
+    },
+    {
+        "id": "ps_135",
+        "subtopic": "7. Mathematical & Quantitative Reasoning",
+        "question": "What is a 'Prime Number'?",
+        "options": ["A number divisible only by 1 and itself.", "A number that is very large.", "A number that is even.", "A number used in a database."],
+        "answer": 0,
+        "explanation": "Primes (like 2, 3, 5, 7) are the building blocks of cryptography (e.g., RSA)."
+    },
+    {
+        "id": "ps_136",
+        "subtopic": "11. Complexity & Efficiency Awareness",
+        "question": "Which of the following is most likely to be an NP-Complete problem?",
+        "options": ["Sorting a list of 10 items.", "Finding the shortest path in a graph using Dijkstra.", "The Traveling Salesperson Problem (finding the absolute shortest route through all cities).", "Binary search."],
+        "answer": 2,
+        "explanation": "NP-complete problems have no known efficient (polynomial time) solution for large inputs."
+    },
+    {
+        "id": "ps_137",
+        "subtopic": "1. Introduction to Problem Solving",
+        "question": "What is 'Occam's Razor'?",
+        "options": ["A tool for fixing hardware.", "The principle that the simplest explanation or solution is usually the correct one.", "A type of encryption.", "A fast way to delete files."],
+        "answer": 1,
+        "explanation": "Avoid over-complicating solutions; simpler systems are easier to maintain and less prone to failure."
+    },
+    {
+        "id": "ps_138",
+        "subtopic": "3. Logical Reasoning Fundamentals",
+        "question": "In a Venn Diagram, the area where two circles overlap represents:",
+        "options": ["The Union of the two sets.", "The Intersection of the two sets.", "The Difference of the two sets.", "All possible data points."],
+        "answer": 1,
+        "explanation": "Intersection (AND) represents elements that belong to both categories."
+    },
+    {
+        "id": "ps_139",
+        "subtopic": "15. Real-World Problem Solving",
+        "question": "What is 'Technical Debt'?",
+        "options": ["Money owed to a server company.", "The future cost of rework caused by choosing an easy solution now instead of a better approach that would take longer.", "A loan for a startup.", "A type of database index."],
+        "answer": 1,
+        "explanation": "Technical debt must eventually be 'paid back' with interest (harder to fix later)."
+    },
+    {
+        "id": "ps_140",
+        "subtopic": "12. Problem Solving Using Programming",
+        "question": "What is 'Object-Oriented Programming' (OOP) primary benefit for problem solving?",
+        "options": ["It makes code run faster.", "It allows developers to model real-world entities and their interactions as objects.", "It removes the need for loops.", "It is only for Python."],
+        "answer": 1,
+        "explanation": "OOP uses encapsulation, inheritance, and polymorphism to manage complexity."
+    },
+    {
+        "id": "ps_141",
+        "subtopic": "5. Data Representation & Abstraction",
+        "question": "What is the decimal equivalent of the binary number 1101?",
+        "options": ["9", "11", "13", "15"],
+        "answer": 2,
+        "explanation": "8 + 4 + 1 = 13. (2^3 + 2^2 + 2^0)."
+    },
+    {
+        "id": "ps_142",
+        "subtopic": "9. Critical Thinking & Decision Making",
+        "question": "What is the 'Escalation of Commitment'?",
+        "options": ["Committing more code to GitHub.", "A human behavior where they face increasingly negative outcomes but continue the behavior rather than changing course.", "A fast way to finish a project.", "Hiring a senior developer."],
+        "answer": 1,
+        "explanation": "Similar to the Sunk Cost Fallacy, it prevents objective pivot decisions."
+    },
+    {
+        "id": "ps_143",
+        "subtopic": "13. Data-Driven Problem Solving",
+        "question": "In a dataset, what is an 'Outlier'?",
+        "options": ["A data point that is outside the database.", "A data point that differs significantly from other observations (is extremely high or low).", "A type of SQL error.", "A user who is not logged in."],
+        "answer": 1,
+        "explanation": "Outliers can skew averages and need to be handled during analysis."
+    },
+    {
+        "id": "ps_144",
+        "subtopic": "4. Algorithms & Flow Control",
+        "question": "What is a 'Base-case' in recursion?",
+        "options": ["The most frequent case.", "The simplest instance of the problem that can be solved directly.", "The first line of the code.", "A type of data segment."],
+        "answer": 1,
+        "explanation": "Base cases terminate the recursion."
+    },
+    {
+        "id": "ps_145",
+        "subtopic": "10. Debugging & Error Analysis",
+        "question": "What is 'Regression Testing'?",
+        "options": ["Testing code after it is deleted.", "Re-running functional and non-functional tests to ensure that previously developed and tested software still performs after a change.", "Testing on a new OS.", "Testing only the UI."],
+        "answer": 1,
+        "explanation": "Vital for maintaining stability in continuous delivery."
+    },
+    {
+        "id": "ps_146",
+        "subtopic": "7. Mathematical & Quantitative Reasoning",
+        "question": "What is the 'Factorial' of 4 (4!)?",
+        "options": ["8", "16", "24", "48"],
+        "answer": 2,
+        "explanation": "4 * 3 * 2 * 1 = 24."
+    },
+    {
+        "id": "ps_147",
+        "subtopic": "6. Pattern Recognition & Generalization",
+        "question": "Which of the following is NOT a benefit of pattern recognition?",
+        "options": ["Faster problem solving.", "Predicting future trends.", "Making every solution unique.", "Reducing cognitive load."],
+        "answer": 2,
+        "explanation": "Pattern recognition aims to find REUSABLE solutions, not make everything unique."
+    },
+    {
+        "id": "ps_148",
+        "subtopic": "1. Introduction to Problem Solving",
+        "question": "What is 'Lateral Thinking'?",
+        "options": ["Thinking in straight lines.", "Solving problems through indirect and creative approaches.", "Thinking while sleeping.", "A type of database join."],
+        "answer": 1,
+        "explanation": "Coined by Edward de Bono, it's about shifting frames of reference."
+    },
+    {
+        "id": "ps_149",
+        "subtopic": "14. Creative & Innovative Thinking",
+        "question": "What is 'Agile' in problem solving?",
+        "options": ["A very fast person.", "An iterative approach that focuses on continuous improvement and flexibility.", "A type of programming language.", "A strict set of rules that never change."],
+        "answer": 1,
+        "explanation": "Agile methodologies (like Scrum) apply iterative problem solving to software development."
+    },
+    {
+        "id": "ps_150",
+        "subtopic": "16. Communication & Documentation of Solutions",
+        "question": "What is the 'Documentation' of a solution for?",
+        "options": ["To prove you worked.", "To ensure that the solution can be understood, maintained, and reproduced by others in the future.", "To make the software look expensive.", "To encrypt the code."],
+        "answer": 1,
+        "explanation": "Without documentation, a solution dies when the creator leaves the team."
+    }
+  ]
+}

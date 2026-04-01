@@ -1,0 +1,820 @@
+{
+  "questions": [
+    {
+      "id": "db_001",
+      "subtopic": "1. Introduction to Database Systems",
+      "question": "Which of the following is the primary advantage of a DBMS over a traditional file-based system?",
+      "options": ["Lower hardware requirements.", "Program-data independence.", "Simpler backup procedures.", "Elimination of all data security risks."],
+      "answer": 1,
+      "explanation": "Data independence allows the data structure to change without requiring changes to the programs that access it, which is impossible in rigid file-based systems."
+    },
+    {
+      "id": "db_002",
+      "subtopic": "1. Introduction to Database Systems",
+      "question": "What is 'Data Redundancy' and why is it generally avoided in database systems?",
+      "options": ["Storing data in multiple formats; it saves disk space.", "Duplication of data; it leads to inconsistency and wasted storage.", "Encrypting data twice; it improves security.", "Linking tables via keys; it improves query speed."],
+      "answer": 1,
+      "explanation": "Redundancy means the same piece of data is stored in multiple places. If one instance is updated and the others are not, the database becomes inconsistent."
+    },
+    {
+      "id": "db_003",
+      "subtopic": "2. Database System Architecture",
+      "question": "In the Three-Schema Architecture, which level describes the physical storage structure of the database?",
+      "options": ["External Level", "Conceptual Level", "Internal Level", "Logical Level"],
+      "answer": 2,
+      "explanation": "The Internal Level (or Physical Schema) deals with how data is actually stored on the disk, including paths and indexes."
+    },
+    {
+      "id": "db_004",
+      "subtopic": "2. Database System Architecture",
+      "question": "What does 'Logical Data Independence' refer to?",
+      "options": ["Changing the physical disk without affecting the conceptual schema.", "The ability to change the conceptual schema without having to change external schemas or application programs.", "Using different programming languages for the frontend.", "Encrypting the database logical layer."],
+      "answer": 1,
+      "explanation": "It allows the overall logical structure of the database to evolve (e.g., adding a new table) without breaking the specific views used by end-users."
+    },
+    {
+      "id": "db_005",
+      "subtopic": "3. Data Models",
+      "question": "In an Entity-Relationship (ER) model, what does a 'Multivalued Attribute' represent?",
+      "options": ["An attribute that can have different types.", "An attribute that can have more than one value for a specific entity (e.g., multiple phone numbers).", "An attribute that is a primary key.", "An attribute that links two different entities."],
+      "answer": 1,
+      "explanation": "Multivalued attributes are usually represented by double ovals in ER diagrams and are often moved to separate tables during normalization."
+    },
+    {
+      "id": "db_006",
+      "subtopic": "3. Data Models",
+      "question": "Which data model organizes data into a tree-like structure where each child has exactly one parent?",
+      "options": ["Relational Model", "Network Model", "Hierarchical Model", "Object-Oriented Model"],
+      "answer": 2,
+      "explanation": "The Hierarchical model (used in older systems like IMS) is strictly 1-to-many, making many-to-many relationships difficult to represent."
+    },
+    {
+      "id": "db_007",
+      "subtopic": "4. Relational Database Concepts",
+      "question": "What is the definition of a 'Candidate Key'?",
+      "options": ["The key selected by the DBA as the primary identifier.", "Any attribute that is part of a join operation.", "A minimal set of attributes that can uniquely identify a tuple in a relation.", "A key that references a primary key in another table."],
+      "answer": 2,
+      "explanation": "A table can have multiple candidate keys. One is chosen as the Primary Key; the others are called Alternate Keys."
+    },
+    {
+      "id": "db_008",
+      "subtopic": "4. Relational Database Concepts",
+      "question": "What does 'Referential Integrity' ensure?",
+      "options": ["That every table has a primary key.", "That a foreign key value must always match an existing primary key value in the referenced table, or be null.", "That data is encrypted during transit.", "That no two rows are identical."],
+      "answer": 1,
+      "explanation": "Referential integrity prevents 'orphaned records' (e.g., an Order record pointing to a Customer ID that doesn't exist)."
+    },
+    {
+      "id": "db_009",
+      "subtopic": "5. Relational Algebra & Calculus",
+      "question": "Which relational algebra operation is used to select specific columns from a relation?",
+      "options": ["Selection (σ)", "Projection (π)", "Union (∪)", "Join (⨝)"],
+      "answer": 1,
+      "explanation": "Projection filters the table vertically (choosing columns), while Selection filters it horizontally (choosing rows)."
+    },
+    {
+      "id": "db_010",
+      "subtopic": "5. Relational Algebra & Calculus",
+      "question": "A 'Natural Join' between two relations R and S is performed based on:",
+      "options": ["The primary key of R only.", "A manually specified condition using WHERE.", "All attributes that have the same name in both relations.", "The physical order of tuples."],
+      "answer": 2,
+      "explanation": "Natural join automatically identifies columns with matching names and joins the tables based on equality in those columns."
+    },
+    {
+      "id": "db_011",
+      "subtopic": "6. Structured Query Language (SQL)",
+      "question": "Which SQL sub-language is used to define the structure of the database (e.g., CREATE, ALTER, DROP)?",
+      "options": ["DML (Data Manipulation Language)", "DDL (Data Definition Language)", "DCL (Data Control Language)", "TCL (Transaction Control Language)"],
+      "answer": 1,
+      "explanation": "DDL commands change the 'Schema' or metadata of the database, rather than the actual data records."
+    },
+    {
+      "id": "db_012",
+      "subtopic": "6. Structured Query Language (SQL)",
+      "question": "What is the result of a SELECT statement that uses a 'GROUP BY' clause without an aggregate function?",
+      "options": ["It returns an error.", "It behaves like a SELECT DISTINCT on the grouped columns.", "It returns all rows in the table.", "It returns only the first row of each group."],
+      "answer": 1,
+      "explanation": "Technically, it collapses identical values in the grouped column into a single row, effectively acting like DISTINCT."
+    },
+    {
+      "id": "db_013",
+      "subtopic": "7. Advanced SQL",
+      "question": "How does a 'Left Outer Join' differ from an 'Inner Join'?",
+      "options": ["Inner Join is faster.", "Left Outer Join returns all rows from the left table, even if there are no matches in the right table (using NULLs for missing data).", "Left Outer Join only returns matching rows.", "There is no difference in the result set."],
+      "answer": 1,
+      "explanation": "Outer joins are used when you want to preserve all records from one side of the relationship regardless of a match."
+    },
+    {
+      "id": "db_014",
+      "subtopic": "7. Advanced SQL",
+      "question": "What is a 'Correlated Subquery'?",
+      "options": ["A query that runs before the main query.", "A subquery that uses values from the outer query, requiring it to be executed once for every row processed by the outer query.", "A query that combines two tables.", "A query stored in the database as an object."],
+      "answer": 1,
+      "explanation": "Correlated subqueries can be performance-heavy because of the row-by-row dependency on the outer query."
+    },
+    {
+      "id": "db_015",
+      "subtopic": "8. Database Design & Normalization",
+      "question": "A relation is in 3rd Normal Form (3NF) if it is in 2NF and:",
+      "options": ["Every non-key attribute is fully functionally dependent on the primary key.", "There are no partial dependencies.", "There are no transitive dependencies (non-key attributes should not depend on other non-key attributes).", "The primary key is a single attribute."],
+      "answer": 2,
+      "explanation": "3NF ensures that non-key attributes depend 'only' on the key, the whole key, and nothing but the key."
+    },
+    {
+      "id": "db_016",
+      "subtopic": "8. Database Design & Normalization",
+      "question": "When is a table considered to be in Boyce-Codd Normal Form (BCNF)?",
+      "options": ["When it is in 3NF and every determinant is a candidate key.", "When it has no multi-valued dependencies.", "When it has no repeating groups.", "When it has a composite primary key."],
+      "answer": 0,
+      "explanation": "BCNF is a stricter version of 3NF. It handles anomalies that can occur when a table has multiple overlapping candidate keys."
+    },
+    {
+      "id": "db_017",
+      "subtopic": "9. Transaction Management",
+      "question": "Which ACID property ensures that a transaction is treated as a single unit of work, where either all operations succeed or none do?",
+      "options": ["Atomicity", "Consistency", "Isolation", "Durability"],
+      "answer": 0,
+      "explanation": "Atomicity prevents 'partial updates' which would leave the database in a corrupted state (e.g., money debited from one account but not credited to the other)."
+    },
+    {
+      "id": "db_018",
+      "subtopic": "9. Transaction Management",
+      "question": "The 'Durability' property of ACID means:",
+      "options": ["Transactions run in isolation.", "Once a transaction is committed, its changes are permanent even in the case of a system crash.", "The database is always in a consistent state.", "Multiple users can access data at the same time."],
+      "answer": 1,
+      "explanation": "Durability is achieved through the use of non-volatile storage and transaction logs (Write-Ahead Logging)."
+    },
+    {
+      "id": "db_019",
+      "subtopic": "10. Concurrency Control",
+      "question": "What is the 'Dirty Read' problem in database concurrency?",
+      "options": ["Reading data while the server is offline.", "A transaction reads data that has been modified by another transaction but not yet committed.", "Two transactions updating the same row at the same time.", "A transaction reading the same row twice and getting different results."],
+      "answer": 1,
+      "explanation": "If the first transaction rolls back, the second transaction has used 'dirty' data that technically never existed in the permanent database."
+    },
+    {
+      "id": "db_020",
+      "subtopic": "10. Concurrency Control",
+      "question": "Which locking protocol ensures 'Serializability' by requiring that no new locks can be acquired once a lock has been released?",
+      "options": ["Simple Locking", "Two-Phase Locking (2PL)", "Time-stamp Ordering", "Optimistic Concurrency Control"],
+      "answer": 1,
+      "explanation": "2PL has a 'Growing Phase' (acquiring locks) and a 'Shrinking Phase' (releasing locks), preventing transactions from interfering with each other's consistency."
+    },
+    {
+      "id": "db_021",
+      "subtopic": "11. Recovery Management",
+      "question": "What is the purpose of 'Write-Ahead Logging' (WAL)?",
+      "options": ["To speed up SELECT queries.", "To ensure that log records describing changes are written to stable storage before the actual data is changed in the database file.", "To keep a list of all users who logged in.", "To automatically index new data."],
+      "answer": 1,
+      "explanation": "WAL allows the system to 'Redo' or 'Undo' operations during recovery after a crash by replaying the log."
+    },
+    {
+      "id": "db_022",
+      "subtopic": "11. Recovery Management",
+      "question": "What happens during a 'Checkpoint' in recovery management?",
+      "options": ["The database is deleted.", "All modified data in memory (dirty buffers) is flushed to the disk, reducing the amount of log to process during a crash recovery.", "A full backup is performed.", "User permissions are verified."],
+      "answer": 1,
+      "explanation": "Checkpoints bound the recovery time; the system only needs to look at log entries created after the last successful checkpoint."
+    },
+    {
+      "id": "db_023",
+      "subtopic": "12. Indexing & File Organization",
+      "question": "Which data structure is the most common choice for implementing database indexes due to its balanced height and efficiency for range queries?",
+      "options": ["Binary Search Tree", "Hash Table", "B+ Tree", "Linked List"],
+      "answer": 2,
+      "explanation": "B+ Trees maintain sorted data and allow for logarithmic time for lookups, insertions, and deletions, while keeping data pointers in leaf nodes for efficient scanning."
+    },
+    {
+      "id": "db_024",
+      "subtopic": "12. Indexing & File Organization",
+      "question": "What is the main disadvantage of creating too many indexes on a single table?",
+      "options": ["The database becomes insecure.", "SELECT queries become slower.", "INSERT, UPDATE, and DELETE operations become slower because the indexes must also be updated.", "The table cannot be grouped."],
+      "answer": 2,
+      "explanation": "Indexing is a trade-off: it improves read performance but adds overhead to all write operations."
+    },
+    {
+      "id": "db_025",
+      "subtopic": "13. Query Processing & Optimization",
+      "question": "During query optimization, what is 'Heuristic Optimization'?",
+      "options": ["Using random numbers to find a plan.", "Applying rule-based transformations, such as 'Pushing Selects Down' (performing filtering as early as possible).", "Calculating the exact cost of every possible execution plan.", "Upgrading the hardware."],
+      "answer": 1,
+      "explanation": "Heuristics use general best practices to reorder relational algebra operations for better performance before the 'cost-based' optimizer takes over."
+    },
+    {
+      "id": "db_026",
+      "subtopic": "13. Query Processing & Optimization",
+      "question": "The 'Selectivity' of a query condition refers to:",
+      "options": ["The speed of the query.", "The fraction of rows from the table that satisfy the condition.", "The number of columns in the result.", "Whether the query uses a JOIN or not."],
+      "answer": 1,
+      "explanation": "Higher selectivity (fewer rows returned) helps the optimizer decide whether to use an index or perform a full table scan."
+    },
+    {
+      "id": "db_027",
+      "subtopic": "14. Database Security",
+      "question": "Which of the following is an example of 'Role-Based Access Control' (RBAC)?",
+      "options": ["Each user is given a unique password.", "Permissions are assigned to a 'Manager' role, and specific users are added to that role.", "All data is encrypted with a public key.", "Users can only access the database during business hours."],
+      "answer": 1,
+      "explanation": "RBAC simplifies security management by grouping permissions into logical roles rather than managing individual users."
+    },
+    {
+      "id": "db_028",
+      "subtopic": "14. Database Security",
+      "question": "In the context of database security, what is 'SQL Injection'?",
+      "options": ["Automatically adding data to a table.", "A vulnerability where an attacker inserts malicious SQL code into input fields to manipulate the database.", "A way to speed up SQL queries.", "Compressing the database logs."],
+      "answer": 1,
+      "explanation": "SQLi can be prevented using prepared statements and parameterized queries."
+    },
+    {
+      "id": "db_029",
+      "subtopic": "15. Distributed Databases",
+      "question": "What is 'Horizontal Fragmentation' in a distributed database?",
+      "options": ["Splitting a table by its columns.", "Splitting a table by its rows (e.g., storing customers from UK in one site and US in another).", "Creating a copy of the database on another server.", "Converting the database to NoSQL."],
+      "answer": 1,
+      "explanation": "Horizontal fragmentation (sharding) places subsets of rows on different nodes to improve local performance and scalability."
+    },
+    {
+      "id": "db_030",
+      "subtopic": "15. Distributed Databases",
+      "question": "The CAP Theorem states that a distributed system can only provide two of the following three guarantees simultaneously:",
+      "options": ["Consistency, Availability, Portability", "Consistency, Availability, Partition Tolerance", "Complexity, Availability, Performance", "Capacity, Availability, Persistence"],
+      "answer": 1,
+      "explanation": "In the presence of a network partition (P), a system must choose between being perfectly consistent (C) or being highly available (A)."
+    },
+    {
+      "id": "db_031",
+      "subtopic": "16. NoSQL & Modern Databases",
+      "question": "Which type of NoSQL database is specifically designed to store data as a collection of related nodes and edges?",
+      "options": ["Document Store (e.g., MongoDB)", "Key-Value Store (e.g., Redis)", "Graph Database (e.g., Neo4j)", "Column-family Store (e.g., Cassandra)"],
+      "answer": 2,
+      "explanation": "Graph databases are highly efficient for traversing complex relationships (like social networks or recommendation engines)."
+    },
+    {
+      "id": "db_032",
+      "subtopic": "16. NoSQL & Modern Databases",
+      "question": "What does the 'BASE' property in NoSQL systems stand for?",
+      "options": ["Basic Availability, Soft-state, Eventual Consistency", "Binary Access, Structured Encryption", "Basic Application, System Efficiency", "Buffer All Software Errors"],
+      "answer": 0,
+      "explanation": "BASE is the NoSQL alternative to ACID, prioritizing availability and scalability over immediate consistency."
+    },
+    {
+      "id": "db_033",
+      "subtopic": "17. Data Warehousing & Data Mining (Introductory)",
+      "question": "What is the primary difference between OLTP and OLAP systems?",
+      "options": ["OLTP is for web; OLAP is for mobile.", "OLTP handles day-to-day operational transactions; OLAP is used for complex analytical queries on historical data.", "OLAP is faster for writing data.", "There is no difference."],
+      "answer": 1,
+      "explanation": "OLTP (Online Transaction Processing) is optimized for high volume, fast writes. OLAP (Online Analytical Processing) is optimized for complex read-heavy analysis."
+    },
+    {
+      "id": "db_034",
+      "subtopic": "17. Data Warehousing & Data Mining (Introductory)",
+      "question": "In a Data Warehouse, what is the 'ETL' process?",
+      "options": ["Encrypt, Test, Load", "Extract, Transform, Load", "Execute, Transfer, List", "External Table Logic"],
+      "answer": 1,
+      "explanation": "ETL is the process of getting data from operational sources into the warehouse in a clean, consistent format."
+    },
+    {
+      "id": "db_035",
+      "subtopic": "8. Database Design & Normalization",
+      "question": "What is a 'Partial Dependency'?",
+      "options": ["When an attribute depends on part of a composite primary key rather than the whole key.", "When two tables are only half-linked.", "When a query only returns half the results.", "When a user has limited access."],
+      "answer": 0,
+      "explanation": "Partial dependencies are removed to reach 2nd Normal Form (2NF)."
+    },
+    {
+      "id": "db_036",
+      "subtopic": "10. Concurrency Control",
+      "question": "The 'Phantom Read' problem occurs when:",
+      "options": ["Data is deleted while reading.", "A transaction re-runs a query and finds new 'phantom' rows that were added by another committed transaction.", "The system crashes during a read.", "The user sees data that doesn't exist."],
+      "answer": 1,
+      "explanation": "Isolation levels like 'Serializable' prevent phantom reads by locking ranges of data."
+    },
+    {
+      "id": "db_037",
+      "subtopic": "4. Relational Database Concepts",
+      "question": "What is a 'Tuple' in a relational database?",
+      "options": ["A column header.", "A single row in a table representing a specific entity instance.", "A type of database join.", "A set of unique table names."],
+      "answer": 1,
+      "explanation": "In formal relational terms, a row is a tuple, a column is an attribute, and a table is a relation."
+    },
+    {
+      "id": "db_038",
+      "subtopic": "6. Structured Query Language (SQL)",
+      "question": "Which SQL keyword is used to sort the result set of a query?",
+      "options": ["SORT BY", "ALIGN BY", "ORDER BY", "GROUP BY"],
+      "answer": 2,
+      "explanation": "ORDER BY allows sorting in ascending (ASC) or descending (DESC) order."
+    },
+    {
+      "id": "db_039",
+      "subtopic": "12. Indexing & File Organization",
+      "question": "What is a 'Clustered Index'?",
+      "options": ["An index that uses a cluster of servers.", "An index where the physical order of the rows in the table is the same as the logical order of the index.", "An index that only works on multiple columns.", "A temporary index used during a join."],
+      "answer": 1,
+      "explanation": "Because it dictates physical storage, a table can have only one clustered index (usually the Primary Key)."
+    },
+    {
+      "id": "db_040",
+      "subtopic": "14. Database Security",
+      "question": "In database security, 'Auditing' involves:",
+      "options": ["Encrypting the data.", "Keeping a record of all actions performed against the database (who accessed what and when).", "Checking for SQL syntax errors.", "Backing up the database daily."],
+      "answer": 1,
+      "explanation": "Auditing provides an 'audit trail' that is vital for forensic analysis after a security breach."
+    },
+    {
+      "id": "db_041",
+      "subtopic": "1. Introduction to Database Systems",
+      "question": "Which of the following describes a 'Data Dictionary' (or System Catalog)?",
+      "options": ["A book containing database definitions.", "A repository that stores metadata, including descriptions of all database objects and constraints.", "A list of all user passwords.", "A backup of the entire database."],
+      "answer": 1,
+      "explanation": "The DBMS uses the Data Dictionary to manage its own structure and enforce constraints."
+    },
+    {
+      "id": "db_042",
+      "subtopic": "5. Relational Algebra & Calculus",
+      "question": "Which operation combines all tuples from two relations, but only if they are 'Union Compatible'?",
+      "options": ["Cartesian Product", "Intersection", "Union", "Division"],
+      "answer": 2,
+      "explanation": "Union compatibility means the relations must have the same number of attributes with matching domains."
+    },
+    {
+      "id": "db_043",
+      "subtopic": "8. Database Design & Normalization",
+      "question": "What is a 'Transitive Dependency'?",
+      "options": ["A -> B and B -> C, therefore A -> C (where B is not a key).", "A dependency on part of a key.", "A dependency between two different tables.", "A dependency that changes over time."],
+      "answer": 0,
+      "explanation": "Removing transitive dependencies is the requirement to move from 2NF to 3NF."
+    },
+    {
+      "id": "db_044",
+      "subtopic": "9. Transaction Management",
+      "question": "What is a 'Deadlock' in a multi-user database environment?",
+      "options": ["The server losing power.", "A situation where two transactions are each waiting for the other to release a lock, resulting in a permanent stall.", "A transaction taking too long to finish.", "A user forgetting their password."],
+      "answer": 1,
+      "explanation": "Deadlocks are resolved by the DBMS picking a 'victim' transaction and rolling it back."
+    },
+    {
+      "id": "db_045",
+      "subtopic": "11. Recovery Management",
+      "question": "In log-based recovery, the 'Redo' operation is used to:",
+      "options": ["Delete a transaction.", "Apply the changes of a committed transaction that may not have been physically written to disk before a crash.", "Cancel a transaction.", "Re-type a SQL query."],
+      "answer": 1,
+      "explanation": "Redo ensures 'Durability' by finishing the work that was promised to the user via a COMMIT."
+    },
+    {
+      "id": "db_046",
+      "subtopic": "13. Query Processing & Optimization",
+      "question": "In a 'Cost-Based' optimizer, what is the 'Cost' usually a measure of?",
+      "options": ["The price of the software license.", "Estimated resource consumption (CPU time, Disk I/O, Memory) for a specific execution plan.", "The number of users connected.", "The size of the SQL query string."],
+      "answer": 1,
+      "explanation": "The optimizer selects the plan with the lowest total estimated cost."
+    },
+    {
+      "id": "db_047",
+      "subtopic": "17. Data Warehousing & Data Mining (Introductory)",
+      "question": "Which schema is common in Data Warehousing and consists of a central 'Fact Table' surrounded by 'Dimension Tables'?",
+      "options": ["Snowflake Schema", "Relational Schema", "Star Schema", "Hierarchical Schema"],
+      "answer": 2,
+      "explanation": "Star schemas are denormalized for fast query performance in analytical environments."
+    },
+    {
+      "id": "db_048",
+      "subtopic": "15. Distributed Databases",
+      "question": "What is 'Data Replication'?",
+      "options": ["Deleting duplicate data.", "Storing copies of the same data at multiple geographic sites.", "Generating random data for testing.", "Moving data to a NoSQL database."],
+      "answer": 1,
+      "explanation": "Replication improves availability and read performance but makes updates more complex."
+    },
+    {
+      "id": "db_049",
+      "subtopic": "6. Structured Query Language (SQL)",
+      "question": "Which SQL command is used to add a new column to an existing table?",
+      "options": ["UPDATE TABLE", "ALTER TABLE", "CHANGE TABLE", "MODIFY TABLE"],
+      "answer": 1,
+      "explanation": "ALTER TABLE allows modifying the definition of a table (DDL)."
+    },
+    {
+      "id": "db_050",
+      "subtopic": "4. Relational Database Concepts",
+      "question": "What is a 'Weak Entity' in an ER model?",
+      "options": ["An entity with few attributes.", "An entity that cannot be uniquely identified by its own attributes and depends on a parent entity for its identity.", "An entity that is rarely accessed.", "A table with no primary key."],
+      "answer": 1,
+      "explanation": "Weak entities (like 'Dependent' of an 'Employee') require a 'Discriminating' attribute and a link to their owner entity."
+    },
+    {
+        "id": "db_051",
+        "subtopic": "10. Concurrency Control",
+        "question": "What is the 'Two-Phase Commit' (2PC) protocol used for?",
+        "options": ["To ensure a transaction is committed on a single server.", "To ensure atomicity in a distributed database by coordinating multiple sites.", "To speed up database backups.", "To encrypt database transactions."],
+        "answer": 1,
+        "explanation": "2PC ensures that either all sites commit a distributed transaction or none do, maintaining consistency across a network."
+    },
+    {
+        "id": "db_052",
+        "subtopic": "7. Advanced SQL",
+        "question": "What is a 'Database View'?",
+        "options": ["A physical copy of a table.", "A virtual table defined by a SQL query; it does not store data itself but displays data from underlying tables.", "A graphical representation of the schema.", "A tool for administrators only."],
+        "answer": 1,
+        "explanation": "Views are used for security (restricting column access) and simplifying complex queries for the user."
+    },
+    {
+        "id": "db_053",
+        "subtopic": "12. Indexing & File Organization",
+        "question": "What is 'Hashing' used for in file organization?",
+        "options": ["To compress the data.", "To map a search key directly to a specific disk address for fast O(1) retrieval.", "To sort data alphabetically.", "To encrypt the database password."],
+        "answer": 1,
+        "explanation": "Hashing is excellent for exact-match queries but poor for range queries (unlike B-trees)."
+    },
+    {
+        "id": "db_054",
+        "subtopic": "16. NoSQL & Modern Databases",
+        "question": "Which NoSQL category is best suited for storing user profiles and shopping carts where the structure varies per user?",
+        "options": ["Document Store (e.g., MongoDB)", "Graph Database", "Relational Database", "Mainframe Database"],
+        "answer": 0,
+        "explanation": "Document stores use JSON/BSON, allowing each record to have a different set of fields (schema-less)."
+    },
+    {
+        "id": "db_055",
+        "subtopic": "5. Relational Algebra & Calculus",
+        "question": "The 'Cartesian Product' (R x S) of two relations results in:",
+        "options": ["Only the matching rows.", "A new relation with every possible combination of rows from R and S.", "The sum of the values in R and S.", "The deletion of all rows."],
+        "answer": 1,
+        "explanation": "If R has 10 rows and S has 5, the product will have 50 rows. Joins are usually a Cartesian Product followed by a filter."
+    },
+    {
+        "id": "db_056",
+        "subtopic": "9. Transaction Management",
+        "question": "Which Isolation Level is the strictest, preventing Dirty Reads, Non-repeatable Reads, and Phantom Reads?",
+        "options": ["Read Uncommitted", "Read Committed", "Repeatable Read", "Serializable"],
+        "answer": 3,
+        "explanation": "Serializable ensures that the result of concurrent transactions is equivalent to running them one by one."
+    },
+    {
+        "id": "db_057",
+        "subtopic": "2. Database System Architecture",
+        "question": "What is the role of the 'Query Processor'?",
+        "options": ["To write data to the disk.", "To parse, optimize, and execute SQL statements.", "To manage user logins.", "To design the ER diagram."],
+        "answer": 1,
+        "explanation": "The Query Processor turns high-level SQL into low-level instructions for the storage engine."
+    },
+    {
+        "id": "db_058",
+        "subtopic": "17. Data Warehousing & Data Mining (Introductory)",
+        "question": "What is 'Data Mining'?",
+        "options": ["The process of manually entering data.", "The process of discovering hidden patterns, correlations, and trends in large datasets using automated algorithms.", "Backing up a data warehouse.", "A type of physical disk storage."],
+        "answer": 1,
+        "explanation": "Data mining uses statistics and ML to provide business intelligence from historical warehouse data."
+    },
+    {
+        "id": "db_059",
+        "subtopic": "3. Data Models",
+        "question": "What does 'Cardinality' describe in a relationship between entities?",
+        "options": ["The number of attributes in an entity.", "The number of instances of one entity that can be associated with instances of another entity (e.g., 1:1, 1:N, M:N).", "The speed of the relationship.", "The size of the table."],
+        "answer": 1,
+        "explanation": "Cardinality constraints are vital for designing the correct table structure and foreign key placements."
+    },
+    {
+        "id": "db_060",
+        "subtopic": "11. Recovery Management",
+        "question": "In the event of a disk failure, which recovery method is typically used?",
+        "options": ["Log-based recovery.", "Restoring from the latest full backup and replaying the transaction log (archival log).", "Restarting the server.", "Deleting the database."],
+        "answer": 1,
+        "explanation": "Log-based recovery only handles software/power failures; physical disk failure requires a backup restore."
+    },
+    {
+      "id": "db_061",
+      "subtopic": "1. Introduction to Database Systems",
+      "question": "What is 'Metadata'?",
+      "options": ["Raw data stored in a table.", "Data about data (e.g., table definitions, data types, constraints).", "A type of encrypted data.", "Data that has been deleted."],
+      "answer": 1,
+      "explanation": "Metadata is stored in the Data Dictionary and defines the structure of the database."
+    },
+    {
+      "id": "db_062",
+      "subtopic": "4. Relational Database Concepts",
+      "question": "What is a 'Foreign Key'?",
+      "options": ["A key from another country.", "An attribute in one table that uniquely identifies a row in another table.", "A key that is not yet used.", "A type of secondary index."],
+      "answer": 1,
+      "explanation": "Foreign keys establish relationships between relations and enforce referential integrity."
+    },
+    {
+      "id": "db_063",
+      "subtopic": "6. Structured Query Language (SQL)",
+      "question": "Which SQL aggregate function is used to calculate the total sum of a numeric column?",
+      "options": ["COUNT()", "TOTAL()", "SUM()", "ADD()"],
+      "answer": 2,
+      "explanation": "SUM() is a standard aggregate function used in SELECT queries."
+    },
+    {
+      "id": "db_064",
+      "subtopic": "8. Database Design & Normalization",
+      "question": "What is the primary requirement for a table to be in 1st Normal Form (1NF)?",
+      "options": ["No foreign keys.", "All attributes must be atomic (no multi-valued or composite attributes).", "No partial dependencies.", "It must have an index."],
+      "answer": 1,
+      "explanation": "1NF requires that each cell in a table contains only a single value."
+    },
+    {
+      "id": "db_065",
+      "subtopic": "10. Concurrency Control",
+      "question": "What is 'Isolation' in ACID properties?",
+      "options": ["Keeping the database on a separate server.", "Ensuring that concurrent transactions do not interfere with each other and see a consistent state.", "Moving the database to the cloud.", "Hiding the database from the public."],
+      "answer": 1,
+      "explanation": "Isolation prevents transactions from seeing intermediate, uncommitted changes made by others."
+    },
+    {
+      "id": "db_066",
+      "subtopic": "12. Indexing & File Organization",
+      "question": "A 'Sparse Index' contains:",
+      "options": ["An entry for every record in the data file.", "Index entries for only some of the search-key values.", "A list of all users.", "No entries until data is searched."],
+      "answer": 1,
+      "explanation": "Sparse indexes are smaller and require less overhead than dense indexes but may take longer to find specific records."
+    },
+    {
+      "id": "db_067",
+      "subtopic": "14. Database Security",
+      "question": "The 'GRANT' command in SQL is part of:",
+      "options": ["DDL", "DML", "DCL (Data Control Language)", "TCL"],
+      "answer": 2,
+      "explanation": "DCL handles permissions and security access controls like GRANT and REVOKE."
+    },
+    {
+      "id": "db_068",
+      "subtopic": "16. NoSQL & Modern Databases",
+      "question": "Which NoSQL database type is best suited for high-speed caching and simple session management?",
+      "options": ["Graph Database", "Document Store", "Key-Value Store (e.g., Redis)", "Relational Database"],
+      "answer": 2,
+      "explanation": "Key-value stores are extremely fast for simple data lookups by a unique identifier."
+    },
+    {
+      "id": "db_069",
+      "subtopic": "7. Advanced SQL",
+      "question": "What is a 'Database Trigger'?",
+      "options": ["A button in the UI.", "A stored procedure that automatically executes in response to certain events on a particular table (e.g., after an INSERT).", "A way to delete a database.", "A type of index."],
+      "answer": 1,
+      "explanation": "Triggers are used for complex integrity checks, logging, and automated tasks."
+    },
+    {
+      "id": "db_070",
+      "subtopic": "5. Relational Algebra & Calculus",
+      "question": "Which relational algebra operation is represented by the 'x' (times) symbol?",
+      "options": ["Join", "Intersection", "Cartesian Product", "Division"],
+      "answer": 2,
+      "explanation": "Cartesian product combines every row of one table with every row of another."
+    },
+    {
+      "id": "db_071",
+      "subtopic": "13. Query Processing & Optimization",
+      "question": "What is an 'Execution Plan' in the context of a DBMS?",
+      "options": ["A plan to buy more servers.", "The specific steps and algorithms the DBMS will use to retrieve the data for a query.", "A list of users who run queries.", "The order in which tables were created."],
+      "answer": 1,
+      "explanation": "The optimizer generates the execution plan after evaluating costs and heuristics."
+    },
+    {
+      "id": "db_072",
+      "subtopic": "15. Distributed Databases",
+      "question": "In a distributed system, 'Eventual Consistency' means:",
+      "options": ["Data is never consistent.", "Updates will eventually propagate to all nodes, but may not be seen immediately by all users.", "The database only works sometimes.", "All nodes are always identical."],
+      "answer": 1,
+      "explanation": "This is a common model for NoSQL systems that prioritize performance over strict consistency."
+    },
+    {
+      "id": "db_073",
+      "subtopic": "3. Data Models",
+      "question": "In an ER diagram, a diamond shape represents a:",
+      "options": ["Entity", "Attribute", "Relationship", "Key"],
+      "answer": 2,
+      "explanation": "Diamonds indicate how different entities (rectangles) interact with each other."
+    },
+    {
+      "id": "db_074",
+      "subtopic": "9. Transaction Management",
+      "question": "What does a 'ROLLBACK' command do?",
+      "options": ["Saves all changes.", "Undoes all operations within the current transaction and returns the database to its previous consistent state.", "Restarts the server.", "Deletes the logs."],
+      "answer": 1,
+      "explanation": "Rollback is essential for maintaining atomicity when an error occurs during a transaction."
+    },
+    {
+      "id": "db_075",
+      "subtopic": "11. Recovery Management",
+      "question": "What is 'Shadow Paging'?",
+      "options": ["Hiding data from users.", "A recovery technique where updates are made on a copy of the database pages, switching to the copy only after success.", "Writing logs in the dark.", "A type of indexing."],
+      "answer": 1,
+      "explanation": "Shadow paging avoids the overhead of log files but can lead to disk fragmentation."
+    },
+    {
+      "id": "db_076",
+      "subtopic": "2. Database System Architecture",
+      "question": "The 'Conceptual Schema' defines:",
+      "options": ["How the user sees the data.", "The global logical structure of the entire database and the relationships between data items.", "The physical disk paths.", "The network protocols."],
+      "answer": 1,
+      "explanation": "The conceptual schema is the 'middle' layer of the 3-schema architecture."
+    },
+    {
+      "id": "db_077",
+      "subtopic": "17. Data Warehousing & Data Mining (Introductory)",
+      "question": "What is an 'OLAP Cube'?",
+      "options": ["A physical storage device.", "A multidimensional data structure that allows fast analysis of data from multiple perspectives.", "A type of server room.", "A 3D database model."],
+      "answer": 1,
+      "explanation": "Cubes allow for 'Slicing and Dicing' data across dimensions like Time, Location, and Product."
+    },
+    {
+      "id": "db_078",
+      "subtopic": "4. Relational Database Concepts",
+      "question": "What is the 'Domain' of an attribute?",
+      "options": ["The website where the database is hosted.", "The set of all possible allowed values for that attribute (e.g., 'Integers from 1-100').", "The name of the column.", "The primary key."],
+      "answer": 1,
+      "explanation": "Defining domains ensures data type consistency across the database."
+    },
+    {
+      "id": "db_079",
+      "subtopic": "8. Database Design & Normalization",
+      "question": "De-normalization is sometimes performed to:",
+      "options": ["Fix bugs in the schema.", "Improve read performance by reducing the number of JOINs required in heavy analytical workloads.", "Make the database more secure.", "Save disk space."],
+      "answer": 1,
+      "explanation": "Normalization is for data integrity; De-normalization is a conscious trade-off for performance."
+    },
+    {
+      "id": "db_080",
+      "subtopic": "10. Concurrency Control",
+      "question": "A 'Shared Lock' (S-lock) allows multiple transactions to:",
+      "options": ["Update the same row.", "Read the same row simultaneously.", "Delete the same row.", "Restart the server."],
+      "answer": 1,
+      "explanation": "Shared locks are for reading. An Exclusive lock (X-lock) is required for writing."
+    },
+    {
+        "id": "db_081",
+        "subtopic": "4. Relational Database Concepts",
+        "question": "What is an 'Alternate Key'?",
+        "options": ["A key that only works on weekends.", "A candidate key that was not chosen as the primary key.", "A foreign key from another table.", "A key used for encryption."],
+        "answer": 1,
+        "explanation": "Every candidate key is a potential primary key. Those not chosen are alternate keys."
+    },
+    {
+        "id": "db_082",
+        "subtopic": "6. Structured Query Language (SQL)",
+        "question": "Which SQL clause is used to filter rows 'after' an aggregate function has been applied?",
+        "options": ["WHERE", "ORDER BY", "HAVING", "GROUP BY"],
+        "answer": 2,
+        "explanation": "WHERE filters individual rows before grouping; HAVING filters the groups themselves."
+    },
+    {
+        "id": "db_083",
+        "subtopic": "12. Indexing & File Organization",
+        "question": "In a B+ tree, where are the actual data pointers stored?",
+        "options": ["In the root node only.", "In all nodes of the tree.", "Only in the leaf nodes.", "In a separate text file."],
+        "answer": 2,
+        "explanation": "Unlike B-trees, B+ trees keep all data pointers in the leaves, making sequential range scans very fast."
+    },
+    {
+        "id": "db_084",
+        "subtopic": "15. Distributed Databases",
+        "question": "What is 'Vertical Fragmentation'?",
+        "options": ["Splitting a table by its rows.", "Splitting a table by its columns (e.g., storing sensitive salaries in one site and public names in another).", "Deleting the vertical columns.", "A type of RAID."],
+        "answer": 1,
+        "explanation": "Vertical fragmentation allows attributes to be stored closer to where they are most frequently used."
+    },
+    {
+        "id": "db_085",
+        "subtopic": "9. Transaction Management",
+        "question": "Which of the following is NOT a valid state for a database transaction?",
+        "options": ["Active", "Partially Committed", "Terminated", "Failed"],
+        "answer": 2,
+        "explanation": "A transaction can be Active, Partially Committed, Committed, Failed, or Aborted. 'Terminated' is not a standard state."
+    },
+    {
+        "id": "db_086",
+        "subtopic": "14. Database Security",
+        "question": "What is 'Data Masking'?",
+        "options": ["Hiding the server behind a proxy.", "The process of obscuring specific data elements (like credit card numbers) so they are unreadable to unauthorized users.", "Deleting sensitive data.", "Using a VPN."],
+        "answer": 1,
+        "explanation": "Masking allows developers to work with realistic data without seeing the actual sensitive values."
+    },
+    {
+        "id": "db_087",
+        "subtopic": "16. NoSQL & Modern Databases",
+        "question": "The 'Consistency' guarantee in NoSQL (e.g., in a CAP context) refers to:",
+        "options": ["The data is always correct.", "Every read receives the most recent write or an error.", "The database never crashes.", "The users always have the same password."],
+        "answer": 1,
+        "explanation": "Consistency in distributed systems ensures all nodes see the same data at the same time."
+    },
+    {
+        "id": "db_088",
+        "subtopic": "5. Relational Algebra & Calculus",
+        "question": "The 'Rename' (ρ) operation is useful when:",
+        "options": ["Changing a user's name.", "Performing a Self-Join to avoid naming conflicts within the same relation.", "Deleting a column.", "Updating a row."],
+        "answer": 1,
+        "explanation": "Rename allows you to treat a single relation as two distinct entities during complex operations."
+    },
+    {
+        "id": "db_089",
+        "subtopic": "13. Query Processing & Optimization",
+        "question": "What is 'Materialization' in query evaluation?",
+        "options": ["The query becoming physical.", "Generating the entire result of one operation and storing it as a temporary table before passing it to the next operation.", "A type of database indexing.", "Encrypting the query results."],
+        "answer": 1,
+        "explanation": "Materialization is the opposite of 'Pipelining', where results are passed row-by-row to the next step."
+    },
+    {
+        "id": "db_090",
+        "subtopic": "17. Data Warehousing & Data Mining (Introductory)",
+        "question": "A 'Data Mart' is:",
+        "options": ["A supermarket for data.", "A subset of a data warehouse focused on a specific department or business line (e.g., Sales or HR).", "A type of NoSQL database.", "The name of the database admin."],
+        "answer": 1,
+        "explanation": "Data marts are easier to manage and faster to query than the entire enterprise warehouse."
+    },
+    {
+        "id": "db_091",
+        "subtopic": "3. Data Models",
+        "question": "What is 'Inheritance' in an Object-Oriented Data Model?",
+        "options": ["Deleting data from a parent table.", "The ability of a sub-type to automatically possess all attributes and methods of its parent type.", "Sharing a database password.", "Using a foreign key."],
+        "answer": 1,
+        "explanation": "OO databases allow for hierarchical data structures similar to OOP languages like Java or C++."
+    },
+    {
+        "id": "db_092",
+        "subtopic": "8. Database Design & Normalization",
+        "question": "A table is in 2NF if it is in 1NF and:",
+        "options": ["It has no transitive dependencies.", "Every non-prime attribute is fully functionally dependent on the entire primary key (no partial dependencies).", "It has a primary key.", "It has no NULL values."],
+        "answer": 1,
+        "explanation": "2NF is only relevant if the primary key is composite (consists of multiple columns)."
+    },
+    {
+        "id": "db_093",
+        "subtopic": "11. Recovery Management",
+        "question": "What is the 'Log-based' recovery technique used to undo an uncommitted transaction after a crash?",
+        "options": ["Redo", "Undo", "Checkpoint", "Abort"],
+        "answer": 1,
+        "explanation": "Undo (or Rollback) removes the effects of incomplete transactions to maintain atomicity."
+    },
+    {
+        "id": "db_094",
+        "subtopic": "2. Database System Architecture",
+        "question": "What is the role of the 'Database Administrator' (DBA)?",
+        "options": ["To write application code.", "To design the physical database, manage security, monitor performance, and handle backups.", "To build the hardware for the database.", "To enter data into the tables."],
+        "answer": 1,
+        "explanation": "The DBA is responsible for the overall health and security of the DBMS environment."
+    },
+    {
+        "id": "db_095",
+        "subtopic": "10. Concurrency Control",
+        "question": "The 'Wait-for Graph' is used in DBMS to detect:",
+        "options": ["Fast queries.", "Deadlocks.", "User errors.", "Slow hardware."],
+        "answer": 1,
+        "explanation": "If the Wait-for Graph contains a cycle, the system is in a deadlock state."
+    },
+    {
+        "id": "db_096",
+        "subtopic": "16. NoSQL & Modern Databases",
+        "question": "Which of the following is a key feature of 'NewSQL' databases?",
+        "options": ["They do not use SQL.", "They provide the scalability of NoSQL systems while maintaining the ACID guarantees of traditional RDBMS.", "They only work on mobile devices.", "They are completely schema-less."],
+        "answer": 1,
+        "explanation": "NewSQL (like Google Spanner or CockroachDB) aims to provide the 'best of both worlds'."
+    },
+    {
+        "id": "db_097",
+        "subtopic": "6. Structured Query Language (SQL)",
+        "question": "The SQL 'LIKE' operator with the '%' (percent) wildcard is used for:",
+        "options": ["Calculating percentages.", "Pattern matching (e.g., '%son' finds 'Johnson' and 'Wilson').", "Dividing two numbers.", "Filtering null values."],
+        "answer": 1,
+        "explanation": "The '%' represents zero or more characters."
+    },
+    {
+        "id": "db_098",
+        "subtopic": "14. Database Security",
+        "question": "What is 'Encryption at Rest'?",
+        "options": ["Encrypting data while the server is off.", "Encrypting data while it is stored on the physical media (hard drive/SSD).", "Encrypting data as it travels across the network.", "A type of password protection."],
+        "answer": 1,
+        "explanation": "This protects the data if the physical disk is stolen or accessed through a lower layer."
+    },
+    {
+        "id": "db_099",
+        "subtopic": "17. Data Warehousing & Data Mining (Introductory)",
+        "question": "What is a 'Dimension' in a star schema?",
+        "options": ["The size of the table.", "A descriptive category (like Date, Store, or Product) used to filter and group the facts.", "The primary key of the fact table.", "A type of SQL function."],
+        "answer": 1,
+        "explanation": "Dimensions provide the 'context' for the numbers (measures) found in the fact table."
+    },
+    {
+        "id": "db_100",
+        "subtopic": "4. Relational Database Concepts",
+        "question": "A 'Composite Key' is a primary key that:",
+        "options": ["Is made of gold.", "Consists of two or more attributes.", "Is also a foreign key.", "Can be null."],
+        "answer": 1,
+        "explanation": "Composite keys are used when no single attribute is sufficient to uniquely identify a row."
+    },
+    {
+        "id": "db_101",
+        "subtopic": "5. Relational Algebra & Calculus",
+        "question": "Which operation finds tuples that are in one relation but not in another?",
+        "options": ["Union", "Intersection", "Set Difference (-)", "Join"],
+        "answer": 2,
+        "explanation": "Set difference requires the two relations to be union compatible."
+    },
+    {
+        "id": "db_102",
+        "subtopic": "11. Recovery Management",
+        "question": "What is 'Log Archiving'?",
+        "options": ["Deleting old logs.", "Moving log records to long-term stable storage to allow recovery beyond the immediate online log.", "Sorting logs by date.", "Encrypting the log files."],
+        "answer": 1,
+        "explanation": "Archived logs are essential for Point-in-Time recovery after a major media failure."
+    }
+  ]
+}

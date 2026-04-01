@@ -1,0 +1,884 @@
+{
+  "questions": [
+    {
+      "id": "prog_001",
+      "subtopic": "1. Programming Fundamentals",
+      "question": "Which of the following describes the primary difference between a 'Compiled' language (C++) and an 'Interpreted' language (Python)?",
+      "options": ["Compiled languages are harder to write.", "Compiled languages are translated to machine code before execution; Interpreted languages are translated line-by-line during execution.", "Interpreted languages do not require a CPU to run.", "Compiled languages can only run on Windows."],
+      "answer": 1,
+      "explanation": "C++ is compiled directly to machine code for high performance, while Python runs on a Virtual Machine (PVM) that interprets bytecode at runtime."
+    },
+    {
+      "id": "prog_002",
+      "subtopic": "1. Programming Fundamentals",
+      "question": "What is the role of 'Bytecode' in the Java ecosystem?",
+      "options": ["It is the final machine code that runs on the CPU.", "It is an intermediate, platform-independent code that runs on the Java Virtual Machine (JVM).", "It is a type of source code written by the developer.", "It is used to encrypt Java files."],
+      "answer": 1,
+      "explanation": "Bytecode allows Java to follow the 'Write Once, Run Anywhere' (WORA) philosophy by decoupling the code from the physical hardware."
+    },
+    {
+      "id": "prog_003",
+      "subtopic": "2. Data Types & Variables",
+      "question": "In C++, what is the size of an 'int' data type on most modern 64-bit systems?",
+      "options": ["1 Byte", "2 Bytes", "4 Bytes", "8 Bytes"],
+      "answer": 2,
+      "explanation": "While 'long' or 'pointers' are 8 bytes on 64-bit systems, the standard 'int' typically remains 4 bytes (32 bits) in C++."
+    },
+    {
+      "id": "prog_004",
+      "subtopic": "2. Data Types & Variables",
+      "question": "Which of the following statements about Python's 'Dynamic Typing' is true?",
+      "options": ["Variables must be declared with a type before use.", "The type of a variable is determined at runtime based on the value assigned to it.", "Python does not have data types.", "Variable types cannot change once assigned."],
+      "answer": 1,
+      "explanation": "Python is dynamically typed; you don't need to specify 'int' or 'string', as the interpreter tracks the type of the object the variable points to."
+    },
+    {
+      "id": "prog_005",
+      "subtopic": "3. Operators & Expressions",
+      "question": "What is 'Short-circuit evaluation' in logical expressions (e.g., in Java or C++)?",
+      "options": ["The program stops if an error occurs.", "The second operand is only evaluated if the first operand does not suffice to determine the value of the expression.", "It is a way to speed up addition and subtraction.", "It only applies to bitwise operators."],
+      "answer": 1,
+      "explanation": "In 'A && B', if A is false, B is not evaluated. In 'A || B', if A is true, B is not evaluated."
+    },
+    {
+      "id": "prog_006",
+      "subtopic": "3. Operators & Expressions",
+      "question": "In Python, what is the result of the expression: 10 // 3?",
+      "options": ["3.333", "3", "4", "3.0"],
+      "answer": 1,
+      "explanation": "The '//' operator performs 'Floor Division,' returning the largest integer less than or equal to the result."
+    },
+    {
+      "id": "prog_007",
+      "subtopic": "4. Control Structures",
+      "question": "Which of the following is a potential risk of a 'Switch' statement in C++ or Java if a 'break' is omitted?",
+      "options": ["A compilation error.", "Fall-through behavior, where execution continues into the next case.", "The program will crash instantly.", "The CPU will overheat."],
+      "answer": 1,
+      "explanation": "Fall-through is sometimes intentional but often a logic bug where multiple cases execute unexpectedly."
+    },
+    {
+      "id": "prog_008",
+      "subtopic": "4. Control Structures",
+      "question": "Which loop is guaranteed to execute at least once, regardless of the condition?",
+      "options": ["for loop", "while loop", "do-while loop", "foreach loop"],
+      "answer": 2,
+      "explanation": "In a do-while loop, the condition is checked 'after' the body executes."
+    },
+    {
+      "id": "prog_009",
+      "subtopic": "5. Functions / Methods",
+      "question": "In C++, what happens when you pass a large object 'By Value' to a function?",
+      "options": ["The function uses the original object.", "A copy of the entire object is created on the stack, which can be inefficient.", "The object is moved to the heap.", "The program returns an error."],
+      "answer": 1,
+      "explanation": "Passing by value creates a local copy. To improve performance, large objects are usually passed 'By Reference' or 'By Pointer'."
+    },
+    {
+      "id": "prog_010",
+      "subtopic": "5. Functions / Methods",
+      "question": "What is 'Method Overloading' in Java?",
+      "options": ["Writing two methods in different classes with the same name.", "Writing two methods in the same class with the same name but different parameter lists.", "A method that takes too much time to execute.", "Calling a method from a different package."],
+      "answer": 1,
+      "explanation": "Overloading allows a class to perform similar actions with different inputs (e.g., add(int, int) and add(double, double))."
+    },
+    {
+      "id": "prog_011",
+      "subtopic": "6. Input / Output Handling",
+      "question": "In Java, why is 'BufferedReader' often preferred over 'Scanner' for reading large text files?",
+      "options": ["Scanner is more secure.", "BufferedReader has a larger buffer and is synchronized, making it faster for large I/O operations.", "BufferedReader can only read numbers.", "Scanner does not support UTF-8."],
+      "answer": 1,
+      "explanation": "BufferedReader is significantly faster because it reads large chunks of the file at once, reducing the number of physical disk accesses."
+    },
+    {
+      "id": "prog_012",
+      "subtopic": "6. Input / Output Handling",
+      "question": "In Python, what is the benefit of using the 'with' statement when opening a file?",
+      "options": ["It makes the file read-only.", "It automatically closes the file even if an exception occurs.", "It encrypts the file content.", "It allows the file to be shared across the network."],
+      "answer": 1,
+      "explanation": "The 'with' statement is a Context Manager that ensures proper resource management (closing the file handle) automatically."
+    },
+    {
+      "id": "prog_013",
+      "subtopic": "7. Strings & Text Processing",
+      "question": "In Java and Python, Strings are 'Immutable'. What does this mean?",
+      "options": ["They cannot be printed.", "Once created, the content of the string object cannot be changed; any 'modification' creates a new string object.", "They are limited to 256 characters.", "They can only be stored in the Stack."],
+      "answer": 1,
+      "explanation": "Immutability improves security and allows for 'String Pooling,' saving memory by reusing identical string literals."
+    },
+    {
+      "id": "prog_014",
+      "subtopic": "7. Strings & Text Processing",
+      "question": "In C, a string is a 'null-terminated array'. What is the special character used to signify the end of the string?",
+      "options": ["\\n", "\\t", "\\0", "EOF"],
+      "answer": 2,
+      "explanation": "The null character (\\0) tells functions like strlen() where the string data actually stops in memory."
+    },
+    {
+      "id": "prog_015",
+      "subtopic": "8. Arrays & Collections",
+      "question": "Which data structure in the Java Collections Framework should be used if you need constant-time (O(1)) lookup by a key?",
+      "options": ["ArrayList", "LinkedList", "HashMap", "TreeSet"],
+      "answer": 2,
+      "explanation": "HashMap uses a hashing algorithm to store and retrieve values in O(1) average time."
+    },
+    {
+      "id": "prog_016",
+      "subtopic": "8. Arrays & Collections",
+      "question": "What is the primary difference between a 'List' and a 'Tuple' in Python?",
+      "options": ["List is faster.", "List is mutable (can change); Tuple is immutable (cannot change after creation).", "Tuple uses more memory.", "Lists can only store integers."],
+      "answer": 1,
+      "explanation": "Tuples are used for data that shouldn't change, and they are slightly faster and more memory-efficient than lists."
+    },
+    {
+      "id": "prog_017",
+      "subtopic": "9. Object-Oriented Programming (OOP)",
+      "question": "Which OOP principle focuses on hiding the internal state and requiring all interaction through well-defined methods?",
+      "options": ["Inheritance", "Encapsulation", "Polymorphism", "Abstraction"],
+      "answer": 1,
+      "explanation": "Encapsulation protects data integrity by preventing external code from directly modifying private variables."
+    },
+    {
+      "id": "prog_018",
+      "subtopic": "9. Object-Oriented Programming (OOP)",
+      "question": "In C++, 'Multiple Inheritance' is allowed, but it can lead to which famous problem?",
+      "options": ["The Null Pointer Exception", "The Diamond Problem", "The Stack Overflow", "The Memory Leak"],
+      "answer": 1,
+      "explanation": "The Diamond Problem occurs when a class inherits from two classes that both inherit from the same base class, creating ambiguity."
+    },
+    {
+      "id": "prog_019",
+      "subtopic": "10. Memory Management Concepts",
+      "question": "In C++, what is a 'Memory Leak'?",
+      "options": ["When the RAM is physically leaking fluid.", "When memory is allocated on the heap (using 'new') but never deallocated (using 'delete'), making it unavailable to the OS.", "When a variable is declared but not used.", "When the program uses too many global variables."],
+      "answer": 1,
+      "explanation": "Manual memory management in C++ requires the developer to track every allocation to avoid consuming all available RAM."
+    },
+    {
+      "id": "prog_020",
+      "subtopic": "10. Memory Management Concepts",
+      "question": "How does 'Garbage Collection' (GC) in Java/Python work?",
+      "options": ["It deletes files from the hard drive.", "It automatically identifies and deletes objects that are no longer reachable by the program to free up memory.", "It reboots the computer when memory is full.", "It prevents the use of the Heap."],
+      "answer": 1,
+      "explanation": "GC automates memory management, significantly reducing the risk of memory leaks compared to C++."
+    },
+    {
+      "id": "prog_021",
+      "subtopic": "11. Exception & Error Handling",
+      "question": "In Java, what is the difference between 'Checked' and 'Unchecked' exceptions?",
+      "options": ["Checked exceptions are errors; Unchecked are warnings.", "Checked exceptions must be handled or declared (using 'throws') at compile-time; Unchecked (Runtime) exceptions do not.", "Only checked exceptions crash the program.", "There is no difference."],
+      "answer": 1,
+      "explanation": "Checked exceptions (like IOException) force the developer to consider error recovery, while Unchecked (like NullPointerException) usually represent programming bugs."
+    },
+    {
+      "id": "prog_022",
+      "subtopic": "11. Exception & Error Handling",
+      "question": "What is the purpose of the 'finally' block in a try-catch-finally structure?",
+      "options": ["To catch any remaining errors.", "To execute code regardless of whether an exception was thrown or caught (e.g., closing a database connection).", "To terminate the program safely.", "It only executes if an error occurs."],
+      "answer": 1,
+      "explanation": "'finally' is used for cleanup operations that must run no matter what happens in the 'try' block."
+    },
+    {
+      "id": "prog_023",
+      "subtopic": "12. Modules, Packages & Libraries",
+      "question": "In Python, what is the purpose of the '__init__.py' file in a directory?",
+      "options": ["It is the main entry point of the program.", "It tells Python to treat the directory as a package containing modules.", "It contains the documentation for the project.", "It is a temporary file created by the interpreter."],
+      "answer": 1,
+      "explanation": "Packages allow for a hierarchical structuring of the module namespace using dot notation (e.g., package.module)."
+    },
+    {
+      "id": "prog_024",
+      "subtopic": "12. Modules, Packages & Libraries",
+      "question": "Which keyword is used in Java to access classes from another package?",
+      "options": ["include", "using", "import", "package"],
+      "answer": 2,
+      "explanation": "Importing allows you to use shorthand names for classes instead of their fully qualified names."
+    },
+    {
+      "id": "prog_025",
+      "subtopic": "13. Advanced Programming Concepts",
+      "question": "What is a 'Lambda Expression'?",
+      "options": ["A type of complex math equation.", "An anonymous function that can be treated as a first-class citizen (passed as a variable).", "A way to declare global variables in Python.", "A security protocol for web APIs."],
+      "answer": 1,
+      "explanation": "Lambdas (available in C++11, Java 8, and Python) enable functional programming patterns like map/filter/reduce."
+    },
+    {
+      "id": "prog_026",
+      "subtopic": "13. Advanced Programming Concepts",
+      "question": "What is 'Recursion' in programming?",
+      "options": ["A loop that runs 100 times.", "A process where a function calls itself as a subroutine.", "A way to store data in a tree.", "A security feature for hashing."],
+      "answer": 1,
+      "explanation": "Recursion solves complex problems by breaking them into smaller instances of the same problem, but it requires a 'Base Case' to prevent infinite loops."
+    },
+    {
+      "id": "prog_027",
+      "subtopic": "14. Concurrency & Parallelism (Introductory)",
+      "question": "What is the 'Global Interpreter Lock' (GIL) in Python?",
+      "options": ["A lock on the computer hardware.", "A mechanism that allows only one thread to execute Python bytecode at a time, preventing true parallelism on multi-core CPUs.", "A way to speed up network requests.", "A security feature for user login."],
+      "answer": 1,
+      "explanation": "The GIL simplifies memory management in CPython but means CPU-bound tasks may not see a speedup from multithreading."
+    },
+    {
+      "id": "prog_028",
+      "subtopic": "14. Concurrency & Parallelism (Introductory)",
+      "question": "Which keyword in Java is used to ensure that a method or block of code is accessible by only one thread at a time?",
+      "options": ["volatile", "static", "synchronized", "transient"],
+      "answer": 2,
+      "explanation": "Synchronization prevents 'Race Conditions' by ensuring mutual exclusion on a shared resource."
+    },
+    {
+      "id": "prog_029",
+      "subtopic": "15. Debugging, Testing & Optimization",
+      "question": "What is the primary difference between 'Unit Testing' and 'Integration Testing'?",
+      "options": ["Unit testing is for hardware; Integration for software.", "Unit testing tests individual components in isolation; Integration testing tests the interactions between them.", "Integration testing is done by the user.", "Unit testing is faster than C++."],
+      "answer": 1,
+      "explanation": "Unit tests ensure small logic blocks work; Integration tests ensure the system as a whole functions correctly."
+    },
+    {
+      "id": "prog_030",
+      "subtopic": "15. Debugging, Testing & Optimization",
+      "question": "In C++, what is a 'Dangling Pointer'?",
+      "options": ["A pointer that is too long.", "A pointer that points to a memory location that has been deallocated (deleted).", "A pointer that points to NULL.", "A pointer used in a loop."],
+      "answer": 1,
+      "explanation": "Dangling pointers lead to segmentation faults or unpredictable behavior because the memory they point to might be reused by other processes."
+    },
+    {
+      "id": "prog_031",
+      "subtopic": "16. Software Development Practices",
+      "question": "The 'DRY' principle in software development stands for:",
+      "options": ["Do Real Yields", "Don't Repeat Yourself", "Data Retrieval Yield", "Design Reliable Yields"],
+      "answer": 1,
+      "explanation": "DRY aims to reduce repetition of information/logic by using functions, classes, and modules."
+    },
+    {
+      "id": "prog_032",
+      "subtopic": "16. Software Development Practices",
+      "question": "What does 'TDD' (Test-Driven Development) involve?",
+      "options": ["Writing documentation after the code.", "Writing tests before writing the actual code for a feature.", "Testing the software only on mobile devices.", "A method to encrypt source code."],
+      "answer": 1,
+      "explanation": "TDD ensures that code is written to satisfy specific requirements and results in high test coverage."
+    },
+    {
+        "id": "prog_033",
+        "subtopic": "9. Object-Oriented Programming (OOP)",
+        "question": "In Java, what is the 'super' keyword used for?",
+        "options": ["To create a super-fast object.", "To refer to the immediate parent class object.", "To exit a method.", "To declare a global variable."],
+        "answer": 1,
+        "explanation": "Super is used to call parent class constructors or methods that have been overridden."
+    },
+    {
+        "id": "prog_034",
+        "subtopic": "10. Memory Management Concepts",
+        "question": "Which memory area in C++ and Java is used for local variables and function calls?",
+        "options": ["Heap", "Stack", "Registry", "Global Segment"],
+        "answer": 1,
+        "explanation": "The stack is fast and managed automatically by the compiler, following a LIFO (Last-In-First-Out) structure."
+    },
+    {
+        "id": "prog_035",
+        "subtopic": "11. Exception & Error Handling",
+        "question": "What is the difference between 'Error' and 'Exception' in Java?",
+        "options": ["Errors are caught; Exceptions are ignored.", "Exceptions can be recovered from; Errors usually indicate serious problems in the JVM environment (e.g., OutOfMemory) that the app shouldn't try to catch.", "They are the same.", "Errors only happen in C++."],
+        "answer": 1,
+        "explanation": "Developers catch Exceptions (like FileNotFound); they usually let the program crash on Errors."
+    },
+    {
+        "id": "prog_036",
+        "subtopic": "13. Advanced Programming Concepts",
+        "question": "What is a 'Closure' in JavaScript or Python?",
+        "options": ["Closing a file handle.", "A function that has access to its outer scope even after the outer function has finished executing.", "A loop that finishes early.", "A private database."],
+        "answer": 1,
+        "explanation": "Closures allow for powerful functional programming techniques and data encapsulation."
+    },
+    {
+        "id": "prog_037",
+        "subtopic": "8. Arrays & Collections",
+        "question": "Which Python collection type is UNORDERED and contains only UNIQUE elements?",
+        "options": ["List", "Dictionary", "Set", "Tuple"],
+        "answer": 2,
+        "explanation": "Sets use hashing internally and automatically remove duplicate entries."
+    },
+    {
+        "id": "prog_038",
+        "subtopic": "5. Functions / Methods",
+        "question": "What is a 'Pure Function'?",
+        "options": ["A function written in a single line.", "A function that has no side effects and always returns the same output for the same input.", "A function with no parameters.", "A function that only uses integers."],
+        "answer": 1,
+        "explanation": "Pure functions are a core concept of functional programming, making code easier to test and reason about."
+    },
+    {
+        "id": "prog_039",
+        "subtopic": "3. Operators & Expressions",
+        "question": "What is the result of the bitwise XOR operation (5 ^ 3)?",
+        "options": ["8", "2", "6", "15"],
+        "answer": 2,
+        "explanation": "5 is 101, 3 is 011. XOR (101 ^ 011) = 110, which is 6 in decimal."
+    },
+    {
+        "id": "prog_040",
+        "subtopic": "9. Object-Oriented Programming (OOP)",
+        "question": "What is an 'Abstract Class'?",
+        "options": ["A class that cannot be instantiated and is meant to be subclassed.", "A class that only contains static methods.", "A class hidden from the user.", "The highest level of a database."],
+        "answer": 0,
+        "explanation": "Abstract classes define a template for children classes to implement specific functionality."
+    },
+    {
+        "id": "prog_041",
+        "subtopic": "2. Data Types & Variables",
+        "question": "In Java, what is 'Autoboxing'?",
+        "options": ["Automatically creating a GUI box.", "The automatic conversion the Java compiler makes between primitive types and their corresponding object wrapper classes (e.g., int to Integer).", "Moving variables to the disk.", "A type of security encryption."],
+        "answer": 1,
+        "explanation": "This simplifies code, allowing primitives to be used in Collections (which only accept objects)."
+    },
+    {
+        "id": "prog_042",
+        "subtopic": "4. Control Structures",
+        "question": "What does the 'continue' keyword do in a loop?",
+        "options": ["Exits the loop entirely.", "Skips the rest of the current iteration and jumps to the next one.", "Restarts the program.", "Deletes the loop variables."],
+        "answer": 1,
+        "explanation": "Continue is useful for skipping specific cases within a loop without stopping the whole process."
+    },
+    {
+        "id": "prog_043",
+        "subtopic": "10. Memory Management Concepts",
+        "question": "In C++, what is a 'Smart Pointer' (e.g., std::unique_ptr)?",
+        "options": ["A pointer that knows the user's name.", "An object that wraps a raw pointer to manage its lifetime and automatically deallocate memory when the smart pointer goes out of scope.", "A pointer that runs faster than a normal one.", "A pointer stored in the GPU."],
+        "answer": 1,
+        "explanation": "Smart pointers help prevent memory leaks and dangling pointers by following RAII (Resource Acquisition Is Initialization) principles."
+    },
+    {
+        "id": "prog_044",
+        "subtopic": "7. Strings & Text Processing",
+        "question": "Which Python method is used to split a string into a list based on a delimiter?",
+        "options": ["divide()", "slice()", "split()", "break()"],
+        "answer": 2,
+        "explanation": "For example, 'a,b,c'.split(',') returns ['a', 'b', 'c']."
+    },
+    {
+        "id": "prog_045",
+        "subtopic": "15. Debugging, Testing & Optimization",
+        "question": "What is 'Profilng' in software optimization?",
+        "options": ["Creating a user profile.", "The process of measuring the space (memory) and time complexity of code to find performance bottlenecks.", "Checking for spelling errors in code.", "Running code on a different OS."],
+        "answer": 1,
+        "explanation": "Profilers help developers identify exactly which functions are slowing down the application."
+    },
+    {
+        "id": "prog_046",
+        "subtopic": "16. Software Development Practices",
+        "question": "The 'SOLID' principles are a set of design principles for:",
+        "options": ["Database optimization.", "Object-oriented software development to make it more understandable, flexible, and maintainable.", "Network security.", "Compiling machine code."],
+        "answer": 1,
+        "explanation": "SOLID includes principles like Single Responsibility and Open-Closed Principle."
+    },
+    {
+        "id": "prog_047",
+        "subtopic": "1. Programming Fundamentals",
+        "question": "What is 'JIT' (Just-In-Time) compilation used in Java and Python?",
+        "options": ["Compiling code only when the user asks for it.", "A technique where parts of the bytecode are compiled into native machine code at runtime to improve performance.", "Deleting old code to save space.", "Translating code into English."],
+        "answer": 1,
+        "explanation": "JIT compilers (like in JVM) bridge the gap between interpreted flexibility and compiled speed."
+    },
+    {
+        "id": "prog_048",
+        "subtopic": "9. Object-Oriented Programming (OOP)",
+        "question": "What is 'Polymorphism'?",
+        "options": ["The ability of an object to take on many forms (e.g., a parent reference pointing to a child object).", "A way to encrypt data.", "A type of loop.", "A method to delete objects."],
+        "answer": 0,
+        "explanation": "Polymorphism allows for 'Dynamic Dispatch,' where the specific method called is determined at runtime based on the object's actual type."
+    },
+    {
+        "id": "prog_049",
+        "subtopic": "14. Concurrency & Parallelism (Introductory)",
+        "question": "What is a 'Deadlock' in multithreading?",
+        "options": ["When a thread finishes execution.", "A situation where two or more threads are blocked forever, each waiting for a resource held by the other.", "A type of system crash.", "When the CPU is too slow."],
+        "answer": 1,
+        "explanation": "Deadlocks are a common concurrency bug that requires careful management of locks."
+    },
+    {
+        "id": "prog_050",
+        "subtopic": "2. Data Types & Variables",
+        "question": "What is the 'Stack Overflow' error?",
+        "options": ["The hard drive is full.", "An error that occurs when the call stack exceeds its limit, usually due to infinite recursion.", "When the user types too fast.", "A database error."],
+        "answer": 1,
+        "explanation": "Every function call consumes space on the stack; if it never returns (infinite recursion), the stack runs out of memory."
+    },
+    {
+      "id": "prog_051",
+      "subtopic": "9. Object-Oriented Programming (OOP)",
+      "question": "In Java and Python, every class automatically inherits from which base class?",
+      "options": ["Base", "Object", "Root", "Parent"],
+      "answer": 1,
+      "explanation": "In Java, it is 'java.lang.Object'. In Python, it is 'object'. This provides common methods like toString() or __str__()."
+    },
+    {
+      "id": "prog_052",
+      "subtopic": "10. Memory Management Concepts",
+      "question": "What is the 'Heap' memory used for in C++ and Java?",
+      "options": ["Temporary local variables.", "Dynamic memory allocation for objects and large data structures.", "Storing the program's binary instructions.", "Handling keyboard input."],
+      "answer": 1,
+      "explanation": "Heap memory is much larger than stack memory but slower to access and requires manual or automatic management."
+    },
+    {
+      "id": "prog_053",
+      "subtopic": "5. Functions / Methods",
+      "question": "What is the difference between a 'Function' and a 'Method'?",
+      "options": ["No difference.", "A method is a function that belongs to a class or an object.", "A function can only return integers.", "Methods are only used in Python."],
+      "answer": 1,
+      "explanation": "In pure OOP languages like Java, nearly all functions are methods."
+    },
+    {
+      "id": "prog_054",
+      "subtopic": "3. Operators & Expressions",
+      "question": "What is the 'Modulo' operator (%) used for?",
+      "options": ["Finding the square root.", "Finding the remainder of a division.", "Calculating percentages.", "Dividing two numbers."],
+      "answer": 1,
+      "explanation": "For example, 10 % 3 results in 1."
+    },
+    {
+      "id": "prog_055",
+      "subtopic": "11. Exception & Error Handling",
+      "question": "In C++, which keyword is used to signal that a problem has occurred?",
+      "options": ["raise", "catch", "throw", "except"],
+      "answer": 2,
+      "explanation": "Throw sends an exception object up the call stack to find a matching catch block."
+    },
+    {
+      "id": "prog_056",
+      "subtopic": "8. Arrays & Collections",
+      "question": "What is an 'ArrayList' in Java?",
+      "options": ["A static array with a fixed size.", "A resizable array implementation that grows dynamically as elements are added.", "A linked list.", "A type of database table."],
+      "answer": 1,
+      "explanation": "ArrayLists provide fast random access (O(1)) but are slower for insertions in the middle (O(n))."
+    },
+    {
+      "id": "prog_057",
+      "subtopic": "13. Advanced Programming Concepts",
+      "question": "What is a 'Decorator' in Python?",
+      "options": ["A design for the GUI.", "A function that takes another function and extends its behavior without explicitly modifying it.", "A way to delete modules.", "A security key."],
+      "answer": 1,
+      "explanation": "Decorators use the '@' symbol and are a form of metaprogramming."
+    },
+    {
+      "id": "prog_058",
+      "subtopic": "6. Input / Output Handling",
+      "question": "In C++, which object is used for standard error output?",
+      "options": ["cout", "cin", "cerr", "clog"],
+      "answer": 2,
+      "explanation": "cerr is used for errors and is usually unbuffered, so the output appears immediately."
+    },
+    {
+      "id": "prog_059",
+      "subtopic": "15. Debugging, Testing & Optimization",
+      "question": "What is a 'Breakpoint'?",
+      "options": ["Where the computer breaks.", "An intentional stopping point in the code where the debugger pauses execution for inspection.", "The end of a function.", "A syntax error."],
+      "answer": 1,
+      "explanation": "Breakpoints allow developers to inspect variables and the call stack at a specific line."
+    },
+    {
+      "id": "prog_060",
+      "subtopic": "16. Software Development Practices",
+      "question": "What is 'Version Control' (e.g., Git) primarily used for?",
+      "options": ["Tracking time spent coding.", "Managing changes to the source code over time, allowing for collaboration and rollbacks.", "Encrypting the source code.", "Formatting the code automatically."],
+      "answer": 1,
+      "explanation": "Git is essential for team development and maintaining a history of the project."
+    },
+    {
+      "id": "prog_061",
+      "subtopic": "9. Object-Oriented Programming (OOP)",
+      "question": "What is an 'Interface' in Java?",
+      "options": ["The physical screen.", "A reference type that can only contain constant declarations and abstract methods (before Java 8).", "A private class.", "A type of loop."],
+      "answer": 1,
+      "explanation": "Interfaces define a contract that classes must implement, enabling multiple inheritance of types."
+    },
+    {
+      "id": "prog_062",
+      "subtopic": "10. Memory Management Concepts",
+      "question": "What is 'Reference Counting'?",
+      "options": ["Counting the number of variables.", "A memory management technique where the system tracks how many references exist to an object and deletes it when the count reaches zero.", "A type of sorting algorithm.", "A way to speed up addition."],
+      "answer": 1,
+      "explanation": "Python uses reference counting along with a cycle detector for garbage collection."
+    },
+    {
+      "id": "prog_063",
+      "subtopic": "4. Control Structures",
+      "question": "In Python, which keyword is used to handle an exception?",
+      "options": ["catch", "except", "handle", "rescue"],
+      "answer": 1,
+      "explanation": "Python uses try-except blocks."
+    },
+    {
+      "id": "prog_064",
+      "subtopic": "13. Advanced Programming Concepts",
+      "question": "What are 'Generics' in Java (or 'Templates' in C++)?",
+      "options": ["General classes for any program.", "A way to write code that can work with different data types while maintaining type safety.", "A type of security encryption.", "A method to compress files."],
+      "answer": 1,
+      "explanation": "For example, ArrayList<String> ensures that only strings can be added to the list."
+    },
+    {
+      "id": "prog_065",
+      "subtopic": "7. Strings & Text Processing",
+      "question": "How do you concatenate two strings in Python?",
+      "options": ["Using the '+' operator.", "Using the 'concat()' method.", "Using the 'merge()' keyword.", "By putting them in the same variable."],
+      "answer": 0,
+      "explanation": "Example: 'Hello ' + 'World'."
+    },
+    {
+      "id": "prog_066",
+      "subtopic": "11. Exception & Error Handling",
+      "question": "What is a 'Checked Exception' example in Java?",
+      "options": ["NullPointerException", "ArithmeticException", "IOException", "ArrayIndexOutOfBoundsException"],
+      "answer": 2,
+      "explanation": "IOException is checked; the compiler forces you to handle it."
+    },
+    {
+      "id": "prog_067",
+      "subtopic": "5. Functions / Methods",
+      "question": "What is 'Variable Scope'?",
+      "options": ["The size of the variable.", "The region of the program where a variable is accessible.", "The type of the variable.", "How long it takes to create a variable."],
+      "answer": 1,
+      "explanation": "Local variables are only available inside their function, while global variables are available everywhere."
+    },
+    {
+      "id": "prog_068",
+      "subtopic": "2. Data Types & Variables",
+      "question": "In C++, what does 'void*' represent?",
+      "options": ["A pointer to a void (empty) space.", "A generic pointer that can point to data of any type.", "A null pointer.", "An error in the code."],
+      "answer": 1,
+      "explanation": "void pointers provide a way to handle data without knowing its specific type until cast."
+    },
+    {
+      "id": "prog_069",
+      "subtopic": "12. Modules, Packages & Libraries",
+      "question": "In C++, which preprocessor directive is used to include a standard library?",
+      "options": ["import", "using", "#include", "require"],
+      "answer": 2,
+      "explanation": "For example, #include <iostream>."
+    },
+    {
+      "id": "prog_070",
+      "subtopic": "3. Operators & Expressions",
+      "question": "What is the 'Ternary Operator' (?:)?",
+      "options": ["A three-way loop.", "A shorthand for an if-else statement that returns a value.", "An operator for three variables.", "A type of bitwise shift."],
+      "answer": 1,
+      "explanation": "Example: (a > b) ? a : b; returns the larger of the two."
+    },
+    {
+      "id": "prog_071",
+      "subtopic": "9. Object-Oriented Programming (OOP)",
+      "question": "What is 'Dynamic Binding' (or Late Binding)?",
+      "options": ["Binding a variable at compile time.", "Connecting to a database at runtime.", "The process where the method to be executed is decided at runtime based on the actual object type.", "A type of memory allocation."],
+      "answer": 2,
+      "explanation": "Dynamic binding is essential for polymorphism."
+    },
+    {
+      "id": "prog_072",
+      "subtopic": "10. Memory Management Concepts",
+      "question": "In C++, what is the difference between 'delete' and 'delete[]'?",
+      "options": ["'delete' is for objects; 'delete[]' is for pointers.", "'delete' is for a single object; 'delete[]' is for an array of objects.", "'delete[]' is newer.", "No difference."],
+      "answer": 1,
+      "explanation": "Using 'delete' on an array results in undefined behavior (usually only the first element's destructor is called)."
+    },
+    {
+      "id": "prog_073",
+      "subtopic": "13. Advanced Programming Concepts",
+      "question": "What is 'Metaprogramming'?",
+      "options": ["Programming for the Facebook company.", "Writing programs that can treat other programs (or themselves) as their data.", "Writing very large programs.", "A type of assembly language."],
+      "answer": 1,
+      "explanation": "Templates in C++ and decorators/metaclasses in Python are examples of metaprogramming."
+    },
+    {
+      "id": "prog_074",
+      "subtopic": "1. Programming Fundamentals",
+      "question": "Which of the following is a characteristic of 'Procedural' programming?",
+      "options": ["Focused on data objects.", "Focused on a sequence of steps or procedures to perform a task.", "Uses only global variables.", "Does not support loops."],
+      "answer": 1,
+      "explanation": "Languages like C follow the procedural paradigm."
+    },
+    {
+      "id": "prog_075",
+      "subtopic": "8. Arrays & Collections",
+      "question": "What is the time complexity of searching for an element in a 'HashSet'?",
+      "options": ["O(1) average", "O(n)", "O(log n)", "O(n^2)"],
+      "answer": 0,
+      "explanation": "Hashing provides nearly instant lookup."
+    },
+    {
+      "id": "prog_076",
+      "subtopic": "14. Concurrency & Parallelism (Introductory)",
+      "question": "What is a 'Race Condition'?",
+      "options": ["A contest between two developers.", "When the final outcome depends on the timing or sequence of thread execution.", "When the CPU is overclocked.", "A type of loop."],
+      "answer": 1,
+      "explanation": "Race conditions are dangerous and can lead to corrupted data."
+    },
+    {
+      "id": "prog_077",
+      "subtopic": "2. Data Types & Variables",
+      "question": "What is 'Type Casting'?",
+      "options": ["Changing a variable's name.", "Converting a value of one data type to another (e.g., int to float).", "Deleting a variable.", "Assigning a value to a constant."],
+      "answer": 1,
+      "explanation": "Casting can be 'Implicit' (automatic) or 'Explicit' (manual)."
+    },
+    {
+      "id": "prog_078",
+      "subtopic": "6. Input / Output Handling",
+      "question": "What does 'EOF' stand for?",
+      "options": ["End of Function", "End of File", "Error of Format", "Every Object Found"],
+      "answer": 1,
+      "explanation": "EOF is a condition used to stop reading from a file or stream."
+    },
+    {
+      "id": "prog_079",
+      "subtopic": "11. Exception & Error Handling",
+      "question": "In Python, which block is used for code that might raise an error?",
+      "options": ["catch", "error", "try", "check"],
+      "answer": 2,
+      "explanation": "Python uses the try keyword."
+    },
+    {
+      "id": "prog_080",
+      "subtopic": "15. Debugging, Testing & Optimization",
+      "question": "What is 'Regression Testing'?",
+      "options": ["Testing older users.", "Re-running tests after code changes to ensure existing features still work.", "Testing only new features.", "Testing the database speed."],
+      "answer": 1,
+      "explanation": "Regression testing is vital to prevent 'side effects' when updating software."
+    },
+    {
+      "id": "prog_081",
+      "subtopic": "5. Functions / Methods",
+      "question": "What is 'Function Overriding'?",
+      "options": ["Giving two functions the same name in the same class.", "Redefining a base class method in a derived (child) class.", "Calling a function too many times.", "Deleting a function."],
+      "answer": 1,
+      "explanation": "Overriding allows a child class to provide a specific implementation for a method defined in its parent."
+    },
+    {
+      "id": "prog_082",
+      "subtopic": "7. Strings & Text Processing",
+      "question": "In Python, what does the 'join()' method do?",
+      "options": ["Connects to a database.", "Joins elements of an iterable (like a list) into a single string using a separator.", "Adds two integers.", "Combines two files."],
+      "answer": 1,
+      "explanation": "Example: ','.join(['a', 'b']) returns 'a,b'."
+    },
+    {
+      "id": "prog_083",
+      "subtopic": "9. Object-Oriented Programming (OOP)",
+      "question": "What is the 'this' keyword in Java and C++?",
+      "options": ["A reference to the current object instance.", "A keyword for the parent class.", "A way to declare static variables.", "A pointer to the kernel."],
+      "answer": 0,
+      "explanation": "This is used to distinguish between instance variables and parameters with the same name."
+    },
+    {
+      "id": "prog_084",
+      "subtopic": "12. Modules, Packages & Libraries",
+      "question": "In Java, what is a 'Package'?",
+      "options": ["A physical box for the computer.", "A namespace that organizes a set of related classes and interfaces.", "A compiled .exe file.", "A type of variable."],
+      "answer": 1,
+      "explanation": "Packages help avoid naming conflicts and control access."
+    },
+    {
+      "id": "prog_085",
+      "subtopic": "3. Operators & Expressions",
+      "question": "What is the 'Bitwise NOT' operator (~)?",
+      "options": ["A logical NOT.", "An operator that inverts all the bits of its operand.", "A way to delete bits.", "A shift operator."],
+      "answer": 1,
+      "explanation": "It changes 0 to 1 and 1 to 0 at the binary level."
+    },
+    {
+      "id": "prog_086",
+      "subtopic": "4. Control Structures",
+      "question": "What is an 'Infinite Loop'?",
+      "options": ["A loop that runs forever because the exit condition is never met.", "A loop that is very long.", "A loop with no code inside.", "A loop that only runs once."],
+      "answer": 0,
+      "explanation": "Infinite loops can cause programs to hang and consume 100% CPU."
+    },
+    {
+      "id": "prog_087",
+      "subtopic": "10. Memory Management Concepts",
+      "question": "What is 'Reference Type' in Java?",
+      "options": ["A variable that stores a reference (address) to an object, rather than the data itself.", "A type of math variable.", "A variable stored in the CPU registers.", "A constant."],
+      "answer": 0,
+      "explanation": "In Java, objects are always handled via references."
+    },
+    {
+      "id": "prog_088",
+      "subtopic": "13. Advanced Programming Concepts",
+      "question": "What is 'Lazy Evaluation'?",
+      "options": ["Programming while tired.", "Delaying the evaluation of an expression until its value is actually needed.", "A type of compiler error.", "Using fewer lines of code."],
+      "answer": 1,
+      "explanation": "This can improve performance and allow for infinite data structures (like in Haskell or Python generators)."
+    },
+    {
+      "id": "prog_089",
+      "subtopic": "16. Software Development Practices",
+      "question": "What is 'Refactoring'?",
+      "options": ["Adding new features.", "Restructuring existing code without changing its behavior to improve its internal quality.", "Rewriting the whole project from scratch.", "Testing on different browsers."],
+      "answer": 1,
+      "explanation": "Refactoring makes code cleaner and easier to maintain."
+    },
+    {
+      "id": "prog_090",
+      "subtopic": "2. Data Types & Variables",
+      "question": "In Python, which type represents a sequence of immutable objects?",
+      "options": ["List", "Dictionary", "Tuple", "Set"],
+      "answer": 2,
+      "explanation": "Tuples are like lists but cannot be modified."
+    },
+    {
+      "id": "prog_091",
+      "subtopic": "1. Programming Fundamentals",
+      "question": "What is 'Source Code'?",
+      "options": ["The code that runs on the CPU.", "The human-readable version of a program written in a programming language.", "The encrypted version of a program.", "The output of a program."],
+      "answer": 1,
+      "explanation": "Source code must be compiled or interpreted to be executed."
+    },
+    {
+      "id": "prog_092",
+      "subtopic": "5. Functions / Methods",
+      "question": "What is a 'Constructor'?",
+      "options": ["A person who builds the code.", "A special method used to initialize an object when it is created.", "A way to delete objects.", "A type of variable scope."],
+      "answer": 1,
+      "explanation": "Constructors set the initial state of an object."
+    },
+    {
+      "id": "prog_093",
+      "subtopic": "8. Arrays & Collections",
+      "question": "In C++, what is 'std::vector'?",
+      "options": ["A static array.", "A dynamic array that can grow in size.", "A mathematical vector for geometry.", "A type of pointer."],
+      "answer": 1,
+      "explanation": "Vectors are the standard resizable array in C++."
+    },
+    {
+      "id": "prog_094",
+      "subtopic": "14. Concurrency & Parallelism (Introductory)",
+      "question": "What is a 'Thread'?",
+      "options": ["A physical wire in the CPU.", "The smallest unit of execution within a process.", "A resizable array.", "A type of variable."],
+      "answer": 1,
+      "explanation": "Processes can contain multiple threads that run concurrently."
+    },
+    {
+      "id": "prog_095",
+      "subtopic": "3. Operators & Expressions",
+      "question": "What is the 'Identity' operator (is) in Python used for?",
+      "options": ["Checking if two values are equal.", "Checking if two variables point to the same object in memory.", "Checking the type of a variable.", "Updating a variable."],
+      "answer": 1,
+      "explanation": "x == y checks equality; x is y checks if they are the exact same instance."
+    },
+    {
+      "id": "prog_096",
+      "subtopic": "9. Object-Oriented Programming (OOP)",
+      "question": "What is 'Inheritance'?",
+      "options": ["Sharing a password between users.", "A mechanism where one class acquires the properties and behavior of another class.", "A type of database join.", "Deleting a parent class."],
+      "answer": 1,
+      "explanation": "Inheritance promotes code reuse and hierarchical relationships."
+    },
+    {
+      "id": "prog_097",
+      "subtopic": "10. Memory Management Concepts",
+      "question": "What is 'Static' memory allocation?",
+      "options": ["Memory allocated during program execution (runtime).", "Memory allocated by the compiler before the program runs.", "Memory that never changes.", "Memory stored on a USB drive."],
+      "answer": 1,
+      "explanation": "Static allocation is used for global variables and constants."
+    },
+    {
+      "id": "prog_098",
+      "subtopic": "6. Input / Output Handling",
+      "question": "In Python, which function is used to read input from the user?",
+      "options": ["read()", "input()", "get()", "scan()"],
+      "answer": 1,
+      "explanation": "input() always returns a string in Python 3."
+    },
+    {
+      "id": "prog_099",
+      "subtopic": "11. Exception & Error Handling",
+      "question": "What is a 'Runtime' error?",
+      "options": ["An error that prevents the code from compiling.", "An error that occurs while the program is running (e.g., division by zero).", "A spelling error in the code.", "An error in the hardware."],
+      "answer": 1,
+      "explanation": "Runtime errors are often called exceptions."
+    },
+    {
+      "id": "prog_100",
+      "subtopic": "15. Debugging, Testing & Optimization",
+      "question": "What is 'Static Analysis'?",
+      "options": ["Running the program and checking its speed.", "Examining the code without executing it to find bugs or security flaws.", "Asking a friend to read the code.", "A type of database query."],
+      "answer": 1,
+      "explanation": "Tools like Linters perform static analysis."
+    },
+    {
+        "id": "prog_101",
+        "subtopic": "10. Memory Management Concepts",
+        "question": "In C++, what is the purpose of the 'destructor'?",
+        "options": ["To delete the source code.", "To perform cleanup (like releasing memory or closing files) when an object is destroyed.", "To stop the program.", "To reset the CPU."],
+        "answer": 1,
+        "explanation": "Destructors are essential in C++ for preventing resource leaks."
+    },
+    {
+        "id": "prog_102",
+        "subtopic": "12. Modules, Packages & Libraries",
+        "question": "In Python, how do you install external libraries?",
+        "options": ["By copying files manually.", "Using a package manager like 'pip'.", "By downloading from the browser only.", "Python does not allow external libraries."],
+        "answer": 1,
+        "explanation": "Pip is the standard tool for managing Python packages."
+    },
+    {
+        "id": "prog_103",
+        "subtopic": "13. Advanced Programming Concepts",
+        "question": "What is an 'Inner Class' in Java?",
+        "options": ["A class hidden inside the JVM.", "A class defined within another class.", "A class with no methods.", "A type of private class."],
+        "answer": 1,
+        "explanation": "Inner classes are used to logically group classes that are only used in one place."
+    },
+    {
+        "id": "prog_104",
+        "subtopic": "14. Concurrency & Parallelism (Introductory)",
+        "question": "What is 'Parallelism'?",
+        "options": ["Running tasks one after another.", "Executing multiple tasks at the exact same time (usually on multiple CPU cores).", "Writing code in two languages.", "A type of loop."],
+        "answer": 1,
+        "explanation": "Parallelism is different from concurrency, which is managing multiple tasks at once (not necessarily simultaneously)."
+    },
+    {
+        "id": "prog_105",
+        "subtopic": "4. Control Structures",
+        "question": "Which keyword is used to skip the rest of a switch-case block?",
+        "options": ["stop", "exit", "break", "return"],
+        "answer": 2,
+        "explanation": "Break prevents the code from falling through into the next case."
+    },
+    {
+        "id": "prog_106",
+        "subtopic": "5. Functions / Methods",
+        "question": "What is a 'Higher-Order Function'?",
+        "options": ["A function that runs on a mainframe.", "A function that takes another function as an argument or returns a function.", "A function with many lines of code.", "A global function."],
+        "answer": 1,
+        "explanation": "Higher-order functions are a key part of functional programming (e.g., map, filter)."
+    },
+    {
+        "id": "prog_107",
+        "subtopic": "3. Operators & Expressions",
+        "question": "In Python, what is the result of '3' * 3?",
+        "options": ["9", "333", "Error", "NaN"],
+        "answer": 1,
+        "explanation": "Python supports string repetition using the '*' operator."
+    },
+    {
+        "id": "prog_108",
+        "subtopic": "7. Strings & Text Processing",
+        "question": "Which C++ header is needed to use the 'string' class?",
+        "options": ["#include <stdio.h>", "#include <iostream>", "#include <string>", "#include <cstring>"],
+        "answer": 2,
+        "explanation": "<string> is the C++ standard library header for string objects."
+    },
+    {
+        "id": "prog_109",
+        "subtopic": "15. Debugging, Testing & Optimization",
+        "question": "What is 'White Box' testing?",
+        "options": ["Testing without looking at the code.", "Testing based on knowledge of the internal logic and structure of the code.", "Testing on a white screen.", "A type of security audit."],
+        "answer": 1,
+        "explanation": "White box testing aims to cover all execution paths in the source code."
+    },
+    {
+        "id": "prog_110",
+        "subtopic": "16. Software Development Practices",
+        "question": "The 'KISS' principle stands for:",
+        "options": ["Keep It Simple, Stupid", "Keep It Safe and Secure", "Kernel Information Security System", "Keyboard Input Standard System"],
+        "answer": 0,
+        "explanation": "KISS promotes simplicity in design, as complex systems are harder to maintain and prone to bugs."
+    }
+  ]
+}

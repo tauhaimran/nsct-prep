@@ -1,0 +1,812 @@
+{
+  "questions": [
+    {
+      "id": "os_001",
+      "subtopic": "1. Introduction to Operating Systems",
+      "question": "What is the primary purpose of an Operating System as a 'Resource Manager'?",
+      "options": ["To compile high-level code into machine code.", "To manage hardware and software resources like CPU, memory, and I/O devices.", "To provide a GUI for the user.", "To act as a database for user files."],
+      "answer": 1,
+      "explanation": "The OS acts as a manager, ensuring that different programs and users don't conflict and that resources are used efficiently."
+    },
+    {
+      "id": "os_002",
+      "subtopic": "1. Introduction to Operating Systems",
+      "question": "What is the 'Kernel' in the context of an Operating System?",
+      "options": ["The user interface where commands are typed.", "The part of the OS that remains in memory and handles the most essential tasks.", "A type of hardware used for processing.", "A software used to install other applications."],
+      "answer": 1,
+      "explanation": "The Kernel is the core part of the OS that manages system resources and communication between hardware and software components."
+    },
+    {
+      "id": "os_003",
+      "subtopic": "2. Operating System Structures",
+      "question": "In a Microkernel architecture, what is the main advantage over a Monolithic kernel?",
+      "options": ["It is faster in execution.", "It is more modular and easier to extend, as most services run in user space.", "It places all services in one large program.", "It does not require system calls."],
+      "answer": 1,
+      "explanation": "Microkernels are more stable because a crash in a non-essential service (like a driver) does not crash the entire system."
+    },
+    {
+      "id": "os_004",
+      "subtopic": "2. Operating System Structures",
+      "question": "How does a 'System Call' differ from a regular function call?",
+      "options": ["System calls are faster.", "System calls are used to request a service from the OS kernel, requiring a switch to kernel mode.", "Regular function calls are only for C++.", "System calls do not return a value."],
+      "answer": 1,
+      "explanation": "System calls provide the interface between a running program and the operating system's privileged operations."
+    },
+    {
+      "id": "os_005",
+      "subtopic": "3. Process Management",
+      "question": "Which structure contains information about a process such as its state, program counter, and CPU registers?",
+      "options": ["Process Table", "Process Control Block (PCB)", "Inode Table", "Memory Block"],
+      "answer": 1,
+      "explanation": "The PCB is the data structure used by the OS to store all information needed to manage a specific process."
+    },
+    {
+      "id": "os_006",
+      "subtopic": "3. Process Management",
+      "question": "What happens during a 'Context Switch'?",
+      "options": ["The computer restarts.", "The CPU saves the state of the current process and loads the state of another process.", "The process is deleted from the disk.", "The user switches from GUI to CLI."],
+      "answer": 1,
+      "explanation": "Context switching allows for multitasking, but it introduces overhead because no useful work is done while the switch occurs."
+    },
+    {
+      "id": "os_007",
+      "subtopic": "4. CPU Scheduling",
+      "question": "Which scheduling algorithm is non-preemptive and serves processes in the order they arrive?",
+      "options": ["Round Robin", "Shortest Job First (Preemptive)", "First-Come, First-Served (FCFS)", "Priority Scheduling"],
+      "answer": 2,
+      "explanation": "FCFS is the simplest scheduling algorithm but can lead to the 'Convoy Effect' where short processes wait behind a long one."
+    },
+    {
+      "id": "os_008",
+      "subtopic": "4. CPU Scheduling",
+      "question": "In Round Robin scheduling, what happens if the time quantum is set to be extremely large?",
+      "options": ["The system becomes more responsive.", "It behaves like the FCFS algorithm.", "Deadlocks will occur frequently.", "Context switching overhead will increase."],
+      "answer": 1,
+      "explanation": "If the time quantum is larger than the longest burst time, no preemption occurs and it becomes FCFS."
+    },
+    {
+      "id": "os_009",
+      "subtopic": "5. Thread Management",
+      "question": "What is the primary difference between a 'Process' and a 'Thread'?",
+      "options": ["Threads are heavier than processes.", "Threads within the same process share the same memory space, while processes are isolated.", "A process cannot have more than one thread.", "Processes are managed by the hardware; threads by software."],
+      "answer": 1,
+      "explanation": "Threads are 'lightweight' because they share the heap and resources of their parent process, making communication faster."
+    },
+    {
+      "id": "os_010",
+      "subtopic": "5. Thread Management",
+      "question": "In a many-to-one multithreading model, what is the major disadvantage?",
+      "options": ["It uses too much memory.", "The entire process blocks if a thread makes a blocking system call.", "It is difficult to implement.", "It only works on single-core CPUs."],
+      "answer": 1,
+      "explanation": "Since all user threads map to a single kernel thread, if one blocks, the kernel stops the whole process."
+    },
+    {
+      "id": "os_011",
+      "subtopic": "6. Concurrency & Synchronization",
+      "question": "A 'Race Condition' occurs when:",
+      "options": ["Two processes run at different speeds.", "The outcome of execution depends on the specific order in which shared data is accessed.", "The CPU is too fast for the memory.", "A process waits too long for I/O."],
+      "answer": 1,
+      "explanation": "Race conditions happen when multiple threads/processes manipulate shared data concurrently without synchronization."
+    },
+    {
+      "id": "os_012",
+      "subtopic": "6. Concurrency & Synchronization",
+      "question": "What is a 'Semaphore' primarily used for in an OS?",
+      "options": ["To speed up the network.", "To provide a signaling mechanism for process synchronization and mutual exclusion.", "To store global variables.", "To manage the boot sequence."],
+      "answer": 1,
+      "explanation": "Semaphores are integer variables used as counters to control access to shared resources."
+    },
+    {
+      "id": "os_013",
+      "subtopic": "7. Deadlocks",
+      "question": "Which of the following is NOT one of the four necessary conditions for a deadlock (Coffman conditions)?",
+      "options": ["Mutual Exclusion", "Hold and Wait", "Preemption", "Circular Wait"],
+      "answer": 2,
+      "explanation": "The condition is actually 'No Preemption' (resources cannot be forcibly taken). If preemption is allowed, deadlocks can be broken."
+    },
+    {
+      "id": "os_014",
+      "subtopic": "7. Deadlocks",
+      "question": "What is the primary purpose of the 'Banker's Algorithm'?",
+      "options": ["To calculate bank interest.", "To prevent deadlocks by checking if a resource request leads to an unsafe state.", "To detect deadlocks after they happen.", "To schedule CPU tasks."],
+      "answer": 1,
+      "explanation": "Banker's Algorithm is used for Deadlock Avoidance by simulating the allocation and ensuring a 'Safe Sequence' exists."
+    },
+    {
+      "id": "os_015",
+      "subtopic": "8. Memory Management",
+      "question": "What is 'Paging' in memory management?",
+      "options": ["Writing data to a physical book.", "Breaking physical memory into fixed-sized blocks (frames) and logical memory into blocks (pages).", "A way to increase CPU speed.", "Sorting files on the hard drive."],
+      "answer": 1,
+      "explanation": "Paging eliminates external fragmentation by allowing a process's physical memory to be non-contiguous."
+    },
+    {
+      "id": "os_016",
+      "subtopic": "8. Memory Management",
+      "question": "What is 'Thrashing' in an operating system?",
+      "options": ["Deleting old files to save space.", "A state where the system spends more time swapping pages in and out than executing instructions.", "A physical error on the RAM chip.", "The process of defragmenting the hard drive."],
+      "answer": 1,
+      "explanation": "Thrashing usually occurs when the degree of multiprogramming is too high and the system lacks sufficient physical frames."
+    },
+    {
+      "id": "os_017",
+      "subtopic": "9. File System Management",
+      "question": "What does an 'Inode' represent in a Unix-style file system?",
+      "options": ["The name of the file.", "A data structure that stores all information about a file except its name and actual data.", "The password for the file.", "The physical location of the user."],
+      "answer": 1,
+      "explanation": "Inodes store metadata like permissions, owner, size, and pointers to the data blocks on disk."
+    },
+    {
+      "id": "os_018",
+      "subtopic": "9. File System Management",
+      "question": "Which file allocation method is most efficient for random (direct) access?",
+      "options": ["Contiguous Allocation", "Linked Allocation", "Indexed Allocation", "Sequential Allocation"],
+      "answer": 2,
+      "explanation": "Indexed allocation brings all pointers together in one block, allowing the OS to jump directly to any part of the file."
+    },
+    {
+      "id": "os_019",
+      "subtopic": "10. Secondary Storage Management",
+      "question": "Which disk scheduling algorithm serves requests in a way that minimizes head movement by always choosing the nearest request?",
+      "options": ["FCFS", "SSTF (Shortest Seek Time First)", "SCAN", "LOOK"],
+      "answer": 1,
+      "explanation": "SSTF reduces seek time significantly compared to FCFS, but it can lead to 'starvation' of distant requests."
+    },
+    {
+      "id": "os_020",
+      "subtopic": "10. Secondary Storage Management",
+      "question": "Why is the SCAN algorithm often called the 'Elevator Algorithm'?",
+      "options": ["Because it moves files up and down.", "Because the disk arm moves from one end of the disk to the other, serving requests along the way, just like an elevator.", "Because it only works on high-rise servers.", "Because it is very fast."],
+      "answer": 1,
+      "explanation": "SCAN provides a more uniform wait time than SSTF by traversing the entire disk surface in a sweep."
+    },
+    {
+      "id": "os_021",
+      "subtopic": "11. Input / Output Systems",
+      "question": "What is 'DMA' (Direct Memory Access)?",
+      "options": ["A way for the user to access RAM.", "A feature that allows an I/O device to send or receive data directly to/from main memory without involving the CPU for every byte.", "A type of hard drive.", "A security protocol for memory."],
+      "answer": 1,
+      "explanation": "DMA improves performance by freeing the CPU to do other work while large blocks of data are transferred."
+    },
+    {
+      "id": "os_022",
+      "subtopic": "11. Input / Output Systems",
+      "question": "What is the purpose of 'Spooling'?",
+      "options": ["To encrypt data.", "To act as a buffer for data intended for slow devices like printers, allowing the CPU to continue other tasks.", "To speed up the mouse pointer.", "To manage the system clock."],
+      "answer": 1,
+      "explanation": "Simultaneous Peripheral Operations On-Line (Spooling) prevents slow devices from holding up the entire system."
+    },
+    {
+      "id": "os_023",
+      "subtopic": "12. Protection & Security",
+      "question": "What is the 'Principle of Least Privilege'?",
+      "options": ["Giving all users admin rights.", "Assigning a user or process only the minimum level of access required to perform its task.", "Encrypting all files on the system.", "Hiring only one security expert."],
+      "answer": 1,
+      "explanation": "This principle limits the potential damage from a compromised account or a bug in a program."
+    },
+    {
+      "id": "os_024",
+      "subtopic": "12. Protection & Security",
+      "question": "Which of the following is a 'Trap Door' (or Backdoor) in security?",
+      "options": ["A physical lock on the server room.", "A hidden entry point into software that bypasses normal security checks.", "A type of firewall.", "A fast way to delete files."],
+      "answer": 1,
+      "explanation": "Trap doors are often left by developers for maintenance but can be exploited by attackers if discovered."
+    },
+    {
+      "id": "os_025",
+      "subtopic": "3. Process Management",
+      "question": "A process that has finished execution but still has an entry in the process table is called a:",
+      "options": ["Orphan Process", "Zombie Process", "Daemon Process", "Child Process"],
+      "answer": 1,
+      "explanation": "A zombie process waits for its parent to read its exit status. If the parent doesn't, the entry remains."
+    },
+    {
+      "id": "os_026",
+      "subtopic": "4. CPU Scheduling",
+      "question": "Which metric measures the time from the submission of a process until its completion?",
+      "options": ["Waiting Time", "Response Time", "Turnaround Time", "Throughput"],
+      "answer": 2,
+      "explanation": "Turnaround Time = Completion Time - Arrival Time."
+    },
+    {
+      "id": "os_027",
+      "subtopic": "8. Memory Management",
+      "question": "What is 'Internal Fragmentation'?",
+      "options": ["Unused space between files on a disk.", "Unused memory within an allocated memory block or page.", "Memory that is stolen by a virus.", "When the RAM is physically broken."],
+      "answer": 1,
+      "explanation": "This happens in fixed-partitioning or paging when a process doesn't perfectly fill the block assigned to it."
+    },
+    {
+      "id": "os_028",
+      "subtopic": "6. Concurrency & Synchronization",
+      "question": "The 'Dining Philosophers Problem' is a classic example used to illustrate:",
+      "options": ["CPU Scheduling", "Disk Defragmentation", "Deadlock and Resource Contention", "Memory Paging"],
+      "answer": 2,
+      "explanation": "It demonstrates the challenges of sharing limited resources among several processes without causing deadlock or starvation."
+    },
+    {
+      "id": "os_029",
+      "subtopic": "2. Operating System Structures",
+      "question": "A 'Layered' approach to OS design is characterized by:",
+      "options": ["All code in one layer.", "Dividing the OS into a hierarchy where each layer uses services only from the layer below it.", "Using only one programming language.", "Requiring a hardware restart to change settings."],
+      "answer": 1,
+      "explanation": "Layering simplifies debugging and system verification."
+    },
+    {
+      "id": "os_030",
+      "subtopic": "12. Protection & Security",
+      "question": "What is the difference between 'User Mode' and 'Kernel Mode'?",
+      "options": ["No difference.", "User Mode is for applications; Kernel Mode is privileged and allows direct hardware access.", "Kernel mode is slower.", "User mode is only for Linux."],
+      "answer": 1,
+      "explanation": "This 'Dual-Mode' operation protects the OS from malfunctioning or malicious applications."
+    },
+    {
+        "id": "os_031",
+        "subtopic": "8. Memory Management",
+        "question": "Which page replacement algorithm suffers from Belady's Anomaly?",
+        "options": ["LRU (Least Recently Used)", "Optimal Page Replacement", "FIFO (First-In, First-Out)", "MRU (Most Recently Used)"],
+        "answer": 2,
+        "explanation": "Belady's Anomaly is a phenomenon where increasing the number of page frames results in an increase in the number of page faults for certain access patterns."
+    },
+    {
+        "id": "os_032",
+        "subtopic": "3. Process Management",
+        "question": "In the five-state process model, which state follows the 'Running' state if the process is preempted by the scheduler?",
+        "options": ["Ready", "Waiting", "Terminated", "New"],
+        "answer": 0,
+        "explanation": "If a process is preempted (e.g., its time slice expires), it moves from Running back to the Ready queue."
+    },
+    {
+        "id": "os_033",
+        "subtopic": "6. Concurrency & Synchronization",
+        "question": "What is a 'Monitor' in the context of process synchronization?",
+        "options": ["A hardware screen.", "A high-level synchronization construct that allows threads to have both mutual exclusion and the ability to wait for a condition.", "A system that logs CPU usage.", "A type of kernel thread."],
+        "answer": 1,
+        "explanation": "Monitors encapsulate shared data and the procedures that operate on it, ensuring only one thread executes inside the monitor at a time."
+    },
+    {
+        "id": "os_034",
+        "subtopic": "7. Deadlocks",
+        "question": "The 'Resource Allocation Graph' is used to:",
+        "options": ["Schedule CPU tasks.", "Visually detect deadlocks by looking for cycles in the graph (in systems with single-instance resources).", "Allocate memory pages.", "Map files to disk sectors."],
+        "answer": 1,
+        "explanation": "If a cycle exists in a resource allocation graph where each resource has only one instance, a deadlock has occurred."
+    },
+    {
+        "id": "os_035",
+        "subtopic": "10. Secondary Storage Management",
+        "question": "What is 'Disk Mirroring' (RAID 1) used for?",
+        "options": ["To make the disk look pretty.", "To provide data redundancy by writing the same data to two separate disks.", "To increase the storage capacity.", "To speed up the internet connection."],
+        "answer": 1,
+        "explanation": "RAID 1 ensures that if one disk fails, the data is still available on the other disk."
+    },
+    {
+        "id": "os_036",
+        "subtopic": "1. Introduction to Operating Systems",
+        "question": "Which of the following is a 'Hard Real-Time' system requirement?",
+        "options": ["A task should ideally finish fast.", "A task must absolutely complete within a strict deadline or the system fails.", "The OS must have a GUI.", "The system must support multithreading."],
+        "answer": 1,
+        "explanation": "Hard real-time systems are used in critical applications like flight control or medical devices where timing is life-or-death."
+    },
+    {
+        "id": "os_037",
+        "subtopic": "4. CPU Scheduling",
+        "question": "Which scheduling algorithm is most likely to cause 'Starvation' for long-running processes?",
+        "options": ["FCFS", "Round Robin", "Shortest Job First (SJF)", "Multilevel Queue"],
+        "answer": 2,
+        "explanation": "In SJF, if short processes keep arriving, a long process may never get the CPU."
+    },
+    {
+        "id": "os_038",
+        "subtopic": "11. Input / Output Systems",
+        "question": "What is 'Cycle Stealing' in the context of DMA?",
+        "options": ["A virus stealing CPU time.", "The DMA controller taking control of the system bus for one or more cycles, briefly pausing the CPU.", "A way to hack a computer.", "A method to delete memory."],
+        "answer": 1,
+        "explanation": "The CPU and DMA controller share the bus; cycle stealing is how the DMA controller transfers data without stopping the CPU entirely."
+    },
+    {
+        "id": "os_039",
+        "subtopic": "8. Memory Management",
+        "question": "What is the function of the 'Translation Lookaside Buffer' (TLB)?",
+        "options": ["To store user passwords.", "To act as a high-speed cache for page table entries to speed up virtual-to-physical address translation.", "To manage the swap file on the disk.", "To encrypt the RAM."],
+        "answer": 1,
+        "explanation": "Without a TLB, every memory access would require two hits to the physical RAM (one for the page table, one for the data)."
+    },
+    {
+        "id": "os_040",
+        "subtopic": "9. File System Management",
+        "question": "What is 'Journaling' in a file system?",
+        "options": ["A way to write a diary.", "A technique that logs changes to a journal before committing them to the main file system to ensure data integrity after a crash.", "Compressing all files automatically.", "Hiding files from the administrator."],
+        "answer": 1,
+        "explanation": "Journaling systems (like NTFS or ext4) can recover much faster and more reliably after an unexpected power loss."
+    },
+    {
+      "id": "os_041",
+      "subtopic": "1. Introduction to Operating Systems",
+      "question": "Which of the following is NOT a primary task of an Operating System?",
+      "options": ["Memory management", "Providing a compiler for C++", "Device management", "Process management"],
+      "answer": 1,
+      "explanation": "Compilers are application software/tools, not a core function of the OS itself."
+    },
+    {
+      "id": "os_042",
+      "subtopic": "1. Introduction to Operating Systems",
+      "question": "A 'Time-sharing' system is an extension of which concept?",
+      "options": ["Batch processing", "Multiprogramming", "Parallel processing", "Distributed processing"],
+      "answer": 1,
+      "explanation": "Time-sharing allows multiple users to interact with a computer simultaneously by switching the CPU between them rapidly."
+    },
+    {
+      "id": "os_043",
+      "subtopic": "2. Operating System Structures",
+      "question": "The 'Shell' is best described as:",
+      "options": ["The core of the OS.", "A hardware component.", "The user interface that interprets commands and executes programs.", "The memory management unit."],
+      "answer": 2,
+      "explanation": "The shell wraps around the kernel to provide user interaction."
+    },
+    {
+      "id": "os_044",
+      "subtopic": "2. Operating System Structures",
+      "question": "Which OS structure is considered a collection of objects, where each object has a set of methods and data?",
+      "options": ["Monolithic", "Object-oriented structure", "Layered", "Microkernel"],
+      "answer": 1,
+      "explanation": "Modern OS designs often use OO principles to manage complex components like device drivers."
+    },
+    {
+      "id": "os_045",
+      "subtopic": "3. Process Management",
+      "question": "When a process is in the 'Ready' state, it is:",
+      "options": ["Executing on the CPU.", "Waiting for I/O completion.", "In main memory, waiting to be assigned to a processor.", "Stored on the disk as an executable."],
+      "answer": 2,
+      "explanation": "Ready processes are fully prepared to run but are waiting for the scheduler to give them CPU time."
+    },
+    {
+      "id": "os_046",
+      "subtopic": "3. Process Management",
+      "question": "What is the primary goal of the 'Short-term Scheduler' (CPU Scheduler)?",
+      "options": ["To select which process should be brought into main memory.", "To select which process should execute next from the ready queue.", "To manage the swap space on disk.", "To handle system interrupts."],
+      "answer": 1,
+      "explanation": "The short-term scheduler makes decisions every few milliseconds."
+    },
+    {
+      "id": "os_047",
+      "subtopic": "4. CPU Scheduling",
+      "question": "In 'Priority Scheduling', what is the most common way to solve the problem of 'Starvation'?",
+      "options": ["Decreasing the priority.", "Aging (gradually increasing the priority of processes that wait for a long time).", "Restarting the computer.", "Using a larger time quantum."],
+      "answer": 1,
+      "explanation": "Aging ensures that even the lowest-priority process will eventually become high-priority and execute."
+    },
+    {
+      "id": "os_048",
+      "subtopic": "4. CPU Scheduling",
+      "question": "Multilevel Feedback Queue scheduling is unique because it allows:",
+      "options": ["Only one queue.", "Processes to move between different queues based on their behavior (e.g., CPU-bound vs I/O-bound).", "No preemption.", "Manual scheduling by the user."],
+      "answer": 1,
+      "explanation": "This provides the most flexible scheduling by adapting to the process's needs."
+    },
+    {
+      "id": "os_049",
+      "subtopic": "5. Thread Management",
+      "question": "Which multithreading model maps many user-level threads to many kernel-level threads?",
+      "options": ["One-to-One", "Many-to-One", "Many-to-Many", "Two-to-Two"],
+      "answer": 2,
+      "explanation": "The Many-to-Many model provides the best balance of flexibility and performance."
+    },
+    {
+      "id": "os_050",
+      "subtopic": "5. Thread Management",
+      "question": "In Java, how are threads typically created?",
+      "options": ["Using system calls directly.", "By extending the Thread class or implementing the Runnable interface.", "By writing a new main function.", "Threads are created automatically by the OS."],
+      "answer": 1,
+      "explanation": "Java provides high-level abstractions for thread management in its standard library."
+    },
+    {
+      "id": "os_051",
+      "subtopic": "6. Concurrency & Synchronization",
+      "question": "A 'Critical Section' is a part of the program where:",
+      "options": ["Errors occur frequently.", "Shared resources are accessed.", "The program terminates.", "Mathematical calculations are done."],
+      "answer": 1,
+      "explanation": "To avoid race conditions, only one process should be in its critical section at a time."
+    },
+    {
+      "id": "os_052",
+      "subtopic": "6. Concurrency & Synchronization",
+      "question": "What is the primary difference between a 'Mutex' and a 'Binary Semaphore'?",
+      "options": ["They are identical.", "A Mutex has an owner; only the thread that locked it can unlock it.", "Semaphores are faster.", "Mutex is only for hardware."],
+      "answer": 1,
+      "explanation": "Ownership is the key conceptual difference, though they are technically similar."
+    },
+    {
+      "id": "os_053",
+      "subtopic": "7. Deadlocks",
+      "question": "If the resources in a system have multiple instances, a cycle in the Resource Allocation Graph means:",
+      "options": ["A deadlock exists.", "A deadlock might exist, but it is not guaranteed.", "There is no deadlock.", "The system is in a safe state."],
+      "answer": 1,
+      "explanation": "Cycles are necessary but not sufficient for deadlock when resources have multiple instances."
+    },
+    {
+      "id": "os_054",
+      "subtopic": "7. Deadlocks",
+      "question": "Which deadlock handling strategy is most commonly used by modern Operating Systems (like Linux or Windows)?",
+      "options": ["Deadlock Prevention", "Deadlock Avoidance", "The Ostrich Algorithm (Ignore the problem)", "Deadlock Recovery"],
+      "answer": 2,
+      "explanation": "Deadlock management is expensive; most general-purpose OSs assume deadlocks are rare and rely on the user to kill frozen processes."
+    },
+    {
+      "id": "os_055",
+      "subtopic": "8. Memory Management",
+      "question": "What is 'Logical Address' space?",
+      "options": ["The actual hardware address in RAM.", "The address generated by the CPU from the perspective of the program.", "The address of the hard drive.", "The IP address of the machine."],
+      "answer": 1,
+      "explanation": "Logical addresses are mapped to Physical addresses by the Memory Management Unit (MMU)."
+    },
+    {
+      "id": "os_056",
+      "subtopic": "8. Memory Management",
+      "question": "The 'First-fit' allocation algorithm chooses:",
+      "options": ["The largest hole available.", "The smallest hole that is big enough.", "The first hole it finds that is big enough.", "A random hole."],
+      "answer": 2,
+      "explanation": "First-fit is generally faster than Best-fit or Worst-fit."
+    },
+    {
+      "id": "os_057",
+      "subtopic": "9. File System Management",
+      "question": "In a directory structure, a 'Hard Link' is:",
+      "options": ["A shortcut to the file name.", "Another name for the same Inode (the same actual file on disk).", "A file that is difficult to delete.", "A link to a different computer."],
+      "answer": 1,
+      "explanation": "Deleting the original file name does not delete the data if a hard link still exists."
+    },
+    {
+      "id": "os_058",
+      "subtopic": "9. File System Management",
+      "question": "Which of the following is a disadvantage of 'Contiguous Allocation'?",
+      "options": ["It is slow for sequential access.", "It causes external fragmentation as files are created and deleted.", "It uses too much metadata.", "It only works with small files."],
+      "answer": 1,
+      "explanation": "Finding a single large block of free space becomes difficult over time."
+    },
+    {
+      "id": "os_059",
+      "subtopic": "10. Secondary Storage Management",
+      "question": "What is 'C-SCAN' (Circular SCAN) intended to provide?",
+      "options": ["Maximum speed.", "A more uniform wait time than standard SCAN by only serving requests in one direction.", "Better security.", "Encryption for the hard drive."],
+      "answer": 1,
+      "explanation": "C-SCAN returns to the beginning of the disk immediately after reaching the end, without serving requests on the return trip."
+    },
+    {
+      "id": "os_060",
+      "subtopic": "10. Secondary Storage Management",
+      "question": "What is the primary unit of storage handled by the OS on a hard drive?",
+      "options": ["Bit", "Byte", "Sector", "Block"],
+      "answer": 3,
+      "explanation": "The OS groups sectors into logical 'Blocks' for more efficient file management."
+    },
+    {
+      "id": "os_061",
+      "subtopic": "11. Input / Output Systems",
+      "question": "Which mechanism allows the OS to handle a device that doesn't have a constant data rate?",
+      "options": ["Buffering", "Spooling", "Paging", "Segmentation"],
+      "answer": 0,
+      "explanation": "Buffers hold data temporarily to smooth out the differences in speed between producers and consumers of data."
+    },
+    {
+      "id": "os_062",
+      "subtopic": "11. Input / Output Systems",
+      "question": "What is a 'Device Driver'?",
+      "options": ["A person who fixes computers.", "Software that provides a uniform interface for the kernel to communicate with a specific piece of hardware.", "A cable used to connect a printer.", "A type of CPU."],
+      "answer": 1,
+      "explanation": "Drivers translate general OS commands into the specific instructions the hardware understands."
+    },
+    {
+      "id": "os_063",
+      "subtopic": "12. Protection & Security",
+      "question": "What is an 'Access Control List' (ACL)?",
+      "options": ["A list of people who can enter the server room.", "A table that lists the permissions associated with a system object (file/folder) for various users.", "A type of password.", "A method for faster boot times."],
+      "answer": 1,
+      "explanation": "ACLs define who can Read, Write, or Execute specific files."
+    },
+    {
+      "id": "os_064",
+      "subtopic": "12. Protection & Security",
+      "question": "A 'Logic Bomb' is a type of malware that:",
+      "options": ["Explodes the hardware.", "Triggers a malicious action when a certain logical condition is met (like a specific date).", "Deletes only the logic of the code.", "Sends spam emails."],
+      "answer": 1,
+      "explanation": "Logic bombs are often planted by insiders to execute after they leave the company."
+    },
+    {
+      "id": "os_065",
+      "subtopic": "3. Process Management",
+      "question": "What is the 'init' process in Unix-based systems?",
+      "options": ["A process that deletes files.", "The first process started by the kernel, acting as the parent of all other processes.", "A process used for encryption.", "A hardware diagnostic tool."],
+      "answer": 1,
+      "explanation": "Process ID 1 (init/systemd) is the ancestor of all processes in the system."
+    },
+    {
+      "id": "os_066",
+      "subtopic": "4. CPU Scheduling",
+      "question": "Which of the following describes the 'Convoy Effect'?",
+      "options": ["Many short processes waiting for one long CPU-bound process to finish.", "Processes running in parallel on different CPUs.", "The CPU switching too fast between tasks.", "A type of deadlock."],
+      "answer": 0,
+      "explanation": "This is a major drawback of the FCFS scheduling algorithm."
+    },
+    {
+      "id": "os_067",
+      "subtopic": "8. Memory Management",
+      "question": "What is 'Virtual Memory'?",
+      "options": ["Memory stored in the cloud.", "A technique that allows the execution of processes that are not completely in main memory.", "A fast type of RAM.", "Memory used by virtual reality apps."],
+      "answer": 1,
+      "explanation": "Virtual memory abstracts the physical RAM into a large, contiguous space for the programmer, using the disk as an extension."
+    },
+    {
+      "id": "os_068",
+      "subtopic": "6. Concurrency & Synchronization",
+      "question": "What is a 'Spinlock'?",
+      "options": ["A lock that spins the disk.", "A synchronization mechanism where a process loops continuously ('spins') while waiting for a lock to become available.", "A type of crash.", "A method to delete threads."],
+      "answer": 1,
+      "explanation": "Spinlocks are efficient for very short wait times as they avoid the overhead of context switching."
+    },
+    {
+      "id": "os_069",
+      "subtopic": "9. File System Management",
+      "question": "What is 'File Allocation Table' (FAT)?",
+      "options": ["A table of employee salaries.", "A file system architecture that uses a table to track which clusters on the disk belong to which file.", "A way to make files smaller.", "A type of hard drive cable."],
+      "answer": 1,
+      "explanation": "FAT is one of the simplest file systems, widely used for USB drives."
+    },
+    {
+      "id": "os_070",
+      "subtopic": "12. Protection & Security",
+      "question": "What does 'Authentication' verify?",
+      "options": ["What a user is allowed to do.", "The identity of the user (e.g., via username/password).", "The speed of the network.", "The integrity of the file system."],
+      "answer": 1,
+      "explanation": "Authentication is 'Who are you?'; Authorization is 'What can you do?'"
+    },
+    {
+        "id": "os_071",
+        "subtopic": "3. Process Management",
+        "question": "Which of the following operations can only be performed by the OS in Kernel Mode?",
+        "options": ["Adding two integers", "Modifying the page table", "Printing a string to the console via a library function", "Allocating a small array in the heap"],
+        "answer": 1,
+        "explanation": "Access to hardware structures like the Page Table or the Interrupt Vector Table is strictly restricted to Kernel Mode for security."
+    },
+    {
+        "id": "os_072",
+        "subtopic": "8. Memory Management",
+        "question": "In the context of 'Segmentation', what is the role of the 'Segment Table'?",
+        "options": ["To store the file names.", "To map 2D user-defined addresses (segment number, offset) into 1D physical addresses.", "To count the number of segments.", "To sort segments by size."],
+        "answer": 1,
+        "explanation": "Segments represent logical units like the Stack, Code, or Heap, unlike Pages which are fixed-sized blocks."
+    },
+    {
+        "id": "os_073",
+        "subtopic": "4. CPU Scheduling",
+        "question": "What is 'Response Time'?",
+        "options": ["The total time a process spends in the system.", "The time from the submission of a request until the first response is produced.", "The time the CPU was idle.", "The speed of the keyboard."],
+        "answer": 1,
+        "explanation": "Response time is crucial for interactive systems (like a UI) where the user expects immediate feedback."
+    },
+    {
+        "id": "os_074",
+        "subtopic": "6. Concurrency & Synchronization",
+        "question": "What is the 'Bounded Buffer' problem also known as?",
+        "options": ["The Reader-Writer Problem", "The Producer-Consumer Problem", "The Dining Philosophers Problem", "The Sleeping Barber Problem"],
+        "answer": 1,
+        "explanation": "It describes the synchronization needed between a producer (adding to a buffer) and a consumer (removing from it)."
+    },
+    {
+        "id": "os_075",
+        "subtopic": "10. Secondary Storage Management",
+        "question": "Which RAID level provides no redundancy but improves performance through 'Striping'?",
+        "options": ["RAID 0", "RAID 1", "RAID 5", "RAID 10"],
+        "answer": 0,
+        "explanation": "RAID 0 splits data across disks to increase speed, but if one disk fails, all data is lost."
+    },
+    {
+        "id": "os_076",
+        "subtopic": "7. Deadlocks",
+        "question": "What is 'Deadlock Detection'?",
+        "options": ["A way to stop deadlocks from happening.", "The process of examining the system state to determine if a deadlock has occurred and identifying the involved processes.", "Deleting processes at random.", "Preventing multiple users from logging in."],
+        "answer": 1,
+        "explanation": "Detection algorithms (like the Wait-for Graph) are used when prevention/avoidance is not implemented."
+    },
+    {
+        "id": "os_077",
+        "subtopic": "11. Input / Output Systems",
+        "question": "What is an 'Interrupt'?",
+        "options": ["A hardware failure.", "A signal from a device to the CPU indicating that an event needs immediate attention.", "A way to turn off the monitor.", "A software bug."],
+        "answer": 1,
+        "explanation": "Interrupts allow the OS to respond to external events (like a mouse click or disk ready signal) asynchronously."
+    },
+    {
+        "id": "os_078",
+        "subtopic": "5. Thread Management",
+        "question": "What is 'Thread Local Storage' (TLS)?",
+        "options": ["A hard drive for threads.", "Data that is unique to a specific thread and not shared with other threads in the same process.", "The RAM used by the kernel.", "A way to hide code from hackers."],
+        "answer": 1,
+        "explanation": "TLS is necessary when a thread needs its own global variable state that isn't overwritten by other threads."
+    },
+    {
+        "id": "os_079",
+        "subtopic": "12. Protection & Security",
+        "question": "What is 'Social Engineering' in a security context?",
+        "options": ["Building a better social media app.", "Manipulating people into performing actions or divulging confidential information.", "Using a virus to delete the registry.", "Scaling a server to handle more users."],
+        "answer": 1,
+        "explanation": "Techniques like phishing or pretexting target the 'human' vulnerability of the system."
+    },
+    {
+        "id": "os_080",
+        "subtopic": "8. Memory Management",
+        "question": "What is a 'Page Fault'?",
+        "options": ["An error in the hardware chip.", "An interrupt that occurs when a program tries to access a page that is not currently in physical RAM.", "When a page is too large for the memory.", "When a user deletes a system file."],
+        "answer": 1,
+        "explanation": "The OS must then fetch the required page from the disk (swap space) and update the page table."
+    },
+    {
+        "id": "os_081",
+        "subtopic": "1. Introduction to Operating Systems",
+        "question": "Which type of OS is designed to manage a group of independent computers and make them appear as a single computer to the user?",
+        "options": ["Real-time OS", "Distributed OS", "Network OS", "Batch OS"],
+        "answer": 1,
+        "explanation": "Distributed OSs manage multiple nodes in a way that provides a single-system image."
+    },
+    {
+        "id": "os_082",
+        "subtopic": "4. CPU Scheduling",
+        "question": "In 'Priority Scheduling', a process with a lower number typically has:",
+        "options": ["Lower priority", "Higher priority", "The same priority as others", "No priority"],
+        "answer": 1,
+        "explanation": "In most OS contexts (like Linux), lower numerical values indicate higher scheduling priority."
+    },
+    {
+        "id": "os_083",
+        "subtopic": "9. File System Management",
+        "question": "A 'Symbolic Link' (or Symlink) differs from a 'Hard Link' because:",
+        "options": ["It is faster.", "It is a file that contains the path string to another file; if the original is deleted, the link breaks.", "It is only for images.", "It doesn't use any disk space."],
+        "answer": 1,
+        "explanation": "Hard links point to the data (inode); Symlinks point to the filename."
+    },
+    {
+        "id": "os_084",
+        "subtopic": "3. Process Management",
+        "question": "Which system call is used in Unix/Linux to create a new process?",
+        "options": ["new()", "exec()", "fork()", "create()"],
+        "answer": 2,
+        "explanation": "The fork() call creates an exact duplicate of the parent process."
+    },
+    {
+        "id": "os_085",
+        "subtopic": "11. Input / Output Systems",
+        "question": "What is 'Memory-Mapped I/O'?",
+        "options": ["Drawing a map of the memory.", "Mapping device registers or memory into the CPU's regular address space, allowing I/O to be handled with standard load/store instructions.", "A fast type of hard drive.", "A security feature for printers."],
+        "answer": 1,
+        "explanation": "This simplifies I/O programming by treating devices like memory locations."
+    },
+    {
+        "id": "os_086",
+        "subtopic": "6. Concurrency & Synchronization",
+        "question": "The 'Peterson's Solution' is used to solve the critical section problem for:",
+        "options": ["Unlimited processes.", "Exactly two processes.", "Only hardware devices.", "Processes running on different servers."],
+        "answer": 1,
+        "explanation": "It is a classic software-based synchronization algorithm for two processes."
+    },
+    {
+        "id": "os_087",
+        "subtopic": "12. Protection & Security",
+        "question": "What is 'Encryption at Rest'?",
+        "options": ["Encrypting data while it is being sent over the internet.", "Encrypting data while it is stored on physical media (hard drive/SSD).", "Turning off the computer.", "Using a password to login."],
+        "answer": 1,
+        "explanation": "This ensures that if the physical hardware is stolen, the data remains unreadable."
+    },
+    {
+        "id": "os_088",
+        "subtopic": "2. Operating System Structures",
+        "question": "What is a 'Hybrid Kernel'?",
+        "options": ["A kernel that runs on gas and electricity.", "An architecture that combines the performance of a monolithic kernel with the modularity of a microkernel (e.g., Windows NT, macOS).", "A kernel that only works in the cloud.", "A kernel with no drivers."],
+        "answer": 1,
+        "explanation": "Most modern commercial OSs use a hybrid approach."
+    },
+    {
+        "id": "os_089",
+        "subtopic": "8. Memory Management",
+        "question": "What is 'External Fragmentation'?",
+        "options": ["Unused memory within a page.", "When total free memory is enough to satisfy a request, but it is not contiguous (it is broken into small pieces).", "A virus on the hard drive.", "When the user adds a new RAM stick."],
+        "answer": 1,
+        "explanation": "External fragmentation is a major issue in dynamic memory allocation schemes."
+    },
+    {
+        "id": "os_090",
+        "subtopic": "5. Thread Management",
+        "question": "Which of the following is SHARED among threads of the same process?",
+        "options": ["Stack", "Program Counter", "Heap and Global Variables", "Register Set"],
+        "answer": 2,
+        "explanation": "Threads share resources like code, data (heap), and files, but have their own unique stack and registers."
+    },
+    {
+        "id": "os_091",
+        "subtopic": "1. Introduction to Operating Systems",
+        "question": "What is the 'Ostrich Algorithm' in OS theory?",
+        "options": ["A very fast sorting method.", "Ignoring a problem (like deadlock) on the assumption that it happens very rarely.", "A way to hide files from users.", "A protocol for wireless networks."],
+        "answer": 1,
+        "explanation": "Named after the myth that ostriches bury their heads in the sand to hide from danger."
+    },
+    {
+        "id": "os_092",
+        "subtopic": "3. Process Management",
+        "question": "What is an 'Orphan Process'?",
+        "options": ["A process with no code.", "A process whose parent has terminated, but it continues to run (it is usually adopted by 'init').", "A process that has crashed.", "A process with no memory allocated."],
+        "answer": 1,
+        "explanation": "The OS must ensure orphan processes are cleaned up properly."
+    },
+    {
+        "id": "os_093",
+        "subtopic": "7. Deadlocks",
+        "question": "Which deadlock handling method involves 'Preemption' of resources?",
+        "options": ["Deadlock Prevention", "Deadlock Avoidance", "Deadlock Recovery", "The Ostrich Algorithm"],
+        "answer": 2,
+        "explanation": "Recovery involves taking resources away from one process and giving them to another to break the circular wait."
+    },
+    {
+        "id": "os_094",
+        "subtopic": "4. CPU Scheduling",
+        "question": "What is a 'Time Quantum'?",
+        "options": ["A unit of energy.", "A fixed period of time given to a process in Round Robin scheduling before it is preempted.", "The total time the computer has been on.", "The speed of the CPU clock."],
+        "answer": 1,
+        "explanation": "Choosing the right time quantum is essential for system responsiveness."
+    },
+    {
+        "id": "os_095",
+        "subtopic": "10. Secondary Storage Management",
+        "question": "In disk storage, what is 'Seek Time'?",
+        "options": ["The time to find a file in a directory.", "The time it takes for the disk arm to move to the correct cylinder/track.", "The time for the disk to rotate.", "The time to copy a file."],
+        "answer": 1,
+        "explanation": "Seek time is the most expensive component of disk access time."
+    },
+    {
+        "id": "os_096",
+        "subtopic": "6. Concurrency & Synchronization",
+        "question": "What is the 'Producer-Consumer' problem primarily concerned with?",
+        "options": ["Economics of OS sales.", "Synchronizing access to a shared buffer so the producer doesn't overflow it and the consumer doesn't underflow it.", "CPU scheduling.", "File encryption."],
+        "answer": 1,
+        "explanation": "It is a foundational problem in concurrent programming."
+    },
+    {
+        "id": "os_097",
+        "subtopic": "8. Memory Management",
+        "question": "What is 'Logical Address Independence'?",
+        "options": ["Each process having its own private address space starting at 0.", "The ability to run an OS without RAM.", "Using only physical addresses.", "A type of firewall."],
+        "answer": 0,
+        "explanation": "This allows the OS to load processes anywhere in physical RAM without the process knowing."
+    },
+    {
+        "id": "os_098",
+        "subtopic": "11. Input / Output Systems",
+        "question": "Which I/O method involves the CPU continuously checking the status of a device to see if it is ready?",
+        "options": ["Interrupt-driven I/O", "DMA", "Polling (Programmed I/O)", "Spooling"],
+        "answer": 2,
+        "explanation": "Polling is simple but wastes CPU cycles."
+    },
+    {
+        "id": "os_099",
+        "subtopic": "12. Protection & Security",
+        "question": "What is a 'Worm'?",
+        "options": ["A bug in the hardware.", "A self-replicating malware that spreads across a network without needing a host file.", "A hidden entry point into code.", "A file that cannot be deleted."],
+        "answer": 1,
+        "explanation": "Unlike viruses, worms do not need human action to spread."
+    },
+    {
+        "id": "os_100",
+        "subtopic": "9. File System Management",
+        "question": "What is the primary difference between FAT32 and NTFS?",
+        "options": ["FAT32 is newer.", "NTFS supports advanced features like permissions, journaling, and large file sizes.", "FAT32 is more secure.", "There is no difference."],
+        "answer": 1,
+        "explanation": "NTFS is the modern standard for Windows systems."
+    },
+    {
+        "id": "os_101",
+        "subtopic": "7. Deadlocks",
+        "question": "What is a 'Safe State' in Banker's Algorithm?",
+        "options": ["When the computer is off.", "A state where there is at least one sequence of process execution that allows everyone to finish without deadlocking.", "A state with no files.", "When only the admin is logged in."],
+        "answer": 1,
+        "explanation": "The OS only grants resource requests if they leave the system in a safe state."
+    }
+  ]
+}
