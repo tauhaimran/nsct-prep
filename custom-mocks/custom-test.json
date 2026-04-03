@@ -1,0 +1,23 @@
+{
+  "title": "Sample Custom Mock Test",
+  "questions": [
+    {
+      "id": "cust_001",
+      "subtopic": "Custom Mock Topic 1",
+      "question": "In a web app, which HTTP method is typically used to create a new resource?",
+      "options": ["GET", "POST", "PUT", "DELETE"],
+      "answer": 1,
+      "explanation": "POST is standard for creating new resources in RESTful APIs.",
+      "tags": ["HTTP", "REST"]
+    },
+    {
+      "id": "cust_002",
+      "subtopic": "Custom Mock Topic 1",
+      "question": "Which data structure is best for FIFO queue behavior?",
+      "options": ["Stack", "Queue", "Binary Tree", "Hash Map"],
+      "answer": 1,
+      "explanation": "Queue follows First-In-First-Out semantics.",
+      "tags": ["DSA", "Queue"]
+    }
+  ]
+}

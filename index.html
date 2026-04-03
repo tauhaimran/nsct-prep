@@ -38,8 +38,17 @@
             </div>
 
             <nav class="flex-1 overflow-y-auto px-4 space-y-1 custom-scrollbar">
-                <button onclick="showDashboard()" class="w-full flex items-center p-3 rounded-lg hover:bg-slate-800 transition mb-4">
+                <button onclick="showDashboard()" class="w-full flex items-center p-3 rounded-lg hover:bg-slate-800 transition mb-2">
                     <i class="fas fa-home mr-3"></i> Dashboard Overview
+                </button>
+                <button onclick="showMockOptions()" class="w-full flex items-center p-3 rounded-lg hover:bg-slate-800 transition mb-2">
+                    <i class="fas fa-stopwatch mr-3"></i> Timed 2hr Mock Test
+                </button>
+                <button onclick="showLibrary()" class="w-full flex items-center p-3 rounded-lg hover:bg-slate-800 transition mb-2">
+                    <i class="fas fa-book mr-3"></i> Browse All MCQs
+                </button>
+                <button onclick="showCredits()" class="w-full flex items-center p-3 rounded-lg hover:bg-slate-800 transition mb-4">
+                    <i class="fas fa-user-circle mr-3"></i> Credits
                 </button>
                 <div class="text-[10px] font-bold text-slate-500 uppercase px-3 mb-2">Syllabus Areas</div>
                 <div id="sidebar-list">
@@ -120,6 +129,58 @@
                     </div>
                 </div>
             </section>
+
+            <!-- VIEW: MOCK TEST CONTROLS -->
+            <section id="view-mock" class="hidden p-10">
+                <div class="max-w-4xl mx-auto">
+                    <div class="bg-white rounded-3xl shadow-xl border border-slate-200 overflow-hidden">
+                        <div class="bg-slate-900 p-6 text-white flex justify-between items-center">
+                            <div>
+                                <h2 class="text-xl font-bold">Timed Mock Test (2 hours)</h2>
+                                <p id="mock-mode" class="text-xs text-slate-200"></p>
+                            </div>
+                            <div class="text-right">
+                                <span id="mock-timer" class="text-sm font-mono bg-slate-800 px-3 py-1 rounded">120:00</span>
+                            </div>
+                        </div>
+
+                        <div class="p-10" id="mock-content"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- VIEW: LIBRARY -->
+            <section id="view-library" class="hidden p-10">
+                <div class="max-w-6xl mx-auto">
+                    <div class="bg-white rounded-3xl shadow-xl border border-slate-200 overflow-hidden p-6">
+                        <h2 class="text-xl font-bold mb-4">MCQ Library</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                            <select id="lib-topic-filter" onchange="renderLibraryList()" class="border p-2 rounded"><option value="all">All Topics</option></select>
+                            <select id="lib-subtopic-filter" onchange="renderLibraryList()" class="border p-2 rounded"><option value="all">All Subtopics</option></select>
+                            <input id="lib-search" oninput="renderLibraryList()" type="text" placeholder="Search questions or tags" class="border p-2 rounded" />
+                        </div>
+                        <div id="library-items" class="space-y-3"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- VIEW: CREDITS -->
+            <section id="view-credits" class="hidden p-10">
+                <div class="max-w-4xl mx-auto">
+                    <div class="bg-white rounded-3xl shadow-xl border border-slate-200 overflow-hidden p-8">
+                        <h2 class="text-2xl font-bold mb-3">Credits & About</h2>
+                        <p class="text-slate-700 mb-2">Tauha Imran (VR Dev, CS Graduate / Student from FAST-NUCES Islamabad)</p>
+                        <p class="text-slate-700 mb-4">Computer Scientist | FAST'26. Specializing in AI/ML, VR, Game Dev, Embedded Systems & DevOps. Also Graphic Design, UI/UX, Digital Marketing. Currently focused on VR/Unity and NextJS.</p>
+                        <ul class="list-disc pl-5 text-blue-700 space-y-1">
+                            <li><a class="underline" href="https://github.com/tauhaimran" target="_blank">GitHub</a></li>
+                            <li><a class="underline" href="https://www.tumblr.com/raggygaggy" target="_blank">Tumblr Blog</a></li>
+                            <li><a class="underline" href="https://www.linkedin.com/in/tauha-imran-6185b3280/" target="_blank">LinkedIn</a></li>
+                            <li>Email: <a class="underline" href="mailto:tauhimran@gmail.com">tauhimran@gmail.com</a></li>
+                        </ul>
+                        <p class="mt-4 text-slate-500 text-sm">nsct syllabus based on official site: https://nsct.hec.gov.pk/</p>
+                    </div>
+                </div>
+            </section>
         </main>
     </div>
 
@@ -140,13 +201,24 @@
         let state = {
             currentTopic: null,
             currentIndex: 0,
-            progress: JSON.parse(localStorage.getItem('nsct_v2_progress')) || {}
+            progress: JSON.parse(localStorage.getItem('nsct_v2_progress')) || {},
+            syllabusData: {},
+            allQuestions: [],
+            mock: {
+                questions: [],
+                index: 0,
+                score: 0,
+                timerSeconds: 120 * 60,
+                timerInterval: null,
+                source: 'syllabus'
+            }
         };
 
         function init() {
             renderSidebar();
             renderDashboard();
             updateGlobalProgress();
+            loadAllSyllabusData();
         }
 
         function renderSidebar() {
@@ -165,6 +237,250 @@
                     </button>
                 `;
             }).join('');
+        }
+
+        function loadAllSyllabusData() {
+            Promise.all(SYLLABUS.map(topic =>
+                fetch(`syllabus/${topic.file}`).then(res => res.json()).then(data => ({ topic, data }))
+            )).then(results => {
+                state.allQuestions = [];
+                results.forEach(({ topic, data }) => {
+                    state.syllabusData[topic.id] = data;
+                    const sourced = data.questions.map(q => ({ ...q, topic: topic.name, topicId: topic.id }));
+                    state.allQuestions.push(...sourced);
+                });
+                if (document.getElementById('view-library').classList.contains('hidden') === false) {
+                    populateLibraryFilters();
+                    renderLibraryList();
+                }
+            }).catch(err => console.error('Failed loading syllabus for library/mock:', err));
+        }
+
+        function showMockOptions() {
+            clearAllViews();
+            document.getElementById('view-mock').classList.remove('hidden');
+            document.getElementById('view-title').innerText = 'Timed Mock Test';
+            document.getElementById('mock-mode').innerText = 'Choose mode below then begin. (2 hours total)';
+            state.mock.questions = [];
+            state.mock.index = 0;
+            state.mock.score = 0;
+            state.mock.timerSeconds = 120 * 60;
+            if (state.mock.timerInterval) {
+                clearInterval(state.mock.timerInterval);
+                state.mock.timerInterval = null;
+            }
+            document.getElementById('mock-content').innerHTML = `
+                <div class="space-y-4">
+                    <button onclick="startMock('syllabus')" class="bg-blue-600 text-white px-4 py-3 rounded-lg hover:bg-blue-700 transition w-full">Start Random Syllabus Mock</button>
+                    <button onclick="startMock('custom')" class="bg-slate-700 text-white px-4 py-3 rounded-lg hover:bg-slate-800 transition w-full">Start Custom Mock (custom-mocks/custom-test.json)</button>
+                    <p class="text-sm text-slate-500">Custom test template: <code>custom-mocks/custom-test-template.json</code></p>
+                </div>
+            `;
+        }
+
+        async function startMock(source) {
+            let pool = [];
+            state.mock.source = source;
+            state.mock.timerSeconds = 120 * 60;
+
+            if (source === 'custom') {
+                try {
+                    const response = await fetch('custom-mocks/custom-test.json');
+                    const json = await response.json();
+                    pool = (json.questions || []).map(q => ({ ...q, topic: 'Custom' }));
+                } catch (e) {
+                    alert('Could not load custom mock file. Ensure custom-mocks/custom-test.json exists.');
+                    console.error(e);
+                    return;
+                }
+            } else {
+                pool = state.allQuestions.slice();
+            }
+
+            if (!pool.length) {
+                alert('No questions available for this mock test.');
+                return;
+            }
+
+            const requestCount = Math.min(pool.length, 80);
+            state.mock.questions = shuffleArray(pool).slice(0, requestCount);
+            state.mock.index = 0;
+            state.mock.score = 0;
+
+            document.getElementById('mock-mode').innerText = `Mode: ${source === 'custom' ? 'Custom set' : 'Random syllabus set'} (${state.mock.questions.length} questions)`;
+            startMockTimer();
+            renderMockQuestion();
+        }
+
+        function startMockTimer() {
+            clearInterval(state.mock.timerInterval);
+            updateMockTimerDisplay();
+            state.mock.timerInterval = setInterval(() => {
+                state.mock.timerSeconds -= 1;
+                if (state.mock.timerSeconds <= 0) {
+                    clearInterval(state.mock.timerInterval);
+                    alert('Time expired! Showing your score.');
+                    showMockResults();
+                    return;
+                }
+                updateMockTimerDisplay();
+            }, 1000);
+        }
+
+        function updateMockTimerDisplay() {
+            const m = Math.floor(state.mock.timerSeconds / 60).toString().padStart(2, '0');
+            const s = (state.mock.timerSeconds % 60).toString().padStart(2, '0');
+            document.getElementById('mock-timer').innerText = `${m}:${s}`;
+        }
+
+        function renderMockQuestion() {
+            const q = state.mock.questions[state.mock.index];
+            if (!q) {
+                showMockResults();
+                return;
+            }
+
+            const optionsHtml = q.options.map((opt, i) => `
+                <button onclick="handleMockAnswer(${i})" class="option-btn w-full text-left p-5 border-2 border-slate-100 rounded-2xl hover:border-blue-400 hover:bg-blue-50 transition-all flex items-center group" id="mock-opt-${i}">
+                    <span class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center mr-4 text-slate-500 font-bold group-hover:bg-blue-600 group-hover:text-white transition-colors">${String.fromCharCode(65 + i)}</span>
+                    <span class="text-slate-700 font-medium">${opt}</span>
+                </button>
+            `).join('');
+
+            document.getElementById('mock-content').innerHTML = `
+                <div>
+                    <h3 class="text-xl font-semibold text-slate-800 mb-4">${state.mock.index + 1}. ${q.question}</h3>
+                    <p class="text-xs text-slate-500 mb-4">Topic: ${q.topic} | Subtopic: ${q.subtopic || 'N/A'} | Tags: ${(q.tags||[]).join(', ') || 'N/A'}</p>
+                    <div id="mock-options" class="grid grid-cols-1 gap-4">${optionsHtml}</div>
+                    <div id="mock-explanation" class="hidden mt-6 p-4 rounded-xl bg-blue-50 border border-blue-100">
+                        <strong class="text-blue-800">Explanation:</strong>
+                        <p id="mock-explanation-text" class="text-blue-800 text-sm mt-1"></p>
+                    </div>
+                    <div class="mt-8 flex justify-between items-center">
+                        <span class="text-sm text-slate-600">Score: ${state.mock.score}/${state.mock.questions.length}</span>
+                        <button id="mock-next-btn" onclick="nextMockQuestion()" class="hidden bg-blue-600 text-white px-5 py-2 rounded-lg">Next</button>
+                    </div>
+                </div>
+            `;
+        }
+
+        function handleMockAnswer(idx) {
+            const q = state.mock.questions[state.mock.index];
+            const btns = document.querySelectorAll('#mock-options .option-btn');
+            btns.forEach(b => b.disabled = true);
+
+            if (idx === q.answer) {
+                document.getElementById(`mock-opt-${idx}`).classList.add('correct-opt');
+                state.mock.score += 1;
+            } else {
+                document.getElementById(`mock-opt-${idx}`).classList.add('wrong-opt');
+                if (q.answer >= 0) {
+                    document.getElementById(`mock-opt-${q.answer}`).classList.add('correct-opt');
+                }
+            }
+
+            document.getElementById('mock-explanation-text').innerText = q.explanation || 'No explanation provided.';
+            document.getElementById('mock-explanation').classList.remove('hidden');
+            document.getElementById('mock-next-btn').classList.remove('hidden');
+        }
+
+        function nextMockQuestion() {
+            state.mock.index += 1;
+            if (state.mock.index >= state.mock.questions.length) {
+                showMockResults();
+            } else {
+                renderMockQuestion();
+            }
+        }
+
+        function showMockResults() {
+            clearInterval(state.mock.timerInterval);
+            document.getElementById('mock-content').innerHTML = `
+                <div class="text-center p-8">
+                    <h3 class="text-2xl font-bold text-slate-800">Mock Completed</h3>
+                    <p class="text-lg text-slate-600 mt-2">Score: ${state.mock.score}/${state.mock.questions.length}</p>
+                    <p class="text-sm text-slate-500">Source: ${state.mock.source === 'custom' ? 'Custom file' : 'Syllabus pool'}</p>
+                    <button onclick="showDashboard()" class="mt-6 bg-blue-600 text-white px-5 py-2 rounded-lg">Back to Dashboard</button>
+                </div>
+            `;
+        }
+
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        function showLibrary() {
+            clearAllViews();
+            document.getElementById('view-library').classList.remove('hidden');
+            document.getElementById('view-title').innerText = 'MCQ Library';
+            populateLibraryFilters();
+            renderLibraryList();
+        }
+
+        function populateLibraryFilters() {
+            const topicSelect = document.getElementById('lib-topic-filter');
+            const subtopicSelect = document.getElementById('lib-subtopic-filter');
+            const topicSet = new Set();
+            const subtopicSet = new Set();
+
+            state.allQuestions.forEach(q => {
+                topicSet.add(q.topic);
+                if (q.subtopic) subtopicSet.add(q.subtopic);
+            });
+
+            topicSelect.innerHTML = '<option value="all">All Topics</option>' + Array.from(topicSet).sort().map(v => `<option value="${v}">${v}</option>`).join('');
+            subtopicSelect.innerHTML = '<option value="all">All Subtopics</option>' + Array.from(subtopicSet).sort().map(v => `<option value="${v}">${v}</option>`).join('');
+        }
+
+        function renderLibraryList() {
+            const target = document.getElementById('library-items');
+            const topicValue = document.getElementById('lib-topic-filter').value;
+            const subtopicValue = document.getElementById('lib-subtopic-filter').value;
+            const searchValue = document.getElementById('lib-search').value.trim().toLowerCase();
+
+            const filtered = state.allQuestions.filter(q => {
+                if (topicValue !== 'all' && q.topic !== topicValue) return false;
+                if (subtopicValue !== 'all' && q.subtopic !== subtopicValue) return false;
+                if (!searchValue) return true;
+
+                const combined = `${q.question} ${q.options.join(' ')} ${q.explanation || ''} ${(q.tags || []).join(' ')} ${q.subtopic || ''} ${q.topic || ''}`.toLowerCase();
+                return combined.includes(searchValue);
+            });
+
+            if (!filtered.length) {
+                target.innerHTML = '<p class="text-slate-500">No questions match this filter.</p>';
+                return;
+            }
+
+            target.innerHTML = filtered.map((q, idx) => `
+                <div class="p-4 rounded-2xl border border-slate-200 bg-slate-50">
+                    <div class="flex justify-between items-center">
+                        <strong>${idx + 1}. ${q.question}</strong>
+                        <button class="text-blue-600 hover:underline" onclick="document.getElementById('lib-details-${idx}').classList.toggle('hidden')">Details</button>
+                    </div>
+                    <div class="text-xs text-slate-500 mt-1">Topic: ${q.topic || 'N/A'} • Subtopic: ${q.subtopic || 'N/A'} • Tags: ${(q.tags || []).join(', ') || 'N/A'}</div>
+                    <div id="lib-details-${idx}" class="hidden mt-3 text-sm text-slate-700">
+                        ${q.options.map((opt, i) => `<div class="py-0.5 ${i === q.answer ? 'font-bold text-emerald-700' : ''}">${String.fromCharCode(65 + i)}. ${opt}</div>`).join('')}
+                        <p class="mt-2"><strong>Explanation:</strong> ${q.explanation || 'No explanation available.'}</p>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function showCredits() {
+            clearAllViews();
+            document.getElementById('view-credits').classList.remove('hidden');
+            document.getElementById('view-title').innerText = 'Credits';
+        }
+
+        function clearAllViews() {
+            ['view-dashboard', 'view-quiz', 'view-mock', 'view-library', 'view-credits'].forEach(id => {
+                document.getElementById(id).classList.add('hidden');
+            });
         }
 
         function renderDashboard() {
@@ -293,8 +609,8 @@
         }
 
         function showDashboard() {
+            clearAllViews();
             document.getElementById('view-dashboard').classList.remove('hidden');
-            document.getElementById('view-quiz').classList.add('hidden');
             document.getElementById('view-title').innerText = "Dashboard Overview";
             renderDashboard();
             renderSidebar();

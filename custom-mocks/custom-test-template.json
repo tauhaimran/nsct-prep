@@ -1,0 +1,14 @@
+{
+  "title": "Custom 2hr Mock Test",
+  "questions": [
+    {
+      "id": "custom_001",
+      "subtopic": "Example Subtopic",
+      "question": "This is a sample question for the custom mock test.",
+      "options": ["Option A", "Option B", "Option C", "Option D"],
+      "answer": 0,
+      "explanation": "This is the correct explanation.",
+      "tags": ["sample", "template"]
+    }
+  ]
+}
